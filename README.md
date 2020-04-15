@@ -1,11 +1,10 @@
 ﻿# Straw-Harvest-Rus
 
 Аддон Straw Harvest переведен на Русский язык
-Straw Harvest + русификатор
 
+*Straw Harvest + русификатор*
 
-
-
+***
 
 # Загрузка / Downloads
 
