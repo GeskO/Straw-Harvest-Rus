@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable>
+    <storeData>
+        <name>$l10n_name_pelletHall_crane</name>
+        <functions>
+            <function>$l10n_function_pelletHall_crane</function>
+        </functions>
+        <image>placeables/pelletHall/store_hallsys.dds</image>
+        <price>250000</price>
+        <dailyUpkeep>105</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>HALLSYS</brand>
+        <species>placeable</species>
+        <category>sheds</category>
+    </storeData>
+
+    <placeableType>FS19_addon_strawHarvest.strawHarvestPelletHall</placeableType>
+    <filename>placeables/pelletHall/pelletHall_empty.i3d</filename>
+    <placement testSizeX="34" testSizeZ="26" sizeX="34" sizeZ="26" useRandomYRotation="false" useManualYRotation="true" placementPositionSnapSize="1"/>
+
+    <vehicle xmlFilename="placeables/pelletHall/crane/hallCrane.xml"/>
+
+    <clearAreas>
+        <clearArea startNode="10|0" widthNode="10|1" heightNode="10|2"/>
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="5" maxSlope="30" maxEdgeAngle="20">
+        <levelAreas>
+            <levelArea startNode="10|0" widthNode="10|1" heightNode="10|2" groundType="asphalt"/>
+        </levelAreas>
+    </leveling>
+
+    <seasons>
+        <maskAreas>
+            <maskArea startNode="10|3" widthNode="10|4" heightNode="10|5"/>
+        </maskAreas>
+    </seasons>
+
+    <tipOcclusionUpdateArea sizeX="34" sizeZ="26" centerX="0" centerZ="-1.6"/>
+
+    <animatedObjects>
+        <animatedObject saveId="door">
+            <animation initialTime="0" duration="1.2">
+                <part node="5|1">
+                    <keyFrame time="0.1" rotation="0 0 0"/>
+                    <keyFrame time="1.1" rotation="0 90 0"/>
+                </part>
+                <part node="5|1|0">
+                    <keyFrame time="0.0" rotation="0 0 0"/>
+                    <keyFrame time="0.1" rotation="0 0 -35"/>
+                    <keyFrame time="0.2" rotation="0 0 0"/>
+                </part>
+            </animation>
+            <controls triggerNode="5|0" posAction="ACTIVATE_HANDTOOL" posText="action_openDoor" negText="action_closeDoor"/>
+            <sounds>
+                <!-- <moving file="data/sounds/prefab/gate/gate_loop.wav" loops="0" linkNode="5|0" volume="0.8" radius="25" innerRadius="3" fadeOut="0.25"/> -->
+                <posEnd file="$data/sounds/prefab/gate/gate_opened.wav" linkNode="5|0" volume="0.8" radius="25" innerRadius="3"/>
+                <negEnd file="$data/sounds/prefab/gate/gate_closed.wav" linkNode="5|0" volume="0.8" radius="25" innerRadius="3"/>
+            </sounds>
+        </animatedObject>
+
+        <animatedObject saveId="lighting">
+            <animation initialTime="0" duration="0.4">
+                <part node="9|1">
+                    <keyFrame time="0.0" rotation="0 0 0"/>
+                    <keyFrame time="0.2" rotation="6.5 0 0"/>
+                    <keyFrame time="0.4" rotation="0 0 0"/>
+                </part>
+                <part node="9|2">
+                    <keyFrame time="0.199" visibility="false"/>
+                    <keyFrame time="0.2" visibility="true"/>
+                </part>
+                <part node="9|3">
+                    <keyFrame time="0.199" visibility="true"/>
+                    <keyFrame time="0.2" visibility="false"/>
+                </part>
+            </animation>
+            <controls posAction="ACTIVATE_HANDTOOL" triggerNode="9|0" posText="action_lightsOn" negText="action_lightsOff"/>
+            <sounds>
+                <moving file="$data/sounds/vehicles/switch/switch_01.wav" pitchOffset="1.00" volume="0.20" indoorVolumeFactor="0.55" indoorLowpassGain="0.85" pitchMax="1.15"/>
+            </sounds>
+        </animatedObject>
+
+        <animatedObject saveId="gate1">
+            <animation duration="10">
+                <part node="6|1">
+                    <keyFrame time="0.05" translation="0 0 0"/>
+                    <keyFrame time="0.2" translation="0 0.5 0"/>
+                </part>
+                <part node="6|1|0">
+                    <keyFrame time="0.05" rotation="0 0 0"/>
+                    <keyFrame time="0.2" rotation="90 0 0"/>
+                </part>
+                <part node="6|1|1">
+                    <keyFrame time="0.2" rotation="0 0 0"/>
+                    <keyFrame time="0.22" rotation="-26 0 0"/>
+                    <keyFrame time="0.24" rotation="-37 0 0"/>
+                    <keyFrame time="0.28" rotation="-53 0 0"/>
+                    <keyFrame time="0.4" rotation="-90 0 0"/>
+                </part>
+                <part node="6|1|2">
+                    <keyFrame time="0.2" translation="0 0 0"/>
+                    <keyFrame time="0.4" translation="0 1.02 0"/>
+                </part>
+                <part node="6|1|2|0">
+                    <keyFrame time="0.2" rotation="0 0 0"/>
+                    <keyFrame time="0.22" rotation="26 0 0"/>
+                    <keyFrame time="0.24" rotation="37 0 0"/>
+                    <keyFrame time="0.28" rotation="53 0 0"/>
+                    <keyFrame time="0.4" rotation="90 0 0"/>
+                </part>
+                <part node="6|1|2|1">
+                    <keyFrame time="0.4" rotation="0 0 0"/>
+                    <keyFrame time="0.42" rotation="-26 0 0"/>
+                    <keyFrame time="0.44" rotation="-37 0 0"/>
+                    <keyFrame time="0.48" rotation="-53 0 0"/>
+                    <keyFrame time="0.6" rotation="-90 0 0"/>
+                </part>
+                <part node="6|1|2|2">
+                    <keyFrame time="0.4" translation="0 0 0"/>
+                    <keyFrame time="0.6" translation="0 1.02 0"/>
+                </part>
+                <part node="6|1|2|2|0">
+                    <keyFrame time="0.4" rotation="0 0 0"/>
+                    <keyFrame time="0.42" rotation="26 0 0"/>
+                    <keyFrame time="0.44" rotation="37 0 0"/>
+                    <keyFrame time="0.48" rotation="53 0 0"/>
+                    <keyFrame time="0.6" rotation="90 0 0"/>
+                </part>
+                <part node="6|1|2|2|1">
+                    <keyFrame time="0.6" rotation="0 0 0"/>
+                    <keyFrame time="0.62" rotation="-26 0 0"/>
+                    <keyFrame time="0.64" rotation="-37 0 0"/>
+                    <keyFrame time="0.68" rotation="-53 0 0"/>
+                    <keyFrame time="0.8" rotation="-90 0 0"/>
+                </part>
+                <part node="6|1|2|2|2">
+                    <keyFrame time="0.6" translation="0 0 0"/>
+                    <keyFrame time="0.8" translation="0 1.02 0"/>
+                </part>
+                <part node="6|1|2|2|2|0">
+                    <keyFrame time="0.6" rotation="0 0 0"/>
+                    <keyFrame time="0.62" rotation="26 0 0"/>
+                    <keyFrame time="0.64" rotation="37 0 0"/>
+                    <keyFrame time="0.68" rotation="53 0 0"/>
+                    <keyFrame time="0.8" rotation="90 0 0"/>
+                </part>
+                <part node="6|1|2|2|2|1">
+                    <keyFrame time="0.8" rotation="0 0 0"/>
+                    <keyFrame time="0.82" rotation="-26 0 0"/>
+                    <keyFrame time="0.84" rotation="-37 0 0"/>
+                    <keyFrame time="0.88" rotation="-53 0 0"/>
+                    <keyFrame time="1" rotation="-90 0 0"/>
+                </part>
+                <part node="6|1|2|2|2|2">
+                    <keyFrame time="0.8" translation="0 0 0"/>
+                    <keyFrame time="1" translation="0 1.02 0"/>
+                </part>
+                <part node="6|1|2|2|2|2|0">
+                    <keyFrame time="0.8" rotation="0 0 0"/>
+                    <keyFrame time="0.82" rotation="26 0 0"/>
+                    <keyFrame time="0.84" rotation="37 0 0"/>
+                    <keyFrame time="0.88" rotation="53 0 0"/>
+                    <keyFrame time="1" rotation="90 0 0"/>
+                </part>
+            </animation>
+            <controls posAction="ACTIVATE_HANDTOOL" triggerNode="6|0" posText="action_openGate" negText="action_closeGate"/>
+            <sounds>
+                <moving file="$data/sounds/vehicles/transmission/transmission_omega_loop.wav" loops="0" linkNode="6|0" volume="0.4" radius="25" innerRadius="3" fadeOut="0.25"/>
+            </sounds>
+        </animatedObject>
+
+        <animatedObject saveId="gate2">
+            <animation duration="10">
+                <part node="7|1">
+                    <keyFrame time="0.05" translation="0 0 0"/>
+                    <keyFrame time="0.2" translation="0 0.5 0"/>
+                </part>
+                <part node="7|1|0">
+                    <keyFrame time="0.05" rotation="0 0 0"/>
+                    <keyFrame time="0.2" rotation="90 0 0"/>
+                </part>
+                <part node="7|1|1">
+                    <keyFrame time="0.2" rotation="0 0 0"/>
+                    <keyFrame time="0.22" rotation="-26 0 0"/>
+                    <keyFrame time="0.24" rotation="-37 0 0"/>
+                    <keyFrame time="0.28" rotation="-53 0 0"/>
+                    <keyFrame time="0.4" rotation="-90 0 0"/>
+                </part>
+                <part node="7|1|2">
+                    <keyFrame time="0.2" translation="0 0 0"/>
+                    <keyFrame time="0.4" translation="0 1.02 0"/>
+                </part>
+                <part node="7|1|2|0">
+                    <keyFrame time="0.2" rotation="0 0 0"/>
+                    <keyFrame time="0.22" rotation="26 0 0"/>
+                    <keyFrame time="0.24" rotation="37 0 0"/>
+                    <keyFrame time="0.28" rotation="53 0 0"/>
+                    <keyFrame time="0.4" rotation="90 0 0"/>
+                </part>
+                <part node="7|1|2|1">
+                    <keyFrame time="0.4" rotation="0 0 0"/>
+                    <keyFrame time="0.42" rotation="-26 0 0"/>
+                    <keyFrame time="0.44" rotation="-37 0 0"/>
+                    <keyFrame time="0.48" rotation="-53 0 0"/>
+                    <keyFrame time="0.6" rotation="-90 0 0"/>
+                </part>
+                <part node="7|1|2|2">
+                    <keyFrame time="0.4" translation="0 0 0"/>
+                    <keyFrame time="0.6" translation="0 1.02 0"/>
+                </part>
+                <part node="7|1|2|2|0">
+                    <keyFrame time="0.4" rotation="0 0 0"/>
+                    <keyFrame time="0.42" rotation="26 0 0"/>
+                    <keyFrame time="0.44" rotation="37 0 0"/>
+                    <keyFrame time="0.48" rotation="53 0 0"/>
+                    <keyFrame time="0.6" rotation="90 0 0"/>
+                </part>
+                <part node="7|1|2|2|1">
+                    <keyFrame time="0.6" rotation="0 0 0"/>
+                    <keyFrame time="0.62" rotation="-26 0 0"/>
+                    <keyFrame time="0.64" rotation="-37 0 0"/>
+                    <keyFrame time="0.68" rotation="-53 0 0"/>
+                    <keyFrame time="0.8" rotation="-90 0 0"/>
+                </part>
+                <part node="7|1|2|2|2">
+                    <keyFrame time="0.6" translation="0 0 0"/>
+                    <keyFrame time="0.8" translation="0 1.02 0"/>
+                </part>
+                <part node="7|1|2|2|2|0">
+                    <keyFrame time="0.6" rotation="0 0 0"/>
+                    <keyFrame time="0.62" rotation="26 0 0"/>
+                    <keyFrame time="0.64" rotation="37 0 0"/>
+                    <keyFrame time="0.68" rotation="53 0 0"/>
+                    <keyFrame time="0.8" rotation="90 0 0"/>
+                </part>
+                <part node="7|1|2|2|2|1">
+                    <keyFrame time="0.8" rotation="0 0 0"/>
+                    <keyFrame time="0.82" rotation="-26 0 0"/>
+                    <keyFrame time="0.84" rotation="-37 0 0"/>
+                    <keyFrame time="0.88" rotation="-53 0 0"/>
+                    <keyFrame time="1" rotation="-90 0 0"/>
+                </part>
+                <part node="7|1|2|2|2|2">
+                    <keyFrame time="0.8" translation="0 0 0"/>
+                    <keyFrame time="1" translation="0 1.02 0"/>
+                </part>
+                <part node="7|1|2|2|2|2|0">
+                    <keyFrame time="0.8" rotation="0 0 0"/>
+                    <keyFrame time="0.82" rotation="26 0 0"/>
+                    <keyFrame time="0.84" rotation="37 0 0"/>
+                    <keyFrame time="0.88" rotation="53 0 0"/>
+                    <keyFrame time="1" rotation="90 0 0"/>
+                </part>
+            </animation>
+            <controls posAction="ACTIVATE_HANDTOOL" triggerNode="7|0" posText="action_openGate" negText="action_closeGate"/>
+            <sounds>
+                <moving file="$data/sounds/vehicles/transmission/transmission_omega_loop.wav" loops="0" linkNode="7|0" volume="0.4" radius="25" innerRadius="3" fadeOut="0.25"/>
+            </sounds>
+        </animatedObject>
+    </animatedObjects>
+</placeable>

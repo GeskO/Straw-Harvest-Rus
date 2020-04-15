@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<powerTakeOff filename="shared/pto/walterscheidW.i3d" colorShaderParameter="colorMat0" isSingleJoint="true" size="0.2" zOffset="0.045" minLength="0.35">
+    <startNode node="0"/>
+    <startJoint node="0|0"/>
+    <scalePart node="0|0|1" referenceNode="0|0|0|1"/>
+    <translationPart node="0|0|0|1" referenceNode="0|0|1" length="0.405">
+        <decal node="0|0|0|1|0" size="0.131" offset="0.1" minOffset="0.015"/>
+    </translationPart>
+    <endJoint node="0|0|0"/>
+    <linkNode node="0|0|0|0"/>
+
+    <animationNodes>
+        <animationNode node="0|1"       rotSpeed="-2700"  rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="2" />
+        <animationNode node="0|0|2"     rotSpeed="2700" rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="2" />
+        <animationNode node="0|0|0|2"   rotSpeed="2700" rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="2" />
+        <animationNode node="0|0|0|0|0" rotSpeed="-2700"  rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="2" />
+        <animationNode class="ShakeAnimation" node="0|0" shaking="0.002 0.002 0 100" turnOnFadeTime="1" turnOffFadeTime="2" />
+        <animationNode class="ShakeAnimation" node="0|0|0" shaking="0.002 0.002 0 100" turnOnFadeTime="1" turnOffFadeTime="2" />
+        <animationNode class="ShakeAnimation" node="0|0|0|1" shaking="0.002 0.002 0 100" turnOnFadeTime="1" turnOffFadeTime="2" />
+        <animationNode class="ShakeAnimation" node="0|0|1" shaking="0.002 0.002 0 100" turnOnFadeTime="1" turnOffFadeTime="2" />
+        <animationNode class="ShakeAnimation" node="0|0|0|1|0" shaking="0.002 0.002 0 100" turnOnFadeTime="1" turnOffFadeTime="2" />
+    </animationNodes>
+</powerTakeOff>

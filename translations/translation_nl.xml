@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+    <translationContributors>Dutch Modding Incorporated</translationContributors>
+
+    <texts>
+        <!-- Inputs -->
+        <text name="input_SH_TOGGLE_COLLECT_MODE" text="SH: Verzamelmodus wisselen"/>
+        <text name="input_SH_DEPART_BALES" text="SH: Balen uitladen"/>
+        <text name="input_SH_RESET_BALE_COUNTER" text="SH: Balenteller resetten"/>
+        <text name="input_SH_GRAB_BALES" text="SH: Balen pakken"/>
+        <text name="input_SH_DROP_BALES" text="SH: Balen lossen"/>
+        <text name="input_SH_TOGGLE_CRANE_TOOL" text="SH: Kraangereedschap wisselen"/>
+        <text name="input_SH_MOVE_CRANE_BRIDGE_1" text="SH: Bovenloopkraan brug naar voren bewegen"/>
+        <text name="input_SH_MOVE_CRANE_BRIDGE_2" text="SH: Bovenloopkraan brug naar achteren bewegen"/>
+        <text name="input_SH_MOVE_CRANE_TROLLEY_1" text="SH: Bovenloopkraan trolley naar rechts bewegen"/>
+        <text name="input_SH_MOVE_CRANE_TROLLEY_2" text="SH: Bovenloopkraan trolley naar links bewegen"/>
+        <text name="input_SH_MOVE_CRANE_TOOL_1" text="SH: Kraangereedschap naar boven bewegen"/>
+        <text name="input_SH_MOVE_CRANE_TOOL_2" text="SH: Kraangereedschap naar beneden bewegen"/>
+        <text name="input_SH_ROTATE_CRANE_TOOL_1" text="SH: Kraangereedschap naar rechts draaien"/>
+        <text name="input_SH_ROTATE_CRANE_TOOL_2" text="SH: Kraangereedschap naar links draaien"/>
+        <text name="input_SH_OPEN_CRANE_TOOL_1" text="SH: Kraangereedschap openen"/>
+        <text name="input_SH_OPEN_CRANE_TOOL_2" text="SH: Kraangereedschap sluiten"/>
+        <text name="input_SH_TOGGLE_BALE_SIZE" text="SH: Baal formaat wisselen"/>
+        <text name="input_SH_TOGGLE_REFILL_COVER" text="SH: Kap openen/sluiten"/>
+
+        <!-- Bale grab -->
+        <text name="typeDesc_baleGrab" text="Balenklem"/>
+        <text name="function_baleGrab" text="Met een balenklem kun je makkelijk en snel vierkante balen pakken."/>
+
+        <text name="configuration_inputAttacherTeleHandler" text="Verreiker"/>
+
+        <text name="action_grabBales" text="Balen pakken"/>
+        <text name="action_dropBales" text="Balen lossen"/>
+
+        <text name="action_addSpikes" text="Balenprikker opbouwen"/>
+        <text name="action_removeSpikes" text="Balenprikker afbouwen"/>
+
+        <!-- Comprima -->
+        <text name="function_comprima" text="Een balenpers maakt van stro, gras of hooi balen. De Comprima perst balen in verschillende maten van 1,10m tot 1,80m. Attentie: veel werktuigen zijn alleen geschikt voor balen van 1,30m."/>
+
+        <!-- Bale counter -->
+        <text name="action_resetBaleCounter" text="Balenteller resetten"/>
+
+        <!-- BigPack -->
+        <text name="configuration_baleTrailer" text="BaleCollect 1230"/>
+        <text name="configuration_noBaleTrailer" text="Balenglijgoot"/>
+
+        <!-- BaleCollect -->
+        <text name="function_baleCollect" text="Koppel de Krone BaleCollect aan de Krone BiGPack 1290 HDP II XC om 3 balen tegelijk te verzamelen en vervolgens naast elkaar neer te leggen."/>
+        <text name="typeDesc_baleCollect" text="Balenverzamelaar"/>
+        <text name="action_collectMode" text="Baal los modus %s"/>
+        <text name="warning_needsABaleTrailer" text="In deze configuratie kan de balenpers alleen gebruikt worden in combinatie met de BaleCollect 1230!"/>
+
+        <!-- Premos -->
+        <text name="function_premos" text="Deze machine kan hooi en stro pellets direct op het land produceren. Als deze aan de concept balenhakselaar gekoppeld wordt, kan deze ook stationair gebruikt worden."/>
+        <text name="typeDesc_premos" text="Pellet oogstmachine"/>
+
+        <!-- BaleShredder -->
+        <text name="name_baleShredder" text="Balenhakselaar"/>
+        <text name="function_baleShredder" text="Koppel de balenhakselaar aan de KRONE Premos 5000 om balen te verhakselen en het materiaal te pelletiseren. De balenhakselaar kan aan de rechtervoorzijde van de Premos worden aangekoppeld in rij-positie, check dat de gele pijl op de pallet richting de Premos wijst."/>
+        <text name="typeDesc_baleShredder" text="Balenhakselaar"/>
+        <text name="warning_firstFoldTheTool" text="Je moet het gereedschap (%s) eerst inklappen!"/>
+        <text name="warning_baleFillTypeNotSupported" text="Dit type baal wordt niet ondersteund!"/>
+        <text name="warning_roundBalesNotSupported" text="Ronde balen worden niet ondersteund!"/>
+
+        <!-- Placeables -->
+        <text name="name_pelletHall" text="Pellet hal palletiseerder"/>
+        <text name="name_pelletHall_crane" text="Pellet hal bovenloopkraan"/>
+        <text name="name_pelletHall_empty" text="Pellet hal"/>
+        <text name="name_palletSellPoint" text="Pallet Sell Point"/>
+        <text name="action_lightsOn" text="Licht inschakelen"/>
+        <text name="action_lightsOff" text="Licht uitschakelen"/>
+
+        <text name="function_pelletHall" text="Hier kunnen jou hooi en stro pellets worden opgeslagen. Gebruik de palletiseerder om de pellets in zakken te stoppen en op een pallet te stapelen. Met de bovenloopkraan kan de palletiseerder eenvoudig gevult worden."/>
+        <text name="function_pelletHall_crane" text=" Hier kunnen jou hooi en stro pellets worden opgeslagen. Met de bovenloopkraan is het eenvoudig om jou machines te vullen."/>
+        <text name="function_pelletHall_empty" text="Hier kunnen jou balen, stortgoed en machines opgeslagen worden."/>
+        <text name="function_palletSellPoint" text="Hier is het mogelijk om de pallets met pellets te verkopen voor een hogere prijs als stortgoed."/>
+
+        <!-- Crane -->
+        <text name="action_toggleCraneTool" text="Kraangereedschap wisselen"/>
+
+        <!-- Palletizer -->
+        <text name="notification_palletizer_refilled" text="Palletiseerder hervuld met %d zakken vanwege het opslaan/synchroniseren."/>
+        <text name="notification_palletizer_stopped" text="Palletiseerder gestopt"/>
+        <text name="notification_palletizer_empty" text="Palletiseerder leeg"/>
+        <text name="statistics_palletizer_bags" text="De opbrengst van vandaag tot nu toe: %d zakken, %d pallets"/>
+        <text name="statistics_palletizer_time" text="Voorraad is nog genoeg voor %d minuten en %d seconden"/>
+        <text name="statistics_palletizer_blocked" text="Palletiseerder geblokkeerd, maak de lopende band vrij!"/>
+
+        <!-- Pallets -->
+        <text name="baleTwinePallet" text="Perstouw pallet"/>
+        <text name="function_baleTwinePallet" text="Met de touw rollen kun je de Krone BigPack 1290 HDP II XC bijvullen."/>
+        <text name="netRolePallet" text="Balennet pallet"/>
+        <text name="function_netRolePallet" text="Met de net rollen kun je de Krone Comprima V 180 XC bijvullen."/>
+        <text name="molassesPallet" text="Melasse pallet"/>
+        <text name="function_molassesPallet" text="Met de jerrycan kun je de melasse tank van de Krone Premos 5000 bijvullen."/>
+
+        <!-- fillTypes -->
+        <text name="fillType_strawPellets" text="Stro pellets"/>
+        <text name="fillType_hayPellets" text="Hooi pellets"/>
+        <text name="fillType_baleTwine" text="Perstouw"/>
+        <text name="fillType_baleNet" text="Balennet"/>
+        <text name="fillType_molasses" text="Melasse"/>
+
+        <!-- refillSupplies -->
+        <text name="action_openBaleNetDoor" text="Balennet kap openen"/>
+        <text name="action_closeBaleNetDoor" text="Balennet kap sluiten"/>
+        <text name="action_lowerTwineBoxes" text="Touwkasten laten zakken"/>
+        <text name="action_liftTwineBoxes" text="Touwkasten omhoog tillen"/>
+        <text name="warning_closeBaleNetDoorFirst" text="Sluit eerst de balennet kap!"/>
+        <text name="warning_closeTwineBoxesFirst" text="Til de touwkasten eerst omhoog!"/>
+        <text name="warning_refillSuppliesFirst" text="Vul %s eerst bij!"/>
+
+        <text name="configuration_refillSupplies" text="Opslag bijvullen"/>
+        <text name="configuration_manually" text="Handmatig"/>
+        <text name="configuration_automatically" text="Automatisch"/>
+
+        <!-- Variable bale size -->
+        <text name="action_baleUnitSize" text="Huidig baal formaat wisselen %.2f."/>
+        <text name="warning_baleTooSmall" text="Het volgende baal formaat %.2f is te klein voor het huidige vulniveau."/>
+
+        <!-- Misc -->
+        <text name="strawHarvest_message_failedHeightTypes" text="Stro Oogst Addon kon niet voor de geselecteerde map geladen worden: de map in combinatie met de geactiveerde mods is niet te gebruiken in samenwerking met de Stro Oogst Addon. (Te veel verschillende gewassen)."/>
+    </texts>
+</l10n>

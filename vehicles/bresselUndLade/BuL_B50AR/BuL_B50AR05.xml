@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="strawHarvestBaleGrab">
+    <annotation>Copyright (C) Creative Mesh UG (haftungsbeschränkt), All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>B50 AR-05</name>
+        <specs>
+            <combination>W190D</combination>
+        </specs>
+        <functions>
+            <function>$l10n_function_baleGrab</function>
+        </functions>
+        <image>vehicles/bresselUndLade/BuL_B50AR/store_BuL50AR05.dds</image>
+        <price>14200</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <shopHeight>3</shopHeight>
+        <shopTranslationOffset>0 0 -1</shopTranslationOffset>
+        <shopFoldingState>1</shopFoldingState>
+        <brand>BRESSELUNDLADE</brand>
+        <category>baling</category>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_baleGrab</typeDesc>
+        <filename>vehicles/bresselUndLade/BuL_B50AR/BuL_B50AR05.i3d</filename>
+        <size width="3.5" length="2.5" />
+        <components count="1">
+            <component centerOfMass="0 0.3 0.4" solverIterationCount="10" mass="1800" />
+        </components>
+        <schemaOverlay attacherJointPosition="0 0">
+            <default name="DEFAULT_IMPLEMENT" />
+            <selected name="DEFAULT_IMPLEMENT_SELECTED" />
+        </schemaOverlay>
+    </base>
+
+    <attachable>
+        <inputAttacherJointConfigurations>
+            <inputAttacherJointConfiguration name="$l10n_configuration_inputAttacherWheelLoader" price="0">
+                <inputAttacherJoint node="wheelLoader_attacherJoint" jointType="wheelLoader" />
+            </inputAttacherJointConfiguration>
+        </inputAttacherJointConfigurations>
+    </attachable>
+
+    <dynamicallyLoadedParts>
+        <dynamicallyLoadedPart node="1|0" linkNode="hydraulicIn01Stored" filename="$data/shared/connectionHoses/connectors.i3d"/>
+        <dynamicallyLoadedPart node="1|0" linkNode="hydraulicOut01Stored" filename="$data/shared/connectionHoses/connectors.i3d"/>
+        <dynamicallyLoadedPart node="1|0" linkNode="hydraulicIn02Stored" filename="$data/shared/connectionHoses/connectors.i3d"/>
+        <dynamicallyLoadedPart node="1|0" linkNode="hydraulicOut02Stored" filename="$data/shared/connectionHoses/connectors.i3d"/>
+    </dynamicallyLoadedParts>
+    
+    <connectionHoses>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn"  node="hydraulicIn01"  length="1.0" diameter="0.02" straighteningFactor="2.5">
+            <objectChange node="hydraulicIn01_detached" visibilityActive="false" visibilityInactive="true" />
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicOut" node="hydraulicOut01" length="1.0" diameter="0.02" straighteningFactor="2.5">
+            <objectChange node="hydraulicOut01_detached" visibilityActive="false" visibilityInactive="true" />
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn"  node="hydraulicIn02"  length="1.0" diameter="0.02" straighteningFactor="2.5">
+            <objectChange node="hydraulicIn02_detached" visibilityActive="false" visibilityInactive="true" />
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicOut" node="hydraulicOut02" length="1.0" diameter="0.02" straighteningFactor="2.5">
+            <objectChange node="hydraulicOut02_detached" visibilityActive="false" visibilityInactive="true" />
+        </hose>
+    </connectionHoses>
+
+    <lights>
+        <sharedLight linkNode="reflector01" filename="$data/shared/assets/reflectors/lizard/yellowRound_01.xml"/>
+        <sharedLight linkNode="reflector02" filename="$data/shared/assets/reflectors/lizard/yellowRound_01.xml"/>
+        <sharedLight linkNode="reflector03" filename="$data/shared/assets/reflectors/lizard/yellowRound_01.xml"/>
+        <sharedLight linkNode="reflector04" filename="$data/shared/assets/reflectors/lizard/yellowRound_01.xml"/>
+        <sharedLight linkNode="reflector05" filename="$data/shared/assets/reflectors/lizard/yellowRound_01.xml"/>
+        <sharedLight linkNode="reflector06" filename="$data/shared/assets/reflectors/lizard/yellowRound_01.xml"/>
+    </lights>
+
+    <animations>
+        <animation name="folding">
+            <part node="main_frame_left" startTime="0.1" endTime="4.0" startRot="0 0 0" endRot="0 0 90" />
+            <part node="main_frame_right" startTime="0.1" endTime="4.0" startRot="0 0 0" endRot="0 0 -90" />
+            <part node="holder_vis" startTime="0.0" endTime="0.1" visibility="true" />
+            <part node="holder_vis" startTime="0.1" endTime="0.2" visibility="false" />
+
+            <!-- bolzen links -->
+            <part node="bolzen_left" startTime="0.0" endTime="0.1" visibility="true" />
+            <part node="bolzen_left" startTime="0.1" endTime="0.2" visibility="false" />
+            <part node="bolzen_left" startTime="0.2" endTime="3.8" startTrans="0.495 0.958 -0.448" endTrans="0.495 0.977 -0.448" />
+            <part node="bolzen_left" startTime="3.8" endTime="3.9" visibility="false" />
+            <part node="bolzen_left" startTime="3.9" endTime="4.0" visibility="true" />
+
+            <!-- bolzen links -->
+            <part node="bolzen_right" startTime="0.0" endTime="0.1" visibility="true" />
+            <part node="bolzen_right" startTime="0.1" endTime="0.2" visibility="false" />
+            <part node="bolzen_right" startTime="0.2" endTime="3.8" startTrans="-0.526 0.958 -0.448" endTrans="-0.526 0.970 -0.448" />
+            <part node="bolzen_right" startTime="3.8" endTime="3.9" visibility="false" />
+            <part node="bolzen_right" startTime="3.9" endTime="4.0" visibility="true" />
+        </animation>
+
+        <animation name="closeHooksLeftOuter">
+            <!-- left outer hook -->
+            <part node="clamp1_back" startTime="0.0" endTime="4.0" startRot="0 0 0" endRot="90 0 0" />
+            <part node="clamp1_front" startTime="0.0" endTime="4.0" startRot="0 0 0" endRot="90 0 0" />
+        </animation>
+        <animation name="closeHooksLeftInner">
+            <!-- left inner hook -->
+            <part node="clamp2_back" startTime="0.0" endTime="4.0" startRot="0 0 0" endRot="90 0 0" />
+            <part node="clamp2_front" startTime="0.0" endTime="4.0" startRot="0 0 0" endRot="90 0 0" />
+        </animation>
+        <animation name="closeHooksMiddle">
+            <!-- middle hook -->
+            <part node="clamp3_back" startTime="0.0" endTime="4.0" startRot="0 0 0" endRot="90 0 0" />
+            <part node="clamp3_front" startTime="0.0" endTime="4.0" startRot="0 0 0" endRot="90 0 0" />
+        </animation>
+        <animation name="closeHooksRightInner">
+            <!-- right inner hook -->
+            <part node="clamp4_back" startTime="0.0" endTime="4.0" startRot="0 0 0" endRot="90 0 0" />
+            <part node="clamp4_front" startTime="0.0" endTime="4.0" startRot="0 0 0" endRot="90 0 0" />
+        </animation>
+        <animation name="closeHooksRightOuter">
+            <!-- right outer hook -->
+            <part node="clamp5_back" startTime="0.0" endTime="4.0" startRot="0 0 0" endRot="90 0 0" />
+            <part node="clamp5_front" startTime="0.0" endTime="4.0" startRot="0 0 0" endRot="90 0 0" />
+        </animation>
+
+        <animation name="closeHooksMiddle_col">
+            <!-- hook collision -->
+            <part node="hookCollision" startTime="0.0" endTime="4.0" startTrans="0 -0.011 0" endTrans="0 -0.415 0" />
+        </animation>
+
+        <animation name="valveTriggerLeftOuter">
+            <part node="clamp1_mechanic" startTime="0.0" endTime="1.0" startRot="0 0 0" endRot="30.769 0 0" />
+        </animation>
+        <animation name="valveTriggerLeftInner">
+            <part node="clamp2_mechanic" startTime="0.0" endTime="1.0" startRot="0 0 0" endRot="30.769 0 0" />
+        </animation>
+        <animation name="valveTriggerRightInner">
+            <part node="clamp4_mechanic" startTime="0.0" endTime="1.0" startRot="0 0 0" endRot="30.769 0 0" />
+        </animation>
+        <animation name="valveTriggerRightOuter">
+            <part node="clamp5_mechanic" startTime="0.0" endTime="1.0" startRot="0 0 0" endRot="30.769 0 0" />
+        </animation>
+    </animations>
+
+    <cylindered>
+        <movingTools>
+            <movingTool node="clamp1_back" playSound="true">
+            </movingTool>
+            <movingTool node="clamp2_back" playSound="true">
+            </movingTool>
+            <movingTool node="clamp3_back" playSound="true">
+            </movingTool>
+            <movingTool node="clamp4_back" playSound="true">
+            </movingTool>
+            <movingTool node="clamp5_back" playSound="true">
+            </movingTool>
+            <movingTool node="main_frame_left" playSound="true">
+            </movingTool>
+        </movingTools>
+        <movingParts>
+            <!-- left outer hook -->
+            <movingPart node="clamp1_pipe" referencePoint="clamp1_pipeRef" referenceFrame="clamp1_pipeRef" isActiveDirty="true" />
+
+            <movingPart node="clamp1_cylinder" referencePoint="clamp1_cylRef" referenceFrame="main_frame_left" isActiveDirty="true">
+                <translatingPart node="clamp1_stamp" />
+            </movingPart>
+
+            <!-- left inner hook -->
+            <movingPart node="clamp2_pipe" referencePoint="clamp2_pipeRef" referenceFrame="clamp2_pipeRef" isActiveDirty="true" />
+
+            <movingPart node="clamp2_cylinder" referencePoint="clamp2_cylRef" referenceFrame="main_frame_left" isActiveDirty="true">
+                <translatingPart node="clamp2_stamp" />
+            </movingPart>
+
+            <!-- middle hook -->
+            <movingPart node="clamp3_pipe" referencePoint="clamp3_pipeRef" referenceFrame="clamp3_pipeRef" isActiveDirty="true" />
+
+            <movingPart node="clamp3_cylinder" referencePoint="clamp3_cylRef" referenceFrame="BuL_B50AR05_main_component1" isActiveDirty="true">
+                <translatingPart node="clamp3_stamp" />
+            </movingPart>
+
+            <!-- right inner hook -->
+            <movingPart node="clamp4_pipe" referencePoint="clamp4_pipeRef" referenceFrame="clamp4_pipeRef" isActiveDirty="true" />
+
+            <movingPart node="clamp4_cylinder" referencePoint="clamp4_cylRef" referenceFrame="main_frame_right" isActiveDirty="true">
+                <translatingPart node="clamp4_stamp" />
+            </movingPart>
+
+            <!-- right outer hook -->
+            <movingPart node="clamp5_pipe" referencePoint="clamp5_pipeRef" referenceFrame="clamp5_pipeRef" isActiveDirty="true" />
+
+            <movingPart node="clamp5_cylinder" referencePoint="clamp5_cylRef" referenceFrame="main_frame_right" isActiveDirty="true">
+                <translatingPart node="clamp5_stamp" />
+            </movingPart>
+
+            <!-- fold cylinders -->
+            <movingPart node="right_zyl_vis" referencePoint="frameRightCylinderRef" referenceFrame="BuL_B50AR05_main_component1" isActiveDirty="true">
+                <translatingPart node="right_stamp_vis" />
+            </movingPart>
+            <movingPart node="left_zyl_vis" referencePoint="frameLeftCylinderRef" referenceFrame="BuL_B50AR05_main_component1" isActiveDirty="true">
+                <translatingPart node="left_stamp_vis" />
+            </movingPart>
+
+            <!-- left outer activation trigger -->
+            <movingPart node="clamp1_mechanicPart" localReferencePoint="clamp1_mechanicValve" referencePoint="clamp1_mechRef" limitedAxis="1" referenceFrame="BuL_B50AR05_main_component1" isActiveDirty="true">
+                <dependentPart node="clamp1_mechanicValve" />
+                <dependentPart node="clamp1_spring" />
+            </movingPart>
+            <movingPart node="clamp1_mechanicValve" referencePoint="clamp1_mechRef" referenceFrame="BuL_B50AR05_main_component1" limitedAxis="1" />
+            <movingPart node="clamp1_spring" referencePoint="clamp1_SpringRef" referenceFrame="BuL_B50AR05_main_component1" scaleZ="true" />
+
+            <!-- left inner activation trigger -->
+            <movingPart node="clamp2_mechanicPart" localReferencePoint="clamp2_mechanicValve" referencePoint="clamp2_mechRef" limitedAxis="1" referenceFrame="BuL_B50AR05_main_component1" isActiveDirty="true">
+                <dependentPart node="clamp2_mechanicValve" />
+                <dependentPart node="clamp2_spring" />
+            </movingPart>
+            <movingPart node="clamp2_mechanicValve" referencePoint="clamp2_mechRef" referenceFrame="BuL_B50AR05_main_component1" limitedAxis="1" />
+            <movingPart node="clamp2_spring" referencePoint="clamp2_SpringRef" referenceFrame="BuL_B50AR05_main_component1" scaleZ="true" />
+
+            <!-- right inner activation trigger -->
+            <movingPart node="clamp4_mechanicPart" localReferencePoint="clamp4_mechanicValve" referencePoint="clamp4_mechRef" limitedAxis="1" referenceFrame="BuL_B50AR05_main_component1" isActiveDirty="true">
+                <dependentPart node="clamp4_mechanicValve" />
+                <dependentPart node="clamp4_spring" />
+            </movingPart>
+            <movingPart node="clamp4_mechanicValve" referencePoint="clamp4_mechRef" referenceFrame="BuL_B50AR05_main_component1" limitedAxis="1" />
+            <movingPart node="clamp4_spring" referencePoint="clamp4_SpringRef" referenceFrame="BuL_B50AR05_main_component1" scaleZ="true" />
+
+            <!-- right outer activation trigger -->
+            <movingPart node="clamp5_mechanicPart" localReferencePoint="clamp5_mechanicValve" referencePoint="clamp5_mechRef" limitedAxis="1" referenceFrame="BuL_B50AR05_main_component1" isActiveDirty="true">
+                <dependentPart node="clamp5_mechanicValve" />
+                <dependentPart node="clamp5_spring" />
+            </movingPart>
+            <movingPart node="clamp5_mechanicValve" referencePoint="clamp5_mechRef" referenceFrame="BuL_B50AR05_main_component1" limitedAxis="1" />
+            <movingPart node="clamp5_spring" referencePoint="clamp5_SpringRef" referenceFrame="BuL_B50AR05_main_component1" scaleZ="true" />
+        </movingParts>
+        <sounds>
+            <hydraulic template="DEFAULT_HYDRAULIC_SOUND" linkNode="0>" />
+        </sounds>
+    </cylindered>
+
+    <foldable>
+        <foldingParts startMoveDirection="1" turnOnFoldDirection="-1">
+            <foldingPart animationName="folding" speedScale="1" />
+        </foldingParts>
+    </foldable>
+
+
+    <baleGrab>
+        <units>
+            <unit animationName="closeHooksLeftOuter" baleTriggerIndex="clamp1_baleTrigger" />
+            <unit animationName="closeHooksLeftInner" baleTriggerIndex="clamp2_baleTrigger" />
+            <unit animationName="closeHooksMiddle" baleTriggerIndex="baleTrigger" onlyCloseIfTriggered="false" noBaleAttachedAnimationName="closeHooksMiddle_col" />
+            <unit animationName="closeHooksRightInner" baleTriggerIndex="clamp4_baleTrigger" />
+            <unit animationName="closeHooksRightOuter" baleTriggerIndex="clamp5_baleTrigger" />
+        </units>
+    </baleGrab>
+
+    <raycastAnimations>
+        <animation name="valveTriggerLeftOuter" raycastNodeIndex="clamp1_raycastNode" raycastDirection="0 -1 0" collisionMask="8194" dist0="0.02" dist1="0.2" />
+        <animation name="valveTriggerLeftInner" raycastNodeIndex="clamp2_raycastNode" raycastDirection="0 -1 0" collisionMask="8194" dist0="0.02" dist1="0.2" />
+        <animation name="valveTriggerRightInner" raycastNodeIndex="clamp4_raycastNode" raycastDirection="0 -1 0" collisionMask="8194" dist0="0.02" dist1="0.2" />
+        <animation name="valveTriggerRightOuter" raycastNodeIndex="clamp5_raycastNode" raycastDirection="0 -1 0" collisionMask="8194" dist0="0.02" dist1="0.2" />
+    </raycastAnimations>
+
+    <foliageBending>
+        <bendingNode minX="-0.6" maxX="0.6" minZ="-0.5" maxZ="1.8" yOffset="0" />
+        <bendingNode minX="-0.6" maxX="-3" minZ="-0.5" maxZ="1.8" yOffset="0" node="frame_right" />
+        <bendingNode minX="00.6" maxX="3" minZ="-0.5" maxZ="1.8" yOffset="0" node="frame_left_vis" />
+    </foliageBending>
+
+    <baseMaterial>
+        <material name="BuL_B50AR05_mat" baseNode="frame_middle_vis">
+            <shaderParameter name="colorMat0" value="1 1 1 0" />
+        </material>
+    </baseMaterial>
+
+    <baseMaterialConfigurations price="1000" useDefaultColors="true" defaultColorIndex="0">
+        <baseMaterialConfiguration price="0" name="BRESSEL UND LADE GREY" color="0.0781 0.0859 0.0781 0" />
+        <baseMaterialConfiguration price="0" name="BRESSEL UND LADE BLACK" color="0.0070 0.0070 0.0082 0" />
+        <baseMaterialConfiguration price="0" name="BRESSEL UND LADE GREEN" color="0.1484 0.1992 0.0976 0" />
+        <baseMaterialConfiguration price="0" name="BRESSEL UND LADE ORANGE" color="0.7578 0.1562 0.0039 0" />
+        <material name="BuL_B50AR05_mat" shaderParameter="colorMat0" />
+    </baseMaterialConfigurations>
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2" />
+    <washable dirtDuration="90" washDuration="1" workMultiplier="6" fieldMultiplier="2" />
+
+    <i3dMappings>
+        <i3dMapping id="BuL_B50AR05_main_component1" node="0>" />
+        <i3dMapping id="wheelLoader_attacherJoint" node="0>0|0" />
+        <i3dMapping id="hosesStored" node="0>0|1" />
+        <i3dMapping id="hydraulicIn01_detached" node="0>0|1|0" />
+        <i3dMapping id="hydraulicIn01Stored" node="0>0|1|0|0" />
+        <i3dMapping id="hydraulicOut01_detached" node="0>0|1|1" />
+        <i3dMapping id="hydraulicOut01Stored" node="0>0|1|1|0" />
+        <i3dMapping id="hydraulicIn02_detached" node="0>0|1|2" />
+        <i3dMapping id="hydraulicIn02Stored" node="0>0|1|2|0" />
+        <i3dMapping id="hydraulicOut02_detached" node="0>0|1|3" />
+        <i3dMapping id="hydraulicOut02Stored" node="0>0|1|3|0" />
+        <i3dMapping id="hydraulicIn01" node="0>0|2|0" />
+        <i3dMapping id="hydraulicOut01" node="0>0|2|1" />
+        <i3dMapping id="hydraulicIn02" node="0>0|2|2" />
+        <i3dMapping id="hydraulicOut02" node="0>0|2|3" />
+        <i3dMapping id="topCollision_middle" node="0>1" />
+        <i3dMapping id="main_frame_left" node="0>2" />
+        <i3dMapping id="frame_left_vis" node="0>2|0" />
+        <i3dMapping id="clamp1" node="0>2|1" />
+        <i3dMapping id="clamp1_back" node="0>2|1|0" />
+        <i3dMapping id="clamp1_decal" node="0>2|1|0|0" />
+        <i3dMapping id="clamp1_cylRef" node="0>2|1|0|1" />
+        <i3dMapping id="clamp1_pipe" node="0>2|1|0|2" />
+        <i3dMapping id="clamp1_pipeDecal" node="0>2|1|0|2|0" />
+        <i3dMapping id="clamp1_front" node="0>2|1|1" />
+        <i3dMapping id="clamp1_pipeRef" node="0>2|1|1|0" />
+        <i3dMapping id="clamp1_cylinder" node="0>2|1|2" />
+        <i3dMapping id="clamp1_stamp" node="0>2|1|2|0" />
+        <i3dMapping id="clamp1_j" node="0>2|1|2|1" />
+        <i3dMapping id="clamp1_mechanic" node="0>2|1|3" />
+        <i3dMapping id="clamp1_mechanicPart" node="0>2|1|3|0" />
+        <i3dMapping id="clamp1_mechanicValve" node="0>2|1|3|0|0" />
+        <i3dMapping id="clamp1_SpringRef" node="0>2|1|3|0|0|0" />
+        <i3dMapping id="clamp1_spring" node="0>2|1|4" />
+        <i3dMapping id="clamp1_raycastNode" node="0>2|1|5" />
+        <i3dMapping id="clamp1_baleTrigger" node="0>2|1|6" />
+        <i3dMapping id="clamp1_mechRef" node="0>2|1|7" />
+        <i3dMapping id="clamp2" node="0>2|2" />
+        <i3dMapping id="clamp2_back" node="0>2|2|0" />
+        <i3dMapping id="clamp2_decal" node="0>2|2|0|0" />
+        <i3dMapping id="clamp2_pipe" node="0>2|2|0|1" />
+        <i3dMapping id="clamp2_pipeDecal" node="0>2|2|0|1|0" />
+        <i3dMapping id="clamp2_cylRef" node="0>2|2|0|2" />
+        <i3dMapping id="clamp2_front" node="0>2|2|1" />
+        <i3dMapping id="clamp2_pipeRef" node="0>2|2|1|0" />
+        <i3dMapping id="clamp2_cylinder" node="0>2|2|2" />
+        <i3dMapping id="clamp2_stamp" node="0>2|2|2|0" />
+        <i3dMapping id="clamp2_j" node="0>2|2|2|1" />
+        <i3dMapping id="clamp2_mechanic" node="0>2|2|3" />
+        <i3dMapping id="clamp2_mechanicPart" node="0>2|2|3|0" />
+        <i3dMapping id="clamp2_mechanicValve" node="0>2|2|3|0|0" />
+        <i3dMapping id="clamp2_SpringRef" node="0>2|2|3|0|0|0" />
+        <i3dMapping id="clamp2_spring" node="0>2|2|4" />
+        <i3dMapping id="clamp2_raycastNode" node="0>2|2|5" />
+        <i3dMapping id="clamp2_baleTrigger" node="0>2|2|6" />
+        <i3dMapping id="clamp2_mechRef" node="0>2|2|7" />
+        <i3dMapping id="decals_vis_left" node="0>2|3" />
+        <i3dMapping id="topCollision_left" node="0>2|4" />
+        <i3dMapping id="back_collision_left" node="0>2|5" />
+        <i3dMapping id="frameLeftCylinderRef" node="0>2|6" />
+        <i3dMapping id="leftFrameJoint" node="0>2|7" />
+        <i3dMapping id="main_frame_middle" node="0>3" />
+        <i3dMapping id="frame_middle_vis" node="0>3|0" />
+        <i3dMapping id="decals_middle_vis" node="0>3|0|0" />
+        <i3dMapping id="holder_vis" node="0>3|0|1" />
+        <i3dMapping id="bolzen_left" node="0>3|0|2" />
+        <i3dMapping id="bolzen_right" node="0>3|0|3" />
+        <i3dMapping id="hydraulicCoupling" node="0>3|0|4" />
+        <i3dMapping id="sharedLights" node="0>3|1" />
+        <i3dMapping id="reflector01" node="0>3|1|0" />
+        <i3dMapping id="reflector02" node="0>3|1|1" />
+        <i3dMapping id="reflector03" node="0>3|1|2" />
+        <i3dMapping id="reflector04" node="0>3|1|3" />
+        <i3dMapping id="reflector05" node="0>3|1|4" />
+        <i3dMapping id="reflector06" node="0>3|1|5" />
+        <i3dMapping id="hoses_vis_index_0_3_2" node="0>3|2" />
+        <i3dMapping id="helpJoint_middle" node="0>3|2|0" />
+        <i3dMapping id="clamp3" node="0>3|3" />
+        <i3dMapping id="clamp3_back" node="0>3|3|0" />
+        <i3dMapping id="clamp3_decal" node="0>3|3|0|0" />
+        <i3dMapping id="clamp3_pipe" node="0>3|3|0|1" />
+        <i3dMapping id="clamp3_pipeDecal" node="0>3|3|0|1|0" />
+        <i3dMapping id="clamp3_cylRef" node="0>3|3|0|2" />
+        <i3dMapping id="clamp3_front" node="0>3|3|1" />
+        <i3dMapping id="clamp3_pipeRef" node="0>3|3|1|0" />
+        <i3dMapping id="clamp3_cylinder" node="0>3|3|2" />
+        <i3dMapping id="clamp3_stamp" node="0>3|3|2|0" />
+        <i3dMapping id="clamp3_j" node="0>3|3|2|1" />
+        <i3dMapping id="baleTrigger" node="0>3|3|3" />
+        <i3dMapping id="hookCollision" node="0>3|3|4" />
+        <i3dMapping id="right_zyl_vis" node="0>3|4" />
+        <i3dMapping id="right_stamp_vis" node="0>3|4|0" />
+        <i3dMapping id="folding_right_cylinder" node="0>3|4|1" />
+        <i3dMapping id="left_zyl_vis" node="0>3|5" />
+        <i3dMapping id="left_stamp_vis" node="0>3|5|0" />
+        <i3dMapping id="folding_left_cylinder" node="0>3|5|1" />
+        <i3dMapping id="main_frame_right" node="0>4" />
+        <i3dMapping id="frame_right" node="0>4|0" />
+        <i3dMapping id="clamp4" node="0>4|1" />
+        <i3dMapping id="clamp4_back" node="0>4|1|0" />
+        <i3dMapping id="clamp4_decal" node="0>4|1|0|0" />
+        <i3dMapping id="clamp4_pipe" node="0>4|1|0|1" />
+        <i3dMapping id="clamp4_pipeDecal" node="0>4|1|0|1|0" />
+        <i3dMapping id="clamp4_cylRef" node="0>4|1|0|2" />
+        <i3dMapping id="clamp4_front" node="0>4|1|1" />
+        <i3dMapping id="clamp4_pipeRef" node="0>4|1|1|0" />
+        <i3dMapping id="clamp4_cylinder" node="0>4|1|2" />
+        <i3dMapping id="clamp4_stamp" node="0>4|1|2|0" />
+        <i3dMapping id="clamp4_j" node="0>4|1|2|1" />
+        <i3dMapping id="clamp4_mechanic" node="0>4|1|3" />
+        <i3dMapping id="clamp4_mechanicPart" node="0>4|1|3|0" />
+        <i3dMapping id="clamp4_mechanicValve" node="0>4|1|3|0|0" />
+        <i3dMapping id="clamp4_SpringRef" node="0>4|1|3|0|0|0" />
+        <i3dMapping id="clamp4_spring" node="0>4|1|4" />
+        <i3dMapping id="clamp4_baleTrigger" node="0>4|1|5" />
+        <i3dMapping id="clamp4_raycastNode" node="0>4|1|6" />
+        <i3dMapping id="clamp4_mechRef" node="0>4|1|7" />
+        <i3dMapping id="clamp5" node="0>4|2" />
+        <i3dMapping id="clamp5_back" node="0>4|2|0" />
+        <i3dMapping id="clamp5_decal" node="0>4|2|0|0" />
+        <i3dMapping id="clamp5_pipe" node="0>4|2|0|1" />
+        <i3dMapping id="clamp5_pipeDecal" node="0>4|2|0|1|0" />
+        <i3dMapping id="clamp5_cylRef" node="0>4|2|0|2" />
+        <i3dMapping id="clamp5_front" node="0>4|2|1" />
+        <i3dMapping id="clamp5_pipeRef" node="0>4|2|1|0" />
+        <i3dMapping id="clamp5_cylinder" node="0>4|2|2" />
+        <i3dMapping id="clamp5_stamp" node="0>4|2|2|0" />
+        <i3dMapping id="clamp5_j" node="0>4|2|2|1" />
+        <i3dMapping id="clamp5_mechanic" node="0>4|2|3" />
+        <i3dMapping id="clamp5_mechanicPart" node="0>4|2|3|0" />
+        <i3dMapping id="clamp5_mechanicValve" node="0>4|2|3|0|0" />
+        <i3dMapping id="clamp5_SpringRef" node="0>4|2|3|0|0|0" />
+        <i3dMapping id="clamp5_spring" node="0>4|2|4" />
+        <i3dMapping id="clamp5_baleTrigger" node="0>4|2|5" />
+        <i3dMapping id="clamp5_mechRef" node="0>4|2|6" />
+        <i3dMapping id="clamp5_raycastNode" node="0>4|2|7" />
+        <i3dMapping id="topCollision_right" node="0>4|3" />
+        <i3dMapping id="back_collision_right" node="0>4|4" />
+        <i3dMapping id="frameRightCylinderRef" node="0>4|5" />
+        <i3dMapping id="decals_vis_right" node="0>4|6" />
+        <i3dMapping id="rightFrameJoint" node="0>4|7" />
+        <i3dMapping id="boundingVolume1" node="1>" />
+        <i3dMapping id="boundingVolume2" node="2>" />
+    </i3dMappings>
+</vehicle>

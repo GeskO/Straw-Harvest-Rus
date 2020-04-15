@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="pallet">
+    <storeData>
+        <name>$l10n_molassesPallet</name>
+        <functions>
+            <function>$l10n_function_molassesPallet</function>
+        </functions>
+        <specs>
+            <capacity>24</capacity>
+            <fillTypes>molasses</fillTypes>
+        </specs>
+        <image>objects/pallets/canisterPallet/store_canisterPallet.png</image>
+        <price>100</price>
+        <allowLeasing>false</allowLeasing>
+        <category>pallets</category>
+        <showInStore>true</showInStore>
+        <canBeSold>false</canBeSold>
+        <rotation>0</rotation>
+        <brand>WEIDEGUT</brand>
+        <financeCategory>OTHER</financeCategory>
+    </storeData>
+    
+    <base>
+        <filename>objects/pallets/canisterPallet/canisterPallet.i3d</filename>
+        <size width="2" length="1.5" lengthOffset="0" />
+        <input allowed="false"/>
+        <components>
+            <component centerOfMass="0 0.1 0" solverIterationCount="10" mass="200"/>
+        </components>
+    </base>
+
+    <animations>
+        <animation name="canisterAnimation">
+            <part node="canister01"  startTime="0.000" endTime="0.001" visibility="false" />
+            <part node="canister01"  startTime="0.001" endTime="1.000" visibility="true" />
+
+            <part node="canister02"  startTime="0.000" endTime="0.042" visibility="false" />
+            <part node="canister02"  startTime="0.042" endTime="1.000" visibility="true" />
+
+            <part node="canister03"  startTime="0.000" endTime="0.084" visibility="false" />
+            <part node="canister03"  startTime="0.084" endTime="1.000" visibility="true" />
+
+            <part node="canister04"  startTime="0.000" endTime="0.126" visibility="false" />
+            <part node="canister04"  startTime="0.126" endTime="1.000" visibility="true" />
+
+            <part node="canister05"  startTime="0.000" endTime="0.168" visibility="false" />
+            <part node="canister05"  startTime="0.168" endTime="1.000" visibility="true" />
+
+            <part node="canister06"  startTime="0.000" endTime="0.210" visibility="false" />
+            <part node="canister06"  startTime="0.210" endTime="1.000" visibility="true" />
+
+            <part node="canister07"  startTime="0.000" endTime="0.252" visibility="false" />
+            <part node="canister07"  startTime="0.252" endTime="1.000" visibility="true" />
+
+            <part node="canister08"  startTime="0.000" endTime="0.294" visibility="false" />
+            <part node="canister08"  startTime="0.294" endTime="1.000" visibility="true" />
+
+            <part node="canister09"  startTime="0.000" endTime="0.336" visibility="false" />
+            <part node="canister09"  startTime="0.336" endTime="1.000" visibility="true" />
+
+            <part node="canister10"  startTime="0.000" endTime="0.378" visibility="false" />
+            <part node="canister10"  startTime="0.378" endTime="1.000" visibility="true" />
+
+            <part node="canister11"  startTime="0.000" endTime="0.420" visibility="false" />
+            <part node="canister11"  startTime="0.420" endTime="1.000" visibility="true" />
+
+            <part node="canister12"  startTime="0.000" endTime="0.462" visibility="false" />
+            <part node="canister12"  startTime="0.462" endTime="1.000" visibility="true" />
+
+            <part node="canister13"  startTime="0.000" endTime="0.504" visibility="false" />
+            <part node="canister13"  startTime="0.504" endTime="1.000" visibility="true" />
+
+            <part node="canister14"  startTime="0.000" endTime="0.546" visibility="false" />
+            <part node="canister14"  startTime="0.546" endTime="1.000" visibility="true" />
+
+            <part node="canister15"  startTime="0.000" endTime="0.588" visibility="false" />
+            <part node="canister15"  startTime="0.588" endTime="1.000" visibility="true" />
+
+            <part node="canister16"  startTime="0.000" endTime="0.630" visibility="false" />
+            <part node="canister16"  startTime="0.630" endTime="1.000" visibility="true" />
+
+            <part node="canister17"  startTime="0.000" endTime="0.672" visibility="false" />
+            <part node="canister17"  startTime="0.672" endTime="1.000" visibility="true" />
+
+            <part node="canister18"  startTime="0.000" endTime="0.714" visibility="false" />
+            <part node="canister18"  startTime="0.714" endTime="1.000" visibility="true" />
+
+            <part node="canister19"  startTime="0.000" endTime="0.756" visibility="false" />
+            <part node="canister19"  startTime="0.756" endTime="1.000" visibility="true" />
+
+            <part node="canister20"  startTime="0.000" endTime="0.798" visibility="false" />
+            <part node="canister20"  startTime="0.798" endTime="1.000" visibility="true" />
+
+            <part node="canister21"  startTime="0.000" endTime="0.840" visibility="false" />
+            <part node="canister21"  startTime="0.840" endTime="1.000" visibility="true" />
+
+            <part node="canister22"  startTime="0.000" endTime="0.882" visibility="false" />
+            <part node="canister22"  startTime="0.882" endTime="1.000" visibility="true" />
+
+            <part node="canister23"  startTime="0.000" endTime="0.924" visibility="false" />
+            <part node="canister23"  startTime="0.924" endTime="1.000" visibility="true" />
+
+            <part node="canister24"  startTime="0.000" endTime="0.970" visibility="false" />
+            <part node="canister24"  startTime="0.970" endTime="1.000" visibility="true" />
+        </animation>
+    </animations>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration name="$l10n_configuration_capacityX" price="660" params="480">
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="molasses" startFillType="molasses" capacity="480" startFillLevel="480">
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="canisterAnimation" />
+                    </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration name="$l10n_configuration_capacityX" price="550" params="400">
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="molasses" startFillType="molasses" capacity="480" startFillLevel="400">
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="canisterAnimation" />
+                    </fillUnit>
+                </fillUnits>
+                <objectChange node="canisterConfig20" visibilityActive="false" visibilityInactive="true"/>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration name="$l10n_configuration_capacityX" price="440" params="320">
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="molasses" startFillType="molasses" capacity="480" startFillLevel="320">
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="canisterAnimation" />
+                    </fillUnit>
+                </fillUnits>
+                <objectChange node="canisterConfig16" visibilityActive="false" visibilityInactive="true"/>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration name="$l10n_configuration_capacityX" price="330" params="240">
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="molasses" startFillType="molasses" capacity="480" startFillLevel="240">
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="canisterAnimation" />
+                    </fillUnit>
+                </fillUnits>
+                <objectChange node="canisterConfig12" visibilityActive="false" visibilityInactive="true"/>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration name="$l10n_configuration_capacityX" price="220" params="160">
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="molasses" startFillType="molasses" capacity="480" startFillLevel="160">
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="canisterAnimation" />
+                    </fillUnit>
+                </fillUnits>
+                <objectChange node="canisterConfig08" visibilityActive="false" visibilityInactive="true"/>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration name="$l10n_configuration_capacityX" price="110" params="80">
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="molasses" startFillType="molasses" capacity="480" startFillLevel="80">
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="canisterAnimation" />
+                    </fillUnit>
+                </fillUnits>
+                <objectChange node="canisterConfig04" visibilityActive="false" visibilityInactive="true"/>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <fillTriggerVehicle triggerNode="fillTrigger" fillUnitIndex="1" litersPerSecond="10"/>
+
+    <dischargeable requiresTipOcclusionArea="false"/>
+
+    <dynamicMount triggerNode="dynamicMountTrigger" />
+
+    <tensionBeltObject>
+        <meshNodes>
+            <meshNode node="palletBase"/>
+            <meshNode node="canisterPallet_main_component1"/>
+        </meshNodes>
+    </tensionBeltObject>
+
+    <i3dMappings>
+        <i3dMapping id="canisterPallet_main_component1" node="0>" />
+        <i3dMapping id="triggers" node="0>0" />
+        <i3dMapping id="dynamicMountTrigger" node="0>0|0" />
+        <i3dMapping id="fillTrigger" node="0>0|1" />
+        <i3dMapping id="collisions" node="0>1" />
+        <i3dMapping id="collision1" node="0>1|0" />
+        <i3dMapping id="collision2" node="0>1|1" />
+        <i3dMapping id="collision3" node="0>1|2" />
+        <i3dMapping id="collision4" node="0>1|3" />
+        <i3dMapping id="collision5" node="0>1|4" />
+        <i3dMapping id="collision6" node="0>1|5" />
+        <i3dMapping id="collision7" node="0>1|6" />
+        <i3dMapping id="collision8" node="0>1|7" />
+        <i3dMapping id="collision9" node="0>1|8" />
+        <i3dMapping id="palletBase" node="0>2" />
+        <i3dMapping id="canisters" node="0>2|0" />
+        <i3dMapping id="canister01" node="0>2|0|0" />
+        <i3dMapping id="canister02" node="0>2|0|1" />
+        <i3dMapping id="canister03" node="0>2|0|2" />
+        <i3dMapping id="canister04" node="0>2|0|3" />
+        <i3dMapping id="canisterConfig04" node="0>2|0|4" />
+        <i3dMapping id="canister05" node="0>2|0|4|0" />
+        <i3dMapping id="canister06" node="0>2|0|4|1" />
+        <i3dMapping id="canister07" node="0>2|0|4|2" />
+        <i3dMapping id="canister08" node="0>2|0|4|3" />
+        <i3dMapping id="canisterConfig08" node="0>2|0|4|4" />
+        <i3dMapping id="canister09" node="0>2|0|4|4|0" />
+        <i3dMapping id="canister10" node="0>2|0|4|4|1" />
+        <i3dMapping id="canister11" node="0>2|0|4|4|2" />
+        <i3dMapping id="canister12" node="0>2|0|4|4|3" />
+        <i3dMapping id="canisterConfig12" node="0>2|0|4|4|4" />
+        <i3dMapping id="canister13" node="0>2|0|4|4|4|0" />
+        <i3dMapping id="canister14" node="0>2|0|4|4|4|1" />
+        <i3dMapping id="canister15" node="0>2|0|4|4|4|2" />
+        <i3dMapping id="canister16" node="0>2|0|4|4|4|3" />
+        <i3dMapping id="canisterConfig16" node="0>2|0|4|4|4|4" />
+        <i3dMapping id="canister17" node="0>2|0|4|4|4|4|0" />
+        <i3dMapping id="canister18" node="0>2|0|4|4|4|4|1" />
+        <i3dMapping id="canister19" node="0>2|0|4|4|4|4|2" />
+        <i3dMapping id="canister20" node="0>2|0|4|4|4|4|3" />
+        <i3dMapping id="canisterConfig20" node="0>2|0|4|4|4|4|4" />
+        <i3dMapping id="canister21" node="0>2|0|4|4|4|4|4|0" />
+        <i3dMapping id="canister22" node="0>2|0|4|4|4|4|4|1" />
+        <i3dMapping id="canister23" node="0>2|0|4|4|4|4|4|2" />
+        <i3dMapping id="canister24" node="0>2|0|4|4|4|4|4|3" />
+        <i3dMapping id="palletCage" node="0>2|1" />
+        <i3dMapping id="wireInside" node="0>2|1|0" />
+        <i3dMapping id="wire3" node="0>2|1|1" />
+        <i3dMapping id="wire2" node="0>2|1|2" />
+        <i3dMapping id="wire1" node="0>2|1|3" />
+        <i3dMapping id="wire" node="0>2|1|4" />
+    </i3dMappings>
+</vehicle>

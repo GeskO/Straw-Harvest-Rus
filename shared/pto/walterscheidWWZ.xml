@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<powerTakeOff filename="shared/pto/walterscheidWWZ.i3d" colorShaderParameter="colorMat0" isDoubleJoint="true" size="0.25" zOffset="0.045">
+    <startNode node="0"/>
+    <startJoint1 node="0|0|0"/>
+    <startJoint2 node="0|0|0|0|0"/>
+    <scalePart node="0|0|0|0|0|1" referenceNode="0|0|0|0|0|0|2"/>
+    <translationPart node="0|0|0|0|0|0|1" referenceNode="0|0|0|0|0|1" length="0.335">
+        <decal node="0|0|0|0|0|0|1|0" size="0.086" offset="0.075" minOffset="0.01"/>
+    </translationPart>
+    <endJoint1 node="0|0|0|0|0|0" referenceNode="0|0|0|0|0|0|0|0|0|0"/>
+    <endJoint2 node="0|0|0|0|0|0|0|0|0"/>
+    <linkNode node="0|0|0|0|0|0|0"/>
+
+    <animationNodes>
+        <animationNode node="0|1"                   rotSpeed="2700"  rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="2" />
+        <animationNode node="0|0|0|1"               rotSpeed="2700" rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="2" />
+        <animationNode node="0|0|0|0|0|0|0|0|0|1"   rotSpeed="-2700" rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="2" />
+        <animationNode node="0|0|0|0|0|0|0|1"       rotSpeed="-2700"  rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="2" />
+        <animationNode class="ShakeAnimation" node="0|2" shaking="0.002 0.002 0 100" turnOnFadeTime="1" turnOffFadeTime="2" />
+        <animationNode class="ShakeAnimation" node="0|0|0" shaking="0.002 0.002 0 100" turnOnFadeTime="1" turnOffFadeTime="2" />
+        <animationNode class="ShakeAnimation" node="0|0|0|3" shaking="0.002 0.002 0 100" turnOnFadeTime="1" turnOffFadeTime="2" />
+        <animationNode class="ShakeAnimation" node="0|0|0|0|0" shaking="0.002 0.002 0 100" turnOnFadeTime="1" turnOffFadeTime="2" />
+        <animationNode class="ShakeAnimation" node="0|0|0|0|0|0" shaking="0.002 0.002 0 100" turnOnFadeTime="1" turnOffFadeTime="2" />
+        <animationNode class="ShakeAnimation" node="0|0|0|0|0|1" shaking="0.002 0.002 0 100" turnOnFadeTime="1" turnOffFadeTime="2" />
+        <animationNode class="ShakeAnimation" node="0|0|0|0|0|0|1|0" shaking="0.002 0.002 0 100" turnOnFadeTime="1" turnOffFadeTime="2" />
+        <animationNode class="ShakeAnimation" node="0|0|0|0|0|0|1" shaking="0.002 0.002 0 100" turnOnFadeTime="1" turnOffFadeTime="2" />
+        <animationNode class="ShakeAnimation" node="0|0|0|0|0|0|0|0|0" shaking="-0.002 0.002 0 100" turnOnFadeTime="1" turnOffFadeTime="2" />
+        <animationNode class="ShakeAnimation" node="0|0|0|0|0|0|0|0|0|3" shaking="0.002 0.002 0 100" turnOnFadeTime="1" turnOffFadeTime="2" />
+    </animationNodes>
+</powerTakeOff>

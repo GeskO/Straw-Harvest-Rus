@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="BuL_B50AR03_ingaming" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="1" filename="BuL_B50AR03_normal.png" />
+    <File fileId="2" filename="BuL_B50AR03_specular.png" />
+    <File fileId="5" filename="$data/shared/default_normal.png" />
+    <File fileId="6" filename="$data/shared/connectionHoses/hoses1_specular.png" />
+    <File fileId="7" filename="../../../shared/baleGrabAdaptor/adaptor_normal.png" />
+    <File fileId="8" filename="../../../shared/baleGrabAdaptor/adaptor_specular.png" />
+    <File fileId="9" filename="../../../shared/baleGrabAdaptor/adaptor_diffuse.png" />
+    <File fileId="4" filename="BuL_B50AR03_diffuse.png" />
+    <File fileId="3" filename="$data/shaders/vehicleShader.xml" />
+  </Files>
+
+  <Materials>
+    <Material name="lambert1" materialId="1" diffuseColor="1 1 1 0" specularColor="0 0 0" ambientColor="1 1 1">
+    </Material>
+    <Material name="BuL_B50AR03_mat" materialId="2" diffuseColor="0.5 0.5 0.5 1" cosPower="50" specularColor="1 1 1" ambientColor="1 1 1" customShaderId="3" customShaderVariation="colorMask">
+      <CustomParameter name="colorMat3" value="0.10 0.10 1.00 1.0"/>
+      <CustomParameter name="colorMat2" value="0.10 1.00 0.10 1.0"/>
+      <CustomParameter name="RDT" value="1.0 1.0 0.0 0.0"/>
+      <CustomParameter name="colorMat0" value="1.0 1.0 1.0 0.0"/>
+      <CustomParameter name="colorMat1" value="0.0080 0.2051 0.1144 1.0"/>
+      <Normalmap fileId="1"/>
+      <Glossmap fileId="2"/>
+    </Material>
+    <Material name="decals_mat" materialId="6" cosPower="50" specularColor="1 1 1" ambientColor="1 1 1" alphaBlending="true" customShaderId="3" customShaderVariation="Decal">
+      <CustomParameter name="RDT" value="1.0 1.0 0.0 0.0"/>
+      <Texture fileId="4"/>
+      <Normalmap fileId="1"/>
+      <Glossmap fileId="2"/>
+    </Material>
+    <Material name="hoses_mat" materialId="5" diffuseColor="0.5 0.5 0.5 1" cosPower="50" specularColor="1 1 1" ambientColor="1 1 1" customShaderId="3" customShaderVariation="colorMask">
+      <Normalmap fileId="5"/>
+      <Glossmap fileId="6"/>
+    </Material>
+    <Material name="adaptor_mat" materialId="3" diffuseColor="0.5 0.5 0.5 1" cosPower="50" specularColor="1 1 1" ambientColor="1 1 1" customShaderId="3" customShaderVariation="colorMask">
+      <CustomParameter name="RDT" value="1.0 1.0 0.0 0.0"/>
+      <CustomParameter name="colorMat0" value="1.0 1.0 1.0 0.0"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="8"/>
+    </Material>
+    <Material name="adaptor_decals_mat" materialId="4" cosPower="50" specularColor="1 1 1" ambientColor="1 1 1" alphaBlending="true" customShaderId="3" customShaderVariation="Decal">
+      <CustomParameter name="RDT" value="1.0 1.0 0.0 0.0"/>
+      <Texture fileId="9"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="8"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="BuL_B50AR03.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <Shape name="BuL_B50AR03_main_component1" shapeId="1" dynamic="true" compound="true" density="1.3" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="1">
+      <Shape name="topCollision" shapeId="2" compoundChild="true" density="0.15" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="2"/>
+      <TransformGroup name="hydraulic" rotation="0 180 0" nodeId="3">
+        <TransformGroup name="grabMechanismRight" collision="false" collisionMask="0" clipDistance="300" nodeId="4">
+          <TransformGroup name="grab_back_right" translation="1.51749 0.56434 -0.582878" clipDistance="300" nodeId="5">
+            <TransformGroup name="grab_connect_right" translation="-0.523864 0.11443 0.1125" rotation="0 180 0" collision="false" collisionMask="0" clipDistance="300" nodeId="6"/>
+            <TransformGroup name="cyl_fixPointRight" translation="-0.525361 0.172089 0.172118" collision="false" collisionMask="0" clipDistance="300" nodeId="7"/>
+          </TransformGroup>
+          <TransformGroup name="grab_front_right" translation="1.51749 0.56434 -1.5069" collision="false" collisionMask="0" clipDistance="300" nodeId="8">
+            <TransformGroup name="connector_fixPointRight" translation="-0.523864 0.11443 0.110159" collision="false" collisionMask="0" clipDistance="300" nodeId="9"/>
+          </TransformGroup>
+          <TransformGroup name="zylinder_right" translation="0.99213 0.674584 0.173318" rotation="173.956 4.41391e-32 180" collision="false" collisionMask="0" clipDistance="300" nodeId="10">
+            <TransformGroup name="stamp_right" translation="1.42109e-16 2.83801e-15 0.587343" collision="false" collisionMask="0" clipDistance="300" nodeId="11"/>
+            <TransformGroup name="cyl_right_joint" translation="0.884588 -0.747054 0.648806" rotation="173.956 4.41391e-32 180" nodeId="12"/>
+          </TransformGroup>
+          <Shape name="baleTriggerRight" translation="1.06523 0.0253353 -0.365223" shapeId="4" kinematic="true" trigger="true" collisionMask="16781312" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="13"/>
+          <TransformGroup name="triggerArmRight" collision="false" collisionMask="0" clipDistance="300" nodeId="14">
+            <TransformGroup name="hanger_right" translation="1.42421 0.579032 -0.440182" collision="false" collisionMask="0" clipDistance="300" nodeId="15">
+              <TransformGroup name="valveconnextion_right" translation="-0.0271153 -0.168381 0.203379" rotation="-80.0096 -0.187352 1.24241e-17" scale="1 1 1" collision="false" collisionMask="0" clipDistance="300" nodeId="16">
+                <TransformGroup name="valvearm_right" translation="-2.84217e-16 1.43885e-14 0.253012" rotation="50.1189 1.11027 173.684" scale="1 1 1" collision="false" collisionMask="0" clipDistance="300" nodeId="17">
+                  <TransformGroup name="springFixPointRight" translation="-0.00236681 -0.00156222 -0.0412437" collision="false" collisionMask="0" clipDistance="300" nodeId="18"/>
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+            <Shape name="spring_right" translation="1.39638 0.581564 -0.078943" rotation="152.649 -3.53113e-31 180" scale="1 1 1" shapeId="5" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="19"/>
+            <TransformGroup name="valveArmFixPoint" translation="1.40468 0.73945 -0.259726" collision="false" collisionMask="0" clipDistance="300" nodeId="20"/>
+            <TransformGroup name="raycastNodeRight" translation="1.437 0.569811 -0.134834" collision="false" collisionMask="0" clipDistance="300" nodeId="21"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="grabMechanismMiddle" collision="false" collisionMask="0" clipDistance="300" nodeId="22">
+          <TransformGroup name="grab_back_middle" translation="0 0.564341 -0.583046" collision="false" collisionMask="0" clipDistance="300" nodeId="23">
+            <TransformGroup name="grab_connect_middle" translation="-4.84676e-29 0.123638 0.10273" rotation="0.576151 180 0" collision="false" collisionMask="0" clipDistance="300" nodeId="24"/>
+            <TransformGroup name="cyl_fixPointMiddle" translation="-0.00214238 0.185663 0.157299" rotation="168.55 -8.82781e-32 180" scale="1 1 1" collision="false" collisionMask="0" clipDistance="300" nodeId="25"/>
+          </TransformGroup>
+          <TransformGroup name="grab_front_middle" translation="0 0.563846 -1.50708" collision="false" collisionMask="0" clipDistance="300" nodeId="26">
+            <TransformGroup name="connector_fixPointMiddle" translation="1.16895e-13 0.114919 0.110495" scale="1 1 1" collision="false" collisionMask="0" clipDistance="300" nodeId="27"/>
+          </TransformGroup>
+          <TransformGroup name="zylinder_middle" translation="-0.00214238 0.673372 0.172404" rotation="172.699 8.82781e-32 -180" scale="1 1 1" collision="false" collisionMask="0" clipDistance="300" nodeId="28">
+            <TransformGroup name="stamp_middle" translation="1.10911e-15 3.42781e-15 0.60304" collision="false" collisionMask="0" clipDistance="300" nodeId="29"/>
+            <TransformGroup name="cyl_middle_joint" translation="-0.0538784 -0.758167 0.618905" rotation="172.699 8.82781e-32 -180" nodeId="30"/>
+          </TransformGroup>
+          <Shape name="baleTriggerMiddle" translation="0 0.02 -0.370881" shapeId="6" kinematic="true" trigger="true" collisionMask="16781312" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="31"/>
+          <Shape name="hookCollision" translation="0 0.508096 -0.370881" shapeId="7" compoundChild="true" density="0.15" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="32"/>
+        </TransformGroup>
+        <TransformGroup name="grabMechanismLeft" collision="false" collisionMask="0" clipDistance="300" nodeId="33">
+          <TransformGroup name="grab_back_left" translation="-1.51749 0.56434 -0.582878" collision="false" collisionMask="0" clipDistance="300" nodeId="34">
+            <TransformGroup name="grab_connect_left" translation="0.526246 0.114251 0.112411" rotation="0 180 0" collision="false" collisionMask="0" clipDistance="300" nodeId="35"/>
+            <TransformGroup name="cyl_fixPointLeft" translation="0.525603 0.17188 0.171907" collision="false" collisionMask="0" clipDistance="300" nodeId="36"/>
+          </TransformGroup>
+          <TransformGroup name="grab_front_left" translation="-1.51749 0.56434 -1.5069" collision="false" collisionMask="0" clipDistance="300" nodeId="37">
+            <TransformGroup name="connector_fixPointLeft" translation="0.526246 0.114251 0.10948" collision="false" collisionMask="0" clipDistance="300" nodeId="38"/>
+          </TransformGroup>
+          <TransformGroup name="zylinder_left" translation="-0.991888 0.673547 0.172874" rotation="173.873 -4.41391e-32 180" collision="false" collisionMask="0" clipDistance="300" nodeId="39">
+            <TransformGroup name="stamp_left" translation="1.30786e-32 2.28262e-15 0.587199" collision="false" collisionMask="0" clipDistance="300" nodeId="40"/>
+            <TransformGroup name="cyl_left_joint" translation="-0.00262582 0.0273418 0.459622" rotation="173.873 -4.41391e-32 180" nodeId="41"/>
+          </TransformGroup>
+          <Shape name="baleTriggerLeft" translation="-1.23031 0.0253353 -0.365223" shapeId="8" kinematic="true" trigger="true" collisionMask="16781312" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="42"/>
+          <TransformGroup name="triggerArmLeft" collision="false" collisionMask="0" clipDistance="300" nodeId="43">
+            <TransformGroup name="hanger_left" translation="-1.42309 0.57898 -0.440034" collision="false" collisionMask="0" clipDistance="300" nodeId="44">
+              <TransformGroup name="valveconnextion_left" translation="0.0264105 -0.168599 0.20328" rotation="-80.0383 -0.548661 4.96984e-17" scale="1 1 1" collision="false" collisionMask="0" clipDistance="300" nodeId="45">
+                <TransformGroup name="valvearm_left" translation="8.52651e-16 1.40687e-14 0.253187" rotation="49.9683 -0.0949117 -179.46" scale="1 1 1" collision="false" collisionMask="0" clipDistance="300" nodeId="46">
+                  <TransformGroup name="springFixPointLeft" translation="2.97568e-15 -0.0010643 -0.0410323" rotation="130.007 0 180" scale="1 1 1" collision="false" collisionMask="0" clipDistance="300" nodeId="47"/>
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+            <TransformGroup name="spring_valveArm_refPoint" translation="-1.3971 0.739572 -0.259952" scale="1 1 1" collision="false" collisionMask="0" clipDistance="300" nodeId="48"/>
+            <Shape name="spring_left" translation="-1.3964 0.58173 -0.0791049" rotation="152.528 -0.450683 180" scale="1 1 1" shapeId="9" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="49"/>
+            <TransformGroup name="raycastNodeLeft" translation="-1.43747 0.569811 -0.134834" collision="false" collisionMask="0" clipDistance="300" nodeId="50"/>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="attacherConfigurations" rotation="0 180 0" nodeId="51">
+        <TransformGroup name="fl_attacherjoint" translation="0 0.442795 0.265405" rotation="-90 88 -90" collision="false" collisionMask="0" clipDistance="300" nodeId="52"/>
+        <Shape name="adapter_teleLoader_col" translation="0 0.108838 0.386015" shapeId="10" compoundChild="true" density="0.15" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="53">
+          <TransformGroup name="tl_attacherJoint" translation="7.10543e-17 0.12127 0.101473" rotation="90 84.011 90" scale="1 1 1" collision="false" collisionMask="0" clipDistance="300" nodeId="54"/>
+          <Shape name="adapter_teleloader_vis" translation="-0.582578 0.341342 -0.121482" shapeId="11" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="55"/>
+          <Shape name="adapter_decals_teleloader" translation="-0.568205 -0.0115465 -0.0331052" shapeId="12" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="4" clipDistance="300" nodeId="56"/>
+        </Shape>
+        <Shape name="adapter_wheelLoader_col" translation="0 0.108838 0.386015" shapeId="13" compoundChild="true" density="0.15" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="57">
+          <TransformGroup name="wl_attacherJoint" translation="2.84217e-16 -0.019905 0.14543" rotation="-90 85.9561 -90" scale="1 1 1" collision="false" collisionMask="0" clipDistance="300" nodeId="58"/>
+          <Shape name="adapter_wheeloader_vis" translation="-0.582878 0.342109 -0.118864" shapeId="14" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="59"/>
+          <Shape name="adapter_decals_wheelloader" translation="-0.568505 -0.0117411 -0.0362133" shapeId="15" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="4" clipDistance="300" nodeId="60"/>
+        </Shape>
+        <TransformGroup name="attachable" nodeId="61">
+          <Shape name="hydraulicIn01_detached" shapeId="16" castsShadows="true" receiveShadows="true" materialIds="5" clipDistance="300" nodeId="62">
+            <TransformGroup name="hydraulicIn01Stored" translation="-0.229922 0.628638 0.1579" rotation="1.00481 -4.55669 0" nodeId="63"/>
+          </Shape>
+          <Shape name="hydraulicOut01_detached" shapeId="17" castsShadows="true" receiveShadows="true" materialIds="5" clipDistance="300" nodeId="64">
+            <TransformGroup name="hydraulicOut01Stored" translation="-0.25749 0.628639 0.173414" rotation="1.45839 -13.1383 -2.5516e-17" nodeId="65"/>
+          </Shape>
+          <TransformGroup name="hydraulicOut01" translation="-0.432927 0.675171 0.0294025" rotation="-90 0 0" nodeId="66"/>
+          <TransformGroup name="hydraulicIn01" translation="-0.432927 0.675033 0.00127206" rotation="-90 0 0" nodeId="67"/>
+        </TransformGroup>
+      </TransformGroup>
+      <Shape name="baleGrab_vis" rotation="0 180 0" shapeId="3" castsShadows="true" receiveShadows="true" materialIds="2" skinBindNodeIds="68 5 6 8 10 11 15 16 17 23 24 26 28 29 34 35 37 39 40 44 45 46" clipDistance="300" nodeId="68">
+        <Shape name="decals_vis" shapeId="18" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="6" skinBindNodeIds="69" clipDistance="300" nodeId="69"/>
+        <TransformGroup name="hoses" nodeId="70">
+          <Shape name="hoses_vis" shapeId="19" castsShadows="true" receiveShadows="true" materialIds="5" skinBindNodeIds="12 30 41 72" clipDistance="300" nodeId="71"/>
+          <TransformGroup name="hoses_helpJoint" rotation="0 180 0" nodeId="72"/>
+        </TransformGroup>
+      </Shape>
+    </Shape>
+  </Scene>
+
+</i3D>

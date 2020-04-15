@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="strawHarvestBaleGrab">
+    <annotation>Copyright (C) Creative Mesh UG (haftungsbeschränkt), All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>vGrab</name>
+        <specs>
+            <combination>FZ 30/FZ 60, 9407 S, MLA-T, MLT, W190D</combination>
+        </specs>
+        <functions>
+            <function>$l10n_function_baleGrab</function>
+        </functions>
+        <image>vehicles/lizard/vGrab/store_vGrab.png</image>
+        <price>4500</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <shopHeight>3</shopHeight>
+        <brand>LIZARD</brand>
+        <category>baling</category>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_baleGrab</typeDesc>
+        <filename>vehicles/lizard/vGrab/vGrab.i3d</filename>
+        <size width="2.5" length="2"/>
+        <components count="1">
+            <component centerOfMass="0 0.5 -0.1" solverIterationCount="10" mass="600"/>
+        </components>
+        <schemaOverlay attacherJointPosition="0 0">
+            <default name="DEFAULT_IMPLEMENT"/>
+            <selected name="DEFAULT_IMPLEMENT_SELECTED"/>
+        </schemaOverlay>
+    </base>
+
+    <attachable>
+        <inputAttacherJointConfigurations>
+            <inputAttacherJointConfiguration name="$l10n_configuration_inputAttacherFrontLoader" price="0">
+                <inputAttacherJoint node="fl_attacher_joint" jointType="frontloader"/>
+            </inputAttacherJointConfiguration>
+            <inputAttacherJointConfiguration name="$l10n_configuration_inputAttacherTeleHandler" price="100">
+                <inputAttacherJoint node="tl_attacherJoint" jointType="telehandler"/>
+                <objectChange node="col_teleLoader" compoundChildInactive="false" visibilityActive="true" visibilityInactive="false"/>
+            </inputAttacherJointConfiguration>
+            <inputAttacherJointConfiguration name="$l10n_configuration_inputAttacherWheelLoader" price="100">
+                <inputAttacherJoint node="wl_attacherJoint1" jointType="wheelLoader"/>
+                <objectChange node="col_wheelLoader" compoundChildInactive="false" visibilityActive="true" visibilityInactive="false"/>
+            </inputAttacherJointConfiguration>
+        </inputAttacherJointConfigurations>
+    </attachable>
+
+    <connectionHoses>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn" node="hydraulicIn01" length="1.0" diameter="0.02" straighteningFactor="1.5">
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicOut" node="hydraulicOut01" length="1.0" diameter="0.02" straighteningFactor="1.5">
+        </hose>
+    </connectionHoses>
+
+    <dynamicMountAttacher node="0>">
+        <mountCollisionMask node="colLeftBack" collisionMask="134225920"/>
+        <mountCollisionMask node="colRightBack" collisionMask="134225920"/>
+    </dynamicMountAttacher>
+
+    <animations>
+        <animation name="closeHooks">
+            <part node="left_grab" startTime="0.0" endTime="4.0" startRot="0 0 0" endRot="0 -90 0"/>
+            <part node="right_grab" startTime="0.0" endTime="4.0" startRot="0 0 0" endRot="0 90 0"/>
+        </animation>
+        <animation name="setForkAndColActive">
+            <part node="balefork" startTime="0.0" endTime="0.1" visibility="true"/>
+            <part node="balefork" startTime="0.1" endTime="0.2" visibility="false"/>
+            <part node="balefork1" startTime="0.0" endTime="0.1" visibility="false"/>
+            <part node="balefork1" startTime="0.1" endTime="0.2" visibility="true"/>
+
+            <!-- rotate the collisions away -->
+            <part node="forkColAnim" startTime="0.0" endTime="0.1" startRot="90 0 0" endRot="0 0 0"/>
+            <part node="forkColAnim" startTime="0.1" endTime="0.2" startTrans="0 0.04 0.05" endTrans="0 0.04 1.06"/>
+        </animation>
+    </animations>
+
+    <cylindered>
+        <movingTools>
+            <movingTool node="left_grab" playSound="true">
+            </movingTool>
+        </movingTools>
+        <movingParts>
+            <movingPart node="cylinder" referencePoint="cyl_fixPoint" referenceFrame="cyl_fixPoint" playSound="false" isActiveDirty="true">
+                <translatingPart node="stamp"/>
+            </movingPart>
+        </movingParts>
+        <sounds>
+            <hydraulic template="DEFAULT_HYDRAULIC_SOUND" linkNode="0>"/>
+        </sounds>
+    </cylindered>
+
+    <foldable>
+        <foldingParts startMoveDirection="1" posDirectionText="action_addSpikes" negDirectionText="action_removeSpikes">
+            <foldingPart animationName="setForkAndColActive" speedScale="1"/>
+        </foldingParts>
+    </foldable>
+
+    <baleGrab skipFoldCheck="true">
+        <units>
+            <unit animationName="closeHooks" baleTriggerIndex="hookTrigger" onlyCloseIfTriggered="false" noBaleAttachedAnimationName="closeHooks"/>
+        </units>
+    </baleGrab>
+
+    <foliageBending>
+        <bendingNode minX="-0.8" maxX="0.8" minZ="-0.28" maxZ="0.13" yOffset="0"/>
+    </foliageBending>
+
+    <baseMaterial>
+        <material name="vGrab_mat" baseNode="vGrab_vis">
+            <shaderParameter name="colorMat0" value="1 1 1 0"/>
+        </material>
+        <material name="adaptor_mat" baseNode="adapter_wheelloader_vis">
+            <shaderParameter name="colorMat0" value="1 1 1 0"/>
+        </material>
+    </baseMaterial>
+
+    <baseMaterialConfigurations price="500" useDefaultColors="true" defaultColorIndex="0">
+        <baseMaterialConfiguration price="0" name="BRESSEL UND LADE GREY" color="0.0781 0.0859 0.0781 0"/>
+        <baseMaterialConfiguration price="0" name="BRESSEL UND LADE BLACK" color="0.0070 0.0070 0.0082 0"/>
+        <baseMaterialConfiguration price="0" name="BRESSEL UND LADE GREEN" color="0.1484 0.1992 0.0976 0"/>
+        <baseMaterialConfiguration price="0" name="BRESSEL UND LADE ORANGE" color="0.7578 0.1562 0.0039 0"/>
+        <material name="vGrab_mat" shaderParameter="colorMat0"/>
+        <material name="adaptor_mat" shaderParameter="colorMat0"/>
+    </baseMaterialConfigurations>
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="6" fieldMultiplier="2"/>
+
+    <i3dMappings>
+        <i3dMapping id="vGrab_main_component1" node="0>" />
+        <i3dMapping id="fl_attacher_joint" node="0>0|0" />
+        <i3dMapping id="col_wheelLoader" node="0>0|1" />
+        <i3dMapping id="wl_attacherJoint1" node="0>0|1|0" />
+        <i3dMapping id="adapter_wheelloader_vis" node="0>0|1|1" />
+        <i3dMapping id="decals_adapter_wheelloader" node="0>0|1|2" />
+        <i3dMapping id="col_teleLoader" node="0>0|2" />
+        <i3dMapping id="tl_attacherJoint" node="0>0|2|0" />
+        <i3dMapping id="adapter_teleloader_vis" node="0>0|2|1" />
+        <i3dMapping id="decals_adapter_teleloader" node="0>0|2|1|0" />
+        <i3dMapping id="hydraulicOut01" node="0>0|3|0" />
+        <i3dMapping id="hydraulicIn01" node="0>0|3|1" />
+        <i3dMapping id="vGrab_vis" node="0>1" />
+        <i3dMapping id="hoses_vis" node="0>1|0" />
+        <i3dMapping id="hoses_helpJoint" node="0>1|0|0" />
+        <i3dMapping id="left_grab" node="0>1|1" />
+        <i3dMapping id="cyl_fixPoint" node="0>1|1|0" />
+        <i3dMapping id="right_grab" node="0>1|2" />
+        <i3dMapping id="cylinder" node="0>1|2|0" />
+        <i3dMapping id="stamp" node="0>1|2|0|0" />
+        <i3dMapping id="hoses_cyl1" node="0>1|2|0|1" />
+        <i3dMapping id="decals_balegrab" node="0>1|3" />
+        <i3dMapping id="decals_adaptor_balegrab" node="0>1|4" />
+        <i3dMapping id="hookTrigger" node="0>2|0" />
+        <i3dMapping id="balefork" node="0>2|1" />
+        <i3dMapping id="balefork1" node="0>2|2" />
+        <i3dMapping id="collisions" node="0>3" />
+        <i3dMapping id="forkColAnim" node="0>3|0" />
+        <i3dMapping id="colRightBack" node="0>3|0|0" />
+        <i3dMapping id="colRightFront" node="0>3|0|1" />
+        <i3dMapping id="colLeftFront" node="0>3|0|2" />
+        <i3dMapping id="colLeftBack" node="0>3|0|3" />
+    </i3dMappings>
+</vehicle>

@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="kronePremosBaleShredder">
+    <annotation>Copyright (C) Creative Mesh UG</annotation>
+
+    <storeData>
+        <name>$l10n_name_baleShredder</name>
+        <functions>
+            <function>$l10n_function_baleShredder</function>
+        </functions>
+        <specs>
+            <combination>Premos 5000</combination>
+        </specs>
+        <image>vehicles/krone/baleShredder/store_baleShredder.png</image>
+        <price>31900</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>KRONE</brand>
+        <category>baling</category>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_baleShredder</typeDesc>
+        <filename>vehicles/krone/baleShredder/baleShredder.i3d</filename>
+        <size width="3" length="5"/>
+        <components>
+            <component centerOfMass="0 0.75 -0.5" solverIterationCount="10" mass="1250"/>
+        </components>
+        <schemaOverlay attacherJointPosition="-0.5 0">
+            <default name="DEFAULT_IMPLEMENT"/>
+            <turnedOn name="DEFAULT_IMPLEMENT_ON"/>
+            <selected name="DEFAULT_IMPLEMENT_SELECTED"/>
+            <turnedOnSelected name="DEFAULT_IMPLEMENT_SELECTED_ON"/>
+        </schemaOverlay>
+    </base>
+
+    <wheels>
+        <wheelConfigurations>
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+                <wheels>
+                    <wheel>
+                        <physics rotSpeed="0" restLoad="1.2" repr="wheel1_root" frictionScale="0.50" driveNode="wheel1" radius="0.13" width="0.2" mass="0.005" initialCompression="30" suspTravel="0.01" spring="50" damper="25" rotationDamping="0.02" isSynchronized="true" versatileYRot="true" maxLatStiffness="0"/>
+                    </wheel>
+                    <wheel>
+                        <physics rotSpeed="0" restLoad="1.2" repr="wheel2_root" frictionScale="0.50" driveNode="wheel2" radius="0.13" width="0.2" mass="0.005" initialCompression="30" suspTravel="0.01" spring="50" damper="25" rotationDamping="0.02" isSynchronized="true" versatileYRot="true" maxLatStiffness="0"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+        </wheelConfigurations>
+    </wheels>
+
+    <speedRotatingParts>
+        <speedRotatingPart radius="0.12" node="wheel1vis" wheelIndex="1"/>
+        <speedRotatingPart radius="0.12" node="wheel2vis" wheelIndex="2"/>
+    </speedRotatingParts>
+
+    <attachable>
+        <inputAttacherJoints>
+            <inputAttacherJoint node="attacherJoint" jointType="premosBaleShredder" fixedRotation="true"/>
+        </inputAttacherJoints>
+        <support animationName="moveOnPallet" delayedOnAttach="false"/>
+    </attachable>
+
+    <lights>
+        <sharedLight linkNode="workLight" filename="$data/shared/assets/lights/hella/hellaWorkingLightSquare_01_back.xml">
+            <rotationNode name="rotationNode1" rotation="30 0 0" />
+        </sharedLight>
+
+        <realLights>
+            <high>
+                <light node="workLightReal" lightTypes="1" />
+            </high>
+        </realLights>
+    </lights>
+
+    <turnOnVehicle turnedOnByAttacherVehicle="true">
+        <animationNodes>
+            <animationNode node="drum1" rotSpeed="1000" rotAxis="2" turnOnFadeTime="1" turnOffFadeTime="1"/>
+            <animationNode node="drum2" rotSpeed="1000" rotAxis="2" turnOnFadeTime="1" turnOffFadeTime="1"/>
+            <animationNode node="drum3" rotSpeed="-1000" rotAxis="2" turnOnFadeTime="1" turnOffFadeTime="1"/>
+            <animationNode node="drum4" rotSpeed="-1000" rotAxis="2" turnOnFadeTime="1" turnOffFadeTime="1"/>
+            <animationNode class="ScrollingAnimation" node="chainTable1" scrollSpeed="-0.2"/>
+            <animationNode class="ScrollingAnimation" node="chainTable2" scrollSpeed="-0.2"/>
+            <animationNode node="chainDrive1" rotSpeed="100" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1"/>
+            <animationNode node="chainDrive2" rotSpeed="100" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1"/>
+            <animationNode node="chainDrive3" rotSpeed="100" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1"/>
+            <animationNode node="chainDrive4" rotSpeed="100" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1"/>
+            <animationNode node="chainDrive5" rotSpeed="100" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1"/>
+            <animationNode node="chainDrive6" rotSpeed="100" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1"/>
+            <animationNode node="chainDrive7" rotSpeed="100" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1"/>
+            <animationNode node="chainDrive8" rotSpeed="100" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1"/>
+            <animationNode class="ScrollingAnimation" node="spikesTable1" shaderParameterName="scrollPosition" scrollSpeed="0.0076" scrollLength="1"  turnOnFadeTime="1" turnOffFadeTime="1"/>
+            <animationNode class="ScrollingAnimation" node="spikesTable2" shaderParameterName="scrollPosition" scrollSpeed="0.0056" scrollLength="1"  turnOnFadeTime="1" turnOffFadeTime="1"/>
+        </animationNodes>
+        <sounds>
+            <work template="FORAGE_WAGON_01" linkNode="baleShredder_main_component1" />
+        </sounds>
+    </turnOnVehicle>
+
+    <baleShredder>
+        <baleAnimation baleNode="baleNode" scaleNode="scaleNode" feedThreshold="0.15" />
+        <twineAnimation detectionRootNode="winderFrame1" startThreshold="0.15" animationName="removeTwine">
+            <animationNodes>
+                <animationNode class="ScrollingAnimation" node="chainWinder" scrollSpeed="-0.1"/>
+            </animationNodes>
+        </twineAnimation>
+        <knifeAnimation detectionRootNode="knife" startThreshold="0" animationName="moveKnife">
+            <animationNodes>
+                <animationNode class="ScrollingAnimation" node="chainKnife" scrollSpeed="-2"/>
+            </animationNodes>
+        </knifeAnimation>
+        <detection detectionRootNode="feederNode" detectionTriggerNode="baleTrigger"/>
+
+        <effect>
+            <effectNode effectClass="ParticleEffect" effectNode="emitFalling" particleType="PICKUP" emitCountScale="6" worldSpace="false" lifespan="0.3"/>
+            <effectNode effectClass="ParticleEffect" effectNode="emitFalling1" particleType="PICKUP" emitCountScale="3" worldSpace="false" lifespan="0.1"/>
+            <effectNode effectClass="ParticleEffect" effectNode="emitFalling2" particleType="PICKUP" emitCountScale="3" worldSpace="false" lifespan="0.15"/>
+            <effectNode effectClass="ParticleEffect" effectNode="emitFalling3" particleType="PICKUP" emitCountScale="3" worldSpace="false" lifespan="0.3"/>
+        </effect>
+
+        <supportObjectChanges>
+            <objectChange node="detachedCollision1" collisionMaskActive="0" collisionMaskInctive="25178120"/>
+            <objectChange node="detachedCollision2" collisionMaskActive="0" collisionMaskInctive="25178120"/>
+            <objectChange node="detachedCollision3" collisionMaskActive="0" collisionMaskInctive="25178120"/>
+            <objectChange node="detachedCollision4" collisionMaskActive="0" collisionMaskInctive="25178120"/>
+
+            <objectChange node="mainCollision1" collisionMaskInactive="0"/>
+            <objectChange node="mainCollision2" collisionMaskInactive="0"/>
+            <objectChange node="mainCollision3" collisionMaskInactive="0"/>
+            <objectChange node="mainCollision4" collisionMaskInactive="0"/>
+            <objectChange node="sup2Collision" collisionMaskInactive="0"/>
+            <objectChange node="sup2Collision2" collisionMaskInactive="0"/>
+            <objectChange node="sup2Collision2" collisionMaskInactive="0"/>
+            <objectChange node="table2Collision" collisionMaskInactive="0"/>
+            <objectChange node="tableExtractionCollision" collisionMaskInactive="0"/>
+            <objectChange node="winderCollision3" collisionMaskInactive="0"/>
+            <objectChange node="winderCollision4" collisionMaskInactive="0"/>
+        </supportObjectChanges>
+        
+        <objectChanges>
+            <objectChange node="arrow_decal" visibilityActive="false" visibilityInactive="true"/>
+            <objectChange node="palletBase" visibilityActive="false" visibilityInactive="true"/>
+            <objectChange node="visualToggle" visibilityActive="true" visibilityInactive="false"/>
+            <objectChange node="attacherJoint" translationActive="0 1.670 -0.5" translationInactive="0 1.8 1.5"/>
+            <objectChange node="detachedCollisions" translationActive="3.38 0.28 0.67" translationInactive="0 0 -2"/>
+            <objectChange node="detachedCollisions" rotationActive="0 90 0" rotationInactive="0 0 0"/>
+            
+            <objectChange node="mainCollision1" translationActive="0.075 2.989 0.075" translationInactive="0.009 0.995 -0.69"/>
+            <objectChange node="mainCollision2" translationActive="1.071 2.086 0.039" translationInactive="0 0.738 -0.968"/>
+            <objectChange node="mainCollision2" rotationActive="0 0 0" rotationInactive="-90 0 90"/>
+            <objectChange node="mainCollision3" translationActive="-0.815 2.086 -0.406" translationInactive="-0.413 0.628 -0.406"/>
+            <objectChange node="mainCollision3" rotationActive="0 0 0" rotationInactive="-90 0 0"/>
+            <objectChange node="mainCollision4" translationActive="-0.02 2.177 0.179" translationInactive="0.028 0.91 -1.104"/>
+            <objectChange node="mainCollision4" rotationActive="0 0 0" rotationInactive="-90 0 0"/>
+            
+            <!-- pallet collisions not toggled to avoid clipping through ground -->
+            <objectChange node="collisionsPallet" translationActive="0 2.848 0.155" translationInactive="0 -0.075 -0.365"/>
+            <objectChange node="collisionsPallet" rotationActive="0 0 0" rotationInactive="0 90 0"/>
+            <objectChange node="collision1" translationActive="-0.35 0.197 0" translationInactive="-1.068 0.197 -0.737"/>
+            <objectChange node="collision2" translationActive="0.35 0.197 0" translationInactive="1.066 0.197 -0.737"/>
+            <objectChange node="collision3" translationActive="-0.35 0.197 0" translationInactive="-1.068 0.197 0.735"/>
+            <objectChange node="collision4" translationActive="0.35 0.197 0" translationInactive="1.066 0.197 0.735"/>
+            <objectChange node="collision5" translationActive="0.018 0.197 0" translationInactive="0.018 0.197 -0.737"/>
+            <objectChange node="collision6" translationActive="0.018 0.197 0" translationInactive="0.018 0.197 0.735"/>
+            <objectChange node="collision7" translationActive="-0.35 0.197 0" translationInactive="-1.065 0.197 0"/>
+            <objectChange node="collision8" translationActive="0.35 0.197 0" translationInactive="1.065 0.197 0"/>
+            <objectChange node="collision9" translationActive="0.023 0.197 0" translationInactive="0.023 0.197 0"/>
+        </objectChanges>
+    </baleShredder>
+
+    <foldable>
+        <foldingParts startMoveDirection="1" turnOnFoldMinLimit="0.0" turnOnFoldMaxLimit="0.01" detachingMinLimit="0.99" detachingMaxLimit="1" unfoldWarning="warning_firstFoldTheTool">
+            <foldingPart animationName="fold" speedScale="1"/>
+        </foldingParts>
+    </foldable>
+
+    <animations>
+        <!-- move support wheel down/up -->
+        <animation name="moveOnPallet">
+            <part node="attachableMoving" startTime="0" endTime="0.3" startTrans="0 1.171 0" endTrans="0 1.371 0"/>
+            <part node="attachableMoving" startTime="0" endTime="0.6" startRot="0 0 0" endRot="-90 0 0"/>
+            <!-- Animation to avoid colliding collisions and to push pallet away from Premos -->
+            <part node="detachedCollisions" startTime="0.1" endTime="0.6" endTrans="0 0 0" startTrans="3.38 0.28 0.67"/>
+            <part node="table1Collision1" startTime="0" endTime="0.2" startTrans="0.016 -0.126 -1.931" endTrans="0.016 1.126 -1.931"/>
+            <part node="table1Collision1" startTime="0.4" endTime="0.8" startTrans="0.016 -0.126 -1.931" endTrans="0.016 -0.126 -1.331"/>
+            <part node="table1Collision1" startTime="0.8" endTime="1" startTrans="0.016 1.126 -1.331" endTrans="0.016 -0.126 -1.931"/>
+        </animation>
+
+        <animation name="fold">
+            <!-- Supports -->
+            <part node="tableExtraction" startTime="0" endTime="1.5" endTrans="0 0 0"/>
+            <part node="supportFrame2Link" startTime="0" endTime="0.9" startRot="144 0 0" endRot="90 0 0"/>
+            <part node="supportFrame2" startTime="2" endTime="6" startRot="90 0 0" endRot="0 0 0"/>
+            <part node="supportFrame2Link" startTime="2" endTime="6" startRot="90 0 0" endRot="0 0 0"/>
+            <part node="supportFrame1Link" startTime="0.9" endTime="1.8" startRot="36.963 180 0" endRot="90 180 0"/>
+            <part node="supportFrame1" startTime="10" endTime="10.75" startRot="90 0 0" endRot="70 0 0"/>
+            <part node="supportFrame1" startTime="10.75" endTime="15" startRot="70 0 0" endRot="0 0 0"/>
+            <part node="supportFrame1Link" startTime="10" endTime="10.75" startRot="90 180 0" endRot="110 180 0"/>
+            <part node="supportFrame1Link" startTime="10.75" endTime="15" startRot="110 180 0" endRot="180 180 0"/>
+            <!-- Table 2 and Yarn Cutter-->
+            <part node="tablePart2" startTime="2" endTime="10" startRot="0 0 0" endRot="180 0 0"/>
+            <part node="foldTriangle" startTime="2.5" endTime="7.5" startRot="0 0 0" endRot="90 0 0"/>
+            <part node="winderFrame1" startTime="2.5" endTime="7.5" startRot="-90 0 0" endRot="-180 0 0"/>
+            <part node="winderFrame2" startTime="2" endTime="4" startTrans="-0.321 -0.177 1.0" endTrans="-0.321 -0.177 0.665"/>
+            <part node="winderRod" startTime="0" endTime="5" startRot="0 0 0" endRot="0 0 1800"/>
+            <part node="winderSpikes" startTime="0" endTime="5" startTrans="0 0 0" endTrans="0 0 0.27"/>
+            <!-- Table 1 -->
+            <part node="table1Link" startTime="10" endTime="15" startRot="0 0 0" endRot="-65 0 0"/>
+            <part node="tablePart1" startTime="10" endTime="10.75" startRot="0 0 0" endRot="30 0 0"/>
+            <part node="tablePart1" startTime="10.75" endTime="15" startRot="30 0 0" endRot="155 0 0"/>
+            <!-- Leaver -->
+            <part node="leaverVis" startTime="15" endTime="15.5" startRot="0 0 -60" endRot="0 0 0"/>
+            <part node="hook" startTime="15" endTime="15.5" startRot="35 0 0" endRot="0 0 0"/>
+            <part node="leaverVis" startTime="14.5" endTime="15" startRot="0 0 0" endRot="0 0 -60"/>
+            <part node="hook" startTime="14.5" endTime="15" startRot="0 0 0" endRot="35 0 0"/>
+        </animation>
+
+        <animation name="removeTwine">
+            <part node="yarnCollector" startTime="0" endTime="10" startTrans="1 0.157 -0.007" endTrans="-1.137 0.157 -0.007"/>
+            <part node="winderSpikes" startTime="4.8" endTime="5" startTrans="0 0 0.25" endTrans="0 0 0"/>
+            <part node="winder" startTime="5" endTime="6" startRot="0 0 0" endRot="0 0 180"/>
+            <part node="winder" startTime="6" endTime="7" startRot="0 0 -180" endRot="0 0 0"/>
+        </animation>
+        <animation name="moveKnife">
+            <part node="knife" startTime="0" endTime="2" startTrans="0.753 0.063 -2.108" endTrans="-0.65 0.063 -2.108"/>
+        </animation>
+    </animations>
+
+    <cylindered>
+        <movingTools>
+            <movingTool node="supportFrame1Ext" foldMinLimit="0" foldMaxLimit="0.1" wheelIndices="1 2" playSound="false">
+                <controls l10nName="label_support" axis="AXIS_CRANE_ARM3" invertAxis="false" mouseSpeedFactor="0.6" iconName="SUPPORT_ARM_TRANSLATE_Y" />
+                <translation transSpeed="0.7" transAcceleration="1.8" transMax="2" transMin="1.55" translationAxis="3" />
+            </movingTool>
+            <movingTool node="supportFrame2Ext" foldMinLimit="0" foldMaxLimit="0.1" playSound="false">
+                <controls l10nName="label_support" axis="AXIS_CRANE_TOOL" invertAxis="true" mouseSpeedFactor="0.6" iconName="SUPPORT_ARM_TRANSLATE_Y" />
+                <translation transSpeed="0.7" transAcceleration="1.8" transMax="2" transMin="1.25" translationAxis="3" />
+            </movingTool>
+            <movingTool node="tableExtraction" foldMinLimit="0" foldMaxLimit="0.1" playSound="false">
+                <controls l10nName="label_arm" axis="AXIS_CRANE_TOOL2" invertAxis="true" mouseSpeedFactor="0.6" iconName="WORKING_WIDTH_TRANSLATE_X" />
+                <translation transSpeed="0.7" transAcceleration="1.8" transMax="0" transMin="-0.7" translationAxis="3" />
+            </movingTool>
+            <movingTool node="attachableMoving" playSound="true" wheelIndices="1 2">
+            </movingTool>
+            <movingTool node="table1Link" playSound="true" wheelIndices="1 2">
+            </movingTool>
+            <movingTool node="tablePart1" playSound="true" wheelIndices="1 2">
+            </movingTool>
+            <movingTool node="supportFrame1" playSound="true" wheelIndices="1 2">
+            </movingTool>
+            <movingTool node="tablePart2" playSound="true">
+            </movingTool>
+        </movingTools>
+
+        <movingParts>
+            <movingPart node="leaverRope" referencePoint="leaverRopeRef" referenceFrame="leaverRopeRef" isActiveDirty="true" scaleZ="true"/>
+            <movingPart node="spring1" referencePoint="spring1Ref" referenceFrame="spring1Ref" isActiveDirty="true" scaleZ="true"/>
+            <movingPart node="table1Cylinder" referencePoint="table1CylinderRef" referenceFrame="linkRefFrame" isActiveDirty="true">
+                <translatingPart node="table1Stamp"/>
+            </movingPart>
+            <movingPart node="table1LinkHelp" referencePoint="table1Link1Ref" referenceFrame="linkRefFrame" isActiveDirty="true" scaleZ="true"/>
+            <movingPart node="table2Cylinder" referencePoint="table2CylinderRef" referenceFrame="tablePart2" isActiveDirty="true" >
+                <translatingPart node="table2Stamp"/>
+            </movingPart>
+            <movingPart node="winderRaiser" referencePoint="winderRaiserRef" referenceFrame="table2CylinderRef" isActiveDirty="true" scaleZ="true"/>
+        </movingParts>
+
+        <sounds>
+            <hydraulic template="DEFAULT_HYDRAULIC_SOUND" linkNode="baleShredder_main_component1"/>
+        </sounds>
+    </cylindered>
+    
+    <dynamicMount triggerNode="dynamicMountTrigger" />
+
+    <tensionBeltObject>
+        <meshNodes>
+            <meshNode node="main"/>
+            <meshNode node="table1Cylinder"/>
+            <meshNode node="table1Link"/>
+            <meshNode node="table1LinkHelp"/>
+            <meshNode node="tablePart1"/>
+            <meshNode node="winderFrame1"/>
+            <meshNode node="winderFrame2"/>
+            <meshNode node="tablePart2"/>
+            <meshNode node="roler1"/>
+            <meshNode node="foldTriangle"/>
+            <meshNode node="palletBase"/>
+        </meshNodes>
+    </tensionBeltObject>
+
+    <!-- <foliageBending> -->
+    <!-- <bendingNode minX="-1.5" maxX="1.5" minZ="-2.0" maxZ="3.0 " yOffset="0.6"/> -->
+    <!-- </foliageBending> -->
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="4" fieldMultiplier="2"/>
+
+    <i3dMappings>
+        <i3dMapping id="baleShredder_main_component1" node="0>" />
+        <i3dMapping id="attachable" node="0>0" />
+        <i3dMapping id="attacherJoint" node="0>0|0" />
+        <i3dMapping id="visuals" node="0>1" />
+        <i3dMapping id="attachableMoving" node="0>1|0" />
+        <i3dMapping id="main" node="0>1|0|0" />
+        <i3dMapping id="feederNode" node="0>1|0|0|0" />
+        <i3dMapping id="scaleNode" node="0>1|0|0|0|0" />
+        <i3dMapping id="baleNode" node="0>1|0|0|0|0|0" />
+        <i3dMapping id="table1Link" node="0>1|0|1" />
+        <i3dMapping id="tablePart1" node="0>1|0|1|0" />
+        <i3dMapping id="tablePart2" node="0>1|0|1|0|0" />
+        <i3dMapping id="supportFrame2" node="0>1|0|1|0|0|0" />
+        <i3dMapping id="sup2Collision" node="0>1|0|1|0|0|0|0" />
+        <i3dMapping id="supportFrame2Ext" node="0>1|0|1|0|0|0|1" />
+        <i3dMapping id="sup2Collision2" node="0>1|0|1|0|0|0|1|0" />
+        <i3dMapping id="sup2Collision1" node="0>1|0|1|0|0|0|1|1" />
+        <i3dMapping id="table2Cylinder" node="0>1|0|1|0|0|1" />
+        <i3dMapping id="table2Stamp" node="0>1|0|1|0|0|1|0" />
+        <i3dMapping id="supportFrame2Link" node="0>1|0|1|0|0|2" />
+        <i3dMapping id="table2RotatingParts" node="0>1|0|1|0|0|3" />
+        <i3dMapping id="roler2" node="0>1|0|1|0|0|3|0" />
+        <i3dMapping id="chainDrive4" node="0>1|0|1|0|0|3|1" />
+        <i3dMapping id="chainDrive3" node="0>1|0|1|0|0|3|2" />
+        <i3dMapping id="chainDrive5" node="0>1|0|1|0|0|3|3" />
+        <i3dMapping id="chainDrive6" node="0>1|0|1|0|0|3|4" />
+        <i3dMapping id="table2Collision" node="0>1|0|1|0|0|4" />
+        <i3dMapping id="baleTrigger" node="0>1|0|1|0|0|5" />
+        <i3dMapping id="tableExtraction" node="0>1|0|1|0|0|6" />
+        <i3dMapping id="roler1" node="0>1|0|1|0|0|6|0" />
+        <i3dMapping id="tableExtractionCollision" node="0>1|0|1|0|0|6|1" />
+        <i3dMapping id="chainsTable2" node="0>1|0|1|0|0|7" />
+        <i3dMapping id="chainTable2" node="0>1|0|1|0|0|7|0" />
+        <i3dMapping id="spikesTable2Rot" node="0>1|0|1|0|0|7|1" />
+        <i3dMapping id="spikesTable2" node="0>1|0|1|0|0|7|1|0" />
+        <i3dMapping id="winderFrame1" node="0>1|0|1|0|1" />
+        <i3dMapping id="winderFrame2" node="0>1|0|1|0|1|0" />
+        <i3dMapping id="yarnCollector" node="0>1|0|1|0|1|0|0" />
+        <i3dMapping id="collectingHook" node="0>1|0|1|0|1|0|0|0" />
+        <i3dMapping id="winder" node="0>1|0|1|0|1|0|1" />
+        <i3dMapping id="winderSpikes" node="0>1|0|1|0|1|0|1|0" />
+        <i3dMapping id="winderRod" node="0>1|0|1|0|1|0|1|1" />
+        <i3dMapping id="baleRockerWinder" node="0>1|0|1|0|1|0|2" />
+        <i3dMapping id="chainWinder" node="0>1|0|1|0|1|0|3" />
+        <i3dMapping id="winderBase" node="0>1|0|1|0|1|0|4" />
+        <i3dMapping id="winderCollisions2" node="0>1|0|1|0|1|0|5" />
+        <i3dMapping id="winderCollision5" node="0>1|0|1|0|1|0|5|0" />
+        <i3dMapping id="winderCollision6" node="0>1|0|1|0|1|0|5|1" />
+        <i3dMapping id="winderCollisionTop" node="0>1|0|1|0|1|0|5|2" />
+        <i3dMapping id="winderCollision4" node="0>1|0|1|0|1|0|5|3" />
+        <i3dMapping id="winderCollision3" node="0>1|0|1|0|1|0|5|4" />
+        <i3dMapping id="workLight" node="0>1|0|1|0|1|0|6" />
+        <i3dMapping id="workLightReal" node="0>1|0|1|0|1|0|6|0" />
+        <i3dMapping id="winderRaiserRef" node="0>1|0|1|0|1|1" />
+        <i3dMapping id="winderCollisions1" node="0>1|0|1|0|1|2" />
+        <i3dMapping id="winderCollision2" node="0>1|0|1|0|1|2|0" />
+        <i3dMapping id="winderCollision1" node="0>1|0|1|0|1|2|1" />
+        <i3dMapping id="supportFrame1" node="0>1|0|1|0|2" />
+        <i3dMapping id="supportFrame1Ext" node="0>1|0|1|0|2|0" />
+        <i3dMapping id="wheels" node="0>1|0|1|0|2|0|0" />
+        <i3dMapping id="wheel1_root" node="0>1|0|1|0|2|0|0|0" />
+        <i3dMapping id="wheelAxle1" node="0>1|0|1|0|2|0|0|0|0" />
+        <i3dMapping id="wheel1vis" node="0>1|0|1|0|2|0|0|0|0|0" />
+        <i3dMapping id="wheel1" node="0>1|0|1|0|2|0|0|0|0|1" />
+        <i3dMapping id="wheel2_root" node="0>1|0|1|0|2|0|0|1" />
+        <i3dMapping id="wheelAxle2" node="0>1|0|1|0|2|0|0|1|0" />
+        <i3dMapping id="wheel2rot" node="0>1|0|1|0|2|0|0|1|0|0" />
+        <i3dMapping id="wheel2" node="0>1|0|1|0|2|0|0|1|0|1" />
+        <i3dMapping id="wheel2vis" node="0>1|0|1|0|2|0|0|1|0|2" />
+        <i3dMapping id="sup1Collision" node="0>1|0|1|0|2|1" />
+        <i3dMapping id="knife" node="0>1|0|1|0|3" />
+        <i3dMapping id="baleRockerTable" node="0>1|0|1|0|4" />
+        <i3dMapping id="spring2" node="0>1|0|1|0|4|0" />
+        <i3dMapping id="foldTriangle" node="0>1|0|1|0|5" />
+        <i3dMapping id="table2CylinderRef" node="0>1|0|1|0|5|0" />
+        <i3dMapping id="winderRaiser" node="0>1|0|1|0|5|1" />
+        <i3dMapping id="table1RotatingParts" node="0>1|0|1|0|6" />
+        <i3dMapping id="chainDrive1" node="0>1|0|1|0|6|0" />
+        <i3dMapping id="chainDrive2" node="0>1|0|1|0|6|1" />
+        <i3dMapping id="chainDrive7" node="0>1|0|1|0|6|2" />
+        <i3dMapping id="chainDrive8" node="0>1|0|1|0|6|3" />
+        <i3dMapping id="chainsTable1" node="0>1|0|1|0|7" />
+        <i3dMapping id="chainTable1" node="0>1|0|1|0|7|0" />
+        <i3dMapping id="chainKnife" node="0>1|0|1|0|7|1" />
+        <i3dMapping id="chain5" node="0>1|0|1|0|7|1|0" />
+        <i3dMapping id="spikesTable1Rot1" node="0>1|0|1|0|7|2" />
+        <i3dMapping id="spikesTable1" node="0>1|0|1|0|7|2|0" />
+        <i3dMapping id="supportFrame1Link" node="0>1|0|1|0|8" />
+        <i3dMapping id="table1Link1Ref" node="0>1|0|1|0|9" />
+        <i3dMapping id="table1Collisions" node="0>1|0|1|0|10" />
+        <i3dMapping id="table1Collision1" node="0>1|0|1|0|10|0" />
+        <i3dMapping id="table1Collision2" node="0>1|0|1|0|10|1" />
+        <i3dMapping id="table1Collision3" node="0>1|0|1|0|10|2" />
+        <i3dMapping id="table1CylinderRef" node="0>1|0|1|1" />
+        <i3dMapping id="drums" node="0>1|0|2" />
+        <i3dMapping id="drum1" node="0>1|0|2|0" />
+        <i3dMapping id="drum2" node="0>1|0|2|1" />
+        <i3dMapping id="drum3" node="0>1|0|2|2" />
+        <i3dMapping id="drum4" node="0>1|0|2|3" />
+        <i3dMapping id="leaver" node="0>1|0|3" />
+        <i3dMapping id="leaverVis" node="0>1|0|3|0" />
+        <i3dMapping id="leaverRope" node="0>1|0|3|0|0" />
+        <i3dMapping id="hook" node="0>1|0|3|1" />
+        <i3dMapping id="spring1" node="0>1|0|3|1|0" />
+        <i3dMapping id="leaverRopeRef" node="0>1|0|3|1|1" />
+        <i3dMapping id="spring1Ref" node="0>1|0|3|2" />
+        <i3dMapping id="cylindered" node="0>1|0|4" />
+        <i3dMapping id="table1LinkHelp" node="0>1|0|4|0" />
+        <i3dMapping id="table1Cylinder" node="0>1|0|4|1" />
+        <i3dMapping id="table1Stamp" node="0>1|0|4|1|0" />
+        <i3dMapping id="linkRefFrame" node="0>1|0|4|2" />
+        <i3dMapping id="visualToggle" node="0>1|0|6" />
+        <i3dMapping id="emitFalling" node="0>1|0|8|0" />
+        <i3dMapping id="emitFalling1" node="0>1|0|8|1" />
+        <i3dMapping id="emitFalling2" node="0>1|0|8|2" />
+        <i3dMapping id="emitFalling3" node="0>1|0|8|3" />
+        <i3dMapping id="arrow_decal" node="0>1|0|9" />
+        <i3dMapping id="pallet" node="0>1|1" />
+        <i3dMapping id="collisionsPallet" node="0>1|1|0" />
+        <i3dMapping id="collision1" node="0>1|1|0|0" />
+        <i3dMapping id="collision2" node="0>1|1|0|1" />
+        <i3dMapping id="collision3" node="0>1|1|0|2" />
+        <i3dMapping id="collision4" node="0>1|1|0|3" />
+        <i3dMapping id="collision5" node="0>1|1|0|4" />
+        <i3dMapping id="collision6" node="0>1|1|0|5" />
+        <i3dMapping id="collision7" node="0>1|1|0|6" />
+        <i3dMapping id="collision8" node="0>1|1|0|7" />
+        <i3dMapping id="collision9" node="0>1|1|0|8" />
+        <i3dMapping id="palletBase" node="0>1|1|1" />
+        <i3dMapping id="dynamicMountTrigger" node="0>1|1|2" />
+        <i3dMapping id="collisions" node="0>2" />
+        <i3dMapping id="attachetCollisions" node="0>2|0" />
+        <i3dMapping id="mainCollision1" node="0>2|0|0" />
+        <i3dMapping id="mainCollision2" node="0>2|0|1" />
+        <i3dMapping id="mainCollision3" node="0>2|0|2" />
+        <i3dMapping id="mainCollision4" node="0>2|0|3" />
+        <i3dMapping id="detachedCollisions" node="0>2|1" />
+        <i3dMapping id="detachedCollision1" node="0>2|1|0" />
+        <i3dMapping id="detachedCollision2" node="0>2|1|1" />
+        <i3dMapping id="detachedCollision4" node="0>2|1|2" />
+        <i3dMapping id="detachedCollision3" node="0>2|1|3" />
+    </i3dMappings>
+</vehicle>

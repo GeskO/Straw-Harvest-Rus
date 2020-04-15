@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+    <translationContributors>*TurboStar*, Killercrock88</translationContributors>
+
+    <texts>
+        <!-- Inputs -->
+        <text name="input_SH_TOGGLE_COLLECT_MODE" text="SH: Modifica modalità di raccolta"/>
+        <text name="input_SH_DEPART_BALES" text="SH: Scarica balle"/>
+        <text name="input_SH_RESET_BALE_COUNTER" text="SH: Azzera contatore balle"/>
+        <text name="input_SH_GRAB_BALES" text="SH: Afferra balle"/>
+        <text name="input_SH_DROP_BALES" text="SH: Rilascia balle"/>
+        <text name="input_SH_TOGGLE_CRANE_TOOL" text="SH: Modifica attrezzo carroponte"/>
+        <text name="input_SH_MOVE_CRANE_BRIDGE_1" text="SH: Muovi carroponte avanti"/>
+        <text name="input_SH_MOVE_CRANE_BRIDGE_2" text="SH: Muovi carroponte indietro"/>
+        <text name="input_SH_MOVE_CRANE_TROLLEY_1" text="SH: Muovi carrello carroponte destra"/>
+        <text name="input_SH_MOVE_CRANE_TROLLEY_2" text="SH: Muovi carrello carroponte sinistra"/>
+        <text name="input_SH_MOVE_CRANE_TOOL_1" text="SH: Muovi attrezzo carroponte su"/>
+        <text name="input_SH_MOVE_CRANE_TOOL_2" text="SH: Muovi attrezzo carroponte giù"/>
+        <text name="input_SH_ROTATE_CRANE_TOOL_1" text="SH: Ruota attrezzo carroponte destra"/>
+        <text name="input_SH_ROTATE_CRANE_TOOL_2" text="SH: Ruota attrezzo carroponte sinistra"/>
+        <text name="input_SH_OPEN_CRANE_TOOL_1" text="SH: Apri attrezzo carroponte"/>
+        <text name="input_SH_OPEN_CRANE_TOOL_2" text="SH: Apri attrezzo carroponte"/>
+        <text name="input_SH_TOGGLE_BALE_SIZE" text="SH: Modifica dimensione balle"/>
+        <text name="input_SH_TOGGLE_REFILL_COVER" text="SH: Apri/Chiudi copertura"/>
+
+        <!-- Bale grab -->
+        <text name="typeDesc_baleGrab" text="pinza per balle"/>
+        <text name="function_baleGrab" text="Con una pinza per balle puoi trasportare più facilmente e velocemente balle quadre."/>
+
+        <text name="configuration_inputAttacherTeleHandler" text="Telescopico"/>
+
+        <text name="action_grabBales" text="Afferra balle"/>
+        <text name="action_dropBales" text="Rilascia balle"/>
+
+        <text name="action_addSpikes" text="Collega spuntoni"/>
+        <text name="action_removeSpikes" text="Scollega spuntoni"/>
+
+        <!-- Comprima -->
+        <text name="function_comprima" text="Una rotopressa trasforma paglia, erba o fieno sfusi in comode balle. La Comprima può pressare balle di diverse dimensioni tra 1,10 e 1,80 m. ATTENZIONE: molti attrezzi nel gioco sono compatibili solo con balle da 1,30m."/>
+
+        <!-- Bale counter -->
+        <text name="action_resetBaleCounter" text="Azzera contatore balle"/>
+
+        <!-- BigPack -->
+        <text name="configuration_baleTrailer" text="BaleCollect 1230"/>
+        <text name="configuration_noBaleTrailer" text="Scivolo balle"/>
+
+        <!-- BaleCollect -->
+        <text name="function_baleCollect" text="Aggancia la Krone BaleCollect 1230 alla krone BigPack 1290 HDP II XC per mettere insieme 3 balle e scaricarle affiancate."/>
+        <text name="typeDesc_baleCollect" text="raccoglitore balle"/>
+        <text name="action_collectMode" text="Modalità scaricamento balle %s"/>
+        <text name="warning_needsABaleTrailer" text="Con questa configurazione l'imballatrice può essere utilizzata solamente con il BaleCollect!"/>
+
+        <!-- Premos -->
+        <text name="function_premos" text="Questo macchinario può pellettizzare paglia e fieno direttamente in campo. Agganciando il frantumatore balle, il macchinario può essere utilizzato anche da fermo."/>
+        <text name="typeDesc_premos" text="pellettizzatore"/>
+
+        <!-- BaleShredder -->
+        <text name="name_baleShredder" text="Frantumatore balle"/>
+        <text name="function_baleShredder" text="Aggancia il frantumatore balle alla Premos 5000 per frantumare le balle e pellettizzare il materiale. Il frantumatore per balle può essere agganciato alla parte anteriore destra della Premos durante la guida, controlla che la freccia gialla sul pallet sia rivolta verso la Premos."/>
+        <text name="typeDesc_baleShredder" text="frantumatore balle"/>
+        <text name="warning_firstFoldTheTool" text="Devi prima dispiegare l'attrezzo (%s)!"/>
+        <text name="warning_baleFillTypeNotSupported" text="Balla non supportata!"/>
+        <text name="warning_roundBalesNotSupported" text="Balle tonde non supportate!"/>
+
+        <!-- Placeables -->
+        <text name="name_pelletHall" text="Edificio con pallettizzatore"/>
+        <text name="name_pelletHall_crane" text="Edificio con carroponte"/>
+        <text name="name_pelletHall_empty" text="Edificio multiuso"/>
+        <text name="name_palletSellPoint" text="Punto vendita pellet/pallet"/>
+        <text name="action_lightsOn" text="Accendi luci"/>
+        <text name="action_lightsOff" text="Spegni luci"/>
+
+        <text name="function_pelletHall" text="Qui puoi immagazzinare i pellet di paglia e fieno. Usa il pallettizzatore per riempire i sacchi di pellet e accatastarli sui bancali. Con il carroponte è più facile alimentare il pallettizzatore."/>
+        <text name="function_pelletHall_crane" text="Qui puoi immagazzinare i pellet di paglia e fieno. Con il carroponte è più facile riempire i tuoi macchinari."/>
+        <text name="function_pelletHall_empty" text="Qui puoi immagazzinare balle e materiale o parcheggiare i tuoi veicoli."/>
+        <text name="function_palletSellPoint" text="Qui puoi vendere direttamente il pellet o i bancali di pellet ad un prezzo maggiore rispetto al materiale sfuso."/>
+
+        <!-- Crane -->
+        <text name="action_toggleCraneTool" text="Modifica attrezzo carroponte"/>
+
+        <!-- Palletizer -->
+        <text name="notification_palletizer_refilled" text="Pallettizzatore riempito con %d sacchi dovuto a salvataggio/sincronizzazione"/>
+        <text name="notification_palletizer_stopped" text="Pallettizzatore arrestato"/>
+        <text name="notification_palletizer_empty" text="Pallettizzatore vuoto"/>
+        <text name="statistics_palletizer_bags" text="Prodotto giornaliero fino ad ora: %d sacchi, %d pallet"/>
+        <text name="statistics_palletizer_time" text="Risorse disponibili per %d minuti %d secondi"/>
+        <text name="statistics_palletizer_blocked" text="Pallettizzatore bloccato, svuota il nastro!"/>
+
+        <!-- Pallets -->
+        <text name="baleTwinePallet" text="Pallet bobina spago balle"/>
+        <text name="function_baleTwinePallet" text="Puoi ricaricare la Krone BigPack 1290 HDP II XC con le bobine di spago."/>
+        <text name="netRolePallet" text="Pallet rete balle"/>
+        <text name="function_netRolePallet" text="Puoi ricaricare la Krone Comprima V180 XC con i rotoli di rete."/>
+        <text name="molassesPallet" text="Pallet melassa"/>
+        <text name="function_molassesPallet" text="Con le taniche puoi ricaricare il serbatoio di melassa della Krone Premos 5000."/>
+
+        <!-- fillTypes -->
+        <text name="fillType_strawPellets" text="Pellet di paglia"/>
+        <text name="fillType_hayPellets" text="Pellet di fieno"/>
+        <text name="fillType_baleTwine" text="Spago balle"/>
+        <text name="fillType_baleNet" text="Rete balle"/>
+        <text name="fillType_molasses" text="Melassa"/>
+
+        <!-- refillSupplies -->
+        <text name="action_openBaleNetDoor" text="Apri vano rete"/>
+        <text name="action_closeBaleNetDoor" text="Chiudi vano rete"/>
+        <text name="action_lowerTwineBoxes" text="Apri alloggiamento spago"/>
+        <text name="action_liftTwineBoxes" text="Chiudi alloggiamento spago"/>
+        <text name="warning_closeBaleNetDoorFirst" text="Prima chiudi vano rete!"/>
+        <text name="warning_closeTwineBoxesFirst" text="Prima chiudi alloggiamento spago!"/>
+        <text name="warning_refillSuppliesFirst" text="Prima ricarica %s!"/>
+
+        <text name="configuration_refillSupplies" text="Tipo di ricarica"/>
+        <text name="configuration_manually" text="Manuale"/>
+        <text name="configuration_automatically" text="Automatico"/>
+
+        <!-- Variable bale size -->
+        <text name="action_baleUnitSize" text="Modifica dimensione attuale balla %.2f"/>
+        <text name="warning_baleTooSmall" text="Prossima dimensione balla %.2f troppo piccola per l'attuale riempimento"/>
+
+        <!-- Misc -->
+        <text name="strawHarvest_message_failedHeightTypes" text="L'espansione Straw Harvest non può essere caricata sulla mappa selezionata: la mappa, in combinazione con le mod attive, non è compatibile con l'espansione. (Troppi frutti a terra)"/>
+    </texts>
+</l10n>

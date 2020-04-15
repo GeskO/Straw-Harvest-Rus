@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+    <translationContributors>Wopster, Jackaroo, DjGoHam</translationContributors>
+
+    <texts>
+        <!-- Inputs -->
+        <text name="input_SH_TOGGLE_COLLECT_MODE" text="SH: Toggle collect mode"/>
+        <text name="input_SH_DEPART_BALES" text="SH: Depart bales"/>
+        <text name="input_SH_RESET_BALE_COUNTER" text="SH: Reset bale counter"/>
+        <text name="input_SH_GRAB_BALES" text="SH: Grab bales"/>
+        <text name="input_SH_DROP_BALES" text="SH: Drop bales"/>
+        <text name="input_SH_TOGGLE_CRANE_TOOL" text="SH: Toggle crane tool"/>
+        <text name="input_SH_MOVE_CRANE_BRIDGE_1" text="SH: Move crane bridge forward"/>
+        <text name="input_SH_MOVE_CRANE_BRIDGE_2" text="SH: Move crane bridge backward"/>
+        <text name="input_SH_MOVE_CRANE_TROLLEY_1" text="SH: Move crane trolley right"/>
+        <text name="input_SH_MOVE_CRANE_TROLLEY_2" text="SH: Move crane trolley left"/>
+        <text name="input_SH_MOVE_CRANE_TOOL_1" text="SH: Move crane tool up"/>
+        <text name="input_SH_MOVE_CRANE_TOOL_2" text="SH: Move crane tool down"/>
+        <text name="input_SH_ROTATE_CRANE_TOOL_1" text="SH: rotate crane tool right"/>
+        <text name="input_SH_ROTATE_CRANE_TOOL_2" text="SH: rotate crane tool left"/>
+        <text name="input_SH_OPEN_CRANE_TOOL_1" text="SH: Open crane tool"/>
+        <text name="input_SH_OPEN_CRANE_TOOL_2" text="SH: Close crane tool"/>
+        <text name="input_SH_TOGGLE_BALE_SIZE" text="SH: Toggle bale size"/>
+        <text name="input_SH_TOGGLE_REFILL_COVER" text="SH: Toggle refill cover"/>
+
+        <!-- Bale grab -->
+        <text name="typeDesc_baleGrab" text="Bale Grab"/>
+        <text name="function_baleGrab" text="With a bale grab you can grab square bales quickly and easily."/>
+
+        <text name="configuration_inputAttacherTeleHandler" text="Telehandler"/>
+
+        <text name="action_grabBales" text="Grab bales"/>
+        <text name="action_dropBales" text="Drop bales"/>
+
+        <text name="action_addSpikes" text="Attach bale spikes"/>
+        <text name="action_removeSpikes" text="Detach bale spikes"/>
+
+        <!-- Bale counter -->
+        <text name="action_resetBaleCounter" text="Reset bale counter"/>
+
+        <!-- Comprima -->
+        <text name="function_comprima" text="A baler turns loose straw, grass or hay into convenient bales. The Comprima can press bales in different sizes between 1,10m and 1,80m. ATTENTION: many tools in the game are only compatible to 1,30m bales."/>
+
+        <!-- BigPack -->
+        <text name="configuration_baleTrailer" text="BaleCollect 1230"/>
+        <text name="configuration_noBaleTrailer" text="Bale Chute"/>
+
+        <!-- BaleCollect -->
+        <text name="function_baleCollect" text="Attach the Krone BaleCollect to the Krone BiGPack 1290 HDP II XC to collect 3 bales and unload them side by side."/>
+        <text name="typeDesc_baleCollect" text="Bale Collector"/>
+        <text name="action_collectMode" text="Bale unload mode %s"/>
+        <text name="warning_needsABaleTrailer" text="In this configuration the baler can only be used in combination with the bale trailer!"/>
+
+        <!-- Premos -->
+        <text name="function_premos" text="This machine can pelletize straw and hay right on the field. Attached to the concept bale shredder, it can also be used stationary."/>
+        <text name="typeDesc_premos" text="Pellet Harvester"/>
+
+        <!-- BaleShredder -->
+        <text name="name_baleShredder" text="Bale Shredder"/>
+        <text name="function_baleShredder" text="Attach the bale shredder to the Premos 5000 to shred bales and pelletize the material. Bale shredder can be attached to the Premos front right side in driving, check that the yellow arrow on the pallet is pointing towards the Premos."/>
+        <text name="typeDesc_baleShredder" text="Bale Shredder"/>
+        <text name="warning_firstFoldTheTool" text="You first need to fold the tool (%s)!"/>
+        <text name="warning_baleFillTypeNotSupported" text="Bale fillType not supported!"/>
+        <text name="warning_roundBalesNotSupported" text="Round bales are not supported!"/>
+
+        <!-- Placeables -->
+        <text name="name_pelletHall" text="Pellet Hall Palletizer"/>
+        <text name="name_pelletHall_crane" text="Pellet Hall Crane"/>
+        <text name="name_pelletHall_empty" text="Pellet Hall"/>
+        <text name="name_palletSellPoint" text="Pallet Sell Point"/>
+        <text name="action_lightsOn" text="Turn on lights"/>
+        <text name="action_lightsOff" text="Turn off lights"/>
+
+        <text name="function_pelletHall" text="Here you can store straw pellets and hay pellets. Use the palletizer to put the pellets into bags and stack them on pallets. With the crane, it is easy to fill the palletizer."/>
+        <text name="function_pelletHall_crane" text="Here you can store straw pellets and hay pellets. With the crane, it is easy to fill your machinery."/>
+        <text name="function_pelletHall_empty" text="Here you can store bales and bulk material or park your vehicles."/>
+        <text name="function_palletSellPoint" text="Here you can sell the pellet pallets for a higher price than as bulk material."/>
+
+        <!-- Crane -->
+        <text name="action_toggleCraneTool" text="Toggle crane tool"/>
+
+        <!-- Palletizer -->
+        <text name="notification_palletizer_refilled" text="Palletizer refilled with %d bags due to saving/sync"/>
+        <text name="notification_palletizer_stopped" text="Palletizer stopped"/>
+        <text name="notification_palletizer_empty" text="Palletizer empty"/>
+        <text name="statistics_palletizer_bags" text="Todays output until now: %d bags, %d pallets"/>
+        <text name="statistics_palletizer_time" text="Supply lasts for %d minutes %d seconds"/>
+        <text name="statistics_palletizer_blocked" text="Palletizer blocked, empty the conveyor!"/>
+
+        <!-- Pallets -->
+        <text name="baleTwinePallet" text="Bale Twine Pallet"/>
+        <text name="function_baleTwinePallet" text="With the twine roles you can refill the Krone BigPack 1290 HDP II XC."/>
+        <text name="netRolePallet" text="Bale Net Pallet"/>
+        <text name="function_netRolePallet" text="With the net roles you can refill the Krone Comprima V 180 XC."/>
+        <text name="molassesPallet" text="Molasses Pallet"/>
+        <text name="function_molassesPallet" text="With the canisters you can refill the molasses tank of the Krone Premos 5000."/>
+
+        <!-- fillTypes -->
+        <text name="fillType_strawPellets" text="Straw Pellets"/>
+        <text name="fillType_hayPellets" text="Hay Pellets"/>
+        <text name="fillType_baleTwine" text="Bale Twine"/>
+        <text name="fillType_baleNet" text="Bale Net"/>
+        <text name="fillType_molasses" text="Molasses"/>
+
+        <!-- refillSupplies -->
+        <text name="action_openBaleNetDoor" text="Open bale net door"/>
+        <text name="action_closeBaleNetDoor" text="Close bale net door"/>
+        <text name="action_lowerTwineBoxes" text="Lower twine boxes"/>
+        <text name="action_liftTwineBoxes" text="Lift twine boxes"/>
+        <text name="warning_closeBaleNetDoorFirst" text="Close bale net box first!"/>
+        <text name="warning_closeTwineBoxesFirst" text="Lift twine boxes first!"/>
+        <text name="warning_refillSuppliesFirst" text="Refill the %s first!"/>
+
+        <text name="configuration_refillSupplies" text="Refill supplies"/>
+        <text name="configuration_manually" text="Manually"/>
+        <text name="configuration_automatically" text="Automatic"/>
+
+        <!-- Variable bale size -->
+        <text name="action_baleUnitSize" text="Switch current bale size %.2f"/>
+        <text name="warning_baleTooSmall" text="The next bale size %.2f is too small for the current fill level"/>
+
+        <!-- Misc -->
+        <text name="strawHarvest_message_failedHeightTypes" text="Straw Harvest was unable to load on the selected map: the map in combination with the active mods is not compatible with Straw Harvest. (too many fruits on the ground)"/>
+    </texts>
+</l10n>

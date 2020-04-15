@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="47">
+    <author>Creative Mesh (rus by GeskO)</author>
+    <version>1.0.0.0_1</version>
+
+    <title>
+        <en>Addon Straw Harvest</en>
+        <de>Addon Strohbergung</de>
+        <fr>Addon Récolte De Paille</fr>
+        <pl>Straw Harvest</pl>
+        <it>Espansione "Straw Harvest"</it>
+        <cz>Addon Sklizeň Slámy</cz>
+        <es>Extensión Recogida De Paja</es>
+        <pt>Addon Colheita De Palha</pt>
+        <nl>Stro Oogst Addon</nl>
+    </title>
+
+    <description>
+        <en><![CDATA[Expand your farming operation with the pellet industry and increase productivity with powerful machinery from KRONE and Bressel und Lade, included in the "Straw Harvest" addon. 
+
+The world's first mobile pellet harvester, the KRONE Premos 5000, can produce pellets by collecting straw or hay swaths directly from the field, or can be operated stationary with the additional bale shredder. The produced pellets can be sold, used for animal bedding, fed to animals, or you can choose to process them in the included industry hall. 
+
+The KRONE BiGPack 1290 HDP II and KRONE Comprima V180XC are the balers of choice for a powerful straw harvest. With the attachable KRONE BaleCollect, the BiGPack can unload stacks of up to three square bales at a time. Additionally, the Comprima also comes with a variable round-bale size options. 
+
+Because the KRONE BiGPack, Comprima, and Premos need bale yarn, netting and molasses in reality, this feature can now be added optionally via shop configurations to add to your virtual farming experience. When this option is enabled you will have to buy the consumables pallets in the shop.
+
+Handling bales is easy with the included bale grabs from Bressel und Lade and Lizard. These grabs come in various sizes for front loaders, telehandlers, and wheel loaders. They grab and hold the bales while moving and only release the bales when you want them to. 
+
+The included industry hall can be configured in three different ways. You can use it as an empty hall for parking your vehicles and storing bales and pallets. Add a hall crane to make moving bulk material, bales, and pallets easier. You can also add an automatic palletizer to further process the pellets created by the KRONE Premos 5000. The pallets filled with pellets can then be sold at a higher profit at the selling station, which is also provided with the addon.
+]]></en>
+        <de><![CDATA[Erweitere deinen Landwirtschaftsbetrieb mit der Pelletierung von Halmgütern und erhöhe die Produktivität mit den schlagkräftigen Maschinen von KRONE und Bressel und Lade aus dem Addon „Strohbergung“. 
+
+Der weltweit erste mobile Pelletvollernter KRONE Premos 5000 produziert Pellets direkt auf dem Feld oder stationär mit dem optionalen Ballenauflöser. Die produzierten Pellets können verkauft, als Einstreu und Futter verwendet oder in der enthaltenen Industriehalle weiter verarbeitet werden. 
+
+KRONE BiGPack 1290 HDP II und Comprima V180XC sind die Ballenpressen der Wahl für eine schlagkräftige Strohernte. Mit dem anbaubaren BaleCollect 1230 sammelt die BiGPack bis zu drei Ballen und läd diese gleichzeitig ab. Die Comprima kann Ballen in diversen Größen pressen.
+
+In der Realität benötigen die KRONE BiGPack, Comprima und Premos zum Binden der Ballen und Pressen der Pellets Ballengarn, Ballennetz und Molasse, diese Funktion kann nun auch im Shop als Konfiguration ausgewählt werden und erweitert so das virtuelle Simulationserlebnis. Die Verbrauchsgüter können dann auf Paletten im Shop gekauft werden.
+
+Ballenhandling wird mit den enthaltenen Ballengreifern der Firma Bressel und Lade sowie Lizard eine Leichtigkeit. Die Ballengreifer gibt es in verschiedenen Größen für Frontlader, Telelader und Radlader, mit ihnen werden die Ballen während des Transports festgehalten und lösen sich erst, wenn du es willst.
+
+Die Industriehalle kann mit diversen Ausbaumöglichkeiten ausgestattet werden. Du kannst sie als leere Halle zum Unterstellen deiner Fahrzeuge oder Lagerung von Ballen und Paletten verwenden. Erweiterst du sie mit dem Hallenkran kannst du bequem Schüttgüter, Ballen und Paletten bewegen. Mit der automatischen Palettierstation kannst du die von der Premos produzierten Pellets absacken und auf Paletten stapeln. Diese Paletten können dann für einen höheren Ertrag bei der platzierbaren Verkaufsstation verkauft werden.
+]]></de>
+        <fr><![CDATA[Étendez votre exploitation agricole à l'industrie des pellets et augmentez votre rendement grâce aux puissantes machines de KRONE et de Bressel und Lade incluses dans l'addon "Récolte de la paille". 
+
+La première récolteuse de pellets (granulés) mobile au monde, la KRONE Premos 5000, peut produire des granulés directement sur le terrain ou peut être utilisée de manière statique avec un broyeur de balles supplémentaire. Les pellets produits peuvent être vendus, utilisés pour la litière des animaux et leur alimentation, et peuvent être traités dans le hall industriel inclus. 
+
+Les presses à balles KRONE BiGPack 1290 HDP II et KRONE Comprima V180XC sont les machines de choix pour une récolte de paille puissante. Grâce au KRONE BaleCollect, la BiGPack peut décharger des piles de trois balles à la fois. La Comprima est également équipée d'une chambre variable pour faire différentes tailles de balles.
+
+Comme la BiGPack, la Comprima et la Premos de KRONE ont, en réalité, besoin de ficelle à balle, de filet et de mélasse, cette fonction peut maintenant être ajoutée en option à votre expérience d'agriculture virtuelle par le biais des configurations au magasin. Lorsque cette option est activée, vous devrez acheter les palettes de consommables au magasin.
+
+La manipulation des balles devient facile grâce aux pinces à balles fournies par Bressel und Lade et Lizard. Ces grappins sont disponibles en différentes tailles pour les chargeurs frontaux, les télescopiques et les chargeurs sur pneus. Ils saisissent et tiennent les balles tout en les déplaçant et ne les relâchent que lorsque vous le souhaitez. 
+
+Le hall industriel inclus, peut être configuré de trois manières différentes. Vous pouvez l'utiliser comme un hall vide pour garer vos véhicules, stocker les balles et les palettes. Ajoutez un pont-roulant pour faciliter l'accès aux produits en vrac, aux balles et aux palettes en transit. Ajoutez un palettiseur automatique pour le traitement ultérieur des pellets produits par la KRONE Premos 5000. Les palettes remplies de pellets peuvent ensuite être vendues avec un bénéfice plus élevé à la station de vente fournie avec l'addon.
+]]></fr>
+        <it><![CDATA[Ampliate la vostra attività agricola all'industria del pellet e aumentate la produttività con i potenti macchinari di KRONE e Bressel und Lade inclusi nell'espansione "Straw Harvest".
+
+La prima raccoglitrice mobile di pellet al mondo KRONE Premos 5000 può produrre pellet direttamente sul campo o può essere azionata da ferma con il frantumatore per balle aggiuntivo. Il pellet prodotto può essere venduto, utilizzato per la lettiera degli animali, per nutrire gli animali o può essere lavorato negli edifici inclusi.
+
+KRONE BiGPack 1290 HDP II e KRONE Comprima V180XC sono le presse scelte per un'ottima raccolta della paglia. Con la KRONE BaleCollect, la BiGPack può scaricare un'accoppiata di tre balle alla volta. Inoltre, la KRONE Comprima ha la possibilità di variare la dimensione delle balle.
+
+Poiché nella realtà la KRONE BiGPack, la Comprima e la Premos hanno bisogno di spago, reti e melassa questa caratteristica può ora essere aggiunta opzionalmente, tramite configurazioni nel negozio, alla vostra esperienza virtuale. Quando questa opzione è attivata, dovrete acquistare i pallet nel negozio.
+
+La gestione delle balle diventa facile con le pinze per balle incluse di Bressel und Lade e Lizard. Queste pinze sono disponibili in varie dimensioni per caricatori frontali, telescopici e pale gommate. Afferrano e trattengono le balle e le rilasciano solo quando lo si desidera. 
+
+Gli edifici inclusi possono avere tre configurazioni. È possibile utilizzarlo come edificio vuoto multiuso per parcheggiare i veicoli o immagazzinare balle e pallet. Aggiungete un carroponte per rendere più accessibili i materiali sfusi, le balle e i pallet. Aggiungete un pallettizzatore automatico per lavorare ulteriormente i pellet prodotti dalla KRONE Premos 5000. I pallet riempiti di sacchi di pellet possono poi essere venduti ad un prezzo maggiore presso il punto di vendita fornito con l'espansione.
+]]></it>
+        <cz><![CDATA[Rozšiřte své zemědělské operace do peletového průmyslu a zvyšte svou produktivitu s výkonými stroji KRONE a Bressel und Lade obsažené v addonu "Sklizeň slámy".
+ 
+Světově první mobilní peletovač KRONE Premos 5000 může produkovat pelety přímo na poli nebo stacionárně s přídavným drtičem balíků. Vyprodukované pelety mohou být prodány, použity pro podestýlku nebo krmení pro zvířata a nebo zpracovány v obsažené průmyslové hale.
+
+KRONE BigPack 1290 HDP II a KRONE Comprima V180XC jsou správnou volbou pro zpracování slámy. S přípojným vozíkem BaleCollect může BigPack vykládat štos tří balíků zároveň. KRONE Comprima s možností variabilní velikosti balíků.
+
+Protože KRONE BigPack, Comprima a Premos potřebují v reálném zemědělství motouzy, síťoviny a melasu, je tato vlastnost přidána jako volitelná konfigurace v obchodě pro zlepšení zážitku z virtuálního zemědělství. Pokud je tato vlastnost zapnuta, musíte koupit palety s potřebnými věcmi v obchodě.
+
+Manipulování s balíky je nyní jednosušší pomocí obsažených balíkových drapáků od Bressel und Lade a Lizard. Tyto drapáky jsou v několika velikostech pro čelní nakladače, teleskopické manipulátory a kolové nakladacče. Uchytí a drží balíky při manipulaci a uvolní se až když budete chtít.
+
+Obsažená průmyslová hala může být nakonfigurována v třech ruzných variantách. Můžete jí použít jako samostatnou halu pro zaparkování vašich vozidel, uskladnění balíků nebo palet. S přidáním halového jeřábu můžete přesouvat sypké materiály, balíky a palety snadněji a dostupněji. Přidáním automatického paletizéru pro další zpracování pelet produkováných z KRONE Premos 5000. Palety s peletami mohou být prodány s vysokým výdělkem na výkupním místě, které je také obsaženo v addonu.
+]]></cz>
+        <es><![CDATA[Amplíe su operación agrícola a la industria de pellets y aumente la productividad con maquinaria poderosa de KRONE y Bressel incluidos en lña extensión "Recogida de Paja"
+
+La KRONE Premos 5000 es la primera cosechadora móvil de pellets del mundo, puede producir pellets directamente en el campo o puede ser operada estacionariamente con la trituradora de pacas adicional. Los pellets producidos se pueden vender, se utilizan para la cama de animales, para alimentar a los animales o para ser procesados en la nave industrial incluida.
+
+La KRONE BiGPack 1290 HDP II y la KRONE Comprima V180XC son las empacadoras preferidas para una gran cosecha de paja. Con el acoplable KRONE BaleCollect el BiGPack puede descargar pilas de hasta tres fardos a la vez. El Comprima también viene con una opción para cambiar el tamaño de las pacas.
+
+Debido a que la KRONE BiGPack, Comprima y Premos necesitan cuerda de paca, redes y melaza para funcionar, ahora este suministro de consumibles se puede activar en la configuracioón inicial como "recarga automática". Cuando esta opción está habilitada tendrá que comprar los palets de consumibles en la tienda.
+
+El manejo de las pacas se vuelve fácil con las accesorios para pacas incluidos de Bressel y Lizard. Estos accesorios vienen en varios tamaños para cargadoras delanteras, manipuladoras telescópicos y cargadoras de ruedas. Cogen y sostienen las pacas  mientras te mueves con el vehículo y sólo las sueltan cuando se desea.
+
+La Nave industrial incluida se puede configurar de tres formas distintas. Se puede utilizar como una sala vacía para aparcar sus vehículos, guardar fardos y palets. Agregue una nave con puente grúa para manejar el material a granel, pacas y palets sea más sencillo. Añadir un paletizador automático para seguir procesando los pellets producidos por el KRONE Premos 5000. Los palets llenos de pellets se pueden vender con un beneficio alto en la estación de venta proporcionada con la extension "Recogida de Paja"
+]]></es>
+        <ae><![CDATA[Expanda su granja a la industria de pellets y aumente la productividad con las potentes máquinas de KRONE y Bressel and Lade incluidas en el complemento "Extensión Recogida De Paja".
+
+La primera cosechadora de pellets móvil del mundo, la KRONE Premos 5000, produce pellets directamente en el campo o de modo fijo con el triturador de pacas opcional. Los pellets producidos pueden venderse, usarse como ropa de cama y forraje o procesarse en la sala industrial que se incluye.
+
+KRONE BiGPack 1290 HDP II y KRONE Comprima V180XC son las empacadoras preferidas para una potente cosecha de paja. Con el KRONE BaleCollect acoplable, la BiGPack puede descargar pilas de hasta tres pacas a la vez. El Comprima también viene con opción de tamaño de paca variable.
+
+Debido a que KRONE BiGPack, Comprima y Premos necesitan cuerda para paca, redes y melaza, esta característica ahora se puede agregar opcionalmente a través de configuraciones en la tienda a su experiencia de cultivo virtual. Cuando esta opción esté habilitada, tendrá que comprar los palets de consumibles en la tienda de estos productos.
+
+El manejo de las pacas se vuelve fácil con las pinzas para pacas incluidas de Bressel und Lade y Lizard. Estas pinzas vienen en varios tamaños para cargadores frontales, manipuladores telescópicos y cargadores de ruedas. Agarran y sostienen los fardos mientras se mueven y los sueltan solo cuando usted lo desea.
+
+La nave industrial puede equiparse con varias opciones de expansión. Puede usarla como una sala vacía para almacenar sus vehículos o para almacenar pacas y palets. Si añade la opción con la grúa interior, puede mover fácilmente mercancías a granel, pacas y palets. Con la estación de paletización automática puede embolsar los pellets producidos por la Premos y apilarlos en palets. Estos palets se pueden vender en la estación de ventas ubicable para obtener un mayor rendimiento.
+]]>
+</ae>
+        <pl><![CDATA[Rozszerz swoją działalność rolniczą o produkcję pelltu i zwiększ produktywność dzięki potężnym maszynom KRONE i Bressel und Lade zawartym w dodatku „Straw Harvest”.
+
+Pierwszy na świecie mobilny pelletyzer KRONE Premos 5000 może produkować pellet bezpośrednio na polu lub może pracować stacjonarnie za pomocą dodatkowego rozdrabniacza bel. Wytworzone granulki można sprzedawać, wykorzystywać jako ściółkę dla zwierząt, karmić zwierzęta i przetwarzać w dołączonej hali przemysłowej.
+
+KRONE BiGPack 1290 HDP II i KRONE Comprima V180XC to prasy zwijające do wydajnego zbioru słomy. Po zaczepienu KRONE BaleCollect BiGPack możesz rozładowywać do trzech bel obok siebie. Comprima ma również opcję zmiennej wielkości beli.
+
+Ponieważ w rzeczywistości KRONE BiGPack, Comprima i Premos potrzebują sznurka, siatki i melasy, tę funkcję można teraz opcjonalnie dodać poprzez konfigurację sklepu dla realniejszej rozgrywki. Gdy ta opcja jest włączona, będziesz musiał kupić palety z tymi materiałami eksploatacyjnymi w sklepie.
+
+Transportowanie bel staje się łatwiejsze dzięki dołączonym chwytakom do bel Bressel und Lade i Lizard. Chwytaki te są dostępne w różnych rozmiarach dla ładowaczy czołowych oraz ładowarek teleskopowych i kołowych. Chwytają i trzymają bele podczas transportu i puszczają je tylko wtedy, gdy chcesz.
+
+Dołączoną halę przemysłową można skonfigurować na trzy różne sposoby. Możesz postawić pustą halę i parkować w niej pojazdy, przechowywać bele i palet. Wybierając wersję z dźwigiem, ułatwisz przenoszenie/załadunek luźnych materiałów, bel i palet. Natomiast w wyposażeniu z paletyzatorem, możesz przetwarzać pellet produkowany przez KRONE Premos 5000. Palety wypełnione pelletem można następnie sprzedawać w punkcie sprzedaży (dołączony do dodatku) za wyższa cenę niż luźny materiał.]]>
+</pl>
+        <nl><![CDATA[Breid jou boerenbedrijf uit naar de pellet industrie en verhoog je productiviteit met behulp van de krachtige machines van KRONE en Bressel und Lade te vinden in de "Stro Oogst" Addon.
+
+'s Werelds eerste mobiele pellet oogstmachine, de KRONE Premos 5000, kan pellets direct op het land produceren of kan stationair gebruikt worden met behulp van een balenhakselaar. De geproduceerde pellets kunnen verkocht worden, gebruikt worden als instrooisel voor de dieren, aan de dieren gevoerd worden of verwerkt worden in de inbegrepen industrie hal.
+
+De KRONE BiGPack 1290 HDP II en KRONE Comprima V180XC zijn de beste keuzes op het gebied van balenpersen voor een productieve stro oogst. Door de KRONE BaleCollect aan de BiGPack te koppelen kan deze drie balen naast elkaar neerleggen. De Comprima bied de mogelijkheid om de grootte van de balen te variëren. De KRONE BiGPack, Comprima en de Premos gebruiken balentouw, netten en melasse in het echte leven, dit kan als optie worden gekozen in de shop. Wanneer deze optie is gekozen moet je de pallets met gebruiksgoederen aanschaffen in de shop.
+
+De balen verplaatsen wordt een gemak met de inbegrepen balenklemmen van Bressel und Lade en Lizard. Deze klemmen komen in verschillende grootte voor voorladers, verreikers en wielladers. Dankzij deze klemmen worden de balen vastgehouden terwijl je rijd en worden alleen losgelaten wanneer jij dat wilt.
+
+De inbegrepen industrie hal kan op drie manieren worden opgebouwd. Je kan het gebruiken als een open opslagloods om je machines, balen en pellets in op te slaan. Voeg een bovenloopkraan toe om het verplaatsen van stortgoed, balen en pellets makkelijker te maken. Voeg een automatische palletiseerder toe om de pellets, geproduceerd door de KRONE Premos 5000, verder te verwerken. De pallets gevult met pellets kunnen vervolgens met een hogere winst verkocht worden bij het verkooppunt binnen de Addon.
+]]></nl>
+    </description>
+
+    <l10n filenamePrefix="translations/translation"/>
+
+    <iconFilename>icon.png</iconFilename>
+    <multiplayer supported="true"/>
+
+    <extraSourceFiles>
+        <sourceFile filename="src/loader.lua"/>
+    </extraSourceFiles>
+
+    <specializations>
+        <specialization name="strawHarvestBaleGrab" className="StrawHarvestBaleGrab" filename="src/vehicles/StrawHarvestBaleGrab.lua"/>
+        <specialization name="strawHarvestRaycastDependentAnimation" className="StrawHarvestRaycastDependentAnimation" filename="src/vehicles/StrawHarvestRaycastDependentAnimation.lua"/>
+        <specialization name="strawHarvestBaleCounter" className="StrawHarvestBaleCounter" filename="src/vehicles/StrawHarvestBaleCounter.lua"/>
+        <specialization name="strawHarvestRefillSupplies" className="StrawHarvestRefillSupplies" filename="src/vehicles/StrawHarvestRefillSupplies.lua"/>
+        <specialization name="strawHarvestBaleCollectBaler" className="StrawHarvestBaleCollectBaler" filename="src/vehicles/StrawHarvestBaleCollectBaler.lua"/>
+        <specialization name="strawHarvestBaleCollect" className="StrawHarvestBaleCollect" filename="src/vehicles/StrawHarvestBaleCollect.lua"/>
+        <specialization name="strawHarvestVariableBaleSizeBaler" className="StrawHarvestVariableBaleSizeBaler" filename="src/vehicles/StrawHarvestVariableBaleSizeBaler.lua"/>
+        <specialization name="strawHarvestPelletizer" className="StrawHarvestPelletizer" filename="src/vehicles/StrawHarvestPelletizer.lua"/>
+        <specialization name="strawHarvestCraneTools" className="StrawHarvestCraneTools" filename="src/vehicles/StrawHarvestCraneTools.lua"/>
+        <specialization name="strawHarvestBaleShredder" className="StrawHarvestBaleShredder" filename="src/vehicles/StrawHarvestBaleShredder.lua"/>
+    </specializations>
+
+    <vehicleTypes>
+        <type name="strawHarvestBaleGrab" className="Vehicle" parent="implementDynamicMountAttacher" filename="$dataS/scripts/vehicles/Vehicle.lua">
+            <specialization name="strawHarvestBaleGrab"/>
+            <specialization name="strawHarvestRaycastDependentAnimation"/>
+        </type>
+        <type name="kroneComprimaV180XC" className="Vehicle" parent="baler" filename="$dataS/scripts/vehicles/Vehicle.lua">
+            <specialization name="strawHarvestBaleCounter"/>
+            <specialization name="strawHarvestRefillSupplies"/>
+            <specialization name="strawHarvestVariableBaleSizeBaler"/>
+        </type>
+        <type name="kroneBigPack1290HDPII" className="Vehicle" parent="baler" filename="$dataS/scripts/vehicles/Vehicle.lua">
+            <specialization name="strawHarvestBaleCounter"/>
+            <specialization name="strawHarvestRefillSupplies"/>
+            <specialization name="strawHarvestBaleCollectBaler"/>
+        </type>
+        <type name="kroneBaleCollect" className="Vehicle" parent="implement" filename="$dataS/scripts/vehicles/Vehicle.lua">
+            <specialization name="fillUnit"/>
+            <specialization name="strawHarvestBaleCollect"/>
+        </type>
+        <type name="kronePremos5000" className="Vehicle" parent="augerWagon" filename="$dataS/scripts/vehicles/Vehicle.lua">
+            <specialization name="groundReference"/>
+            <specialization name="workArea"/>
+            <specialization name="workParticles"/>
+            <specialization name="turnOnVehicle"/>
+            <specialization name="pickup"/>
+            <specialization name="waterTrailer"/>
+            <specialization name="strawHarvestRefillSupplies"/>
+            <specialization name="strawHarvestPelletizer"/>
+        </type>
+        <type name="kronePremosBaleShredder" className="Vehicle" parent="implement" filename="$dataS/scripts/vehicles/Vehicle.lua">
+            <specialization name="strawHarvestBaleShredder"/>
+            <specialization name="turnOnVehicle"/>
+            <specialization name="tensionBeltObject"/>
+        </type>
+        <type name="hallCrane" className="Vehicle" parent="crane" filename="$dataS/scripts/vehicles/Vehicle.lua">
+            <specialization name="fillUnit"/>
+            <specialization name="fillVolume"/>
+            <specialization name="dischargeable"/>
+            <specialization name="ropes"/>
+            <specialization name="shovel"/>
+            <specialization name="bunkerSiloInteractor"/>
+            <specialization name="strawHarvestCraneTools"/>
+        </type>
+    </vehicleTypes>
+
+    <jointTypes>
+        <jointType name="premosBaleShredder"/>
+    </jointTypes>
+
+    <storeItems>
+        <storeItem xmlFilename="vehicles/bresselUndLade/BuL_B50AR/BuL_B50AR03.xml"/>
+        <storeItem xmlFilename="vehicles/bresselUndLade/BuL_B50AR/BuL_B50AR05.xml"/>
+        <storeItem xmlFilename="vehicles/lizard/vGrab/vGrab.xml"/>
+
+        <storeItem xmlFilename="vehicles/krone/comprimaV180XC/comprimaV180XC.xml"/>
+        <storeItem xmlFilename="vehicles/krone/bigPack1290HDPII/bigPack1290HDPII.xml"/>
+        <storeItem xmlFilename="vehicles/krone/baleCollect/baleCollect.xml"/>
+        <storeItem xmlFilename="vehicles/krone/premos5000/premos5000.xml"/>
+        <storeItem xmlFilename="vehicles/krone/baleShredder/baleShredder.xml"/>
+
+        <storeItem xmlFilename="placeables/pelletHall/crane/hallCrane.xml"/>
+        <storeItem xmlFilename="placeables/palletSellPoint/palletSellPoint.xml"/>
+        <storeItem xmlFilename="placeables/pelletHall/pelletHall_empty.xml"/>
+        <storeItem xmlFilename="placeables/pelletHall/pelletHall_crane.xml"/>
+        <storeItem xmlFilename="placeables/pelletHall/pelletHall.xml"/>
+
+        <storeItem xmlFilename="objects/pallets/krone/twinePallets/baleTwinePallet.xml"/>
+        <storeItem xmlFilename="objects/pallets/krone/netPallets/netRolePallet.xml"/>
+        <storeItem xmlFilename="objects/pallets/canisterPallet/canisterPallet.xml"/>
+
+        <!-- The pallets that are created by the palletizer (hidden in the shop) -->
+        <storeItem xmlFilename="objects/pallets/pelletPallets/strawPelletsPallet.xml"/>
+        <storeItem xmlFilename="objects/pallets/pelletPallets/hayPelletsPallet.xml"/>
+    </storeItems>
+
+    <brands>
+        <brand name="HALLSYS" title="HallSYS" image="resources/brands/brand_hallsys.dds"/>
+        <brand name="BRESSELUNDLADE" title="Bressel und Lade" image="resources/brands/brand_bressel_und_lade.dds"/>
+        <brand name="WEIDEGUT" title="Weidegut" image="resources/brands/brand_weidegut.dds"/>
+    </brands>
+
+    <actions>
+        <action name="SH_TOGGLE_COLLECT_MODE" axisType="HALF"/>
+        <action name="SH_DEPART_BALES" axisType="HALF"/>
+        <action name="SH_RESET_BALE_COUNTER" axisType="HALF"/>
+        <action name="SH_GRAB_BALES" axisType="HALF"/>
+        <action name="SH_DROP_BALES" axisType="HALF"/>
+        <action name="SH_TOGGLE_CRANE_TOOL" axisType="HALF"/>
+        <action name="SH_MOVE_CRANE_BRIDGE" axisType="FULL"/>
+        <action name="SH_MOVE_CRANE_TROLLEY" axisType="FULL"/>
+        <action name="SH_MOVE_CRANE_TOOL" axisType="FULL"/>
+        <action name="SH_ROTATE_CRANE_TOOL" axisType="FULL"/>
+        <action name="SH_OPEN_CRANE_TOOL" axisType="FULL"/>
+        <action name="SH_TOGGLE_BALE_SIZE" axisType="HALF"/>
+        <action name="SH_TOGGLE_REFILL_COVER" axisType="HALF"/>
+    </actions>
+
+    <inputBinding>
+        <actionBinding action="SH_TOGGLE_COLLECT_MODE">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_o"/>
+            <binding device="GAMEPAD_DEFAULT" input="BUTTON_5 BUTTON_19"/>
+        </actionBinding>
+        <actionBinding action="SH_DEPART_BALES">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_y"/>
+            <binding device="GAMEPAD_DEFAULT" input="BUTTON_5 BUTTON_4"/>
+        </actionBinding>
+        <actionBinding action="SH_RESET_BALE_COUNTER">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_n"/>
+            <binding device="GAMEPAD_DEFAULT" input="BUTTON_5 BUTTON_20"/>
+        </actionBinding>
+        <actionBinding action="SH_GRAB_BALES">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_y"/>
+            <binding device="GAMEPAD_DEFAULT" input="BUTTON_5 BUTTON_4"/>
+        </actionBinding>
+        <actionBinding action="SH_DROP_BALES">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_z"/>
+            <binding device="GAMEPAD_DEFAULT" input="BUTTON_5 BUTTON_17"/>
+        </actionBinding>
+        <actionBinding action="SH_TOGGLE_CRANE_TOOL">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_x"/>
+            <binding device="GAMEPAD_DEFAULT" input="BUTTON_5 BUTTON_2"/>
+        </actionBinding>
+        <actionBinding action="SH_MOVE_CRANE_BRIDGE">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_j" axisComponent="+"/>
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_n" axisComponent="-"/>
+            <binding device="KB_MOUSE_DEFAULT" input="MOUSE_BUTTON_LEFT AXIS_Y+" axisComponent="+"/>
+            <binding device="KB_MOUSE_DEFAULT" input="MOUSE_BUTTON_LEFT AXIS_Y-" axisComponent="-"/>
+            <binding device="GAMEPAD_DEFAULT" input="BUTTON_6 AXIS_2+" axisComponent="+"/>
+            <binding device="GAMEPAD_DEFAULT" input="BUTTON_6 AXIS_2-" axisComponent="-"/>
+        </actionBinding>
+        <actionBinding action="SH_MOVE_CRANE_TROLLEY">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_k" axisComponent="+"/>
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_m" axisComponent="-"/>
+            <binding device="KB_MOUSE_DEFAULT" input="MOUSE_BUTTON_LEFT AXIS_X-" axisComponent="-"/>
+            <binding device="KB_MOUSE_DEFAULT" input="MOUSE_BUTTON_LEFT AXIS_X+" axisComponent="+"/>
+            <binding device="GAMEPAD_DEFAULT" input="BUTTON_6 AXIS_1+" axisComponent="+"/>
+            <binding device="GAMEPAD_DEFAULT" input="BUTTON_6 AXIS_1-" axisComponent="-"/>
+        </actionBinding>
+        <actionBinding action="SH_MOVE_CRANE_TOOL">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lshift KEY_j" axisComponent="+"/>
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lshift KEY_n" axisComponent="-"/>
+            <binding device="KB_MOUSE_DEFAULT" input="MOUSE_BUTTON_RIGHT AXIS_Y+" axisComponent="+"/>
+            <binding device="KB_MOUSE_DEFAULT" input="MOUSE_BUTTON_RIGHT AXIS_Y-" axisComponent="-"/>
+            <binding device="GAMEPAD_DEFAULT" input="BUTTON_6 AXIS_4+" axisComponent="+"/>
+            <binding device="GAMEPAD_DEFAULT" input="BUTTON_6 AXIS_4-" axisComponent="-"/>
+        </actionBinding>
+        <actionBinding action="SH_ROTATE_CRANE_TOOL">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lshift KEY_k" axisComponent="+"/>
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lshift KEY_m" axisComponent="-"/>
+            <binding device="KB_MOUSE_DEFAULT" input="MOUSE_BUTTON_RIGHT AXIS_X+" axisComponent="+"/>
+            <binding device="KB_MOUSE_DEFAULT" input="MOUSE_BUTTON_RIGHT AXIS_X-" axisComponent="-"/>
+            <binding device="GAMEPAD_DEFAULT" input="BUTTON_6 AXIS_3-" axisComponent="+"/>
+            <binding device="GAMEPAD_DEFAULT" input="BUTTON_6 AXIS_3+" axisComponent="-"/>
+        </actionBinding>
+        <actionBinding action="SH_OPEN_CRANE_TOOL">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lshift KEY_lctrl KEY_k" axisComponent="+"/>
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lshift KEY_lctrl KEY_m" axisComponent="-"/>
+            <binding device="KB_MOUSE_DEFAULT" input="MOUSE_BUTTON_LEFT MOUSE_BUTTON_RIGHT AXIS_Y-" axisComponent="+"/>
+            <binding device="KB_MOUSE_DEFAULT" input="MOUSE_BUTTON_LEFT MOUSE_BUTTON_RIGHT AXIS_Y+" axisComponent="-"/>
+            <binding device="GAMEPAD_DEFAULT" input="BUTTON_5 BUTTON_6 AXIS_4-" axisComponent="+"/>
+            <binding device="GAMEPAD_DEFAULT" input="BUTTON_5 BUTTON_6 AXIS_4+" axisComponent="-"/>
+        </actionBinding>
+        <actionBinding action="SH_TOGGLE_BALE_SIZE">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_o"/>
+            <binding device="GAMEPAD_DEFAULT" input="BUTTON_5 BUTTON_19"/>
+        </actionBinding>
+        <actionBinding action="SH_TOGGLE_REFILL_COVER">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_z"/>
+            <binding device="GAMEPAD_DEFAULT" input="BUTTON_5 BUTTON_17"/>
+        </actionBinding>
+    </inputBinding>
+</modDesc>

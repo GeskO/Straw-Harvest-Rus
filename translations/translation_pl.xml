@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+    <translationContributors>Ziuta</translationContributors>
+
+    <texts>
+        <!-- Inputs -->
+        <text name="input_SH_TOGGLE_COLLECT_MODE" text="SH: Przełącz tryb rozładunku"/>
+        <text name="input_SH_DEPART_BALES" text="SH: Rozładunek bel"/>
+        <text name="input_SH_RESET_BALE_COUNTER" text="SH: Wyzeruj licznik bel"/>
+        <text name="input_SH_GRAB_BALES" text="SH: Chwyć bele"/>
+        <text name="input_SH_DROP_BALES" text="SH: Puść bele"/>
+        <text name="input_SH_TOGGLE_CRANE_TOOL" text="SH: Zmień narzędzi dźwigu"/>
+        <text name="input_SH_MOVE_CRANE_BRIDGE_1" text="SH: Przesuń suwnicę do przodu"/>
+        <text name="input_SH_MOVE_CRANE_BRIDGE_2" text="SH:Przesuń suwnicę do tyłu"/>
+        <text name="input_SH_MOVE_CRANE_TROLLEY_1" text="SH: Przesuń windę w prawo"/>
+        <text name="input_SH_MOVE_CRANE_TROLLEY_2" text="SH: Przesuń windę w lewo"/>
+        <text name="input_SH_MOVE_CRANE_TOOL_1" text="SH: Podnieś narzędzie dźwigu"/>
+        <text name="input_SH_MOVE_CRANE_TOOL_2" text="SH: Opuść narzędzie dźwigu"/>
+        <text name="input_SH_ROTATE_CRANE_TOOL_1" text="SH: Obróć narzędzie dźwigu w prawo"/>
+        <text name="input_SH_ROTATE_CRANE_TOOL_2" text="SH: Obróć narzędzie dźwigu w lewo"/>
+        <text name="input_SH_OPEN_CRANE_TOOL_1" text="SH: Otwórz narzędzie dźwigu"/>
+        <text name="input_SH_OPEN_CRANE_TOOL_2" text="SH: Zamknij narzędzie dźwigu"/>
+        <text name="input_SH_TOGGLE_BALE_SIZE" text="SH: Zmiana rozmiaru beli"/>
+        <text name="input_SH_TOGGLE_REFILL_COVER" text="SH: Obsługa pojemników na siatkę/sznurek"/>
+
+        <!-- Bale grab -->
+        <text name="typeDesc_baleGrab" text="Chwytak do bel"/>
+        <text name="function_baleGrab" text="Za pomocą chwytaka do bel, możesz łatwo i szybko zebrać kwadratowe bele."/>
+
+        <text name="configuration_inputAttacherTeleHandler" text="Ładowarka teleskopowa"/>
+
+        <text name="action_grabBales" text="Podnieś bele"/>
+        <text name="action_dropBales" text="Odłóż bele"/>
+
+        <text name="action_addSpikes" text="Podłącz kolce do bel"/>
+        <text name="action_removeSpikes" text="Odłącz kolce do bel"/>
+
+        <!-- Comprima -->
+        <text name="function_comprima" text="Prasa zamienia luźną słomę, trawę i siano w wygodne bele. Comprima może prasować bele w różnych rozmiarach od 1,10m do 1,80m. UWAGA: Wiele narzędzi w grze jest kompatybilnych tylko z belami 1,30m."/>
+
+        <!-- Bale counter -->
+        <text name="action_resetBaleCounter" text="Wyzeruj licznik bel"/>
+
+        <!-- BigPack -->
+        <text name="configuration_baleTrailer" text="BaleCollect 1230"/>
+        <text name="configuration_noBaleTrailer" text="Zsyp bel"/>
+
+        <!-- BaleCollect -->
+        <text name="function_baleCollect" text="Doczep Krone BaleCollect do Krone BiGPack 1290 HDP II XC, aby zebrać 3 bele i wyładować je obok siebie."/>
+        <text name="typeDesc_baleCollect" text="Bale Collector"/>
+        <text name="action_collectMode" text="Tryb rozładunku bel %s"/>
+        <text name="warning_needsABaleTrailer" text="W tej konfiguracji, narzędzia można użyć tylko z Krone BaleCollect!"/>
+
+        <!-- Premos -->
+        <text name="function_premos" text="Ta maszyna może przetwarzać słomę i siano na pellet na polu. Po dołączeniu rozdrabniacza bel, może być również używana stacjonarnie."/>
+        <text name="typeDesc_premos" text="Pelletyzer"/>
+
+        <!-- BaleShredder -->
+        <text name="name_baleShredder" text="Rozdrabniacz bel"/>
+        <text name="function_baleShredder" text="Podłącz rozdrabniacz bel do Premos 5000, aby rozdrabniać bele i przetwarzać materiał na pellet. Rozdrabniacz bel można zamontować z przodu po prawej stronie Premos w trybie transportu, żółta strzałka na palecie powinna wskazuywać na Premos."/>
+        <text name="typeDesc_baleShredder" text="Rozdrabniacz bel"/>
+        <text name="warning_firstFoldTheTool" text="Najpierw musisz rozłożyć (%s)!"/>
+        <text name="warning_baleFillTypeNotSupported" text="Bela z tej uprawy nie jest obsługiwana!"/>
+        <text name="warning_roundBalesNotSupported" text="Okrągłe bele nie są obsługiwane!"/>
+
+        <!-- Placeables -->
+        <text name="name_pelletHall" text="Hala do pelletu z paletyzatorem"/>
+        <text name="name_pelletHall_crane" text="Hali do pelletu z żurawiem"/>
+        <text name="name_pelletHall_empty" text="Hala do pelletu"/>
+        <text name="name_palletSellPoint" text="Punkt sprzedaży palet"/>
+        <text name="action_lightsOn" text="Włącz światła"/>
+        <text name="action_lightsOff" text="Wyłącz światła"/>
+
+        <text name="function_pelletHall" text="Tutaj możesz przechowywać pellet ze słomy i siana. Użyj paletyzatora, aby napełnić worki pelletem i przechowywać je na paletach. Używając dźwigu, możesz łatwo uzupełnić paletyzer."/>
+        <text name="function_pelletHall_crane" text="Tutaj możesz przechowywać pellet ze słomy i siana. Używając dźwigu, możesz łatwo załadować swoje maszyny."/>
+        <text name="function_pelletHall_empty" text="Tutaj możesz przechowywać bele, luźny materiał lub swoje pojazdy."/>
+        <text name="function_palletSellPoint" text="Tutaj możesz sprzedać palety z pelletem za wyższą cenę niż za luźny materiał."/>
+
+        <!-- Crane -->
+        <text name="action_toggleCraneTool" text="Zmień narzędzie dźwigu"/>
+
+        <!-- Palletizer -->
+        <text name="notification_palletizer_refilled" text="Paletyzator napełniony %d workami ze względu na zapis/synchronizację"/>
+        <text name="notification_palletizer_stopped" text="Paletyzator zatrzymany"/>
+        <text name="notification_palletizer_empty" text="Paletyzator pusty"/>
+        <text name="statistics_palletizer_bags" text="Dzisiejsza produkcja do tej pory: %d worki/ów, %d palet/y"/>
+        <text name="statistics_palletizer_time" text="Zapas na %d:%d"/>
+        <text name="statistics_palletizer_blocked" text="Paletyzator zablokowany. Opróżnij taśmę!"/>
+
+        <!-- Pallets -->
+        <text name="baleTwinePallet" text="Paleta sznurka do bel"/>
+        <text name="function_baleTwinePallet" text="Za pomocą rolek ze sznurkiem, możesz uzupełnić braki w Krone BigPack 1290 HDP II XC."/>
+        <text name="netRolePallet" text="Paleta siatki do bel"/>
+        <text name="function_netRolePallet" text="Za pomocą rolek z siatką, możesz uzupełnić braki w Krone Comprima V 180 XC."/>
+        <text name="molassesPallet" text="Paleta melasy"/>
+        <text name="function_molassesPallet" text="Za pomocą kanistrów, możesz uzupełnić zbiornik melasy w Krone Premos 5000."/>
+
+        <!-- fillTypes -->
+        <text name="fillType_strawPellets" text="Pellet słomy"/>
+        <text name="fillType_hayPellets" text="Pellet siana"/>
+        <text name="fillType_baleTwine" text="Sznurek do bel"/>
+        <text name="fillType_baleNet" text="Siatka do bel"/>
+        <text name="fillType_molasses" text="Melasa"/>
+
+        <!-- refillSupplies -->
+        <text name="action_openBaleNetDoor" text="Otwórz pojemnik na siatkę do bel"/>
+        <text name="action_closeBaleNetDoor" text="Zamknij pojemnik na siatkę do bel"/>
+        <text name="action_lowerTwineBoxes" text="Opuść pojemnik na sznurek do bel"/>
+        <text name="action_liftTwineBoxes" text="Podnieść pojemnik na sznurek do bel"/>
+        <text name="warning_closeBaleNetDoorFirst" text="Najpierw zamknij pojemnik na siatkę!"/>
+        <text name="warning_closeTwineBoxesFirst" text="Najpierw podnieś pojemnik na sznurek do bel!"/>
+        <text name="warning_refillSuppliesFirst" text="Najpierw uzupełnij %s!"/>
+
+        <text name="configuration_refillSupplies" text="Uzupełnianie maszyny"/>
+        <text name="configuration_manually" text="Ręcznie"/>
+        <text name="configuration_automatically" text="Automatycznie"/>
+
+        <!-- Variable bale size -->
+        <text name="action_baleUnitSize" text="Zmień obecny rozmiar beli %.2f"/>
+        <text name="warning_baleTooSmall" text="Następny rozmiar beli %.2f jest za mały dla obecnego poziomu napełnienia prasy"/>
+
+        <!-- Misc -->
+        <text name="strawHarvest_message_failedHeightTypes" text="Straw Harvest nie mógł załadować wybranej mapy: mapa w połączeniu z aktywnymi modami nie jest kompatybilna z Straw Harvest. (za dużo zarejestrowanych upraw)"/>
+    </texts>
+</l10n>

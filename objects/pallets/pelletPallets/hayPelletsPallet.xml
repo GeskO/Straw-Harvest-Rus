@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="pallet">
+    <storeData>
+        <name>hayPelletsPallet</name>
+        <image>icons/icon.png</image>
+        <category>pallets</category>
+        <showInStore>false</showInStore>
+        <canBeSold>false</canBeSold>
+        <rotation>0</rotation>
+        <brand>WEIDEGUT</brand>
+        <financeCategory>OTHER</financeCategory>
+    </storeData>
+    
+    <base>
+        <filename>objects/pallets/pelletPallets/hayPelletsPallet.i3d</filename>
+        <size width="1.8" length="1.8" lengthOffset="0" />
+        <canBeReset>false</canBeReset>
+        <input allowed="false"/>
+        <components>
+            <component centerOfMass="0 0.6 0" solverIterationCount="10" mass="200"/>
+        </components>
+    </base>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="hayPellets" capacity="2000" startFillType="hayPellets" startFillLevel="2000">
+                        <fillRootNode node="0>" />
+                    </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+    
+    <dischargeable requiresTipOcclusionArea="false">
+        <dischargeNode node="0>" emptySpeed="2000" fillUnitIndex="1" maxDistance="6" canStartDischargeAutomatically="true">
+            <trigger node="dischargeTrigger" />
+        </dischargeNode>
+    </dischargeable>
+
+    <dynamicMount triggerNode="dynamicMountTrigger" />
+
+    <tensionBeltObject>
+        <meshNodes>
+            <meshNode node="pallet_base1"/>
+            <meshNode node="package_hay"/>
+        </meshNodes>
+    </tensionBeltObject>
+
+    <i3dMappings>
+        <i3dMapping id="hayPelletPallet_main_component1" node="0>" />
+        <i3dMapping id="dynamicMountTrigger" node="0>0" />
+        <i3dMapping id="collisions" node="0>1" />
+        <i3dMapping id="col9" node="0>1|0" />
+        <i3dMapping id="col8" node="0>1|1" />
+        <i3dMapping id="col6" node="0>1|2" />
+        <i3dMapping id="col5" node="0>1|3" />
+        <i3dMapping id="col7" node="0>1|4" />
+        <i3dMapping id="col4" node="0>1|5" />
+        <i3dMapping id="col3" node="0>1|6" />
+        <i3dMapping id="col2" node="0>1|7" />
+        <i3dMapping id="col1" node="0>1|8" />
+        <i3dMapping id="pallet_base1" node="0>2" />
+        <i3dMapping id="package_hay" node="0>2|0" />
+        <i3dMapping id="decal" node="0>2|1" />
+        <i3dMapping id="dischargeTrigger" node="0>3" />
+    </i3dMappings>
+</vehicle>

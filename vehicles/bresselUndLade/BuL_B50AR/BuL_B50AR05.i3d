@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="BuL_B50AR05_ingaming" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="1" filename="BuL_B50AR05_normal.png" />
+    <File fileId="2" filename="BuL_B50AR05_specular.png" />
+    <File fileId="4" filename="BuL_B50AR03_diffuse.png" />
+    <File fileId="5" filename="BuL_B50AR03_normal.png" />
+    <File fileId="6" filename="BuL_B50AR03_specular.png" />
+    <File fileId="7" filename="$data/shared/default_normal.png" />
+    <File fileId="8" filename="$data/shared/connectionHoses/hoses1_specular.png" />
+    <File fileId="3" filename="$data/shaders/vehicleShader.xml" />
+  </Files>
+
+  <Materials>
+    <Material name="lambert1" materialId="1" diffuseColor="1 1 1 1" specularColor="0 0 0" ambientColor="1 1 1">
+    </Material>
+    <Material name="BuL_B50AR05_mat" materialId="3" diffuseColor="0.5 0.5 0.5 1" cosPower="50" specularColor="1 1 1" ambientColor="1 1 1" customShaderId="3" customShaderVariation="colorMask">
+      <CustomParameter name="colorMat3" value="0.10 0.10 1.00 1.0"/>
+      <CustomParameter name="colorMat2" value="0.10 1.00 0.10 1.0"/>
+      <CustomParameter name="RDT" value="1.0 1.0 0.0 0.0"/>
+      <CustomParameter name="colorMat0" value="1.0 1.0 1.0 0.0"/>
+      <CustomParameter name="colorMat1" value="0.0080 0.2051 0.1144 1.0"/>
+      <Normalmap fileId="1"/>
+      <Glossmap fileId="2"/>
+    </Material>
+    <Material name="decals_mat" materialId="4" cosPower="50" specularColor="1 1 1" ambientColor="1 1 1" alphaBlending="true" customShaderId="3" customShaderVariation="Decal">
+      <CustomParameter name="RDT" value="1.0 1.0 0.0 0.0"/>
+      <Texture fileId="4"/>
+      <Normalmap fileId="5"/>
+      <Glossmap fileId="6"/>
+    </Material>
+    <Material name="hoses_mat" materialId="2" diffuseColor="0.5 0.5 0.5 1" cosPower="50" specularColor="1 1 1" ambientColor="1 1 1" customShaderId="3" customShaderVariation="colorMask">
+      <CustomParameter name="RDT" value="1.0 1.0 0.0 0.0"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="8"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="BuL_B50AR05.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <Shape name="BuL_B50AR05_main_component1" shapeId="1" dynamic="true" compound="true" density="0.5" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="1">
+      <TransformGroup name="attachable" nodeId="2">
+        <TransformGroup name="wheelLoader_attacherJoint" translation="0 0.0959493 -0.613097" rotation="0 -90 0" collision="false" collisionMask="0" clipDistance="300" nodeId="3"/>
+        <TransformGroup name="hosesDetached" nodeId="4">
+          <Shape name="hydraulicIn01_detached" translation="-7.10543e-17 7.10543e-17 -1.42109e-16" scale="1 1 1" shapeId="2" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="5">
+            <TransformGroup name="hydraulicIn01Stored" translation="0.364559 0.54736 -0.555173" rotation="-139.308 16.6506 164.068" nodeId="6"/>
+          </Shape>
+          <Shape name="hydraulicOut01_detached" translation="-7.10543e-17 7.10543e-17 0" scale="1 1 1" shapeId="3" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="7">
+            <TransformGroup name="hydraulicOut01Stored" translation="0.328577 0.552319 -0.553777" rotation="48.8358 206.983 23.1225" scale="1 1 1" nodeId="8"/>
+          </Shape>
+          <Shape name="hydraulicIn02_detached" translation="7.10543e-17 0 7.10543e-17" scale="1 1 1" shapeId="4" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="9">
+            <TransformGroup name="hydraulicIn02Stored" translation="0.195805 0.554179 -0.554664" rotation="37.3693 199.912 27.7882" scale="1 1 1" nodeId="10"/>
+          </Shape>
+          <Shape name="hydraulicOut02_detached" translation="-3.55271e-17 -1.42109e-16 0" scale="1 1 1" shapeId="5" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="11">
+            <TransformGroup name="hydraulicOut02Stored" translation="0.167337 0.55112 -0.557741" rotation="1.42918 221.052 80.8867" scale="1 1 1" nodeId="12"/>
+          </Shape>
+        </TransformGroup>
+        <TransformGroup name="hosesAttached" nodeId="13">
+          <TransformGroup name="hydraulicIn01" translation="-0.116415 0.622812 -0.111332" rotation="-6.52716 180 0" nodeId="14"/>
+          <TransformGroup name="hydraulicOut01" translation="-0.102177 0.598477 -0.131856" rotation="-6.25689 180 0" nodeId="15"/>
+          <TransformGroup name="hydraulicIn02" translation="0.00560935 0.909512 -0.510989" rotation="0 180 0" nodeId="16"/>
+          <TransformGroup name="hydraulicOut02" translation="-0.0335677 0.886451 -0.51122" rotation="0 180 0" nodeId="17"/>
+        </TransformGroup>
+      </TransformGroup>
+      <Shape name="topCollision_middle" shapeId="6" compoundChild="true" density="0.5" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="18"/>
+      <TransformGroup name="main_frame_left" translation="0.551693 0.564534 -0.254956" collision="false" collisionMask="0" clipDistance="300" nodeId="19">
+        <TransformGroup name="frame_left_vis" translation="-0.551693 -0.564534 0.254956" clipDistance="300" nodeId="20"/>
+        <TransformGroup name="clamp1" translation="-0.551693 -0.564534 0.254956" collision="false" collisionMask="0" clipDistance="300" nodeId="21">
+          <TransformGroup name="clamp1_back" translation="2.66324 0.528746 0.316266" collision="false" collisionMask="0" clipDistance="300" nodeId="22">
+            <TransformGroup name="clamp1_decal" translation="-2.66324 -0.528746 -0.316266" clipDistance="300" nodeId="23"/>
+            <TransformGroup name="clamp1_cylRef" translation="-0.527885 0.172905 -0.171054" rotation="-6.09034 0.0820058 0" scale="1 1 1" collision="false" collisionMask="0" clipDistance="300" nodeId="24"/>
+            <TransformGroup name="clamp1_pipe" translation="-0.52514 0.114058 -0.11348" rotation="-0.0287532 0 0" collision="false" collisionMask="0" clipDistance="300" nodeId="25">
+              <TransformGroup name="clamp1_pipeDecal" translation="-2.1381 -0.642702 -0.203109" collision="false" collisionMask="0" clipDistance="300" nodeId="26"/>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="clamp1_front" translation="2.66324 0.528746 1.27498" collision="false" collisionMask="0" clipDistance="300" nodeId="27">
+            <TransformGroup name="clamp1_pipeRef" translation="-0.52514 0.114542 -0.109144" rotation="-0.0287532 0 0" collision="false" collisionMask="0" clipDistance="300" nodeId="28"/>
+          </TransformGroup>
+          <TransformGroup name="clamp1_cylinder" translation="2.13451 0.638837 -0.443491" rotation="-6.09034 0.0820058 0" scale="1 1 1" collision="false" collisionMask="0" clipDistance="300" nodeId="29">
+            <TransformGroup name="clamp1_stamp" translation="1.03403e-14 1.93623e-15 0.592046" collision="false" collisionMask="0" clipDistance="300" nodeId="30"/>
+            <TransformGroup name="clamp1_j" translation="2.69965e-05 -0.0126373 0.452397" rotation="6.09035 -0.0815429 -0.00870053" nodeId="31"/>
+          </TransformGroup>
+          <TransformGroup name="clamp1_mechanic" translation="2.56797 0.542974 0.2221" collision="false" collisionMask="0" clipDistance="300" nodeId="32">
+            <TransformGroup name="clamp1_mechanicPart" translation="-0.0226854 -0.168064 -0.203243" rotation="100.04 6.33867 180" scale="1 1 1" collision="false" collisionMask="0" clipDistance="300" nodeId="33">
+              <TransformGroup name="clamp1_mechanicValve" translation="1.43219e-15 1.46905e-14 0.25327" rotation="50.0787 -1.10287 -173.758" scale="1 1 1" collision="false" collisionMask="0" clipDistance="300" nodeId="34">
+                <TransformGroup name="clamp1_SpringRef" translation="0.000552296 -0.00155359 -0.040844" nodeId="35"/>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+          <Shape name="clamp1_spring" translation="2.5414 0.546109 -0.139014" rotation="-27.2141 5.98096 0" scale="1 1 1" shapeId="9" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="36"/>
+          <TransformGroup name="clamp1_raycastNode" translation="2.56802 0.52144 -0.0741452" collision="false" collisionMask="0" clipDistance="300" nodeId="37"/>
+          <Shape name="clamp1_baleTrigger" translation="2.2828 0.302523 1.75333" shapeId="10" kinematic="true" trigger="true" collisionMask="16781312" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="38"/>
+          <TransformGroup name="clamp1_mechRef" translation="2.55016 0.703929 0.0420224" nodeId="39"/>
+        </TransformGroup>
+        <TransformGroup name="clamp2" translation="-0.551693 -0.564534 0.254956" collision="false" collisionMask="0" clipDistance="300" nodeId="40">
+          <TransformGroup name="clamp2_back" translation="0 0.528362 0.316219" collision="false" collisionMask="0" clipDistance="300" nodeId="41">
+            <TransformGroup name="clamp2_decal" translation="0 -0.528362 -0.316219" collision="false" collisionMask="0" clipDistance="300" nodeId="42"/>
+            <TransformGroup name="clamp2_pipe" translation="1.14609 0.114817 -0.113439" collision="false" collisionMask="0" clipDistance="300" nodeId="43">
+              <TransformGroup name="clamp2_pipeDecal" translation="-1.14609 -0.643179 -0.20278" collision="false" collisionMask="0" clipDistance="300" nodeId="44"/>
+            </TransformGroup>
+            <TransformGroup name="clamp2_cylRef" translation="1.14506 0.172689 -0.172556" rotation="-6.17733 -0.0128856 0" scale="1 1 1" collision="false" collisionMask="0" clipDistance="300" nodeId="45"/>
+          </TransformGroup>
+          <TransformGroup name="clamp2_front" translation="0 0.528607 1.27486" collision="false" collisionMask="0" clipDistance="300" nodeId="46">
+            <TransformGroup name="clamp2_pipeRef" translation="1.14609 0.114571 -0.10932" collision="false" collisionMask="0" clipDistance="300" nodeId="47"/>
+          </TransformGroup>
+          <TransformGroup name="clamp2_cylinder" translation="1.14519 0.637885 -0.439936" rotation="-6.17733 -0.0128856 0" scale="1 1 1" collision="false" collisionMask="0" clipDistance="300" nodeId="48">
+            <TransformGroup name="clamp2_stamp" translation="-1.10788e-13 2.46914e-15 0.587007" collision="false" collisionMask="0" clipDistance="300" nodeId="49"/>
+            <TransformGroup name="clamp2_j" translation="0.000742893 -0.0119957 0.448944" rotation="6.17733 0.0128107 0.00138656" nodeId="50"/>
+          </TransformGroup>
+          <TransformGroup name="clamp2_mechanic" translation="1.60174 0.543319 0.230031" collision="false" collisionMask="0" clipDistance="300" nodeId="51">
+            <TransformGroup name="clamp2_mechanicPart" translation="-0.0228822 -0.16852 -0.203426" rotation="100.026 5.99265 180" scale="1 1 1" collision="false" collisionMask="0" clipDistance="300" nodeId="52">
+              <TransformGroup name="clamp2_mechanicValve" translation="4.98712e-15 1.41043e-14 0.253189" rotation="49.5113 -0.981443 -174.439" scale="1 1 1" collision="false" collisionMask="0" clipDistance="300" nodeId="53">
+                <TransformGroup name="clamp2_SpringRef" translation="-0.00060339 -0.00048853 -0.0402456" nodeId="54"/>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+          <Shape name="clamp2_spring" translation="1.57527 0.546062 -0.131396" rotation="-27.1845 5.2814 0" scale="1 1 1" shapeId="11" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="55"/>
+          <TransformGroup name="clamp2_raycastNode" translation="1.6021 0.52144 -0.0741452" collision="false" collisionMask="0" clipDistance="300" nodeId="56"/>
+          <Shape name="clamp2_baleTrigger" translation="1.20115 0.302523 1.75333" shapeId="12" kinematic="true" trigger="true" collisionMask="16781312" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="57"/>
+          <TransformGroup name="clamp2_mechRef" translation="1.58306 0.704598 0.0491847" nodeId="58"/>
+        </TransformGroup>
+        <TransformGroup name="decals_vis_left" translation="-0.551693 -0.564534 0.254956" collision="false" collisionMask="0" clipDistance="300" nodeId="59"/>
+        <Shape name="topCollision_left" translation="-0.551693 -0.564534 0.254956" shapeId="13" compoundChild="true" density="0.3" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="60"/>
+        <Shape name="back_collision_left" translation="-0.551693 -0.564534 0.254956" shapeId="14" compoundChild="true" density="0.3" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="61"/>
+        <TransformGroup name="frameLeftCylinderRef" translation="0.79725 0.232576 0.000209389" nodeId="62"/>
+        <TransformGroup name="leftFrameJoint" translation="1.07717 -0.00920068 0.902229" nodeId="63"/>
+      </TransformGroup>
+      <TransformGroup name="main_frame_middle" collision="false" collisionMask="0" clipDistance="300" nodeId="64">
+        <Shape name="frame_middle_vis" shapeId="7" castsShadows="true" receiveShadows="true" materialIds="3" skinBindNodeIds="65 20 22 25 27 29 30 32 33 34 41 43 46 48 49 51 52 53 68 69 70 81 83 86 88 89 93 94 96 97 100 102 104 107 109 110 112 113 114 121 123 126 128 129 131 132 133" clipDistance="300" nodeId="65">
+          <Shape name="decals_middle_vis" shapeId="8" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="4" skinBindNodeIds="66 23 26 42 44 59 82 84 103 105 122 124 142" clipDistance="300" nodeId="66"/>
+          <Shape name="holder_vis" shapeId="15" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="67"/>
+          <TransformGroup name="bolzen_left" translation="0.494814 0.976667 -0.447594" collision="false" collisionMask="0" clipDistance="300" nodeId="68"/>
+          <TransformGroup name="bolzen_right" translation="-0.525651 0.977547 -0.450442" collision="false" collisionMask="0" clipDistance="300" nodeId="69"/>
+          <TransformGroup name="hydraulicCoupling" collision="false" collisionMask="0" clipDistance="300" nodeId="70"/>
+        </Shape>
+        <TransformGroup name="sharedLights" nodeId="71">
+          <TransformGroup name="reflector01" translation="-0.536572 0.299374 -0.440731" rotation="0 0 90" nodeId="72"/>
+          <TransformGroup name="reflector02" translation="-0.541716 0.531767 0.0211388" rotation="0 0 90" nodeId="73"/>
+          <TransformGroup name="reflector03" translation="-0.541716 0.531767 0.886974" rotation="0 0 90" nodeId="74"/>
+          <TransformGroup name="reflector04" translation="0.50894 0.531767 0.886974" rotation="0 0 -90" nodeId="75"/>
+          <TransformGroup name="reflector05" translation="0.50894 0.531767 0.0211388" rotation="0 0 -90" nodeId="76"/>
+          <TransformGroup name="reflector06" translation="0.503796 0.299374 -0.440731" rotation="0 0 -90" nodeId="77"/>
+        </TransformGroup>
+        <Shape name="hoses_vis_index_0_3_2" shapeId="16" castsShadows="true" receiveShadows="true" materialIds="2" skinBindNodeIds="31 50 63 79 90 95 98 111 130 143" clipDistance="300" nodeId="78">
+          <TransformGroup name="helpJoint_middle" nodeId="79"/>
+        </Shape>
+        <TransformGroup name="clamp3" collision="false" collisionMask="0" clipDistance="300" nodeId="80">
+          <TransformGroup name="clamp3_back" translation="-0.0159525 0.529473 0.316006" collision="false" collisionMask="0" clipDistance="300" nodeId="81">
+            <TransformGroup name="clamp3_decal" translation="0.0159525 -0.316006 0.529473" collision="false" collisionMask="0" clipDistance="300" nodeId="82"/>
+            <TransformGroup name="clamp3_pipe" translation="0.000283661 0.113861 -0.113527" rotation="0.0261093 0 0" collision="false" collisionMask="0" clipDistance="300" nodeId="83">
+              <TransformGroup name="clamp3_pipeDecal" translation="0.0156688 -0.643427 -0.202186" collision="false" collisionMask="0" clipDistance="300" nodeId="84"/>
+            </TransformGroup>
+            <TransformGroup name="clamp3_cylRef" translation="-0.000213132 0.171617 -0.172698" nodeId="85"/>
+          </TransformGroup>
+          <TransformGroup name="clamp3_front" translation="-0.0164263 0.528737 1.27539" collision="false" collisionMask="0" clipDistance="300" nodeId="86">
+            <TransformGroup name="clamp3_pipeRef" translation="0.000757499 0.114159 -0.110091" nodeId="87"/>
+          </TransformGroup>
+          <TransformGroup name="clamp3_cylinder" translation="-0.0132596 0.638143 -0.439882" rotation="-6.16035 -0.285505 3.10605e-18" scale="1 1 1" collision="false" collisionMask="0" clipDistance="300" nodeId="88">
+            <TransformGroup name="clamp3_stamp" translation="6.42764e-15 3.45501e-15 0.586584" collision="false" collisionMask="0" clipDistance="300" nodeId="89"/>
+            <TransformGroup name="clamp3_j" translation="0.00191067 -0.0121125 0.448863" rotation="6.16043 0.283856 0.0306381" nodeId="90"/>
+          </TransformGroup>
+          <Shape name="baleTrigger" shapeId="17" kinematic="true" trigger="true" collisionMask="16781312" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="91"/>
+          <Shape name="hookCollision" shapeId="18" compoundChild="true" density="0.3" collisionMask="16781312" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="3" clipDistance="300" nodeId="92"/>
+        </TransformGroup>
+        <TransformGroup name="right_zyl_vis" translation="-0.292891 0.620646 -0.254481" rotation="-9.31934 -89.984 -2.84484e-12" scale="1 1 1" collision="false" collisionMask="0" clipDistance="300" nodeId="93">
+          <TransformGroup name="right_stamp_vis" translation="-6.95593e-14 1.3483e-14 1.1026" collision="false" collisionMask="0" clipDistance="300" nodeId="94"/>
+          <TransformGroup name="folding_right_cylinder" translation="0.895012 0.00806264 0.598566" rotation="89.9024 80.6806 89.9011" nodeId="95"/>
+        </TransformGroup>
+        <TransformGroup name="left_zyl_vis" translation="0.26036 0.621039 -0.254535" rotation="170.812 89.9889 180" scale="1 1 1" collision="false" collisionMask="0" clipDistance="300" nodeId="96">
+          <TransformGroup name="left_stamp_vis" translation="6.96483e-14 5.31168e-14 1.10273" collision="false" collisionMask="0" clipDistance="300" nodeId="97"/>
+          <TransformGroup name="folding_left_cylinder" translation="-0.895351 0.00387218 0.630497" rotation="90.0689 -80.8124 -90.0697" nodeId="98"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="main_frame_right" translation="-0.592813 0.56489 -0.255001" collision="false" collisionMask="0" clipDistance="300" nodeId="99">
+        <TransformGroup name="frame_right" translation="0.592813 -0.56489 0.255001" collision="false" collisionMask="0" clipDistance="300" nodeId="100"/>
+        <TransformGroup name="clamp4" translation="0.592813 -0.56489 0.255001" collision="false" collisionMask="0" clipDistance="300" nodeId="101">
+          <TransformGroup name="clamp4_back" translation="-1.1769 0.528866 0.315287" collision="false" collisionMask="0" clipDistance="300" nodeId="102">
+            <TransformGroup name="clamp4_decal" translation="1.1769 -0.528866 -0.315287" collision="false" collisionMask="0" clipDistance="300" nodeId="103"/>
+            <TransformGroup name="clamp4_pipe" translation="-0.00178234 0.114413 -0.11272" collision="false" collisionMask="0" clipDistance="300" nodeId="104">
+              <TransformGroup name="clamp4_pipeDecal" translation="1.17868 -0.643278 -0.202567" collision="false" collisionMask="0" clipDistance="300" nodeId="105"/>
+            </TransformGroup>
+            <TransformGroup name="clamp4_cylRef" translation="-0.000643242 0.172301 -0.171852" nodeId="106"/>
+          </TransformGroup>
+          <TransformGroup name="clamp4_front" translation="-1.17891 0.528669 1.27482" collision="false" collisionMask="0" clipDistance="300" nodeId="107">
+            <TransformGroup name="clamp4_pipeRef" translation="0.000227452 0.114609 -0.109319" nodeId="108"/>
+          </TransformGroup>
+          <TransformGroup name="clamp4_cylinder" translation="-1.17685 0.638014 -0.440028" rotation="-6.17749 -0.0682688 0" scale="1 1 1" collision="false" collisionMask="0" clipDistance="300" nodeId="109">
+            <TransformGroup name="clamp4_stamp" translation="1.28191e-14 2.54907e-15 0.586871" collision="false" collisionMask="0" clipDistance="300" nodeId="110"/>
+            <TransformGroup name="clamp4_j" translation="0.0313813 -0.0121311 0.448985" rotation="6.1775 0.0678724 0.00734633" nodeId="111"/>
+          </TransformGroup>
+          <TransformGroup name="clamp4_mechanic" translation="-1.634 0.543131 0.229815" collision="false" collisionMask="0" clipDistance="300" nodeId="112">
+            <TransformGroup name="clamp4_mechanicPart" translation="0.0227851 -0.168189 -0.202629" rotation="100.145 -5.96979 -180" scale="1 1 1" collision="false" collisionMask="0" clipDistance="300" nodeId="113">
+              <TransformGroup name="clamp4_mechanicValve" translation="-8.38885e-15 1.46372e-14 0.253167" rotation="49.2116 0.972821 174.555" scale="1 1 1" collision="false" collisionMask="0" clipDistance="300" nodeId="114">
+                <TransformGroup name="clamp4_SpringRef" translation="-7.02936e-05 -0.000510898 -0.0408588" nodeId="115"/>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+          <Shape name="clamp4_spring" translation="-1.60772 0.546017 -0.131253" rotation="-27.36 -5.40704 0" scale="1 1 1" shapeId="19" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="116"/>
+          <Shape name="clamp4_baleTrigger" translation="-1.2322 0.302522 1.75333" shapeId="20" kinematic="true" trigger="true" collisionMask="16781312" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="117"/>
+          <TransformGroup name="clamp4_raycastNode" translation="-1.63292 0.52144 -0.0741452" collision="false" collisionMask="0" clipDistance="300" nodeId="118"/>
+          <TransformGroup name="clamp4_mechRef" translation="-1.61536 0.703996 0.0477491" nodeId="119"/>
+        </TransformGroup>
+        <TransformGroup name="clamp5" translation="0.592813 -0.56489 0.255001" collision="false" collisionMask="0" clipDistance="300" nodeId="120">
+          <TransformGroup name="clamp5_back" translation="-2.16826 0.528907 0.315984" collision="false" collisionMask="0" clipDistance="300" nodeId="121">
+            <TransformGroup name="clamp5_decal" translation="2.16826 -0.528907 -0.315984" collision="false" collisionMask="0" clipDistance="300" nodeId="122"/>
+            <TransformGroup name="clamp5_pipe" translation="-0.000545005 0.114143 -0.1131" collision="false" collisionMask="0" clipDistance="300" nodeId="123">
+              <TransformGroup name="clamp5_pipeDecal" translation="2.1688 -0.643049 -0.202884" collision="false" collisionMask="0" clipDistance="300" nodeId="124"/>
+            </TransformGroup>
+            <TransformGroup name="clamp5_cylRef" translation="0.000984614 0.172431 -0.172345" nodeId="125"/>
+          </TransformGroup>
+          <TransformGroup name="clamp5_front" translation="-2.16897 0.52863 1.27543" collision="false" collisionMask="0" clipDistance="300" nodeId="126">
+            <TransformGroup name="clamp5_pipeRef" translation="0.000166768 0.114419 -0.110201" nodeId="127"/>
+          </TransformGroup>
+          <TransformGroup name="clamp5_cylinder" translation="-2.167 0.637835 -0.439656" rotation="-6.21329 -0.0263022 1.94126e-19" scale="1 1 1" collision="false" collisionMask="0" clipDistance="300" nodeId="128">
+            <TransformGroup name="clamp5_stamp" translation="2.61041e-15 3.3662e-15 0.586741" collision="false" collisionMask="0" clipDistance="300" nodeId="129"/>
+            <TransformGroup name="clamp5_j" translation="0.0322093 -0.0121955 0.448649" rotation="6.21329 0.0261477 0.00284669" nodeId="130"/>
+          </TransformGroup>
+          <TransformGroup name="clamp5_mechanic" translation="-2.60032 0.543265 0.222356" collision="false" collisionMask="0" clipDistance="300" nodeId="131">
+            <TransformGroup name="clamp5_mechanicPart" translation="0.0181738 -0.168468 -0.203578" rotation="99.9338 0.116468 180" collision="false" collisionMask="0" clipDistance="300" nodeId="132">
+              <TransformGroup name="clamp5_mechanicValve" translation="3.20271e-14 1.5703e-14 0.253292" rotation="49.9019 -0.020092 -179.885" scale="1 1 1" collision="false" collisionMask="0" clipDistance="300" nodeId="133">
+                <TransformGroup name="clamp5_SpringRef" translation="-0.000888947 -0.00128491 -0.0410245" nodeId="134"/>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+          <Shape name="clamp5_spring" translation="-2.57427 0.546317 -0.138919" rotation="-27.1688 -5.59014 0" scale="1 1 1" shapeId="21" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="135"/>
+          <Shape name="clamp5_baleTrigger" translation="-2.32642 0.302522 1.75333" shapeId="22" kinematic="true" trigger="true" collisionMask="16781312" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="136"/>
+          <TransformGroup name="clamp5_mechRef" translation="-2.58206 0.703618 0.0415699" nodeId="137"/>
+          <TransformGroup name="clamp5_raycastNode" translation="-2.60057 0.52144 -0.0741452" collision="false" collisionMask="0" clipDistance="300" nodeId="138"/>
+        </TransformGroup>
+        <Shape name="topCollision_right" translation="0.592813 -0.56489 0.255001" shapeId="23" compoundChild="true" density="0.3" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="3" clipDistance="300" nodeId="139"/>
+        <Shape name="back_collision_right" translation="0.592813 -0.56489 0.255001" shapeId="24" compoundChild="true" density="0.3" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="3" clipDistance="300" nodeId="140"/>
+        <TransformGroup name="frameRightCylinderRef" translation="-0.78812 0.234307 0.000519826" rotation="1.1176 -90 0" nodeId="141"/>
+        <TransformGroup name="decals_vis_right" translation="0.592813 -0.56489 0.260666" collision="false" collisionMask="0" clipDistance="300" nodeId="142"/>
+        <TransformGroup name="rightFrameJoint" translation="-1.03619 -0.00955655 0.902275" nodeId="143"/>
+      </TransformGroup>
+    </Shape>
+  </Scene>
+
+</i3D>

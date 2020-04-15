@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="T480_45_17" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="1" filename="$data/shared/wheels/trelleborg/AW305/AW305_normal.png" />
+    <File fileId="2" filename="$data/shared/wheels/trelleborg/AW305/AW305_specular.png" />
+    <File fileId="3" filename="$data/shaders/vehicleShader.xml" />
+  </Files>
+
+  <Materials>
+    <Material name="comprimaTire_mat" materialId="1" diffuseColor="0.5 0.5 0.5 1" cosPower="50" specularColor="1 1 1" ambientColor="0.588235 0.588235 0.588235" customShaderId="3" customShaderVariation="tirePressureDeformation">
+      <CustomParameter name="morphPosition" value="-0.252 -0.428 0.5 0.05"/>
+      <CustomParameter name="RDT" value="1.0 1.0 16.0 8.0"/>
+      <Normalmap fileId="1" bumpDepth="1.5"/>
+      <Glossmap fileId="2"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="T480_45_17.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <Shape name="T480TireLeft" shapeId="1" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="1"/>
+    <Shape name="T480TireRight" shapeId="2" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="2"/>
+  </Scene>
+
+</i3D>

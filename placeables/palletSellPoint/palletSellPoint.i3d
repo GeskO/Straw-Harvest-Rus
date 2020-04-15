@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="palletSellPoint_ingaming" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="1" filename="../../objects/pallets/palletBase_diffuse.png" />
+    <File fileId="2" filename="../../objects/pallets/palletBase_normal.png" />
+    <File fileId="3" filename="../../objects/pallets/palletBase_specular.png" />
+    <File fileId="4" filename="textures/sellpoint_diffuse.png" />
+    <File fileId="5" filename="textures/sellpoint_normal.png" />
+    <File fileId="6" filename="textures/sellpoint_specular.png" />
+    <File fileId="7" filename="$data/maps/textures/shared/warningStripes_diffuse.png" />
+    <File fileId="9" filename="$data/maps/textures/shared/warningStripes_specular.png" />
+    <File fileId="10" filename="../../objects/pallets/pelletPallets/pallet_diffuse.png" />
+    <File fileId="11" filename="../../objects/pallets/pelletPallets/pallet_normal.png" />
+    <File fileId="12" filename="../../objects/pallets/pelletPallets/pallet_specular.png" />
+    <File fileId="8" filename="$data/maps/textures/shared/warningStripes_normal.png" />
+  </Files>
+
+  <Materials>
+    <Material name="lambert1" materialId="2" diffuseColor="0.5 0.5 0.5 1" specularColor="0 0 0" ambientColor="1 1 1">
+    </Material>
+    <Material name="palletBase_mat" materialId="4" cosPower="50" specularColor="1 1 1" ambientColor="1 1 1">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="sellPoint_mat" materialId="1" cosPower="50" specularColor="1 1 1" ambientColor="1 1 1">
+      <Texture fileId="4"/>
+      <Normalmap fileId="5"/>
+      <Glossmap fileId="6"/>
+    </Material>
+    <Material name="marker_mat" materialId="5" cosPower="2" specularColor="1 1 1" ambientColor="0.588235 0.588235 0.588235" alphaBlending="true">
+      <Texture fileId="7"/>
+      <Normalmap fileId="8"/>
+      <Glossmap fileId="9"/>
+    </Material>
+    <Material name="bags_mat" materialId="3" cosPower="255" specularColor="1 1 1" ambientColor="1 1 1">
+      <Texture fileId="10"/>
+      <Normalmap fileId="11"/>
+      <Glossmap fileId="12"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="palletSellPoint.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="palletSellPoint" compound="true" static="true" nodeId="1">
+      <Shape name="flags" translation="1.36654 1.46648 -7.57217e-06" shapeId="1" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="2">
+        <TransformGroup name="collisions" translation="-1.36654 -1.46648 7.57217e-06" nodeId="3">
+          <Shape name="collision3" translation="0.856617 0.296693 0.779646" rotation="0 10.013 0" shapeId="2" static="true" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="2" clipDistance="300" nodeId="4"/>
+          <Shape name="collision2" translation="1.82079 1.79847 -1.83373" rotation="0 5.20234 0" shapeId="3" static="true" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="2" clipDistance="300" nodeId="5"/>
+          <Shape name="collision1" translation="1.83954 1.79847 2.23365" shapeId="4" static="true" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="2" clipDistance="300" nodeId="6"/>
+        </TransformGroup>
+      </Shape>
+      <Shape name="pelletsack" translation="2.07742 1.0519 0.777756" shapeId="5" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="7">
+        <Shape name="collision" translation="0.204499 -0.0188973 -0.549833" scale="1 1 1" shapeId="6" static="true" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="2" clipDistance="300" nodeId="8"/>
+        <Shape name="collision1" translation="0.242478 1.57089 -0.549833" scale="1 1 1" shapeId="7" static="true" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="2" clipDistance="300" nodeId="9"/>
+      </Shape>
+      <Shape name="pallets" translation="2.24651 0.0924354 0.790527" shapeId="8" castsShadows="true" receiveShadows="true" materialIds="4" clipDistance="300" nodeId="10"/>
+      <Shape name="tipTrigger" translation="-1.16745 1.03916 0" shapeId="9" static="true" trigger="true" collisionMask="16781312" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="2" clipDistance="300" nodeId="11"/>
+      <TransformGroup name="posNodes" nodeId="12">
+        <TransformGroup name="posNode" translation="3 0 2.5" nodeId="13"/>
+        <TransformGroup name="posNode1" translation="-3 -0.05 2.5" nodeId="14"/>
+        <TransformGroup name="posNode2" translation="3 0 -2.5" nodeId="15"/>
+      </TransformGroup>
+      <Shape name="marker_vis_decal" translation="-1.15896 0 -0.000189628" shapeId="10" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="5" clipDistance="300" nodeId="16"/>
+      <Shape name="exactFillRootNode" translation="-1.16745 0.206774 0" shapeId="11" static="true" collisionMask="1073741824" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="2" clipDistance="300" nodeId="17"/>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

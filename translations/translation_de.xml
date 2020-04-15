@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+    <translationContributors>BlackJack, Jackaroo</translationContributors>
+
+    <texts>
+        <!-- Inputs -->
+        <text name="input_SH_TOGGLE_COLLECT_MODE" text="SH: Sammelmodus wechseln"/>
+        <text name="input_SH_DEPART_BALES" text="SH: Ballen abladen"/>
+        <text name="input_SH_RESET_BALE_COUNTER" text="SH: Ballenzähler zurücksetzen"/>
+        <text name="input_SH_GRAB_BALES" text="SH: Ballen greifen"/>
+        <text name="input_SH_DROP_BALES" text="SH: Ballen lösen"/>
+        <text name="input_SH_TOGGLE_CRANE_TOOL" text="SH: Werkzeug wechseln"/>
+        <text name="input_SH_MOVE_CRANE_BRIDGE_1" text="SH: Kranbrücke vorwärts bewegen"/>
+        <text name="input_SH_MOVE_CRANE_BRIDGE_2" text="SH: Kranbrücke rückwärts bewegen"/>
+        <text name="input_SH_MOVE_CRANE_TROLLEY_1" text="SH: Laufkatze nach rechts bewegen"/>
+        <text name="input_SH_MOVE_CRANE_TROLLEY_2" text="SH: Laufkatze nach links bewegen"/>
+        <text name="input_SH_MOVE_CRANE_TOOL_1" text="SH: Kran Werkzeug heben"/>
+        <text name="input_SH_MOVE_CRANE_TOOL_2" text="SH: Kran Werkzeug senken"/>
+        <text name="input_SH_ROTATE_CRANE_TOOL_1" text="SH: Kran Werkzeug rechts drehen"/>
+        <text name="input_SH_ROTATE_CRANE_TOOL_2" text="SH: Kran Werkzeug links drehen"/>
+        <text name="input_SH_OPEN_CRANE_TOOL_1" text="SH: Kran Werkzeug schließen"/>
+        <text name="input_SH_OPEN_CRANE_TOOL_2" text="SH: Kran Werkzeug öffnen"/>
+        <text name="input_SH_TOGGLE_BALE_SIZE" text="SH: Ballengröße wechseln"/>
+        <text name="input_SH_TOGGLE_REFILL_COVER" text="SH: Hauben öffnen/schließen"/>
+
+        <!-- Bale grab -->
+        <text name="typeDesc_baleGrab" text="Ballengreifer"/>
+        <text name="function_baleGrab" text="Mit einem Ballengreifer können Quaderballen schnell und einfach bewegt werden."/>
+
+        <text name="configuration_inputAttacherTeleHandler" text="Telelader"/>
+
+        <text name="action_grabBales" text="Ballen greifen"/>
+        <text name="action_dropBales" text="Ballen lösen"/>
+
+        <text name="action_addSpikes" text="Ballenspieße anbauen"/>
+        <text name="action_removeSpikes" text="Ballenspieße abbauen"/>
+
+        <!-- Bale counter -->
+        <text name="action_resetBaleCounter" text="Ballenzähler zurücksetzen"/>
+
+        <!-- Comprima -->
+        <text name="function_comprima" text="Eine Ballenpresse verwandelt loses Stroh, Gras oder Heu in handliche Ballen. Die Comprima kann Ballengrößen zwischen 1,10m und 1,80m pressen. ACHTUNG: viele Geräte im Spiel sind nur mit 1,30m Ballen kompatibel."/>
+
+        <!-- BigPack -->
+        <text name="configuration_baleTrailer" text="BaleCollect 1230"/>
+        <text name="configuration_noBaleTrailer" text="Ballenschurre"/>
+
+        <!-- BaleCollect -->
+        <text name="function_baleCollect" text="Hänge den Krone BaleCollect an die Krone BiGPack1290 HDP II XC, um maximal drei Ballen gesammelt abzulegen."/>
+        <text name="typeDesc_baleCollect" text="Ballensammler"/>
+        <text name="action_collectMode" text="Entlademodus %s"/>
+        <text name="warning_needsABaleTrailer" text="In dieser Konfiguration kann die Ballenpresse nur in Kombination mit dem BaleCollect 1230 verwendet werden!"/>
+
+        <!-- Premos -->
+        <text name="function_premos" text="Die Krone Premos 5000 kann Stroh und Heu direkt auf dem Feld zu Pellets verarbeiten. In Kombination mit dem Ballenauflöser kann die Maschine auch stationär genutzt werden."/>
+        <text name="typeDesc_premos" text="Pelletpresse"/>
+
+        <!-- BaleShredder -->
+        <text name="name_baleShredder" text="Ballenauflöser"/>
+        <text name="function_baleShredder" text="Baue den Ballenauflöser an der Krone Premos 5000 an, um Stroh- und Heuballen stationär zu Pellets zu pressen. Ballenauflöser in Fahrtrichtung vorne rechts an die Premos anbauen, gelber Pfeil auf der Palette zeigt zur Premos."/>
+        <text name="typeDesc_baleShredder" text="Ballenauflöser"/>
+        <text name="warning_firstFoldTheTool" text="Das Gerät (%s) zuerst einklappen!"/>
+        <text name="warning_baleFillTypeNotSupported" text="Dieser Ballen-Typ wird nicht unterstützt!"/>
+        <text name="warning_roundBalesNotSupported" text="Rundballen können nicht verarbeitet werden!"/>
+
+        <!-- Placeables -->
+        <text name="name_pelletHall" text="Pellethalle mit Palettierer"/>
+        <text name="name_pelletHall_crane" text="Pellethalle mit Kran"/>
+        <text name="name_pelletHall_empty" text="Pellethalle leer"/>
+        <text name="name_palletSellPoint" text="Pellet Verkauf"/>
+        <text name="action_lightsOn" text="Lichter einschalten"/>
+        <text name="action_lightsOff" text="Lichter ausschalten"/>
+
+        <text name="function_pelletHall" text="Hier können Stroh- und Heupellets gelagert werden. Der Palettierer füllt die losen Pellets in Säcke ab und stapelt diese auf Paletten. Mit dem Kran können die Maschinen einfach befüllt werden."/>
+        <text name="function_pelletHall_crane" text="Hier können Stroh- und Heupellets gelagert werden. Mit dem Kran können die Maschinen einfach befüllt werden."/>
+        <text name="function_pelletHall_empty" text="Hier können Ballen und Schüttgüter gelagert oder deine Fahrzeuge geparkt werden."/>
+        <text name="function_palletSellPoint" text="Hier können die erstellten Pellet-Paletten für einen höheren Preis als lose Pellets verkauft werden."/>
+
+        <!-- Crane -->
+        <text name="action_toggleCraneTool" text="Werkzeug wechseln"/>
+
+        <!-- Palletizer -->
+        <text name="notification_palletizer_refilled" text="Palettierer aufgefüllt mit %d Säcken. (speichern und synchronisation)"/>
+        <text name="notification_palletizer_stopped" text="Palettierer gestoppt"/>
+        <text name="notification_palletizer_empty" text="Palettierer leer"/>
+        <text name="statistics_palletizer_bags" text="Heutige Produktion: %d Säcke, %d Paletten"/>
+        <text name="statistics_palletizer_time" text="Vorrat reicht für %d Minuten und %d Sekunden"/>
+        <text name="statistics_palletizer_blocked" text="Palettierer blockiert, Band leeren!"/>
+
+        <!-- Pallets -->
+        <text name="baleTwinePallet" text="Garnrollen Palette"/>
+        <text name="function_baleTwinePallet" text="Mit den Garnrollen wird die Krone BigPack 1290 HDP II XC aufgefüllt."/>
+        <text name="netRolePallet" text="Netzrollen Palette"/>
+        <text name="function_netRolePallet" text="Mit den Netzrollen wird die Krone Comprima V 180 XC aufgefüllt."/>
+        <text name="molassesPallet" text="Melasse Palette"/>
+        <text name="function_molassesPallet" text="Mit den Kanistern wird der Melasse-Tank der Krone Premos 5000 aufgefüllt."/>
+
+        <!-- fillTypes -->
+        <text name="fillType_strawPellets" text="Strohpellets"/>
+        <text name="fillType_hayPellets" text="Heupellets"/>
+        <text name="fillType_baleTwine" text="Garnrollen"/>
+        <text name="fillType_baleNet" text="Netzrollen"/>
+        <text name="fillType_molasses" text="Melasse"/>
+
+        <!-- refillSupplies -->
+        <text name="action_openBaleNetDoor" text="Haube öffnen"/>
+        <text name="action_closeBaleNetDoor" text="Haube schließen"/>
+        <text name="action_lowerTwineBoxes" text="Garnkästen absenken"/>
+        <text name="action_liftTwineBoxes" text="Garnkästen anheben"/>
+        <text name="warning_closeBaleNetDoorFirst" text="Die Hauben müssen zuerst geschlossen werden!"/>
+        <text name="warning_closeTwineBoxesFirst" text="Die Garnkästen müssen zuerst angehoben werden!"/>
+        <text name="warning_refillSuppliesFirst" text="Zuerst %s auffüllen!"/>
+
+        <text name="configuration_refillSupplies" text="Verbrauchsmaterial auffüllen"/>
+        <text name="configuration_manually" text="manuell"/>
+        <text name="configuration_automatically" text="automatisch"/>
+
+        <!-- Variable bale size -->
+        <text name="action_baleUnitSize" text="Ballengröße %.2f m"/>
+        <text name="warning_baleTooSmall" text="Die Ballengröße %.2f m kann bei dem aktuellen Füllstand nicht verwendet werden!"/>
+
+        <!-- Misc -->
+        <text name="strawHarvest_message_failedHeightTypes" text="Das Addon Strohbergung kann den Spielstand nicht laden: Die Karte in kombination mit den ausgewählten Mods wird vom Addon nicht unterstützt. (zu viele Fruchttypen)"/>
+    </texts>
+</l10n>

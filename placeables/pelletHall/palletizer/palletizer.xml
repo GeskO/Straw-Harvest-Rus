@@ -1,0 +1,912 @@
+<palletizer>
+    <filename>placeables/pelletHall/palletizer/palletizer.i3d</filename>
+    <litersPerSecond>75</litersPerSecond>
+    <playerTrigger node="statsPlayerTrigger"/>
+
+    <bunkerBuffer fillTypes="strawPellets hayPellets" capacity="5000" planeNode="heap_plane"/>
+    <pelletizerBuffer fillTypes="strawPellets hayPellets" capacity="5000" planeNode="palletizer_plane"/>
+
+    <!-- Don't modify the node index here (the vanilla trigger does not support i3d mappings) -->
+    <unloadTrigger exactFillRootNode="0|2|1|0"/>
+
+    <bagCreations fillGuideNode="bagAnimNode" dropGuideNode="bagDropAnimNode">
+        <bagCreation fillType="strawPellets" fillTypeDecisionWeight="1" cloneNode="pelletBag_straw_cloning" palletXMLFilename="objects/pallets/pelletPallets/strawPelletsPallet.xml"/>
+        <bagCreation fillType="hayPellets" fillTypeDecisionWeight="0.75" cloneNode="pelletBag_hay_cloning" palletXMLFilename="objects/pallets/pelletPallets/hayPelletsPallet.xml"/>
+
+        <patterns>
+            <pattern firstMovementBagThreshold="3" secondMovementBagThreshold="5">
+                <guideNodes>
+                    <guideNode node="pattern1GuideNode1"/>
+                    <guideNode node="pattern1GuideNode2"/>
+                    <guideNode node="pattern1GuideNode3"/>
+                    <guideNode node="pattern1GuideNode4"/>
+                    <guideNode node="pattern1GuideNode5"/>
+                </guideNodes>
+
+                <firstMovementAnimationPackage name="p1GuideNodesMovementFirst3" loop="false" duration="3.0">
+                    <animation>
+                        <part node="pattern1GuideNode1">
+                            <keyFrame keyTime="0.0" rotation="0 0 0" translation="0.435 1.029 0"/>
+                            <keyFrame keyTime="1.0" rotation="0 0 0" translation="0.435 0.227 0"/>
+                            <keyFrame keyTime="1.562344" rotation="0 0 0" translation="0.435 0.227 0"/>
+                            <keyFrame keyTime="2.0" rotation="0 0 0" translation="0.435 -0.124 0"/>
+                            <keyFrame keyTime="2.463514" rotation="0 0 0" translation="0.435 -0.124 0"/>
+                            <keyFrame keyTime="3.0" rotation="0 0 0" translation="0.435 -0.627 0"/>
+                        </part>
+                        <part node="pattern1GuideNode2">
+                            <keyFrame keyTime="1.0" rotation="0 0 0" translation="0.435 1.029 0"/>
+                            <keyFrame keyTime="2.0" rotation="0 0 0" translation="0.435 0.227 0"/>
+                            <keyFrame keyTime="2.463514" rotation="0 0 0" translation="0.435 0.227 0"/>
+                            <keyFrame keyTime="3.0" rotation="0 0 0" translation="0.435 -0.275 0"/>
+                        </part>
+                        <part node="pattern1GuideNode3">
+                            <keyFrame keyTime="2.0" rotation="0 0 0" translation="0.435 1.049 0"/>
+                            <keyFrame keyTime="3.0" rotation="0 0 0" translation="0.435 0.076 0"/>
+                        </part>
+
+                        <part node="rotator_belt2" shaderParameter="offsetUV" shaderComponentScale="1 0 0 0">
+                            <keyFrame keyTime="0" value="0 0 0 0"/>
+                            <keyFrame keyTime="0.66" value="0 0 0 0"/>
+                            <keyFrame keyTime="1.0" value="-0.09 0 0 0"/>
+                            <keyFrame keyTime="1.562344" value="-0.09 0 0 0"/>
+                            <keyFrame keyTime="2" value="-0.18 0 0 0"/>
+                            <keyFrame keyTime="2.463514" value="-0.18 0 0 0"/>
+                            <keyFrame keyTime="3" value="-0.27 0 0 0"/>
+                        </part>
+
+                        <part>
+                            <animationNodes>
+                                <animationNode node="conveyor_belt_roll7" rotSpeed="250" rotAxis="1" turnOnFadeTime="0" turnOffFadeTime="0"/>
+                                <animationNode node="conveyor_belt_roll8" rotSpeed="250" rotAxis="1" turnOnFadeTime="0" turnOffFadeTime="0"/>
+                            </animationNodes>
+
+                            <keyFrame keyTime="0.65" active="false"/>
+                            <keyFrame keyTime="0.66" active="true"/>
+                            <keyFrame keyTime="1.0" active="true"/>
+                            <keyFrame keyTime="1.01" active="false"/>
+                            <keyFrame keyTime="1.55" active="false"/>
+                            <keyFrame keyTime="1.562344" active="true"/>
+                            <keyFrame keyTime="2" active="true"/>
+                            <keyFrame keyTime="2.01" active="false"/>
+                            <keyFrame keyTime="2.45" active="false"/>
+                            <keyFrame keyTime="2.463514" active="true"/>
+                            <keyFrame keyTime="3.0" active="true"/>
+                        </part>
+                    </animation>
+                </firstMovementAnimationPackage>
+
+                <secondMovementAnimationPackage name="p1GuideNodesMovementLast2" loop="false" duration="2.0">
+                    <animation>
+                        <part node="pattern1GuideNode4">
+                            <keyFrame keyTime="0.0" rotation="0 0 0" translation="-14.374 3.014 1.381"/>
+                            <keyFrame keyTime="1.0" rotation="0 0 0" translation="-14.374 2.1 1.381"/>
+                            <keyFrame keyTime="1.36034" rotation="0 0 0" translation="-14.374 2.1 1.381"/>
+                            <keyFrame keyTime="2.0" rotation="0 0 0" translation="-14.374 1.429 1.381"/>
+                        </part>
+                        <part node="pattern1GuideNode5">
+                            <keyFrame keyTime="1.0" rotation="0 0 0" translation="-14.374 3.014 1.381"/>
+                            <keyFrame keyTime="2.0" rotation="0 0 0" translation="-14.374 1.965 1.381"/>
+                        </part>
+
+                        <part node="rotator_belt2" shaderParameter="offsetUV" shaderComponentScale="1 0 0 0">
+                            <keyFrame keyTime="0" value="0 0 0 0"/>
+                            <keyFrame keyTime="1" value="-0.135 0 0 0"/>
+                            <keyFrame keyTime="1.36034" value="-0.135 0 0 0"/>
+                            <keyFrame keyTime="2" value="-0.27 0 0 0"/>
+                        </part>
+
+                        <part>
+                            <animationNodes>
+                                <animationNode node="conveyor_belt_roll7" rotSpeed="250" rotAxis="1" turnOnFadeTime="0" turnOffFadeTime="0"/>
+                                <animationNode node="conveyor_belt_roll8" rotSpeed="250" rotAxis="1" turnOnFadeTime="0" turnOffFadeTime="0"/>
+                            </animationNodes>
+
+                            <keyFrame keyTime="0.0" active="true"/>
+                            <keyFrame keyTime="1.0" active="true"/>
+                            <keyFrame keyTime="1.01" active="false"/>
+                            <keyFrame keyTime="1.35" active="false"/>
+                            <keyFrame keyTime="1.36034" active="true"/>
+                            <keyFrame keyTime="2.0" active="true"/>
+                        </part>
+                    </animation>
+                </secondMovementAnimationPackage>
+
+                <rotatory guideNode="rotatorBagGuideNode" playPattern="1 1 1 0 0">
+                    <rotatoryAnimationPackage name="rotatorAnimationLeft" loop="false" callbackTime="2" duration="2">
+                        <animation>
+                            <part node="bag_rotator">
+                                <keyFrame keyTime="0.0" rotation="0 0 0" translation="-3.945 0.538 -0.905"/>
+                                <keyFrame keyTime="0.5" rotation="0 0 0" translation="-3.945 0.538 -0.905"/>
+                                <keyFrame keyTime="1" rotation="0 0 90" translation="-3.945 0.538 -0.905"/>
+                                <keyFrame keyTime="1.5" rotation="0 0 90" translation="-3.945 0.538 -0.905"/>
+                                <keyFrame keyTime="2" rotation="0 0 0" translation="-3.945 0.538 -0.905"/>
+                            </part>
+                            <part node="rotatorBagGuideNode">
+                                <keyFrame keyTime="1.5" rotation="180 180 0" translation="0 0 -0.538"/>
+                                <keyFrame keyTime="2" rotation="180 180 90" translation="0 0 -0.538"/>
+                            </part>
+                            <part node="pusher_left">
+                                <keyFrame keyTime="0.3" rotation="0 -90 0" translation="0.185 -0.015 -0.334"/>
+                                <keyFrame keyTime="0.5" rotation="0 4 0" translation="0.185 -0.015 -0.334"/>
+                                <keyFrame keyTime="1.0" rotation="0 4 0" translation="0.185 -0.015 -0.334"/>
+                                <keyFrame keyTime="1.3" rotation="0 -90 0" translation="0.185 -0.015 -0.334"/>
+                            </part>
+                            <part node="pusher_right">
+                                <keyFrame keyTime="0.3" rotation="0 90 0" translation="-0.188 -0.015 -0.334"/>
+                                <keyFrame keyTime="0.5" rotation="0 -4 0" translation="-0.188 -0.015 -0.334"/>
+                                <keyFrame keyTime="1.0" rotation="0 -4 0" translation="-0.188 -0.015 -0.334"/>
+                                <keyFrame keyTime="1.3" rotation="0 90 0" translation="-0.188 -0.015 -0.334"/>
+                            </part>
+                        </animation>
+
+                        <sounds>
+                            <sound>
+                                <sample linkNode="bag_rotator" file="resources/sounds/rotator2.wav" innerRadius="6" outerRadius="10.0" fadeIn="0.25" fadeOut="0.25">
+                                    <volume indoor="0.45" outdoor="1.0"/>
+                                    <pitch indoor="1.00" outdoor="1.00"/>
+                                    <lowpassGain indoor="0.9" outdoor="1.00"/>
+                                </sample>
+
+                                <keyFrame keyTime="0" active="true"/>
+                                <keyFrame keyTime="0.49" active="true"/>
+                                <keyFrame keyTime="0.5" active="false"/>
+                                <keyFrame keyTime="1.49" active="true"/>
+                                <keyFrame keyTime="2" active="false"/>
+                            </sound>
+                        </sounds>
+                    </rotatoryAnimationPackage>
+                </rotatory>
+
+                <pusher>
+                    <pusherFirstAnimationPackage name="p1bagPusherPushFirst3" loop="false" callbackTime="1.0" duration="2.0">
+                        <animation>
+                            <part node="slider_vis">
+                                <keyFrame keyTime="0.0" rotation="0 0 0" translation="-14.817 1.666 1.564"/>
+                                <keyFrame keyTime="1.0" rotation="0 0 0" translation="-14.096 1.666 1.564"/>
+                                <keyFrame keyTime="2.0" rotation="0 0 0" translation="-14.817 1.666 1.564"/>
+                            </part>
+                            <part node="pusher_vis">
+                                <keyFrame keyTime="1.0" rotation="0 0 0" translation="0.009 0.006 -0.12"/>
+                                <keyFrame keyTime="1.1" rotation="0 0 0" translation="0.009 0.006 -0.027"/>
+                                <keyFrame keyTime="1.9" rotation="0 0 0" translation="0.009 0.006 -0.027"/>
+                                <keyFrame keyTime="2.0" rotation="0 0 0" translation="0.009 0.006 -0.12"/>
+                            </part>
+                            <part node="guideNodes_pattern1">
+                                <keyFrame keyTime="0.0638" rotation="0 0 0" translation="-14.809 1.985 1.381"/>
+                                <keyFrame keyTime="1.0" rotation="0 0 0" translation="-14.129 1.985 1.381"/>
+                            </part>
+                            <part node="prepareTable_gear2">
+                                <keyFrame keyTime="0" rotation="0 0 0" translation="-1.953 0.822 0.747"/>
+                                <keyFrame keyTime="1.0" rotation="0 -360 0" translation="-1.953 0.822 0.747"/>
+                                <keyFrame keyTime="2.0" rotation="0 0 0" translation="-1.953 0.822 0.747"/>
+                            </part>
+                            <part node="prepareTable_gear">
+                                <keyFrame keyTime="0" rotation="0 0 0" translation="0.164 0.822 0.747"/>
+                                <keyFrame keyTime="1.0" rotation="0 -360 0" translation="0.164 0.822 0.747"/>
+                                <keyFrame keyTime="2.0" rotation="0 0 0" translation="0.164 0.822 0.747"/>
+                            </part>
+
+                            <part node="sliderBelt" shaderParameter="offsetUV" shaderComponentScale="1 0 0 0">
+                                <keyFrame keyTime="0" value="0 0 0 0"/>
+                                <keyFrame keyTime="1.0" value="-0.5 0 0 0"/>
+                                <keyFrame keyTime="2.0" value="0 0 0 0"/>
+                            </part>
+                        </animation>
+                        <sounds>
+                            <sound>
+                                <sample linkNode="bag_rotator" file="resources/sounds/pusher.wav" innerRadius="6" outerRadius="10.0" fadeIn="0.3" fadeOut="0.3">
+                                    <volume indoor="0.5" outdoor="2.0"/>
+                                    <pitch indoor="1.00" outdoor="1.00"/>
+                                    <lowpassGain indoor="0.9" outdoor="1.00"/>
+                                </sample>
+
+                                <keyFrame keyTime="0" active="true"/>
+                                <keyFrame keyTime="1.999" active="true"/>
+                                <keyFrame keyTime="2" active="false"/>
+                            </sound>
+                        </sounds>
+                    </pusherFirstAnimationPackage>
+
+                    <pusherPushThroughAnimationPackage name="p1bagPusherPushThrough" loop="false" callbackTime="2.0" duration="4.1">
+                        <animation>
+                            <part node="slider_vis">
+                                <keyFrame keyTime="0.0" rotation="0 0 0" translation="-14.817 1.666 1.564"/>
+                                <keyFrame keyTime="2.0" rotation="0 0 0" translation="-12.898 1.666 1.564"/>
+                                <keyFrame keyTime="4.0" rotation="0 0 0" translation="-14.817 1.666 1.564"/>
+                            </part>
+                            <part node="guideNodes_pattern1_2">
+                                <keyFrame keyTime="0.150078" rotation="0 0 0" translation="0 0 0"/>
+                                <keyFrame keyTime="2.0" rotation="0 0 0" translation="1.78 0 0"/>
+                                <keyFrame keyTime="4.0" rotation="0 0 0" translation="0 0 0"/>
+                            </part>
+                            <part node="guideNodes_pattern1">
+                                <keyFrame keyTime="0.399166" rotation="0 0 0" translation="-14.129 1.965 1.381"/>
+                                <keyFrame keyTime="2.0" rotation="0 0 0" translation="-12.594 1.965 1.381"/>
+                                <keyFrame keyTime="4.0" rotation="0 0 0" translation="-14.809 1.965 1.381"/>
+                            </part>
+                            <part node="pusher_vis">
+                                <keyFrame keyTime="1.9" rotation="0 0 0" translation="0.009 0.006 -0.12"/>
+                                <keyFrame keyTime="2.0" rotation="0 0 0" translation="0.009 0.006 -0.027"/>
+                                <keyFrame keyTime="4.0" rotation="0 0 0" translation="0.009 0.006 -0.027"/>
+                                <keyFrame keyTime="4.1" rotation="0 0 0" translation="0.009 0.006 -0.12"/>
+                            </part>
+                            <part node="prepareTable_gear2">
+                                <keyFrame keyTime="0" rotation="0 0 0" translation="-1.953 0.822 0.747"/>
+                                <keyFrame keyTime="2.0" rotation="0 -825 0" translation="-1.953 0.822 0.747"/>
+                                <keyFrame keyTime="4.0" rotation="0 0 0" translation="-1.953 0.822 0.747"/>
+                            </part>
+                            <part node="prepareTable_gear">
+                                <keyFrame keyTime="0" rotation="0 0 0" translation="0.164 0.822 0.747"/>
+                                <keyFrame keyTime="2.0" rotation="0 -825 0" translation="0.164 0.822 0.747"/>
+                                <keyFrame keyTime="4.0" rotation="0 0 0" translation="0.164 0.822 0.747"/>
+                            </part>
+
+                            <part node="sliderBelt" shaderParameter="offsetUV" shaderComponentScale="1 0 0 0">
+                                <keyFrame keyTime="0" value="0 0 0 0"/>
+                                <keyFrame keyTime="2.0" value="-1.1 0 0 0"/>
+                                <keyFrame keyTime="4.0" value="0 0 0 0"/>
+                            </part>
+                        </animation>
+                        <sounds>
+                            <sound>
+                                <sample linkNode="bag_rotator" file="resources/sounds/pusher.wav" innerRadius="6" outerRadius="10.0" fadeIn="0.3" fadeOut="0.3">
+                                    <volume indoor="0.5" outdoor="2.0"/>
+                                    <pitch indoor="1.00" outdoor="1.00"/>
+                                    <lowpassGain indoor="0.9" outdoor="1.00"/>
+                                </sample>
+
+                                <keyFrame keyTime="0" active="true"/>
+                                <keyFrame keyTime="1.999" active="true"/>
+                                <keyFrame keyTime="2" active="false"/>
+                                <keyFrame keyTime="2.099" active="false"/>
+                                <keyFrame keyTime="2.1" active="true"/>
+                                <keyFrame keyTime="4.099" active="true"/>
+                                <keyFrame keyTime="4.1" active="false"/>
+                            </sound>
+                        </sounds>
+                    </pusherPushThroughAnimationPackage>
+                </pusher>
+            </pattern>
+
+            <pattern firstMovementBagThreshold="2" secondMovementBagThreshold="5">
+                <guideNodes>
+                    <guideNode node="pattern2GuideNode1"/>
+                    <guideNode node="pattern2GuideNode2"/>
+                    <guideNode node="pattern2GuideNode3"/>
+                    <guideNode node="pattern2GuideNode4"/>
+                    <guideNode node="pattern2GuideNode5"/>
+                </guideNodes>
+
+                <firstMovementAnimationPackage name="p2GuideNodesMovementFirst2" loop="false" duration="2.0">
+                    <animation>
+                        <part node="pattern2GuideNode1">
+                            <keyFrame keyTime="0.0" rotation="0 0 0" translation="-14.374 3.014 1.381"/>
+                            <keyFrame keyTime="1.0" rotation="0 0 0" translation="-14.374 2.1 1.381"/>
+                            <keyFrame keyTime="1.36034" rotation="0 0 0" translation="-14.374 2.1 1.381"/>
+                            <keyFrame keyTime="2.0" rotation="0 0 0" translation="-14.374 1.429 1.381"/>
+                        </part>
+                        <part node="pattern2GuideNode2">
+                            <keyFrame keyTime="1.0" rotation="0 0 0" translation="-14.374 3.014 1.381"/>
+                            <keyFrame keyTime="2.0" rotation="0 0 0" translation="-14.374 1.965 1.381"/>
+                        </part>
+
+                        <part node="rotator_belt2" shaderParameter="offsetUV" shaderComponentScale="1 0 0 0">
+                            <keyFrame keyTime="0" value="0 0 0 0"/>
+                            <keyFrame keyTime="1" value="-0.135 0 0 0"/>
+                            <keyFrame keyTime="1.36034" value="-0.135 0 0 0"/>
+                            <keyFrame keyTime="2" value="-0.27 0 0 0"/>
+                        </part>
+
+                        <part>
+                            <animationNodes>
+                                <animationNode node="conveyor_belt_roll7" rotSpeed="250" rotAxis="1" turnOnFadeTime="0" turnOffFadeTime="0"/>
+                                <animationNode node="conveyor_belt_roll8" rotSpeed="250" rotAxis="1" turnOnFadeTime="0" turnOffFadeTime="0"/>
+                            </animationNodes>
+
+                            <keyFrame keyTime="0.0" active="true"/>
+                            <keyFrame keyTime="1.0" active="true"/>
+                            <keyFrame keyTime="1.01" active="false"/>
+                            <keyFrame keyTime="1.35" active="false"/>
+                            <keyFrame keyTime="1.36034" active="true"/>
+                            <keyFrame keyTime="2.0" active="true"/>
+                        </part>
+                    </animation>
+                </firstMovementAnimationPackage>
+
+                <secondMovementAnimationPackage name="p2GuideNodesMovementLast3" loop="false" duration="3.0">
+                    <animation>
+                        <part node="pattern2GuideNode3">
+                            <keyFrame keyTime="0.0" rotation="0 0 0" translation="0.435 1.029 0"/>
+                            <keyFrame keyTime="1.0" rotation="0 0 0" translation="0.435 0.227 0"/>
+                            <keyFrame keyTime="1.562344" rotation="0 0 0" translation="0.435 0.227 0"/>
+                            <keyFrame keyTime="2.0" rotation="0 0 0" translation="0.435 -0.124 0"/>
+                            <keyFrame keyTime="2.463514" rotation="0 0 0" translation="0.435 -0.124 0"/>
+                            <keyFrame keyTime="3.0" rotation="0 0 0" translation="0.435 -0.627 0"/>
+                        </part>
+                        <part node="pattern2GuideNode4">
+                            <keyFrame keyTime="1.0" rotation="0 0 0" translation="0.435 1.029 0"/>
+                            <keyFrame keyTime="2.0" rotation="0 0 0" translation="0.435 0.227 0"/>
+                            <keyFrame keyTime="2.463514" rotation="0 0 0" translation="0.435 0.227 0"/>
+                            <keyFrame keyTime="3.0" rotation="0 0 0" translation="0.435 -0.275 0"/>
+                        </part>
+                        <part node="pattern2GuideNode5">
+                            <keyFrame keyTime="2.0" rotation="0 0 0" translation="0.435 1.049 0"/>
+                            <keyFrame keyTime="3.0" rotation="0 0 0" translation="0.435 0.076 0"/>
+                        </part>
+
+                        <part node="rotator_belt2" shaderParameter="offsetUV" shaderComponentScale="1 0 0 0">
+                            <keyFrame keyTime="0" value="0 0 0 0"/>
+                            <keyFrame keyTime="0.66" value="0 0 0 0"/>
+                            <keyFrame keyTime="1.0" value="-0.09 0 0 0"/>
+                            <keyFrame keyTime="1.562344" value="-0.09 0 0 0"/>
+                            <keyFrame keyTime="2" value="-0.18 0 0 0"/>
+                            <keyFrame keyTime="2.463514" value="-0.18 0 0 0"/>
+                            <keyFrame keyTime="3" value="-0.27 0 0 0"/>
+                        </part>
+
+                        <part>
+                            <animationNodes>
+                                <animationNode node="conveyor_belt_roll7" rotSpeed="250" rotAxis="1" turnOnFadeTime="0" turnOffFadeTime="0"/>
+                                <animationNode node="conveyor_belt_roll8" rotSpeed="250" rotAxis="1" turnOnFadeTime="0" turnOffFadeTime="0"/>
+                            </animationNodes>
+
+                            <keyFrame keyTime="0.65" active="false"/>
+                            <keyFrame keyTime="0.66" active="true"/>
+                            <keyFrame keyTime="1.0" active="true"/>
+                            <keyFrame keyTime="1.01" active="false"/>
+                            <keyFrame keyTime="1.55" active="false"/>
+                            <keyFrame keyTime="1.562344" active="true"/>
+                            <keyFrame keyTime="2" active="true"/>
+                            <keyFrame keyTime="2.01" active="false"/>
+                            <keyFrame keyTime="2.45" active="false"/>
+                            <keyFrame keyTime="2.463514" active="true"/>
+                            <keyFrame keyTime="3.0" active="true"/>
+                        </part>
+                    </animation>
+                </secondMovementAnimationPackage>
+
+                <rotatory guideNode="rotatorBagGuideNode" playPattern="0 0 1 1 1">
+                    <rotatoryAnimationPackage name="rotatorAnimationRight" loop="false" callbackTime="2.0" duration="2.0">
+                        <animation>
+                            <part node="bag_rotator">
+                                <keyFrame keyTime="0.0" rotation="0 0 0" translation="-3.945 0.538 -0.905"/>
+                                <keyFrame keyTime="0.5" rotation="0 0 0" translation="-3.945 0.538 -0.905"/>
+                                <keyFrame keyTime="1" rotation="0 0 -90" translation="-3.945 0.538 -0.905"/>
+                                <keyFrame keyTime="1.5" rotation="0 0 -90" translation="-3.945 0.538 -0.905"/>
+                                <keyFrame keyTime="2" rotation="0 0 0" translation="-3.945 0.538 -0.905"/>
+                            </part>
+                            <part node="rotatorBagGuideNode">
+                                <keyFrame keyTime="1.5" rotation="180 180 0" translation="0 0 -0.538"/>
+                                <keyFrame keyTime="2" rotation="180 180 -90" translation="0 0 -0.538"/>
+                            </part>
+                            <part node="pusher_left">
+                                <keyFrame keyTime="0.3" rotation="0 -90 0" translation="0.185 -0.015 -0.334"/>
+                                <keyFrame keyTime="0.5" rotation="0 4 0" translation="0.185 -0.015 -0.334"/>
+                                <keyFrame keyTime="1.0" rotation="0 4 0" translation="0.185 -0.015 -0.334"/>
+                                <keyFrame keyTime="1.3" rotation="0 -90 0" translation="0.185 -0.015 -0.334"/>
+                            </part>
+                            <part node="pusher_right">
+                                <keyFrame keyTime="0.3" rotation="0 90 0" translation="-0.188 -0.015 -0.334"/>
+                                <keyFrame keyTime="0.5" rotation="0 -4 0" translation="-0.188 -0.015 -0.334"/>
+                                <keyFrame keyTime="1.0" rotation="0 -4 0" translation="-0.188 -0.015 -0.334"/>
+                                <keyFrame keyTime="1.3" rotation="0 90 0" translation="-0.188 -0.015 -0.334"/>
+                            </part>
+                        </animation>
+                        <sounds>
+                            <sound>
+                                <sample linkNode="bag_rotator" file="resources/sounds/rotator2.wav" innerRadius="6" outerRadius="10.0" fadeIn="0.25" fadeOut="0.25">
+                                    <volume indoor="0.45" outdoor="1.0"/>
+                                    <pitch indoor="1.00" outdoor="1.00"/>
+                                    <lowpassGain indoor="0.9" outdoor="1.00"/>
+                                </sample>
+
+                                <keyFrame keyTime="0" active="true"/>
+                                <keyFrame keyTime="0.49" active="true"/>
+                                <keyFrame keyTime="0.5" active="false"/>
+                                <keyFrame keyTime="1.49" active="true"/>
+                                <keyFrame keyTime="2" active="false"/>
+                            </sound>
+                        </sounds>
+                    </rotatoryAnimationPackage>
+                </rotatory>
+
+                <pusher>
+                    <pusherFirstAnimationPackage name="p2bagPusherPushFirst2" loop="false" callbackTime="1.0" duration="2.0">
+                        <animation>
+                            <part node="slider_vis">
+                                <keyFrame keyTime="0.0" rotation="0 0 0" translation="-14.817 1.666 1.564"/>
+                                <keyFrame keyTime="1.0" rotation="0 0 0" translation="-14.096 1.666 1.564"/>
+                                <keyFrame keyTime="2.0" rotation="0 0 0" translation="-14.817 1.666 1.564"/>
+                            </part>
+                            <part node="pusher_vis">
+                                <keyFrame keyTime="1.0" rotation="0 0 0" translation="0.009 0.006 -0.12"/>
+                                <keyFrame keyTime="1.1" rotation="0 0 0" translation="0.009 0.006 -0.027"/>
+                                <keyFrame keyTime="1.9" rotation="0 0 0" translation="0.009 0.006 -0.027"/>
+                                <keyFrame keyTime="2.0" rotation="0 0 0" translation="0.009 0.006 -0.12"/>
+                            </part>
+                            <part node="guideNodes_pattern2">
+                                <keyFrame keyTime="0.19278" rotation="0 0 0" translation="0 0 0"/>
+                                <keyFrame keyTime="1.0" rotation="0 0 0" translation="0.58 0 0"/>
+                            </part>
+                            <part node="prepareTable_gear2">
+                                <keyFrame keyTime="0" rotation="0 0 0" translation="-1.953 0.822 0.747"/>
+                                <keyFrame keyTime="1.0" rotation="0 -360 0" translation="-1.953 0.822 0.747"/>
+                                <keyFrame keyTime="2.0" rotation="0 0 0" translation="-1.953 0.822 0.747"/>
+                            </part>
+                            <part node="prepareTable_gear">
+                                <keyFrame keyTime="0" rotation="0 0 0" translation="0.164 0.822 0.747"/>
+                                <keyFrame keyTime="1.0" rotation="0 -360 0" translation="0.164 0.822 0.747"/>
+                                <keyFrame keyTime="2.0" rotation="0 0 0" translation="0.164 0.822 0.747"/>
+                            </part>
+
+                            <part node="sliderBelt" shaderParameter="offsetUV" shaderComponentScale="1 0 0 0">
+                                <keyFrame keyTime="0" value="0 0 0 0"/>
+                                <keyFrame keyTime="1.0" value="-0.5 0 0 0"/>
+                                <keyFrame keyTime="2.0" value="0 0 0 0"/>
+                            </part>
+                        </animation>
+                        <sounds>
+                            <sound>
+                                <sample linkNode="bag_rotator" file="resources/sounds/pusher.wav" innerRadius="6" outerRadius="10.0" fadeIn="0.3" fadeOut="0.3">
+                                    <volume indoor="0.5" outdoor="2.0"/>
+                                    <pitch indoor="1.00" outdoor="1.00"/>
+                                    <lowpassGain indoor="0.9" outdoor="1.00"/>
+                                </sample>
+
+                                <keyFrame keyTime="0" active="true"/>
+                                <keyFrame keyTime="1.999" active="true"/>
+                                <keyFrame keyTime="2" active="false"/>
+                            </sound>
+                        </sounds>
+                    </pusherFirstAnimationPackage>
+
+                    <pusherPushThroughAnimationPackage name="p2bagPusherPushThrough" loop="false" callbackTime="2.0" duration="4.1">
+                        <animation>
+                            <part node="slider_vis">
+                                <keyFrame keyTime="0.0" rotation="0 0 0" translation="-14.817 1.666 1.564"/>
+                                <keyFrame keyTime="2.0" rotation="0 0 0" translation="-12.898 1.666 1.564"/>
+                                <keyFrame keyTime="4.0" rotation="0 0 0" translation="-14.817 1.666 1.564"/>
+                            </part>
+                            <part node="guideNodes_pattern2_1">
+                                <keyFrame keyTime="0.04585" rotation="0 0 0" translation="-14.809 1.965 1.381"/>
+                                <keyFrame keyTime="2.0" rotation="0 0 0" translation="-12.936 1.965 1.381"/>
+                                <keyFrame keyTime="4.0" rotation="0 0 0" translation="-14.809 1.965 1.381"/>
+                            </part>
+                            <part node="guideNodes_pattern2">
+                                <keyFrame keyTime="0.162419" rotation="0 0 0" translation="0.58 0 0"/>
+                                <keyFrame keyTime="2.0" rotation="0 0 0" translation="2.310 0 0"/>
+                                <keyFrame keyTime="4.0" rotation="0 0 0" translation="0 0 0"/>
+                            </part>
+                            <part node="pusher_vis">
+                                <keyFrame keyTime="1.7" rotation="0 0 0" translation="0.009 0.006 -0.12"/>
+                                <keyFrame keyTime="2.0" rotation="0 0 0" translation="0.009 0.006 -0.027"/>
+                                <keyFrame keyTime="4.0" rotation="0 0 0" translation="0.009 0.006 -0.027"/>
+                                <keyFrame keyTime="4.3" rotation="0 0 0" translation="0.009 0.006 -0.12"/>
+                            </part>
+                            <part node="prepareTable_gear2">
+                                <keyFrame keyTime="0" rotation="0 0 0" translation="-1.953 0.822 0.747"/>
+                                <keyFrame keyTime="2.0" rotation="0 -825 0" translation="-1.953 0.822 0.747"/>
+                                <keyFrame keyTime="4.0" rotation="0 0 0" translation="-1.953 0.822 0.747"/>
+                            </part>
+                            <part node="prepareTable_gear">
+                                <keyFrame keyTime="0" rotation="0 0 0" translation="0.164 0.822 0.747"/>
+                                <keyFrame keyTime="2.0" rotation="0 -825 0" translation="0.164 0.822 0.747"/>
+                                <keyFrame keyTime="4.0" rotation="0 0 0" translation="0.164 0.822 0.747"/>
+                            </part>
+
+                            <part node="sliderBelt" shaderParameter="offsetUV" shaderComponentScale="1 0 0 0">
+                                <keyFrame keyTime="0" value="0 0 0 0"/>
+                                <keyFrame keyTime="2.0" value="-1.1 0 0 0"/>
+                                <keyFrame keyTime="4.0" value="0 0 0 0"/>
+                            </part>
+                        </animation>
+                        <sounds>
+                            <sound>
+                                <sample linkNode="bag_rotator" file="resources/sounds/pusher.wav" innerRadius="6" outerRadius="10.0" fadeIn="0.3" fadeOut="0.3">
+                                    <volume indoor="0.5" outdoor="2.0"/>
+                                    <pitch indoor="1.00" outdoor="1.00"/>
+                                    <lowpassGain indoor="0.9" outdoor="1.00"/>
+                                </sample>
+
+                                <keyFrame keyTime="0" active="true"/>
+                                <keyFrame keyTime="4.0" active="true"/>
+                                <keyFrame keyTime="4.001" active="false"/>
+                            </sound>
+                        </sounds>
+                    </pusherPushThroughAnimationPackage>
+                </pusher>
+            </pattern>
+        </patterns>
+    </bagCreations>
+
+    <bagLifter numBagRowsOnPallet="8" palletGuideNode="liftPalletGuideNode" bagGuideNode="bagLifterGuideNode" minAnimationTime="0.0126495" maxAnimationTime="1" loadPosAnimationTime="0.4668" animationTimePerBagLayer="0.103143072">
+        <bagLifterMovementAnimationPackage name="bagLiftMovement" loop="false" callbackTime="4.0" duration="4.0">
+            <animation>
+                <part node="bagLift">
+                    <!-- lowest -->
+                    <keyFrame keyTime="0.0" rotation="0 0 0" translation="-11.691 1.661 0.746"/>
+                    <keyFrame keyTime="4" rotation="0 0 0" translation="-11.691 1.661 2.074"/>
+                </part>
+            </animation>
+        </bagLifterMovementAnimationPackage>
+
+        <bagLifterPutBagsOnPalletAnimationPackage name="bagLifterPutBagsOnPallet" loop="false" callbackTime="3.0" duration="3.2">
+            <animation>
+                <part node="lift_table">
+                    <keyFrame keyTime="0.0" rotation="0 0 0" translation="-0.6 0 -0.103"/>
+                    <keyFrame keyTime="1.0" rotation="0 0 0" translation="0.535 0 -0.103"/>
+                    <keyFrame keyTime="1.5" rotation="0 0 0" translation="0.535 0 -0.103"/>
+                    <keyFrame keyTime="2.5" rotation="0 0 0" translation="-0.6 0 -0.103"/>
+                </part>
+                <part node="bagLifterGuideNode">
+                    <keyFrame keyTime="1.5" rotation="0 0 0" translation="-0.303 0.303 0.118"/>
+                    <keyFrame keyTime="2.5" rotation="0 0 0" translation="0.832 0.303 0.118"/>
+                    <keyFrame keyTime="3.0" rotation="0 0 0" translation="0.832 0.303 0.0452312"/>
+                    <keyFrame keyTime="3.15" rotation="0 0 0" translation="0.832 0.303 0.0816156"/>
+                    <keyFrame keyTime="3.2" rotation="0 0 0" translation="-0.303 0.303 0.118"/>
+                </part>
+                <part node="stopper_front">
+                    <keyFrame keyTime="1.0" rotation="0 0 0" translation="0.989 -0.017 -0.032"/>
+                    <keyFrame keyTime="1.5" rotation="0 0 0" translation="0.946 -0.017 -0.032"/>
+                    <keyFrame keyTime="2.5" rotation="0 0 0" translation="0.946 -0.017 -0.032"/>
+                    <keyFrame keyTime="3.0" rotation="0 0 0" translation="0.989 -0.017 -0.032"/>
+                </part>
+                <part node="stopper_right">
+                    <keyFrame keyTime="1.0" rotation="0 0 0" translation="0.503 0.635 -0.032"/>
+                    <keyFrame keyTime="1.5" rotation="0 0 0" translation="0.503 0.559 -0.032"/>
+                    <keyFrame keyTime="2.5" rotation="0 0 0" translation="0.503 0.559 -0.032"/>
+                    <keyFrame keyTime="3.0" rotation="0 0 0" translation="0.503 0.635 -0.032"/>
+                </part>
+                <part node="stopper_left">
+                    <keyFrame keyTime="1.0" rotation="0 0 0" translation="0.457 -0.582 0.014"/>
+                    <keyFrame keyTime="1.5" rotation="0 0 0" translation="0.457 -0.5 0.014"/>
+                    <keyFrame keyTime="2.5" rotation="0 0 0" translation="0.457 -0.5 0.014"/>
+                    <keyFrame keyTime="3.0" rotation="0 0 0" translation="0.457 -0.582 0.014"/>
+                </part>
+            </animation>
+        </bagLifterPutBagsOnPalletAnimationPackage>
+    </bagLifter>
+
+    <palletStacker palletGuideNode="palletStackerGuideNode" palletCloneNode="pallet_base_cloning">
+        <palletStackerDeliverPalletAnimationPackage name="palletStackerDeliverPallet" loop="false" callbackTime="1.0" duration="10.0">
+            <animation>
+                <part node="palletStackerGuideNode">
+                    <keyFrame keyTime="0.0" rotation="0 0 0" translation="11.195 0.572 3.824"/>
+                    <keyFrame keyTime="1.0" rotation="0 0 0" translation="11.195 0.572 1.664"/>
+                </part>
+                <part node="pallet_base_cloning">
+                    <keyFrame keyTime="0.0" rotation="0 0 0" translation="11.195 0.572 3.824" active="true"/>
+                    <keyFrame keyTime="0.001" rotation="0 0 0" translation="11.195 0.572 1.664" active="false"/>
+                </part>
+                <part node="stacker_vis">
+                    <keyFrame keyTime="1" rotation="0 0 0" translation="11.515 1.441 3.824"/>
+                    <keyFrame keyTime="2" rotation="0 0 0" translation="11.515 1.122 3.824"/>
+                    <keyFrame keyTime="2.5" rotation="0 0 0" translation="11.515 1.122 3.824"/>
+                    <keyFrame keyTime="3.5" rotation="0 0 0" translation="11.515 1.291 3.824"/>
+                    <keyFrame keyTime="4" rotation="0 0 0" translation="11.515 1.291 3.824"/>
+                    <keyFrame keyTime="5" rotation="0 0 0" translation="11.515 1.441 3.824"/>
+                </part>
+                <part node="pallet_base">
+                    <keyFrame keyTime="1" rotation="0 0 0" translation="11.835 1.441 3.274"/>
+                    <keyFrame keyTime="2" rotation="0 0 0" translation="11.835 1.122 3.274"/>
+                    <keyFrame keyTime="4" rotation="0 0 0" translation="11.835 1.122 3.274"/>
+                </part>
+                <part node="pallet_base2">
+                    <keyFrame keyTime="4" rotation="0 0 0" translation="-0.64 0.13 0.55"/>
+                    <keyFrame keyTime="5" rotation="0 0 0" translation="-0.64 0.2895 0.55"/>
+                </part>
+                <part node="rightArm">
+                    <keyFrame keyTime="2" rotation="0 0 0" translation="0 0 0"/>
+                    <keyFrame keyTime="2.5" rotation="0 0 0" translation="0 0 0.059"/>
+                    <keyFrame keyTime="3.5" rotation="0 0 0" translation="0 0 0.059"/>
+                    <keyFrame keyTime="4" rotation="0 0 0" translation="0 0 0"/>
+                </part>
+                <part node="leftArm">
+                    <keyFrame keyTime="2" rotation="0 0 0" translation="0 0 0"/>
+                    <keyFrame keyTime="2.5" rotation="0 0 0" translation="0 0 -0.063"/>
+                    <keyFrame keyTime="3.5" rotation="0 0 0" translation="0 0 -0.063"/>
+                    <keyFrame keyTime="4" rotation="0 0 0" translation="0 0 0"/>
+                </part>
+            </animation>
+        </palletStackerDeliverPalletAnimationPackage>
+    </palletStacker>
+
+    <conveyor palletGuideNode="pallet_guideNode">
+        <conveyorMovePalletOutAnimationPackage name="conveyorMovePalletOut" speed="0.35" loop="false" callbackTime="3" duration="6">
+            <animation>
+                <part node="pallet_guideNode">
+                    <keyFrame keyTime="0.0" rotation="0 0 0" translation="0.009 0.159 2.411"/>
+                    <keyFrame keyTime="1.0" rotation="0 0 0" translation="0.009 0.159 0"/>
+                    <!-- small fix :D -->
+                    <keyFrame keyTime="3.0" rotation="0 0 0" translation="0.009 0.259 0"/>
+                </part>
+                <part node="traverser">
+                    <keyFrame keyTime="1.0" rotation="90 0 -180" translation="-11.204 -0.747 0.412"/>
+                    <keyFrame keyTime="3.0" rotation="90 0 -180" translation="-14.866 -0.747 0.412"/>
+                    <keyFrame keyTime="4.0" rotation="90 0 -180" translation="-14.866 -0.747 0.412"/>
+                    <keyFrame keyTime="6.0" rotation="90 0 -180" translation="-11.204 -0.747 0.412"/>
+                </part>
+            </animation>
+        </conveyorMovePalletOutAnimationPackage>
+    </conveyor>
+
+    <palletOutput palletGuideNode="palletOutputGuideNode">
+        <places>
+            <place triggerNode="collisionTrigger" spawnOffset="-0.4" animationTime="1.0"/>
+            <place triggerNode="collisionTrigger1" spawnOffset="-0.4" animationTime="0.711961"/>
+            <place triggerNode="collisionTrigger2" spawnOffset="-0.4" animationTime="0.428571"/>
+        </places>
+
+        <movePalletToDestinationAnimationPackage name="movePalletToDestination" speed="0.25" loop="false" callbackTime="1" duration="1">
+            <animation>
+                <part node="palletOutputGuideNode">
+                    <keyFrame keyTime="0.0" rotation="90 180 180" translation="14.893 0.482 -0.747"/>
+                    <keyFrame keyTime="1.0" rotation="90 180 180" translation="14.893 0.482 -7.201"/>
+                </part>
+            </animation>
+        </movePalletToDestinationAnimationPackage>
+    </palletOutput>
+
+    <sounds>
+        <work linkNode="conveyors_base" file="resources/sounds/pelletizerAmbient.wav" innerRadius="15.0" outerRadius="25.0" fadeIn="0.25" fadeOut="0.25">
+            <volume indoor="0.5" outdoor="1.5"/>
+            <pitch indoor="1.0" outdoor="1.0"/>
+            <lowpassGain indoor="0.75" outdoor="1.00"/>
+        </work>
+    </sounds>
+
+    <effect>
+        <effectNode effectClass="MorphPositionEffect" effectNode="beltEffect" materialType="BELT" materialTypeId="1" delay="0" fadeTime="3.2" speed="0.9" scrollLength="10" scrollSpeed="1.25"/>
+        <effectNode effectClass="MorphPositionEffect" effectNode="unloadingEffect" materialType="UNLOADING" delay="2.5" speed="0.05" scrollLength="1" scrollSpeed="0.6"/>
+    </effect>
+
+    <animationPackages>
+        <unloadAnimationPackage name="unloadAnimation" loop="false" duration="1">
+            <animation>
+                <part node="heap_plane">
+                    <keyFrame keyTime="0" rotation="-90 0 0" scale="0 0 0" translation="0 -1.1 0"/>
+                    <keyFrame keyTime="0.001" rotation="-90 0 0" scale="0.157 0.145 0.054" translation="0 -1.1 0"/>
+                    <keyFrame keyTime="0.3" rotation="-90 0 0" scale="0.9 0.9 0.9" translation="0 -0.45 0"/>
+                    <keyFrame keyTime="1" rotation="-90 0 0" scale="1 1 1" translation="0 0 0"/>
+                </part>
+            </animation>
+        </unloadAnimationPackage>
+
+        <loadAnimationPackage name="loadAnimation" loop="false" duration="1">
+            <animation>
+                <part node="palletizer_plane"> <!-- plane -->
+                    <keyFrame keyTime="0" scale="0 0 0" translation="0.002 0.643 1.687"/>
+                    <keyFrame keyTime="0.01" scale="0.253 0.552 0.1" translation="0.002 0.643 1.687"/>
+                    <keyFrame keyTime="0.4" scale="1 1 0.1" translation="0 0.946 2.023"/>
+                    <keyFrame keyTime="1" scale="1 1 1" translation="0 0.946 2.227"/>
+                </part>
+            </animation>
+        </loadAnimationPackage>
+
+        <beltBunkerAnimationPackage name="beltBunkerAnimation" loop="true" duration="1">
+            <animationNodes>
+                <animationNode node="belt" rotSpeed="-15" rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="2" shaderComponentScale="1 0 0 0" shaderParameterName="offsetUV"/>
+                <animationNode node="beltRoller1" rotSpeed="500" rotAxis="2" turnOnFadeTime="2" turnOffFadeTime="2"/>
+                <animationNode node="beltRoller2" rotSpeed="500" rotAxis="2" turnOnFadeTime="2" turnOffFadeTime="2"/>
+            </animationNodes>
+        </beltBunkerAnimationPackage>
+
+        <beltBagAnimationPackage name="beltBagAnimation" loop="true" duration="1">
+            <animationNodes>
+                <animationNode node="conveyor_belt1" rotSpeed="-15" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1" shaderComponentScale="1 0 0 0" shaderParameterName="offsetUV"/>
+                <animationNode node="conveyor_belt2" rotSpeed="-15" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1" shaderComponentScale="1 0 0 0" shaderParameterName="offsetUV"/>
+                <animationNode node="conveyor_belt_roll1" rotSpeed="500" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1"/>
+                <animationNode node="conveyor_belt_roll2" rotSpeed="500" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1"/>
+                <animationNode node="conveyor_belt_roll3" rotSpeed="500" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1"/>
+                <animationNode node="conveyor_belt_roll4" rotSpeed="500" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1"/>
+            </animationNodes>
+        </beltBagAnimationPackage>
+
+        <bagFillAnimationPackage name="bagFillAnimation" callbackTime="4.4" loop="false" duration="4.4">
+            <animation>
+                <part node="bagAnimNode"> <!-- guide node for the bag -->
+                    <keyFrame keyTime="0" rotation="0 0 0" translation="14.343 1.708 8.693"/>
+                    <keyFrame keyTime="0.25" rotation="0 0 0" translation="14.343 1.658 8.693"/>
+                    <keyFrame keyTime="1.30" rotation="0 0 0" translation="14.343 0.991 8.693"/>
+                </part>
+                <part node="welder_front"> <!-- welder front -->
+                    <!-- welder closed -->
+                    <keyFrame keyTime="0" translation="14.344 1.344 8.648" rotation="0 0 0"/>
+                    <keyFrame keyTime="0.25" translation="14.344 1.344 8.648" rotation="0 0 0"/>
+                    <!-- welder opens -->
+                    <keyFrame keyTime="0.4" translation="14.344 1.344 8.568" rotation="0 0 0"/>
+                    <keyFrame keyTime="3.15" translation="14.344 1.344 8.568" rotation="0 0 0"/>
+                    <!-- welder closes -->
+                    <keyFrame keyTime="3.30" translation="14.344 1.344 8.648" rotation="0 0 0"/>
+                </part>
+                <part node="welder_back"> <!-- welder back -->
+                    <!-- welder closed -->
+                    <keyFrame keyTime="0.0" translation="14.344 1.344 8.738" rotation="0 0 0"/>
+                    <keyFrame keyTime="0.25" translation="14.344 1.344 8.738" rotation="0 0 0"/>
+                    <!-- welder opens -->
+                    <keyFrame keyTime="0.4" translation="14.344 1.344 8.827" rotation="0 0 0"/>
+                    <keyFrame keyTime="3.15" translation="14.344 1.344 8.827" rotation="0 0 0"/>
+                    <!-- welder closes -->
+                    <keyFrame keyTime="3.30" translation="14.344 1.344 8.738" rotation="0 0 0"/>
+                </part>
+                <part node="foilRole_roller"> <!-- foil role roller -->
+                    <keyFrame keyTime="0.0" translation="14.343 0.629 10.841" rotation="0 0 0"/>
+                    <keyFrame keyTime="1.3" translation="14.343 0.629 10.841" rotation="180 0 0"/>
+                </part>
+
+                <part node="foil_back_skinned" shaderParameter="offsetUV" shaderComponentScale="1 0 0 0">
+                    <keyFrame keyTime="0" value="0 0 0 0"/>
+                    <keyFrame keyTime="1.3" value="-0.25 0 0 0"/>
+                </part>
+                <part node="foilRole_foil" shaderParameter="offsetUV" shaderComponentScale="1 0 0 0">
+                    <keyFrame keyTime="0" value="0 0 0 0"/>
+                    <keyFrame keyTime="1.3" value="-0.5 0 0 0"/>
+                </part>
+
+                <part>
+                    <animationNodes>
+                        <animationNode node="welder_roll1" rotSpeed="250" rotAxis="3" turnOnFadeTime="0" turnOffFadeTime="0"/>
+                        <animationNode node="welder_roll2" rotSpeed="250" rotAxis="3" turnOnFadeTime="0" turnOffFadeTime="0"/>
+                        <animationNode node="welder_roll3" rotSpeed="250" rotAxis="3" turnOnFadeTime="0" turnOffFadeTime="0"/>
+                        <animationNode node="welder_roll4" rotSpeed="250" rotAxis="3" turnOnFadeTime="0" turnOffFadeTime="0"/>
+                    </animationNodes>
+
+                    <keyFrame keyTime="0" active="true"/>
+                    <keyFrame keyTime="1.3" active="true"/>
+                    <keyFrame keyTime="1.31" active="false"/>
+                </part>
+            </animation>
+
+            <sounds>
+                <sound>
+                    <sample linkNode="bagAnimNode" file="resources/sounds/bagFilling.wav" innerRadius="6" outerRadius="10">
+                        <volume indoor="0.45" outdoor="1.5"/>
+                        <pitch indoor="1.00" outdoor="1.00"/>
+                        <lowpassGain indoor="0.95" outdoor="1.00"/>
+                    </sample>
+
+                    <keyFrame keyTime="0" active="false"/>
+                    <keyFrame keyTime="0.999" active="false"/>
+                    <keyFrame keyTime="1.0" active="true"/>
+                    <keyFrame keyTime="3.2" active="true"/>
+                    <keyFrame keyTime="3.201" active="false"/>
+                </sound>
+            </sounds>
+        </bagFillAnimationPackage>
+
+        <bagDropAnimationPackage name="bagDropAnimation" callbackTime="0.60" loop="false" duration="0.9">
+            <animation>
+                <part node="bagDropAnimNode"> <!-- guide node for the bag -->
+                    <keyFrame keyTime="0" rotation="0 0 0" translation="0 0.318 -0.123"/>
+                    <keyFrame keyTime="0.15" rotation="0 0 0" translation="0 0.268 -0.123"/>
+                    <keyFrame keyTime="0.30" rotation="0 0 0" translation="0 0.268 -0.123"/>
+                    <keyFrame keyTime="0.60" rotation="-40 0 0" translation="0 0.295 -0.626"/>
+                    <keyFrame keyTime="0.80" rotation="-40 0 0" translation="0 0.295 -0.626"/>
+                    <keyFrame keyTime="0.90" rotation="0 0 0" translation="0 0.318 -0.123"/>
+                </part>
+                <part node="drop_table"> <!-- drop table -->
+                    <keyFrame keyTime="0.15" rotation="0 0 0" translation="14.343 0.673 8.816"/>
+                    <keyFrame keyTime="0.30" rotation="-30 0 0" translation="14.343 0.673 8.816"/>
+                    <keyFrame keyTime="0.60" rotation="-30 0 0" translation="14.343 0.673 8.816"/>
+                    <keyFrame keyTime="0.90" rotation="0 0 0" translation="14.343 0.673 8.816"/>
+                </part>
+            </animation>
+
+            <sounds>
+                <sound>
+                    <sample linkNode="bagDropAnimNode" file="resources/sounds/bagDrop.wav" innerRadius="6" outerRadius="10">
+                        <volume indoor="0.45" outdoor="1.5"/>
+                        <pitch indoor="1.00" outdoor="1.00"/>
+                        <lowpassGain indoor="0.95" outdoor="1.00"/>
+                    </sample>
+
+                    <keyFrame keyTime="0" active="false"/>
+                    <keyFrame keyTime="0.1" active="true"/>
+                    <keyFrame keyTime="0.8" active="true"/>
+                    <keyFrame keyTime="0.90" active="false"/>
+                </sound>
+            </sounds>
+        </bagDropAnimationPackage>
+
+        <rotatoryBeltAnimationPackage name="rotatorBeltAnim" loop="true" duration="1">
+            <animationNodes>
+                <animationNode node="rotator_belt1" rotSpeed="-15" rotAxis="1" turnOnFadeTime="0" turnOffFadeTime="0" shaderComponentScale="1 0 0 0" shaderParameterName="offsetUV"/>
+                <animationNode node="conveyor_belt_roll5" rotSpeed="-500" rotAxis="1" turnOnFadeTime="0" turnOffFadeTime="0"/>
+                <animationNode node="conveyor_belt_roll6" rotSpeed="-500" rotAxis="1" turnOnFadeTime="0" turnOffFadeTime="0"/>
+            </animationNodes>
+        </rotatoryBeltAnimationPackage>
+
+        <!-- Todo: not seeing the value of this yet..-->
+        <ghostAnimation duration="10">
+            <part name="bag" guideNode="ghostAttachNode">  <!-- animation is not bound to a node, but animation is relative to guideNode -->
+                <keyFrame keyTime="0" rotation="20 0 0" translation="0 0 0"/>
+                <keyFrame keyTime="4" rotation="20 0 0" translation="0 2.02 0.735"/>
+                <keyFrame keyTime="4.5" rotation="0 0 0" translation="0 2.244 0.765"/>
+                <keyFrame keyTime="10" rotation="0 0 0" translation="-0.016 5.128 0.765"/>
+            </part>
+        </ghostAnimation>
+    </animationPackages>
+
+    <i3dMappings>
+        <i3dMapping id="palletizer_plane" node="0>0|0|1"/>
+        <i3dMapping id="sliderBelt" node="0>0|0|2"/>
+        <i3dMapping id="belt" node="0>0|2|0|0"/>
+        <i3dMapping id="beltRoller1" node="0>0|2|0|1"/>
+        <i3dMapping id="beltRoller2" node="0>0|2|0|2"/>
+        <i3dMapping id="beltEffect" node="0>0|2|0|3"/>
+        <i3dMapping id="unloadingEffect" node="0>0|2|0|4"/>
+        <i3dMapping id="exactFillRootNode" node="0>0|2|1|0"/>
+        <i3dMapping id="heap_plane" node="0>0|2|2|0"/>
+        <i3dMapping id="welder_front" node="0>0|3|0"/>
+        <i3dMapping id="welder_back" node="0>0|3|1"/>
+        <i3dMapping id="welder_roll1" node="0>0|3|2"/>
+        <i3dMapping id="welder_roll2" node="0>0|3|3"/>
+        <i3dMapping id="welder_roll3" node="0>0|3|4"/>
+        <i3dMapping id="welder_roll4" node="0>0|3|5"/>
+        <i3dMapping id="foilRole_roller" node="0>0|3|12"/>
+        <i3dMapping id="foilRole_foil" node="0>0|3|13"/>
+        <i3dMapping id="foil_back_skinned" node="0>0|3|14"/>
+        <i3dMapping id="drop_table" node="0>0|3|15"/>
+        <i3dMapping id="bagDropAnimNode" node="0>0|3|15|0"/>
+        <i3dMapping id="bagAnimNode" node="0>0|3|16"/>
+        <i3dMapping id="pelletBag_straw_cloning" node="0>0|3|17"/>
+        <i3dMapping id="pelletBag_hay_cloning" node="0>0|3|18"/>
+        <i3dMapping id="statsPlayerTrigger" node="0>0|3|19"/>
+        <i3dMapping id="conveyors_base" node="0>0|4"/>
+        <i3dMapping id="ghostAttachNode" node="0>0|4|0"/>
+        <i3dMapping id="conveyor_belt1" node="0>0|4|1"/>
+        <i3dMapping id="conveyor_belt2" node="0>0|4|2"/>
+        <i3dMapping id="rotator_belt1" node="0>0|4|3"/>
+        <i3dMapping id="rotator_belt2" node="0>0|4|4"/>
+        <i3dMapping id="conveyor_belt_roll1" node="0>0|4|5"/>
+        <i3dMapping id="conveyor_belt_roll2" node="0>0|4|6"/>
+        <i3dMapping id="conveyor_belt_roll3" node="0>0|4|7"/>
+        <i3dMapping id="conveyor_belt_roll4" node="0>0|4|8"/>
+        <i3dMapping id="conveyor_belt_roll5" node="0>0|4|9"/>
+        <i3dMapping id="conveyor_belt_roll6" node="0>0|4|10"/>
+        <i3dMapping id="conveyor_belt_roll7" node="0>0|4|11"/>
+        <i3dMapping id="conveyor_belt_roll8" node="0>0|4|12"/>
+        <i3dMapping id="prepareTable_gear" node="0>0|4|13"/>
+        <i3dMapping id="prepareTable_gear2" node="0>0|4|14"/>
+        <i3dMapping id="traverser" node="0>0|4|16|0"/>
+        <i3dMapping id="pallet_guideNode" node="0>0|4|16|0|0"/>
+        <i3dMapping id="stacker_vis" node="0>0|6|0"/>
+        <i3dMapping id="leftArm" node="0>0|6|0|0"/>
+        <i3dMapping id="rightArm" node="0>0|6|0|1"/>
+        <i3dMapping id="palletStackerGuideNode" node="0>0|6|1"/>
+        <i3dMapping id="pallet_base_cloning" node="0>0|6|2"/>
+        <i3dMapping id="pallet_base" node="0>0|6|3"/>
+        <i3dMapping id="pallet_base2" node="0>0|6|3|0"/>
+        <i3dMapping id="bagLift" node="0>0|7|0"/>
+        <i3dMapping id="lift_table" node="0>0|7|0|0"/>
+        <i3dMapping id="bagLifterGuideNode" node="0>0|7|0|0|0"/>
+        <i3dMapping id="stopper_front" node="0>0|7|0|1"/>
+        <i3dMapping id="stopper_right" node="0>0|7|0|2"/>
+        <i3dMapping id="stopper_left" node="0>0|7|0|3"/>
+        <i3dMapping id="liftPalletGuideNode" node="0>0|7|1"/>
+        <i3dMapping id="guideNodes_pattern1" node="0>0|8|0"/>
+        <i3dMapping id="pattern1GuideNode1" node="0>0|8|0|0"/>
+        <i3dMapping id="pattern1GuideNode2" node="0>0|8|0|1"/>
+        <i3dMapping id="pattern1GuideNode3" node="0>0|8|0|2"/>
+        <i3dMapping id="guideNodes_pattern1_2" node="0>0|8|1"/>
+        <i3dMapping id="pattern1GuideNode4" node="0>0|8|1|0"/>
+        <i3dMapping id="pattern1GuideNode5" node="0>0|8|1|1"/>
+        <i3dMapping id="guideNodes_pattern2" node="0>0|8|2"/>
+        <i3dMapping id="pattern2GuideNode1" node="0>0|8|2|0"/>
+        <i3dMapping id="pattern2GuideNode2" node="0>0|8|2|1"/>
+        <i3dMapping id="guideNodes_pattern2_1" node="0>0|8|3"/>
+        <i3dMapping id="pattern2GuideNode3" node="0>0|8|3|0"/>
+        <i3dMapping id="pattern2GuideNode4" node="0>0|8|3|1"/>
+        <i3dMapping id="pattern2GuideNode5" node="0>0|8|3|2"/>
+        <i3dMapping id="slider_vis" node="0>0|8|4"/>
+        <i3dMapping id="pusher_vis" node="0>0|8|4|0"/>
+        <i3dMapping id="bag_rotator" node="0>0|9"/>
+        <i3dMapping id="rotatorBagGuideNode" node="0>0|9|0"/>
+        <i3dMapping id="pusher_left" node="0>0|9|1"/>
+        <i3dMapping id="pusher_right" node="0>0|9|2"/>
+        <i3dMapping id="palletOutputGuideNode" node="0>0|10|0"/>
+        <i3dMapping id="collisionTrigger" node="0>0|10|1"/>
+        <i3dMapping id="collisionTrigger1" node="0>0|10|2"/>
+        <i3dMapping id="collisionTrigger2" node="0>0|10|3"/>
+    </i3dMappings>
+</palletizer>

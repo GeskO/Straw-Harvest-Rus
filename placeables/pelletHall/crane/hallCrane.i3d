@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="hallCrane_ingaming" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="1" filename="crane_diffuse.png" />
+    <File fileId="2" filename="crane_normal.png" />
+    <File fileId="3" filename="crane_specular.png" />
+    <File fileId="5" filename="craneTools_diffuse.png" />
+    <File fileId="6" filename="craneTools_normal.png" />
+    <File fileId="7" filename="craneTools_specular.png" />
+    <File fileId="8" filename="$data/shared/default_normal.png" />
+    <File fileId="9" filename="craneTools2_diffuse.png" />
+    <File fileId="11" filename="craneTools2_specular.png" />
+    <File fileId="10" filename="craneTools2_normal.png" />
+    <File fileId="12" filename="rope_diffuse.png" />
+    <File fileId="15" filename="trigger_diffuse.png" />
+    <File fileId="13" filename="$data/shared/default_normal.png" />
+    <File fileId="4" filename="$data/shaders/buildingShader.xml" />
+    <File fileId="16" filename="$data/shaders/fxCircleShader.xml" />
+    <File fileId="14" filename="$data/shaders/vehicleShader.xml" />
+  </Files>
+
+  <Materials>
+    <Material name="lambert1" materialId="1" diffuseColor="0.559242 0.559242 0.559242 1" specularColor="0 0 0" ambientColor="1 1 1">
+    </Material>
+    <Material name="crane_mat" materialId="2" cosPower="50" specularColor="1 1 1" ambientColor="1 1 1" customShaderId="4">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="tools_mat" materialId="4" cosPower="50" specularColor="1 1 1" ambientColor="1 1 1" customShaderId="4">
+      <Texture fileId="5"/>
+      <Normalmap fileId="6"/>
+      <Glossmap fileId="7"/>
+    </Material>
+    <Material name="unloadingEffect_mat" materialId="5" diffuseColor="0.569507 0.569507 0.569507 1" cosPower="20" specularColor="0 0 0" ambientColor="1 1 1">
+      <Normalmap fileId="8"/>
+    </Material>
+    <Material name="craneTools2_mat" materialId="6" cosPower="50" specularColor="1 1 1" ambientColor="1 1 1">
+      <Texture fileId="9"/>
+      <Normalmap fileId="10"/>
+      <Glossmap fileId="11"/>
+    </Material>
+    <Material name="rope_mat" materialId="7" cosPower="50" specularColor="0.5 0.5 0.5" ambientColor="1 1 1" customShaderId="14" customShaderVariation="LOCAL_CATMULL_ROM">
+      <CustomParameter name="cv2" value="0 0 10 0"/>
+      <CustomParameter name="cv3" value="-5 0 15 0"/>
+      <CustomParameter name="cv0" value="5 0 -5 0"/>
+      <CustomParameter name="cv1" value="0 0 0 0"/>
+      <CustomParameter name="lengthAndDiameter" value="1 1 0 0"/>
+      <CustomParameter name="RDT" value="0 0 0 0"/>
+      <Texture fileId="12"/>
+      <Normalmap fileId="13"/>
+    </Material>
+    <Material name="VehicleEnterCircle_mat" materialId="3" cosPower="20" specularColor="0 0 0" ambientColor="1 1 1" alphaBlending="true" customShaderId="16" customShaderVariation="PULSATING">
+      <CustomParameter name="scaleParameters" value="0.75 1.0 2.5 1.0"/>
+      <Emissivemap fileId="15"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="hallCrane.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <Shape name="hallCrane_main_component1" shapeId="1" static="true" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="1">
+      <Shape name="crane" translation="-0.16488 6.21762 7.09927" rotation="-90 0 0" scale="1 1 1" shapeId="2" castsShadows="true" receiveShadows="true" materialIds="2" skinBindNodeIds="2 3 6 25" clipDistance="300" nodeId="2">
+        <TransformGroup name="craneTraveler" translation="-0.0802032 -2.22587 0.0776315" scale="1 1 1" collision="false" clipDistance="300" nodeId="3">
+          <TransformGroup name="craneTravelerComponentJoint" translation="-0.380697 -0.00137108 -0.167405" rotation="90 0 0" nodeId="4"/>
+          <TransformGroup name="ropes" translation="-0.482653 2.57676 -6.62017" rotation="90 0 0" nodeId="5">
+            <TransformGroup name="Umlenkrolle" translation="0.813053 6.51697 2.60063" scale="1 1 1" collision="false" clipDistance="300" nodeId="6"/>
+            <Shape name="Stromkabel" translation="-0.150073 5.8626 6.32522" shapeId="3" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="2" clipDistance="300" nodeId="7"/>
+          </TransformGroup>
+          <TransformGroup name="ropeTargets" translation="6.96665e-15 2.33591e-13 -2.25597e-13" rotation="90 0 0" nodeId="8">
+            <TransformGroup name="ropeTarget1" translation="-0.250129 -0.0772305 0.320803" nodeId="9"/>
+            <TransformGroup name="ropeTarget2" translation="-0.250409 -0.0772305 -0.284607" nodeId="10"/>
+            <TransformGroup name="ropeTarget3" translation="0.331698 -0.0773061 0.296189" nodeId="11"/>
+            <TransformGroup name="ropeTarget4" translation="0.329792 -0.0772305 -0.276467" nodeId="12"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="cameras" translation="0.16488 7.09927 -6.21763" rotation="90 0 0" scale="1 1 1" nodeId="13">
+          <Camera name="indoorCamera" translation="-2.62917 8.60309 9.28574" rotation="-65 -90 0" scale="1 1 1" fov="54.4322" nearClip="0.1" farClip="10000" nodeId="14"/>
+          <TransformGroup name="outdoorCameraTarget2" translation="0 5 1" rotation="-5 -105 0" nodeId="15">
+            <Camera name="outdoorCamera2" translation="5.55112e-17 0 5" scale="1 1 1" fov="60" nearClip="0.3" farClip="5000" nodeId="16"/>
+          </TransformGroup>
+        </TransformGroup>
+        <Shape name="craneCollisionPart" translation="0.16488 7.09927 -6.21763" rotation="90 0 0" scale="1 1 1" shapeId="4" compoundChild="true" density="0.001" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="17"/>
+        <TransformGroup name="lights" nodeId="18">
+          <TransformGroup name="beaconLight" translation="0.0226658 15.0262 -0.102933" rotation="-90 0 0" scale="1 1 1" nodeId="19"/>
+        </TransformGroup>
+      </Shape>
+      <TransformGroup name="VehicleEnterTrigger" translation="-1.14446 0.872477 -8.25272" static="true" trigger="true" collisionMask="1048576" clipDistance="300" nodeId="20">
+        <Shape name="vehicleEnterCircle" translation="0 0.227362 0" shapeId="5" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="21"/>
+        <TransformGroup name="exitReferencePoint" translation="0 -0.210385 -1.77636e-15" scale="1 1 1" nodeId="22"/>
+        <TransformGroup name="enterReferencePoint" translation="0 -0.210385 -1.77636e-15" scale="1 1 1" nodeId="23"/>
+      </TransformGroup>
+    </Shape>
+    <Shape name="hallCrane_rotator_component2" translation="-0.244593 5.25 9.35875" scale="1 1 1" shapeId="6" dynamic="true" compound="true" collisionMask="8397058" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="24">
+      <TransformGroup name="cranePulley_vis" translation="0.0018563 -0.0014158 -0.000650317" scale="1 1 1" collision="false" clipDistance="300" nodeId="25">
+        <Shape name="craneRotator_vis" translation="-0.0018563 0.0014158 0.000650317" scale="1 1 1" shapeId="7" castsShadows="true" receiveShadows="true" materialIds="4" skinBindNodeIds="26" clipDistance="300" nodeId="26">
+          <TransformGroup name="craneRotator" translation="2.77556e-17 8.88178e-16 0" nodeId="27">
+            <TransformGroup name="toolRightComponentJoint" translation="-1.94289e-16 -0.362699 -0.222" scale="1 1 1" collision="false" clipDistance="300" nodeId="28"/>
+            <TransformGroup name="toolLeftComponentJoint" translation="-2.77556e-17 -0.362699 0.222" scale="1 1 1" collision="false" clipDistance="300" nodeId="29"/>
+            <TransformGroup name="shovel" translation="-2.77556e-17 2.66454e-15 -3.55271e-15" scale="1 1 1" nodeId="30">
+              <Shape name="shovel_vis" translation="-2.77556e-17 -8.88178e-16 0" scale="1 1 1" shapeId="8" castsShadows="true" receiveShadows="true" materialIds="4" clipDistance="300" nodeId="31">
+                <Shape name="shovelLeft" translation="-0.00073106 -0.36335 0.228656" shapeId="9" castsShadows="true" receiveShadows="true" materialIds="4" clipDistance="300" nodeId="32">
+                  <TransformGroup name="shovelConnectionBarRef" translation="0.0468995 -0.0447297 -0.00759698" nodeId="33"/>
+                  <TransformGroup name="shovelCylinderRef" translation="-0.0264675 0.0151604 0.0986033" nodeId="34"/>
+                  <TransformGroup name="pickupNode" translation="0.00073106 -0.600213 -0.228656" rotation="90 0 0" scale="1 1 1" nodeId="35"/>
+                </Shape>
+                <Shape name="shovelRight" translation="-0.000725859 -0.362802 -0.229947" rotation="0 180 0" scale="1 1 1" shapeId="10" castsShadows="true" receiveShadows="true" materialIds="4" clipDistance="300" nodeId="36">
+                  <Shape name="shovelCylinder" translation="0.0274638 0.0191111 0.097414" rotation="-179.632 0.000554381 180" scale="1 1 1" shapeId="11" castsShadows="true" receiveShadows="true" materialIds="4" clipDistance="300" nodeId="37">
+                    <Shape name="shovelCylinderPunch" translation="-4.09284e-13 6.21725e-15 0.657146" scale="1 1 1" shapeId="12" castsShadows="true" receiveShadows="true" materialIds="4" clipDistance="300" nodeId="38"/>
+                  </Shape>
+                  <Shape name="shovelConnectionBar" translation="-0.0465873 0.0230055 0.0980158" rotation="7.08964 180.032 0" scale="1 1 1" shapeId="13" castsShadows="true" receiveShadows="true" materialIds="4" clipDistance="300" nodeId="39"/>
+                </Shape>
+                <TransformGroup name="shovelFillVolume" scale="1 1 1" nodeId="40">
+                  <Shape name="fillVolume" translation="-0.00116888 -0.671755 9.62405e-06" scale="1 1 1" shapeId="14" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="41"/>
+                  <Shape name="exactFillRootNode" translation="-0.00116888 -0.671755 9.62405e-06" scale="1 1 1" shapeId="15" compoundChild="true" collisionMask="1073741824" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="42"/>
+                  <TransformGroup name="loadInfo" translation="2.77556e-17 -0.946635 0" nodeId="43"/>
+                  <TransformGroup name="unloadInfo" translation="2.77556e-17 -0.422213 0" nodeId="44"/>
+                  <TransformGroup name="dischargeNode" translation="2.77556e-17 -0.961759 0" rotation="90 0 0" nodeId="45"/>
+                  <Shape name="grainNorm1" translation="-0.000115604 -0.931582 -0.000413533" shapeId="16" castsShadows="true" receiveShadows="true" materialIds="5" clipDistance="300" nodeId="46"/>
+                  <Shape name="smokeEffect" translation="-0.00943652 -1 -0.0735316" visibility="false" shapeId="17" castsShadows="true" receiveShadows="true" materialIds="5" clipDistance="100" nodeId="47"/>
+                </TransformGroup>
+                <TransformGroup name="shovelLeftRefFrame" translation="0.0034043 -0.35 0.223832" scale="1 1 1" nodeId="48"/>
+                <TransformGroup name="shovelRightRefFrame" translation="0.0034043 -0.35 -0.226168" rotation="0 180 0" scale="1 1 1" nodeId="49"/>
+              </Shape>
+            </TransformGroup>
+            <TransformGroup name="grab" translation="-8.32667e-17 0 -3.55271e-15" scale="1 1 1" nodeId="50">
+              <Shape name="grab_vis" translation="5.55112e-17 -0.283961 0.0163135" scale="1 1 1" shapeId="18" castsShadows="true" receiveShadows="true" materialIds="4" clipDistance="300" nodeId="51">
+                <Shape name="grabLeft" translation="-0.00367571 -0.0808209 0.211137" scale="1 1 1" shapeId="19" castsShadows="true" receiveShadows="true" materialIds="4" clipDistance="300" nodeId="52">
+                  <TransformGroup name="grabConnectionBarRef" translation="0.0492118 -0.00918629 0.043089" nodeId="53"/>
+                  <TransformGroup name="grabCylinderRef" translation="-0.0250957 0.101694 -0.00789294" nodeId="54"/>
+                  <Shape name="grab_vis3" translation="0.00367571 0.0808209 -0.211137" shapeId="20" castsShadows="true" receiveShadows="true" materialIds="4" clipDistance="300" nodeId="55"/>
+                  <Shape name="baleTriggerLeft" translation="0.00516961 0.188642 0.529303" scale="1 1 1" shapeId="21" kinematic="true" trigger="true" density="100" collisionMask="16781312" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="56"/>
+                </Shape>
+                <Shape name="grabRight" translation="-0.00367571 -0.0808209 -0.24737" rotation="180 -1.68377e-37 180" scale="1 1 1" shapeId="22" castsShadows="true" receiveShadows="true" materialIds="4" clipDistance="300" nodeId="57">
+                  <Shape name="grabConnectionBar" translation="-0.0482424 0.104343 -0.00922432" rotation="12.9842 180.113 0" scale="1 1 1" shapeId="23" castsShadows="true" receiveShadows="true" materialIds="4" clipDistance="300" nodeId="58"/>
+                  <Shape name="grabCylinder" translation="0.0251019 0.103147 -0.00997019" rotation="0.000107155 180 0" shapeId="24" castsShadows="true" receiveShadows="true" materialIds="4" clipDistance="300" nodeId="59">
+                    <Shape name="grabCylinderPunch" translation="-2.21101e-13 5.88329e-12 0.442108" shapeId="25" castsShadows="true" receiveShadows="true" materialIds="4" clipDistance="300" nodeId="60"/>
+                  </Shape>
+                  <Shape name="grab_vis2" translation="-0.00367571 0.080821 -0.24737" shapeId="26" castsShadows="true" receiveShadows="true" materialIds="4" clipDistance="300" nodeId="61"/>
+                  <Shape name="baleTriggerRight" translation="-0.0179836 0.186696 0.524481" scale="1 1 1" shapeId="27" kinematic="true" trigger="true" density="100" collisionMask="16781312" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="62"/>
+                </Shape>
+                <TransformGroup name="grabRightRefFrame" translation="-0.00367571 -0.0808209 -0.24737" rotation="0 180 0" scale="1 1 1" nodeId="63"/>
+                <TransformGroup name="grabLeftRefFrame" translation="-0.00367571 -0.0808209 0.211137" scale="1 1 1" nodeId="64"/>
+                <TransformGroup name="grabJointNode" translation="2.4635e-12 -0.70177 -0.0163135" scale="1 1 1" nodeId="65"/>
+              </Shape>
+            </TransformGroup>
+            <TransformGroup name="palletGrab" translation="2.46345e-12 0.00889219 -3.55271e-15" collision="false" collisionMask="0" clipDistance="300" nodeId="66">
+              <Shape name="base" translation="2.77556e-17 -0.244623 0" shapeId="28" castsShadows="true" receiveShadows="true" materialIds="6" clipDistance="300" nodeId="67">
+                <TransformGroup name="palletGrabRightRotHelp" translation="5.55112e-17 -0.525 3.55271e-15" rotation="0 180 0" nodeId="68">
+                  <TransformGroup name="palletGrabRightTranslateHelp" translation="-1.11022e-16 0 0.105" scale="1 1 1" nodeId="69"/>
+                </TransformGroup>
+                <TransformGroup name="palletGrabLeftRotHelp" translation="8.32667e-17 -0.525 -1.77636e-15" nodeId="70">
+                  <TransformGroup name="palletGrabLeftTranslateHelp" translation="5.55112e-17 1.77636e-15 0.105" scale="1 1 1" nodeId="71"/>
+                </TransformGroup>
+                <TransformGroup name="palletGrabRightTranslate" translation="8.32667e-17 -0.525 3.55271e-15" rotation="0 180 0" scale="1 1 1" nodeId="72">
+                  <Shape name="palletGrabRight" translation="-8.32667e-17 0 0.105" scale="1 1 1" shapeId="29" castsShadows="true" receiveShadows="true" materialIds="6" clipDistance="300" nodeId="73">
+                    <TransformGroup name="palletGrabCylinderRightRef" translation="-5.57703e-17 0.50201 0.451167" collision="false" collisionMask="0" clipDistance="300" nodeId="74"/>
+                    <Shape name="pelletGrabRightCollision1" translation="-3.05311e-16 8.88178e-16 -0.1575" shapeId="30" compoundChild="true" density="0.001" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="75"/>
+                    <Shape name="dynamicMountTriggerRight" translation="8.66542e-17 -0.2 0.4" shapeId="31" kinematic="true" compound="true" trigger="true" collisionMask="83886080" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="76"/>
+                    <TransformGroup name="grabCollisions" translation="-8.32667e-17 0 -0.21" rotation="0 180 0" nodeId="77">
+                      <Shape name="grabCollisionLeft1" translation="-0.42 -1.01453 -0.542639" shapeId="32" compoundChild="true" density="0.001" collisionMask="134225922" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="78"/>
+                      <Shape name="grabCollisionLeft2" translation="0.424635 -1.01453 -0.565105" shapeId="33" compoundChild="true" density="0.001" collisionMask="134225922" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="79"/>
+                    </TransformGroup>
+                  </Shape>
+                </TransformGroup>
+                <TransformGroup name="palletGrabLeftTranslate" translation="1.11022e-16 -0.525 -1.77636e-15" scale="1 1 1" nodeId="80">
+                  <Shape name="palletGrabLeft" translation="2.77556e-17 1.77636e-15 0.105" scale="1 1 1" shapeId="34" castsShadows="true" receiveShadows="true" materialIds="6" clipDistance="300" nodeId="81">
+                    <TransformGroup name="palletGrabCylinderLeftRef" translation="1.38778e-16 0.50134 0.456853" collision="false" collisionMask="0" clipDistance="300" nodeId="82"/>
+                    <Shape name="palletGrabLeftCollision1" translation="1.66533e-16 0 -0.1575" shapeId="35" compoundChild="true" density="0.001" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="83"/>
+                    <Shape name="dynamicMountTriggerLeft" translation="2.77556e-17 -0.2 0.4" rotation="0 180 0" shapeId="36" kinematic="true" compound="true" trigger="true" collisionMask="83886080" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="84"/>
+                    <TransformGroup name="grabCollisions" translation="1.66533e-16 0 -0.21" rotation="0 180 0" scale="1 1 1" nodeId="85">
+                      <Shape name="grabCollisionRight1" translation="-0.329823 -1.01453 -0.565105" shapeId="37" compoundChild="true" density="0.001" collisionMask="134225922" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="86"/>
+                      <Shape name="grabCollisionRight2" translation="0.334899 -1.01453 -0.565105" shapeId="38" compoundChild="true" density="0.001" collisionMask="134225922" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="87"/>
+                    </TransformGroup>
+                  </Shape>
+                </TransformGroup>
+                <Shape name="palletGrabCylinderRight" translation="9.11176e-16 -0.0388507 -0.0259005" rotation="178.286 2.20695e-32 180" shapeId="39" castsShadows="true" receiveShadows="true" materialIds="6" clipDistance="300" nodeId="88">
+                  <Shape name="palletGrabCylinderPunchRight" translation="3.05311e-16 -1.77636e-15 0.5334" shapeId="40" castsShadows="true" receiveShadows="true" materialIds="6" clipDistance="300" nodeId="89"/>
+                </Shape>
+                <Shape name="palletGrabCylinderLeft" translation="-1.08247e-15 -0.0391441 0.0326739" rotation="-1.5664 0 0" shapeId="41" castsShadows="true" receiveShadows="true" materialIds="6" clipDistance="300" nodeId="90">
+                  <Shape name="palletGrabCylinderPunchLeft" translation="2.77556e-16 -8.88178e-16 0.53025" shapeId="42" castsShadows="true" receiveShadows="true" materialIds="6" clipDistance="300" nodeId="91"/>
+                </Shape>
+                <TransformGroup name="palletGrabLeftRefFrame" translation="5.55112e-17 1.77636e-15 0" nodeId="92"/>
+                <TransformGroup name="palletGrabRightRefFrame" translation="5.55112e-17 1.77636e-15 6.79816e-33" rotation="0 180 0" nodeId="93"/>
+                <TransformGroup name="palletGrabJointNode" translation="0 -0.75 0" scale="1 1 1" nodeId="94"/>
+              </Shape>
+            </TransformGroup>
+          </TransformGroup>
+        </Shape>
+        <TransformGroup name="ropesBase" translation="1.11022e-16 0 0" nodeId="95">
+          <Shape name="rope1" translation="-0.0722735 0.065 0.0717435" rotation="-90 0 0" scale="1 1 1" shapeId="43" castsShadows="true" receiveShadows="true" materialIds="7" clipDistance="200" nodeId="96"/>
+          <Shape name="rope2" translation="-0.0722716 0.065 -0.0737361" rotation="-90 0 0" scale="1 1 1" shapeId="44" castsShadows="true" receiveShadows="true" materialIds="7" clipDistance="200" nodeId="97"/>
+          <Shape name="rope3" translation="0.0722544 0.065 0.0725501" rotation="-90 0 0" scale="1 1 1" shapeId="45" castsShadows="true" receiveShadows="true" materialIds="7" clipDistance="200" nodeId="98"/>
+          <Shape name="rope4" translation="0.0722562 0.065 -0.0720702" rotation="-90 0 0" scale="1 1 1" shapeId="46" castsShadows="true" receiveShadows="true" materialIds="7" clipDistance="200" nodeId="99"/>
+        </TransformGroup>
+        <TransformGroup name="outdoorCameraTarget" rotation="175 -75 180" scale="1 1 1" nodeId="100">
+          <Camera name="outdoorCamera" translation="5.55112e-17 0 5" scale="1 1 1" fov="60" nearClip="0.3" farClip="5000" nodeId="101"/>
+        </TransformGroup>
+      </TransformGroup>
+    </Shape>
+    <Shape name="hallCrane_toolLeft_component3" translation="-0.243741 4.8873 9.58726" shapeId="47" dynamic="true" compound="true" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="102">
+      <TransformGroup name="shovelLeftRefPoint" translation="-0.00158245 -0.000651013 0.5" scale="1 1 1" nodeId="103"/>
+      <TransformGroup name="grabLeftRefPoint" translation="-0.0045271 -0.453079 0.208976" rotation="65 0 0" scale="1 1 1" nodeId="104"/>
+      <TransformGroup name="palletGrabLeftRefPoint" translation="-0.00158245 -0.3 0.05" scale="1 1 1" nodeId="105"/>
+      <TransformGroup name="shovelCollisionsLeft" nodeId="106">
+        <Shape name="shovelLeftCollisionPart1" translation="0 -0.0380748 0" rotation="-23 0 0" scale="1 1 1" shapeId="48" compoundChild="true" density="0.001" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="107"/>
+      </TransformGroup>
+      <TransformGroup name="grabCollisionsLeft" rotation="65 0 0" nodeId="108">
+        <Shape name="grabLeftCollisionPart1" translation="0.000851375 0 0.039152" scale="1 1 1" shapeId="49" compoundChild="true" density="0.001" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="109"/>
+        <TransformGroup name="baleCollisionLeft" translation="0 0.15 0.61" rotation="85 180 0" nodeId="110">
+          <Shape name="grabLeftCollisionPart2" translation="-2.77556e-17 -4.44089e-16 0.25" shapeId="50" compoundChild="true" density="0.001" collisionMask="134225922" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="111"/>
+          <Shape name="grabLeftCollisionPart3" translation="-2.77556e-17 0 0.550158" shapeId="51" compoundChild="true" density="0.001" collisionMask="134225920" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="112"/>
+        </TransformGroup>
+      </TransformGroup>
+    </Shape>
+    <Shape name="hallCrane_toolRight_component4" translation="-0.243741 4.8873 9.12762" shapeId="52" dynamic="true" compound="true" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="113">
+      <TransformGroup name="shovelRightRefPoint" translation="-0.00157725 0.00540144 -0.498816" rotation="0 180 0" scale="1 1 1" nodeId="114"/>
+      <TransformGroup name="grabRightRefPoint" translation="-0.0045271 -0.453967 -0.20939" rotation="65 180 0" scale="1 1 1" nodeId="115"/>
+      <TransformGroup name="palletGrabRightRefPoint" translation="-0.00157725 -0.3 0.05" rotation="0 180 0" scale="1 1 1" nodeId="116"/>
+      <TransformGroup name="shovelCollisionsRight" nodeId="117">
+        <Shape name="shovelRightCollisionPart1" translation="0 -0.0380748 0.0078568" rotation="23 0 0" scale="1 1 1" shapeId="53" compoundChild="true" density="0.001" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="118"/>
+      </TransformGroup>
+      <TransformGroup name="grabCollisionsRight" translation="2.77556e-17 -2.85455e-16 3.40192e-16" rotation="-65 0 0" nodeId="119">
+        <Shape name="grabRightCollisionPart1" translation="0.000851375 0.0509629 -0.039152" shapeId="54" compoundChild="true" density="0.001" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" nodeId="120"/>
+        <TransformGroup name="baleCollisionRight" translation="0 0.15 -0.61" rotation="85 0 0" nodeId="121">
+          <Shape name="grabRightCollisionPart2" translation="2.77556e-17 2.66454e-15 0.245201" shapeId="55" compoundChild="true" density="0.001" collisionMask="134225922" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="122"/>
+          <Shape name="grabRightCollisionPart3" translation="2.77556e-17 2.66454e-15 0.545359" shapeId="56" compoundChild="true" density="0.001" collisionMask="134225920" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="123"/>
+        </TransformGroup>
+      </TransformGroup>
+    </Shape>
+  </Scene>
+
+</i3D>

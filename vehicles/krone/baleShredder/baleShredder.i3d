@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="baleShredder" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="2" filename="baleShredder_specular.png" />
+    <File fileId="1" filename="baleShredder_normal.png" />
+    <File fileId="6" filename="chain_specular.png" />
+    <File fileId="5" filename="chain_normal.png" />
+    <File fileId="7" filename="../../../objects/pallets/palletBase_diffuse.png" />
+    <File fileId="8" filename="../../../objects/pallets/palletBase_normal.png" />
+    <File fileId="9" filename="../../../objects/pallets/palletBase_specular.png" />
+    <File fileId="4" filename="chain_diffuse.png" />
+    <File fileId="10" filename="$data/vehicles/krone/TX560D/TX560Dcover_diffuse.png" />
+    <File fileId="11" filename="$data/vehicles/krone/TX560D/TX560Dcover_normal.png" />
+    <File fileId="12" filename="$data/vehicles/krone/TX560D/TX560Dcover_specular.png" />
+    <File fileId="13" filename="arrow.png" />
+    <File fileId="14" filename="$data/shared/default_normal.png" />
+    <File fileId="15" filename="$data/shared/default_specular.png" />
+    <File fileId="3" filename="$data/shaders/vehicleShader.xml" />
+  </Files>
+
+  <Materials>
+    <Material name="lambert1" materialId="1" diffuseColor="0.5 0.5 0.5 1" specularColor="0 0 0" ambientColor="1 1 1">
+    </Material>
+    <Material name="main_mat" materialId="2" diffuseColor="0.5 0.5 0.5 1" cosPower="20" specularColor="1 1 1" ambientColor="1 1 1" customShaderId="3" customShaderVariation="colorMask">
+      <CustomParameter name="colorMat5" value="0.0446 0.0446 0.0446 11"/>
+      <CustomParameter name="colorMat4" value="0.0000 0.0802 0.2159 0"/>
+      <CustomParameter name="colorMat1" value="0.0446 0.0446 0.0446 0"/>
+      <CustomParameter name="colorMat0" value="0.0600 0.2801 0.0254 0"/>
+      <CustomParameter name="colorMat2" value="0.8913 0.6456 0.2120 0"/>
+      <CustomParameter name="colorMat3" value="0.6995 0.6995 0.6995 1"/>
+      <Normalmap fileId="1"/>
+      <Glossmap fileId="2"/>
+    </Material>
+    <Material name="chain_mat" materialId="3" cosPower="20" specularColor="1 1 1" ambientColor="1 1 1" customShaderId="3" customShaderVariation="uvScroll_colorMask">
+      <CustomParameter name="colorMat3" value="0.0155 0.0155 0.0155 6.0"/>
+      <CustomParameter name="colorMat2" value="0.0155 0.0155 0.0155 6.0"/>
+      <CustomParameter name="colorMat0" value="0.0155 0.0155 0.0155 6.0"/>
+      <CustomParameter name="colorMat1" value="0.0155 0.0155 0.0155 6.0"/>
+      <CustomParameter name="colorMat6" value="0.0155 0.0155 0.0155 6.0"/>
+      <CustomParameter name="colorMat7" value="0.0155 0.0155 0.0155 6.0"/>
+      <CustomParameter name="colorMat4" value="0.0155 0.0155 0.0155 6.0"/>
+      <CustomParameter name="colorMat5" value="0.0155 0.0155 0.0155 6.0"/>
+      <Texture fileId="4"/>
+      <Normalmap fileId="5"/>
+      <Glossmap fileId="6"/>
+    </Material>
+    <Material name="pallet_mat1" materialId="8" cosPower="50" specularColor="1 1 1" ambientColor="0.588235 0.588235 0.588235">
+      <Texture fileId="7"/>
+      <Normalmap fileId="8"/>
+      <Glossmap fileId="9"/>
+    </Material>
+    <Material name="net_mat" materialId="6" cosPower="20" specularColor="1 1 1" ambientColor="1 1 1" alphaBlending="true" customShaderId="3" customShaderVariation="colorMask">
+      <CustomParameter name="colorMat0" value="0.0446 0.0446 0.0446 11"/>
+      <Texture fileId="10"/>
+      <Normalmap fileId="11"/>
+      <Glossmap fileId="12"/>
+    </Material>
+    <Material name="spikes1_mat" materialId="5" diffuseColor="0.5 0.5 0.5 1" cosPower="20" specularColor="1 1 1" ambientColor="1 1 1" customShaderId="3" customShaderVariation="meshScroll_colorMask">
+      <CustomParameter name="lengthAndRadius" value="2.015 0.083 0.0 0.0"/>
+      <Normalmap fileId="1"/>
+      <Glossmap fileId="2"/>
+    </Material>
+    <Material name="spikes2_mat" materialId="4" diffuseColor="0.5 0.5 0.5 1" cosPower="20" specularColor="1 1 1" ambientColor="1 1 1" customShaderId="3" customShaderVariation="meshScroll_colorMask">
+      <CustomParameter name="lengthAndRadius" value="2.725 0.081 0.0 0.0"/>
+      <Normalmap fileId="1"/>
+      <Glossmap fileId="2"/>
+    </Material>
+    <Material name="decals_mat" materialId="7" cosPower="20" specularColor="1 1 1" ambientColor="1 1 1" alphaBlending="true" customShaderId="3" customShaderVariation="Decal">
+      <Texture fileId="13"/>
+      <Normalmap fileId="14"/>
+      <Glossmap fileId="15"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="baleShredder.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <Shape name="baleShredder_main_component1" shapeId="1" dynamic="true" compound="true" collisionMask="8397058" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="1">
+      <TransformGroup name="attachable" nodeId="2">
+        <TransformGroup name="attacherJoint" translation="0 1.8 1.5" rotation="0 90 0" nodeId="3"/>
+      </TransformGroup>
+      <TransformGroup name="visuals" nodeId="4">
+        <TransformGroup name="attachableMoving" translation="0 1.17096 0" nodeId="5">
+          <Shape name="main" translation="0.0105317 1.00895 0.0196032" shapeId="2" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="6">
+            <TransformGroup name="feederNode" translation="0 0.15 -0.2" nodeId="7">
+              <TransformGroup name="scaleNode" nodeId="8">
+                <TransformGroup name="baleNode" nodeId="9"/>
+              </TransformGroup>
+            </TransformGroup>
+          </Shape>
+          <Shape name="table1Link" translation="-5.05066e-05 0.211899 -0.270812" scale="1 1 1" shapeId="3" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="10">
+            <Shape name="tablePart1" translation="-0.0156176 0.354156 -0.685456" scale="1 1 1" shapeId="4" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="11">
+              <Shape name="tablePart2" translation="0.0154902 0.11217 -2.59255" shapeId="5" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="12">
+                <TransformGroup name="supportFrame2" translation="0.000177841 -0.292415 -2.83187" rotation="90 0 0" scale="1 1 1" clipDistance="300" nodeId="13">
+                  <Shape name="sup2Collision" translation="-0.0521595 0.00559413 1.23435" rotation="-90 0 0" scale="1 1 1" shapeId="7" compoundChild="true" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="14"/>
+                  <TransformGroup name="supportFrame2Ext" translation="-9.09233e-05 2.27374e-15 1.55677" scale="1 1 1" collision="false" clipDistance="300" nodeId="15">
+                    <Shape name="sup2Collision2" translation="-0.0520686 0.00559413 -0.152419" rotation="-90 0 0" shapeId="8" compoundChild="true" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="16"/>
+                    <Shape name="sup2Collision1" translation="-0.0520686 0.00559413 -0.152419" rotation="-90 0 0" shapeId="9" compoundChild="true" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="17"/>
+                  </TransformGroup>
+                </TransformGroup>
+                <TransformGroup name="table2Cylinder" translation="-0.560319 -0.242522 -1.02107" rotation="-0.163149 0.00997237 1.38082e-05" scale="1 1 1" collision="false" clipDistance="300" nodeId="18">
+                  <TransformGroup name="table2Stamp" translation="1.42154e-14 -6.25278e-15 0.76097" collision="false" clipDistance="300" nodeId="19"/>
+                </TransformGroup>
+                <TransformGroup name="supportFrame2Link" translation="0.00238182 -0.198261 -2.01891" rotation="144 0 0" collision="false" clipDistance="300" nodeId="20"/>
+                <TransformGroup name="table2RotatingParts" translation="0.000177841 -0.0585396 3.29229" nodeId="21">
+                  <TransformGroup name="roler2" translation="0.0498767 -0.014766 -6.2506" rotation="-90 0 0" collision="false" clipDistance="300" nodeId="22"/>
+                  <TransformGroup name="chainDrive4" translation="0.0535198 -0.0605444 -5.93554" rotation="-90 0 0" collision="false" clipDistance="300" nodeId="23"/>
+                  <TransformGroup name="chainDrive3" translation="0.0523291 -0.0960221 -3.21001" rotation="-90 0 0" collision="false" clipDistance="300" nodeId="24"/>
+                  <TransformGroup name="chainDrive5" translation="0.0523291 -0.0659445 -3.21001" rotation="-90 0 0" collision="false" clipDistance="300" nodeId="25"/>
+                  <TransformGroup name="chainDrive6" translation="0.0535198 -0.080499 -5.93554" rotation="-90 0 0" collision="false" clipDistance="300" nodeId="26"/>
+                </TransformGroup>
+                <Shape name="table2Collision" translation="0.000177841 -0.238081 -2.83578" rotation="90 0 0" shapeId="10" compoundChild="true" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="27"/>
+                <Shape name="baleTrigger" translation="0.000177841 0.0441084 -1.32547" rotation="0.0793343 0 0" scale="1 1 1" shapeId="11" kinematic="true" trigger="true" collisionMask="16777216" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="28"/>
+                <TransformGroup name="tableExtraction" translation="3.46945e-20 -2.84217e-16 0" collision="false" clipDistance="300" nodeId="29">
+                  <Shape name="roler1" translation="-0.00399147 -0.0634003 -3.11475" rotation="-90 0 0" shapeId="12" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="30"/>
+                  <Shape name="tableExtractionCollision" translation="0.000177841 -0.238081 -2.83578" rotation="90 0 0" shapeId="13" compoundChild="true" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="31"/>
+                </TransformGroup>
+                <TransformGroup name="chainsTable2" rotation="-0.3 0 0" scale="1 1 1" nodeId="32">
+                  <Shape name="chainTable2" shapeId="14" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="33"/>
+                  <TransformGroup name="spikesTable2Rot" translation="0.0533909 -0.123588 0.081914" rotation="179.95 0 0" scale="1 1 1" nodeId="34">
+                    <Shape name="spikesTable2" shapeId="15" castsShadows="true" receiveShadows="true" materialIds="4" clipDistance="300" nodeId="35"/>
+                  </TransformGroup>
+                </TransformGroup>
+              </Shape>
+              <Shape name="winderFrame1" translation="-0.00905254 0.0121837 -1.09114" rotation="-90 0 0" shapeId="16" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="36">
+                <Shape name="winderFrame2" translation="-0.320986 -0.176784 0.66476" shapeId="17" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="37">
+                  <TransformGroup name="yarnCollector" translation="-1.1365 0.157406 -0.00713486" rotation="90 0 0" collision="false" clipDistance="300" nodeId="38">
+                    <TransformGroup name="collectingHook" translation="0.0755561 0.0172351 0" collision="false" clipDistance="300" nodeId="39"/>
+                  </TransformGroup>
+                  <TransformGroup name="winder" translation="-0.766586 -0.0975481 0.0925101" scale="1 1 1" nodeId="40">
+                    <TransformGroup name="winderSpikes" scale="1 1 1" collision="false" clipDistance="300" nodeId="41"/>
+                    <TransformGroup name="winderRod" scale="1 1 1" collision="false" clipDistance="300" nodeId="42"/>
+                  </TransformGroup>
+                  <TransformGroup name="baleRockerWinder" translation="0.399701 0.307234 -0.0299432" collision="false" clipDistance="300" nodeId="43"/>
+                  <Shape name="chainWinder" shapeId="18" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="44"/>
+                  <TransformGroup name="winderBase" translation="-0.766586 -0.0975481 0.0925101" collision="false" clipDistance="300" nodeId="45"/>
+                  <TransformGroup name="winderCollisions2" nodeId="46">
+                    <Shape name="winderCollision5" translation="-1.50661 0.190238 -0.458442" rotation="90 0 0" scale="1 1 1" shapeId="19" compoundChild="true" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="47"/>
+                    <Shape name="winderCollision6" translation="-1.50661 0.190238 -0.458442" rotation="90 0 0" scale="1 1 1" shapeId="20" compoundChild="true" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="48"/>
+                    <Shape name="winderCollisionTop" translation="0.345706 0.130719 -0.329231" scale="1 1 1" shapeId="21" compoundChild="true" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="49"/>
+                    <Shape name="winderCollision4" translation="0.345706 0.130719 -0.329231" rotation="90 0 0" scale="1 1 1" shapeId="22" compoundChild="true" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="50"/>
+                    <Shape name="winderCollision3" translation="0.345706 0.130719 -0.329231" rotation="90 0 0" scale="1 1 1" shapeId="23" compoundChild="true" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="51"/>
+                  </TransformGroup>
+                  <TransformGroup name="workLight" translation="0.410396 0.0930497 0.23614" rotation="90 0 0" scale="1 1 1" nodeId="52">
+                    <Light name="workLightReal" translation="0 0.0447973 0.0533336" rotation="160 0 180" scale="1 1 1" type="spot" color="1 1 1" emitDiffuse="true" emitSpecular="true" decayRate="0" range="20" coneAngle="110" dropOff="2" clipDistance="75" nodeId="53"/>
+                  </TransformGroup>
+                </Shape>
+                <TransformGroup name="winderRaiserRef" translation="-0.831426 -0.192728 0.285693" rotation="73.5031 0 0" scale="1 1 1" nodeId="54"/>
+                <TransformGroup name="winderCollisions1" nodeId="55">
+                  <Shape name="winderCollision2" translation="0.0247206 -0.0460654 0.300225" rotation="90 0 0" scale="1 1 1" shapeId="24" compoundChild="true" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="56"/>
+                  <Shape name="winderCollision1" translation="0.0247206 -0.0460654 0.300225" rotation="90 0 0" scale="1 1 1" shapeId="25" compoundChild="true" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="57"/>
+                </TransformGroup>
+              </Shape>
+              <TransformGroup name="supportFrame1" translation="0.0697076 -0.159113 -1.86759" rotation="90 0 0" collision="false" clipDistance="300" nodeId="58">
+                <Shape name="supportFrame1Ext" translation="-4.88498e-17 1.27898e-15 1.5779" shapeId="6" castsShadows="true" receiveShadows="true" materialIds="2" skinBindNodeIds="59 13 15 18 19 20 22 23 24 25 26 29 38 39 41 42 43 45 58 62 63 66 69 71 72 73 78 79 80 81 88 96 97 98 99 101 103 110" clipDistance="300" nodeId="59">
+                  <TransformGroup name="wheels" translation="0.00101972 -1.24336e-15 -0.275838" rotation="-90 -3.18055e-15 0" scale="1 1 1" nodeId="60">
+                    <TransformGroup name="wheel1_root" translation="-0.455571 3.55271e-16 0.000437317" scale="1 1 1" nodeId="61">
+                      <TransformGroup name="wheelAxle1" translation="-1.09863e-05 -0.150797 -0.000239391" scale="1 1 1" collision="false" clipDistance="300" nodeId="62">
+                        <TransformGroup name="wheel1vis" translation="0 3.55271e-17 -0.07" collision="false" clipDistance="300" nodeId="63"/>
+                        <TransformGroup name="wheel1" translation="0 3.55271e-17 -0.07" scale="1 1 1" nodeId="64"/>
+                      </TransformGroup>
+                    </TransformGroup>
+                    <TransformGroup name="wheel2_root" translation="0.455235 -3.19744e-16 0.000437317" scale="1 1 1" nodeId="65">
+                      <TransformGroup name="wheelAxle2" translation="0 0 -1.5099e-16" scale="1 1 1" collision="false" clipDistance="300" nodeId="66">
+                        <TransformGroup name="wheel2rot" translation="1.09863e-05 -0.150797 -0.0702393" rotation="0 90 0" scale="1 1 1" nodeId="67"/>
+                        <TransformGroup name="wheel2" translation="1.09863e-05 -0.150797 -0.0702393" rotation="0 90 0" scale="1 1 1" nodeId="68"/>
+                        <TransformGroup name="wheel2vis" translation="1.09863e-05 -0.150797 -0.0702393" collision="false" clipDistance="300" nodeId="69"/>
+                      </TransformGroup>
+                    </TransformGroup>
+                  </TransformGroup>
+                </Shape>
+                <Shape name="sup1Collision" translation="-0.0540396 -0.00258834 1.25548" rotation="-90 0 0" shapeId="26" compoundChild="true" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="70"/>
+              </TransformGroup>
+              <TransformGroup name="knife" translation="0.753087 0.0627921 -2.10776" rotation="-90 0 0" collision="false" clipDistance="300" nodeId="71"/>
+              <TransformGroup name="baleRockerTable" translation="-0.0931627 0.0311331 0.136281" rotation="-90 0 0" collision="false" clipDistance="300" nodeId="72">
+                <TransformGroup name="spring2" translation="-0.00525238 0.053702 -0.0641855" collision="false" clipDistance="300" nodeId="73"/>
+              </TransformGroup>
+              <Shape name="foldTriangle" translation="-0.701617 0.11217 -2.59255" shapeId="27" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="74">
+                <TransformGroup name="table2CylinderRef" translation="0.157053 -0.240355 -0.260102" rotation="-50 0.00997237 1.38082e-05" scale="1 1 1" nodeId="75"/>
+                <Shape name="winderRaiser" translation="-0.138862 -0.238624 0.261338" rotation="-16.4969 0 0" shapeId="28" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="76"/>
+              </Shape>
+              <TransformGroup name="table1RotatingParts" translation="0.0156681 0.0536301 0.699738" nodeId="77">
+                <TransformGroup name="chainDrive1" translation="0.054219 -0.101541 -0.256384" rotation="-90 0 0" collision="false" clipDistance="300" nodeId="78"/>
+                <TransformGroup name="chainDrive2" translation="0.0542098 -0.0553175 -2.28264" rotation="-90 0 0" collision="false" clipDistance="300" nodeId="79"/>
+                <TransformGroup name="chainDrive7" translation="0.0542098 -0.0640422 -2.28264" rotation="-90 0 0" collision="false" clipDistance="300" nodeId="80"/>
+                <TransformGroup name="chainDrive8" translation="0.0542098 -0.0640422 -0.26585" rotation="-90 0 0" collision="false" clipDistance="300" nodeId="81"/>
+              </TransformGroup>
+              <TransformGroup name="chainsTable1" translation="0.0156681 0.0536301 0.699738" nodeId="82">
+                <Shape name="chainTable1" translation="0.0542511 -0.0648221 -1.2753" scale="1 1 1" shapeId="29" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="83"/>
+                <Shape name="chainKnife" translation="0.000572205 -0.0456979 -2.91184" rotation="180 0 0" scale="1 1 1" shapeId="30" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="84">
+                  <Shape name="chain5" translation="6.93889e-20 0 -5.68434e-16" scale="1 1 1" shapeId="31" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="85"/>
+                </Shape>
+                <TransformGroup name="spikesTable1Rot1" translation="0.385259 -0.0652218 -0.268036" rotation="180 0 0" scale="1 1 1" nodeId="86">
+                  <Shape name="spikesTable1" shapeId="32" castsShadows="true" receiveShadows="true" materialIds="5" clipDistance="300" nodeId="87"/>
+                </TransformGroup>
+              </TransformGroup>
+              <TransformGroup name="supportFrame1Link" translation="0.0695708 -0.0611037 -1.05762" rotation="36.963 180 0" scale="1 1 1" collision="false" clipDistance="300" nodeId="88"/>
+              <TransformGroup name="table1Link1Ref" translation="0.0156681 -0.00193153 -0.448877" rotation="40.4719 179.997 0" scale="1 1 1" nodeId="89"/>
+              <TransformGroup name="table1Collisions" nodeId="90">
+                <Shape name="table1Collision1" translation="0.0156681 -0.125911 -1.93138" rotation="90 0 0" shapeId="33" compoundChild="true" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="91"/>
+                <Shape name="table1Collision2" translation="-2.22045e-18 0 -2.02135" scale="1 1 1" shapeId="34" compoundChild="true" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="92"/>
+                <Shape name="table1Collision3" translation="-2.22045e-18 0 -2.02135" scale="1 1 1" shapeId="35" compoundChild="true" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="93"/>
+              </TransformGroup>
+            </Shape>
+            <TransformGroup name="table1CylinderRef" translation="2.43645e-07 0.288158 -0.359223" rotation="-118.056 -9.46576e-06 180" scale="1 1 1" nodeId="94"/>
+          </Shape>
+          <TransformGroup name="drums" translation="-0.577425 0.471085 0.0367534" rotation="-9 0 0" nodeId="95">
+            <TransformGroup name="drum1" translation="7.10543e-17 0 0" rotation="0.5 0 0" scale="1 1 1" collision="false" clipDistance="300" nodeId="96"/>
+            <TransformGroup name="drum2" translation="0.384727 -2.84217e-16 -1.42109e-16" rotation="0.5 0 0" scale="1 1 1" collision="false" clipDistance="300" nodeId="97"/>
+            <TransformGroup name="drum3" translation="0.769722 -5.68434e-16 3.55271e-17" rotation="0.5 0 0" scale="1 1 1" collision="false" clipDistance="300" nodeId="98"/>
+            <TransformGroup name="drum4" translation="1.15423 0 0" rotation="0.5 0 0" scale="1 1 1" collision="false" clipDistance="300" nodeId="99"/>
+          </TransformGroup>
+          <TransformGroup name="leaver" translation="0 0.619685 -0.25653" nodeId="100">
+            <TransformGroup name="leaverVis" translation="-0.868478 -0.586006 -0.0653043" rotation="2.50448e-06 0 0" scale="1 1 1" collision="false" clipDistance="300" nodeId="101">
+              <Shape name="leaverRope" translation="0.100107 0.00772598 0.0159623" rotation="90.6564 -30.1877 180" scale="1 1 1" shapeId="36" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="102"/>
+            </TransformGroup>
+            <TransformGroup name="hook" translation="-0.74167 1.28415 -0.221295" rotation="2.50448e-06 0 0" scale="1 1 1" collision="false" clipDistance="300" nodeId="103">
+              <Shape name="spring1" translation="0.00344282 0.0226107 -0.0789919" rotation="-90 1.98785e-16 -177.087" scale="1 1 1" shapeId="37" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="104"/>
+              <TransformGroup name="leaverRopeRef" translation="-0.0377175 0.0497269 0.153016" rotation="90.6564 -30.1877 180" scale="1 1 1" nodeId="105"/>
+            </TransformGroup>
+            <TransformGroup name="spring1Ref" translation="-0.733337 1.21068 -0.300287" rotation="-90 1.98785e-16 -177.087" scale="1 1 1" nodeId="106"/>
+          </TransformGroup>
+          <TransformGroup name="cylindered" translation="0 0.619685 -0.25653" nodeId="107">
+            <Shape name="table1LinkHelp" translation="-5.05066e-05 0.912288 -0.0142813" rotation="40.4719 179.997 0" shapeId="38" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="108"/>
+            <Shape name="table1Cylinder" translation="-5.0354e-05 0.554394 -0.0142814" rotation="61.9444 180 0" scale="1 1 1" shapeId="39" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="109">
+              <TransformGroup name="table1Stamp" translation="7.7136e-10 -3.38218e-14 0.763772" collision="false" clipDistance="300" nodeId="110"/>
+            </Shape>
+            <TransformGroup name="linkRefFrame" translation="-2.02254e-07 0.554394 -0.0142814" rotation="-118.056 -9.46576e-06 180" scale="1 1 1" nodeId="111"/>
+          </TransformGroup>
+          <Shape name="net" translation="-0.470452 1.5327 0.226792" shapeId="40" castsShadows="true" receiveShadows="true" materialIds="6" clipDistance="300" nodeId="112"/>
+          <Shape name="visualToggle" translation="0.107256 -0.142519 0.317352" rotation="2.50448e-06 0 0" scale="1 1 1" shapeId="41" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="113"/>
+          <TransformGroup name="attachableRotating" nodeId="114"/>
+          <TransformGroup name="effects" translation="0 -1.17096 0" nodeId="115">
+            <Shape name="emitFalling" translation="-0.366 2.8251 -0.14678" shapeId="42" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="116"/>
+            <Shape name="emitFalling1" translation="-0.30245 1.71716 0.101324" shapeId="43" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="117"/>
+            <Shape name="emitFalling2" translation="-0.30245 1.71716 0.101324" shapeId="44" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="118"/>
+            <Shape name="emitFalling3" translation="-0.30245 1.71716 0.101324" shapeId="45" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="119"/>
+          </TransformGroup>
+          <Shape name="arrow_decal" translation="0.0520996 -0.396484 -0.705171" shapeId="46" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="7" clipDistance="50" nodeId="120"/>
+        </TransformGroup>
+        <TransformGroup name="pallet" translation="0 0 -0.39262" nodeId="121">
+          <TransformGroup name="collisionsPallet" translation="7.10757e-17 -0.075 -0.365096" rotation="0 90 0" nodeId="122">
+            <Shape name="collision1" translation="-1.06836 0.197418 -0.736586" shapeId="47" compoundChild="true" collisionMask="25178120" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="123"/>
+            <Shape name="collision2" translation="1.06591 0.197418 -0.736586" shapeId="48" compoundChild="true" collisionMask="25178120" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="124"/>
+            <Shape name="collision3" translation="-1.06836 0.197418 0.735451" shapeId="49" compoundChild="true" collisionMask="25178120" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="125"/>
+            <Shape name="collision4" translation="1.06591 0.197418 0.735451" shapeId="50" compoundChild="true" collisionMask="25178120" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="126"/>
+            <Shape name="collision5" translation="0.0181838 0.197418 -0.736586" shapeId="51" compoundChild="true" collisionMask="25178120" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="127"/>
+            <Shape name="collision6" translation="0.0181839 0.197418 0.735451" shapeId="52" compoundChild="true" collisionMask="25178120" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="128"/>
+            <Shape name="collision7" translation="-1.06457 0.196522 3.33786e-08" shapeId="53" compoundChild="true" collisionMask="25178120" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="129"/>
+            <Shape name="collision8" translation="1.06492 0.196522 -3.33786e-08" shapeId="54" compoundChild="true" collisionMask="25178120" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="130"/>
+            <Shape name="collision9" translation="0.0228003 0.196522 9.40096e-18" shapeId="55" compoundChild="true" collisionMask="25178120" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="131"/>
+          </TransformGroup>
+          <Shape name="palletBase" translation="9.15527e-07 0.161904 -0.365096" shapeId="56" castsShadows="true" receiveShadows="true" materialIds="8" clipDistance="300" nodeId="132"/>
+          <Shape name="dynamicMountTrigger" translation="0 -0.0317746 -0.262633" shapeId="57" kinematic="true" trigger="true" collisionMask="8192" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="133"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="collisions" nodeId="134">
+        <TransformGroup name="attachetCollisions" nodeId="135">
+          <Shape name="mainCollision1" translation="0.0752529 2.98886 0.0747333" shapeId="58" compoundChild="true" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="136"/>
+          <Shape name="mainCollision2" translation="1.07074 2.08612 0.0391014" shapeId="59" compoundChild="true" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="137"/>
+          <Shape name="mainCollision3" translation="-0.814731 2.08612 -0.405561" shapeId="60" compoundChild="true" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="138"/>
+          <Shape name="mainCollision4" translation="-0.0200644 2.17664 0.179431" shapeId="61" compoundChild="true" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="139"/>
+        </TransformGroup>
+        <TransformGroup name="detachedCollisions" nodeId="140">
+          <Shape name="detachedCollision1" shapeId="62" compoundChild="true" collisionMask="25178120" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="141"/>
+          <Shape name="detachedCollision2" shapeId="63" compoundChild="true" collisionMask="25178120" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="142"/>
+          <Shape name="detachedCollision4" shapeId="64" compoundChild="true" collisionMask="25178120" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="143"/>
+          <Shape name="detachedCollision3" shapeId="65" compoundChild="true" collisionMask="25178120" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="144"/>
+        </TransformGroup>
+      </TransformGroup>
+    </Shape>
+  </Scene>
+
+</i3D>

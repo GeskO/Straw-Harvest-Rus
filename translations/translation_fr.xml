@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+    <translationContributors>Farmer1602, Sabot.D</translationContributors>
+
+    <texts>
+        <!-- Inputs -->
+        <text name="input_SH_TOGGLE_COLLECT_MODE" text="SH: Basculer le mode de collecte"/>
+        <text name="input_SH_DEPART_BALES" text="SH: Décharger les balles du collecteur"/>
+        <text name="input_SH_RESET_BALE_COUNTER" text="SH: Remise à zéro du compteur de balles"/>
+        <text name="input_SH_GRAB_BALES" text="SH: Saisir les balles"/>
+        <text name="input_SH_DROP_BALES" text="SH: Lâcher les balles"/>
+        <text name="input_SH_TOGGLE_CRANE_TOOL" text="SH: Changer l'outil de la grue"/>
+        <text name="input_SH_MOVE_CRANE_BRIDGE_1" text="SH: Translation avant du pont-roulant"/>
+        <text name="input_SH_MOVE_CRANE_BRIDGE_2" text="SH: Translation arrière du pont-roulant"/>
+        <text name="input_SH_MOVE_CRANE_TROLLEY_1" text="SH: Déplacer le chariot vers la droite"/>
+        <text name="input_SH_MOVE_CRANE_TROLLEY_2" text="SH: Déplacer le chariot vers la gauche"/>
+        <text name="input_SH_MOVE_CRANE_TOOL_1" text="SH: Monter l'outil de la grue"/>
+        <text name="input_SH_MOVE_CRANE_TOOL_2" text="SH: Descendre l'outil de la grue"/>
+        <text name="input_SH_ROTATE_CRANE_TOOL_1" text="SH: Tourner l'outil de la grue vers la droite"/>
+        <text name="input_SH_ROTATE_CRANE_TOOL_2" text="SH: Tourner l'outil de la grue vers la gauche"/>
+        <text name="input_SH_OPEN_CRANE_TOOL_1" text="SH: Ouvrir l'outil de la grue"/>
+        <text name="input_SH_OPEN_CRANE_TOOL_2" text="SH: Fermer l'outil de la grue"/>
+        <text name="input_SH_TOGGLE_BALE_SIZE" text="SH: Changer la taille des balles"/>
+        <text name="input_SH_TOGGLE_REFILL_COVER" text="SH: Ouvrir/fermer le caisson/boite à ficelle"/>
+
+        <!-- Bale grab -->
+        <text name="typeDesc_baleGrab" text="Pince à balles"/>
+        <text name="function_baleGrab" text="Avec une pince à balles, vous pouvez saisir des balles carrées rapidement et facilement."/>
+
+        <text name="configuration_inputAttacherTeleHandler" text="Télescopique"/>
+
+        <text name="action_grabBales" text="Saisir les balles"/>
+        <text name="action_dropBales" text="Lâcher les balles"/>
+
+        <text name="action_addSpikes" text="Fixer les pics à balles"/>
+        <text name="action_removeSpikes" text="Démonter les pics à balles"/>
+
+        <!-- Comprima -->
+        <text name="function_comprima" text="Une presse à balles transforme la paille, l'herbe ou le foin en balles faciles à manipuler. La Comprima peut presser des balles de différentes tailles entre 1,10 m et 1,80 m. ATTENTION : de nombreux outils du jeu ne sont compatibles qu'avec des balles de 1,30 m."/>
+
+        <!-- Bale counter -->
+        <text name="action_resetBaleCounter" text="Remise à zéro du compteur de balles"/>
+
+        <!-- BigPack -->
+        <text name="configuration_baleTrailer" text="BaleCollect 1230"/>
+        <text name="configuration_noBaleTrailer" text="Glissière de déchargement"/>
+
+        <!-- BaleCollect -->
+        <text name="function_baleCollect" text="Attachez le Krone BaleCollect à la Krone BiGPack 1290 HDP II XC pour collecter 3 balles et les décharger côte à côte."/>
+        <text name="typeDesc_baleCollect" text="Collecteur de balles"/>
+        <text name="action_collectMode" text="Mode de déchargement des balles %s"/>
+        <text name="warning_needsABaleTrailer" text="Dans cette configuration, la presse à balles ne peut être utilisée que combinée avec le BaleCollect 1230!"/>
+
+        <!-- Premos -->
+        <text name="function_premos" text="Cette machine peut produire des pellets de paille et de foin directement sur le champ. Associée au système de broyage de balles, elle peut également être utilisée de manière stationnaire."/>
+        <text name="typeDesc_premos" text="Presse à pellets"/>
+
+        <!-- BaleShredder -->
+        <text name="name_baleShredder" text="Broyeur de balles"/>
+        <text name="function_baleShredder" text="Attachez le broyeur de balles à la Premos 5000 pour déchiqueter les balles et produire des pellets. Le broyeur de balles peut être fixé à l'avant droit de la Premos, vérifiez que la flèche jaune sur la palette est dirigée vers la Premos."/>
+        <text name="typeDesc_baleShredder" text="Broyeur de balles"/>
+        <text name="warning_firstFoldTheTool" text="Vous devez d'abord plier l'outil (%s)!"/>
+        <text name="warning_baleFillTypeNotSupported" text="Type de balle non pris en charge!"/>
+        <text name="warning_roundBalesNotSupported" text="Les balles rondes ne sont pas prises en charge!"/>
+
+        <!-- Placeables -->
+        <text name="name_pelletHall" text="Bâtiment de palettisation des pellets"/>
+        <text name="name_pelletHall_crane" text="Bâtiment de stockage vrac avec pont-roulant"/>
+        <text name="name_pelletHall_empty" text="Bâtiment de stockage (vrac et matériels)"/>
+        <text name="name_palletSellPoint" text="Point de vente des palettes de pellets"/>
+        <text name="action_lightsOn" text="Allumer les lumières"/>
+        <text name="action_lightsOff" text="Eteindre les lumières"/>
+
+        <text name="function_pelletHall" text="Dans ce bâtiment vous pouvez stocker des pellets de paille et de foin. Utilisez le palettiseur pour mettre les granulés dans des sacs et les empiler sur des palettes. Avec la grue, il est facile de remplir le palettiseur."/>
+        <text name="function_pelletHall_crane" text="Dans ce bâtiment vous pouvez stocker des pellets de paille et de foin. Avec la grue, il est facile de remplir vos machines."/>
+        <text name="function_pelletHall_empty" text="Dans ce bâtiment vous pouvez stocker des balles et des produits en vrac ou garer vos véhicules."/>
+        <text name="function_palletSellPoint" text="Avec ce point de vente vous pouvez vendre les palettes de pellets à un prix plus élevé qu'en vrac."/>
+
+        <!-- Crane -->
+        <text name="action_toggleCraneTool" text="Changer l'outil de la grue"/>
+
+        <!-- Palletizer -->
+        <text name="notification_palletizer_refilled" text="Palettiseur rempli de %d sacs en raison de la sauvergarde/synchronisation."/>
+        <text name="notification_palletizer_stopped" text="Le palettiseur s'est arrêté"/>
+        <text name="notification_palletizer_empty" text="Palettiseur vide"/>
+        <text name="statistics_palletizer_bags" text="Production de la journée : %d sacs, %d palettes"/>
+        <text name="statistics_palletizer_time" text="L'approvisionnement est assuré pour %d minutes %d secondes"/>
+        <text name="statistics_palletizer_blocked" text="Palettiseur bloqué, enlevez les palettes pleines du convoyeur!"/>
+
+        <!-- Pallets -->
+        <text name="baleTwinePallet" text="Palette de bobines de ficelle"/>
+        <text name="function_baleTwinePallet" text="Avec les bobines de ficelle, vous pouvez recharger la Krone BigPack 1290 HDP II XC."/>
+        <text name="netRolePallet" text="Palette de rouleaux de filet"/>
+        <text name="function_netRolePallet" text="Avec les rouleaux de filets, vous pouvez recharger la Krone Comprima V 180 XC."/>
+        <text name="molassesPallet" text="Palette de mélasse"/>
+        <text name="function_molassesPallet" text="Avec les bidons, vous pouvez remplir le réservoir de mélasse de la Krone Premos 5000."/>
+
+        <!-- fillTypes -->
+        <text name="fillType_strawPellets" text="Pellets de paille"/>
+        <text name="fillType_hayPellets" text="Pellets de foin"/>
+        <text name="fillType_baleTwine" text="Ficelle pour balles"/>
+        <text name="fillType_baleNet" text="Filet pour balles"/>
+        <text name="fillType_molasses" text="Mélasse"/>
+
+        <!-- refillSupplies -->
+        <text name="action_openBaleNetDoor" text="Ouvrir le caisson à filet."/>
+        <text name="action_closeBaleNetDoor" text="Fermer le caisson à filet."/>
+        <text name="action_lowerTwineBoxes" text="Ouvrir les boites à bobines."/>
+        <text name="action_liftTwineBoxes" text="Fermer les boites à bobines."/>
+        <text name="warning_closeBaleNetDoorFirst" text="Fermez d'abord le caisson à filet!"/>
+        <text name="warning_closeTwineBoxesFirst" text="Fermez d'abord les boîtes à bobines!"/>
+        <text name="warning_refillSuppliesFirst" text="L'outil doit être rempli en %s!"/>
+        <text name="configuration_refillSupplies" text="Recharge de fournitures"/>
+        <text name="configuration_manually" text="Manuelle"/>
+        <text name="configuration_automatically" text="Automatique"/>
+
+        <!-- Variable bale size -->
+        <text name="action_baleUnitSize" text="Taille actuelle des balles %.2f"/>
+        <text name="warning_baleTooSmall" text="La taille de balle suivante %.2f est trop petite pour le niveau de remplissage actuel."/>
+
+        <!-- Misc -->
+        <text name="strawHarvest_message_failedHeightTypes" text="Straw Harvest n'a pas pu être chargé sur la carte sélectionnée : la carte combinée aux mods actifs n'est pas compatible avec Straw Harvest. (trop de fruits sur le sol)."/>
+    </texts>
+</l10n>

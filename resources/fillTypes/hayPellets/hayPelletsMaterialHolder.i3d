@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="hayPelletsMaterialHolder" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="1" filename="../../hud/fillTypes/hud_fill_hayPellets.png" />
+    <File fileId="4" filename="hayPellets_diffuse.png" />
+    <File fileId="5" filename="../pellets_normal.png" />
+    <File fileId="8" filename="../pellets_specular.png" />
+    <File fileId="12" filename="hayPelletsRarely_diffuse.png" />
+    <File fileId="13" filename="../pelletsRarely_normal.png" />
+    <File fileId="11" filename="$data/shaders/cultivatorSoilShader.xml" />
+    <File fileId="2" filename="$data/shaders/fillIconShader.xml" />
+    <File fileId="9" filename="$data/shaders/fillPlaneShader.xml" />
+    <File fileId="3" filename="$data/shaders/grainSmokeShader.xml" />
+    <File fileId="10" filename="$data/shaders/grainUnloadingShader.xml" />
+    <File fileId="7" filename="$data/shaders/morphTargetShader.xml" />
+    <File fileId="6" filename="$data/shaders/pipeUnloadingShader.xml" />
+  </Files>
+
+  <Materials>
+    <Material name="hud_fill_hayPellets_mat" materialId="2" cosPower="20" specularColor="0 0 0" ambientColor="1 1 1" alphaBlending="true" customShaderId="2">
+      <CustomParameter name="iconColor" value="0.0 0.0 0.0 1.0"/>
+      <Texture fileId="1"/>
+    </Material>
+    <Material name="hayPellets_smoke_mat" materialId="6" diffuseColor="0.5 0.5 0.5 1" cosPower="20" specularColor="0 0 0" ambientColor="1 1 1" alphaBlending="true" customShaderId="3">
+      <CustomParameter name="ColorAlpha" value="0.467 0.502 0.327 2"/>
+      <CustomParameter name="UVScaleSpeed" value="0.75 0.1 -0.3 0.0"/>
+      <CustomParameter name="fadeProgress" value="1.0 1.0 0.0 0.0"/>
+    </Material>
+    <Material name="hayPellets_pipe_1_mat" materialId="7" cosPower="20" specularColor="0 0 0" ambientColor="1 1 1" customShaderId="6">
+      <CustomParameter name="uvScaleSpeedFreqAmp" value="1.5 6 3.0 0.1"/>
+      <CustomParameter name="controlPoint" value="10.0 0.25 0.0 0.0"/>
+      <CustomParameter name="alphaRemap" value="0.1 0.65 0.0 0.0"/>
+      <CustomParameter name="shapeScaleSpread" value="0.4 0.2 1.0 0.0"/>
+      <CustomParameter name="fadeProgress" value="1.0 1.0 0.0 0.0"/>
+      <Texture fileId="4"/>
+      <Normalmap fileId="5"/>
+    </Material>
+    <Material name="hayPellets_pipe_2_mat" materialId="8" cosPower="20" specularColor="0 0 0" ambientColor="1 1 1" customShaderId="6" customShaderVariation="BEND_PARABOLA">
+      <CustomParameter name="uvScaleSpeedFreqAmp" value="1.5 6 3.0 0.1"/>
+      <CustomParameter name="controlPoint" value="10.0 0.25 0.0 0.0"/>
+      <CustomParameter name="alphaRemap" value="0.1 0.65 0.0 0.0"/>
+      <CustomParameter name="shapeScaleSpread" value="0.4 0.2 1.0 0.0"/>
+      <CustomParameter name="fadeProgress" value="1.0 1.0 0.0 0.0"/>
+      <Texture fileId="4"/>
+      <Normalmap fileId="5"/>
+    </Material>
+    <Material name="hayPellets_pickup_mat" materialId="11" cosPower="20" specularColor="0 0 0" ambientColor="1 1 1" customShaderId="7" customShaderVariation="VERTEX_ANIMATION">
+      <CustomParameter name="morphPosition" value="0.0 1.0 1.0 2.0"/>
+      <CustomParameter name="offsetUV" value="0.0 0.0 -100.0 100.0"/>
+      <CustomParameter name="alphaRemap" value="0.1 0.58 0.0 0.0"/>
+      <CustomParameter name="uvScale" value="2.0 2.0 1.0 1.0"/>
+      <CustomParameter name="vertexAnim" value="20.0 20.0 0.05 1.0"/>
+      <Texture fileId="4"/>
+      <Normalmap fileId="5"/>
+    </Material>
+    <Material name="hayPellets_mat" materialId="1" cosPower="20" specularColor="1 1 1" ambientColor="1 1 1" customShaderId="9">
+      <CustomParameter name="uvOffset" value="0 0 0 1"/>
+      <CustomParameter name="uvScale" value="1 1 1 1"/>
+      <Texture fileId="4"/>
+      <Normalmap fileId="5"/>
+      <Glossmap fileId="8"/>
+    </Material>
+    <Material name="hayPellets_belt_mat" materialId="9" cosPower="20" specularColor="0 0 0" ambientColor="1 1 1" customShaderId="7" customShaderVariation="ALPHA_DISABLE">
+      <CustomParameter name="morphPosition" value="0.0 1.0 1.0 2.0"/>
+      <CustomParameter name="offsetUV" value="0.0 0.0 -100.0 100.0"/>
+      <CustomParameter name="alphaRemap" value="0.0 1.0 0.0 0.0"/>
+      <CustomParameter name="uvScale" value="2.0 2.0 1.0 1.0"/>
+      <CustomParameter name="vertexAnim" value="20.0 20.0 0.05 1.0"/>
+      <Texture fileId="4"/>
+      <Normalmap fileId="5"/>
+    </Material>
+    <Material name="hayPellets_025_mat" materialId="3" cosPower="20" specularColor="0 0 0" ambientColor="1 1 1" customShaderId="10" customShaderVariation="CUSTOM_ALPHA_TEST">
+      <CustomParameter name="alphaBlendStartEnd" value="75 80 -0.001 0.01"/>
+      <CustomParameter name="UVScaleSpeed" value="3 -2 0.0 0.0"/>
+      <CustomParameter name="vSpeedFrequencyAmplitudeFadescale" value="10 20 0.15 -0.025"/>
+      <CustomParameter name="ColorAlpha" value="1.0 1.0 1.0 2.0"/>
+      <CustomParameter name="fadeProgress" value="1.0 1.0 0.0 0.0"/>
+      <Texture fileId="4"/>
+      <Normalmap fileId="5"/>
+    </Material>
+    <Material name="hayPellets_05_mat" materialId="4" cosPower="20" specularColor="0 0 0" ambientColor="1 1 1" customShaderId="10" customShaderVariation="CUSTOM_ALPHA_TEST">
+      <CustomParameter name="alphaBlendStartEnd" value="75 80 -0.001 0.01"/>
+      <CustomParameter name="UVScaleSpeed" value="3 -2 0.0 0.0"/>
+      <CustomParameter name="vSpeedFrequencyAmplitudeFadescale" value="10 20 0.15 -0.05"/>
+      <CustomParameter name="ColorAlpha" value="1.0 1.0 1.0 2.0"/>
+      <CustomParameter name="fadeProgress" value="1.0 1.0 0.0 0.0"/>
+      <Texture fileId="4"/>
+      <Normalmap fileId="5"/>
+    </Material>
+    <Material name="hayPellets_15_mat" materialId="5" cosPower="20" specularColor="0 0 0" ambientColor="1 1 1" customShaderId="10" customShaderVariation="CUSTOM_ALPHA_TEST">
+      <CustomParameter name="alphaBlendStartEnd" value="75 80 -0.001 0.01"/>
+      <CustomParameter name="UVScaleSpeed" value="3 -2 0.0 0.0"/>
+      <CustomParameter name="vSpeedFrequencyAmplitudeFadescale" value="10 20 0.15 -0.15"/>
+      <CustomParameter name="ColorAlpha" value="1.0 1.0 1.0 2.0"/>
+      <CustomParameter name="fadeProgress" value="1.0 1.0 0.0 0.0"/>
+      <Texture fileId="4"/>
+      <Normalmap fileId="5"/>
+    </Material>
+    <Material name="hayPellets_leveler_mat" materialId="10" cosPower="20" specularColor="0 0 0" ambientColor="1 1 1" alphaBlending="true" customShaderId="11" customShaderVariation="LEVELER">
+      <CustomParameter name="VertxoffsetVertexdeformMotionUVscale" value="-35 1.0 0.0 6"/>
+      <Texture fileId="4"/>
+      <Normalmap fileId="5"/>
+    </Material>
+    <Material name="hayPellets_rarelyBelt_mat" materialId="12" cosPower="20" specularColor="0 0 0" ambientColor="1 1 1" customShaderId="7">
+      <CustomParameter name="alphaRemap" value="0.0 1.0 0.0 0.0"/>
+      <CustomParameter name="offsetUV" value="0.0 0.0 -100.0 100.0"/>
+      <CustomParameter name="uvScale" value="1.0 1.0 1.0 1.0"/>
+      <CustomParameter name="morphPosition" value="0.0 1.0 1.0 2.0"/>
+      <CustomParameter name="vertexAnim" value="20.0 20.0 0.05 1.0"/>
+      <Texture fileId="12"/>
+      <Normalmap fileId="13"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="hayPelletsMaterialHolder.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="fillType_hayPellets" nodeId="1">
+      <Shape name="hayPellets_materialHolder" shapeId="1" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="10" nodeId="2"/>
+      <Shape name="hayPellets_icon_materialHolder" shapeId="2" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="10" nodeId="3"/>
+    </TransformGroup>
+    <TransformGroup name="unloading_hayPellets" nodeId="4">
+      <Shape name="hayPellets_025_materialHolder" shapeId="3" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="10" nodeId="5"/>
+      <Shape name="hayPellets_05_materialHolder" shapeId="4" castsShadows="true" receiveShadows="true" materialIds="4" clipDistance="10" nodeId="6"/>
+      <Shape name="hayPellets_15_materialHolder" shapeId="5" castsShadows="true" receiveShadows="true" materialIds="5" clipDistance="10" nodeId="7"/>
+    </TransformGroup>
+    <TransformGroup name="smoke_hayPellets" nodeId="8">
+      <Shape name="hayPellets_smoke_materialHolder" shapeId="6" castsShadows="true" receiveShadows="true" materialIds="6" clipDistance="10" nodeId="9"/>
+    </TransformGroup>
+    <TransformGroup name="pipe_hayPellets" nodeId="10">
+      <Shape name="hayPellets_pipe1_materialHolder" shapeId="7" castsShadows="true" receiveShadows="true" materialIds="7" clipDistance="10" nodeId="11"/>
+      <Shape name="hayPellets_pipe2_materialHolder" shapeId="8" castsShadows="true" receiveShadows="true" materialIds="8" clipDistance="10" nodeId="12"/>
+    </TransformGroup>
+    <TransformGroup name="belt_hayPellets" nodeId="13">
+      <Shape name="hayPellets_belt_materialHolder" shapeId="9" castsShadows="true" receiveShadows="true" materialIds="9" clipDistance="10" nodeId="14"/>
+    </TransformGroup>
+    <TransformGroup name="leveler_hayPellets" nodeId="15">
+      <Shape name="hayPellets_leveler_materialHolder" shapeId="10" castsShadows="true" receiveShadows="true" materialIds="10" clipDistance="10" nodeId="16"/>
+    </TransformGroup>
+    <TransformGroup name="pickup_hayPellets" nodeId="17">
+      <Shape name="hayPellets_pickup_materialHolder" shapeId="11" castsShadows="true" receiveShadows="true" materialIds="11" clipDistance="10" nodeId="18"/>
+    </TransformGroup>
+    <TransformGroup name="rarelyBelt_hayPellets" nodeId="19">
+      <Shape name="hayPellets_rarelyBelt_materialHolder" shapeId="12" castsShadows="true" receiveShadows="true" materialIds="12" clipDistance="10" nodeId="20"/>
+    </TransformGroup>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="2">
+      <Attribute name="fillType" type="string" value="hayPellets"/>
+      <Attribute name="onCreate" type="scriptCallback" value="MaterialUtil.onCreateMaterial"/>
+      <Attribute name="materialType" type="string" value="FILLPLANE"/>
+    </UserAttribute>
+    <UserAttribute nodeId="3">
+      <Attribute name="fillType" type="string" value="hayPellets"/>
+      <Attribute name="materialType" type="string" value="ICON"/>
+      <Attribute name="onCreate" type="scriptCallback" value="MaterialUtil.onCreateMaterial"/>
+    </UserAttribute>
+    <UserAttribute nodeId="5">
+      <Attribute name="fillType" type="string" value="hayPellets"/>
+      <Attribute name="materialIndex" type="string" value="1"/>
+      <Attribute name="materialType" type="string" value="unloading"/>
+      <Attribute name="onCreate" type="scriptCallback" value="MaterialUtil.onCreateMaterial"/>
+    </UserAttribute>
+    <UserAttribute nodeId="6">
+      <Attribute name="fillType" type="string" value="hayPellets"/>
+      <Attribute name="materialIndex" type="string" value="2"/>
+      <Attribute name="materialType" type="string" value="unloading"/>
+      <Attribute name="onCreate" type="scriptCallback" value="MaterialUtil.onCreateMaterial"/>
+    </UserAttribute>
+    <UserAttribute nodeId="7">
+      <Attribute name="fillType" type="string" value="hayPellets"/>
+      <Attribute name="materialType" type="string" value="unloading"/>
+      <Attribute name="materialIndex" type="string" value="3"/>
+      <Attribute name="onCreate" type="scriptCallback" value="MaterialUtil.onCreateMaterial"/>
+    </UserAttribute>
+    <UserAttribute nodeId="9">
+      <Attribute name="fillType" type="string" value="hayPellets"/>
+      <Attribute name="materialIndex" type="string" value="1"/>
+      <Attribute name="materialType" type="string" value="smoke"/>
+      <Attribute name="onCreate" type="scriptCallback" value="MaterialUtil.onCreateMaterial"/>
+    </UserAttribute>
+    <UserAttribute nodeId="11">
+      <Attribute name="fillType" type="string" value="hayPellets"/>
+      <Attribute name="materialIndex" type="string" value="1"/>
+      <Attribute name="materialType" type="string" value="PIPE"/>
+      <Attribute name="onCreate" type="scriptCallback" value="MaterialUtil.onCreateMaterial"/>
+    </UserAttribute>
+    <UserAttribute nodeId="12">
+      <Attribute name="fillType" type="string" value="hayPellets"/>
+      <Attribute name="materialIndex" type="string" value="2"/>
+      <Attribute name="materialType" type="string" value="PIPE"/>
+      <Attribute name="onCreate" type="scriptCallback" value="MaterialUtil.onCreateMaterial"/>
+    </UserAttribute>
+    <UserAttribute nodeId="14">
+      <Attribute name="fillType" type="string" value="hayPellets"/>
+      <Attribute name="materialIndex" type="string" value="1"/>
+      <Attribute name="materialType" type="string" value="belt"/>
+      <Attribute name="onCreate" type="scriptCallback" value="MaterialUtil.onCreateMaterial"/>
+    </UserAttribute>
+    <UserAttribute nodeId="16">
+      <Attribute name="fillType" type="string" value="hayPellets"/>
+      <Attribute name="materialIndex" type="string" value="1"/>
+      <Attribute name="materialType" type="string" value="LEVELER"/>
+      <Attribute name="onCreate" type="scriptCallback" value="MaterialUtil.onCreateMaterial"/>
+    </UserAttribute>
+    <UserAttribute nodeId="18">
+      <Attribute name="fillType" type="string" value="hayPellets"/>
+      <Attribute name="materialIndex" type="string" value="1"/>
+      <Attribute name="materialType" type="string" value="pickup"/>
+      <Attribute name="onCreate" type="scriptCallback" value="MaterialUtil.onCreateMaterial"/>
+    </UserAttribute>
+    <UserAttribute nodeId="20">
+      <Attribute name="fillType" type="string" value="hayPellets"/>
+      <Attribute name="materialIndex" type="string" value="2"/>
+      <Attribute name="materialType" type="string" value="belt"/>
+      <Attribute name="onCreate" type="scriptCallback" value="MaterialUtil.onCreateMaterial"/>
+    </UserAttribute>
+  </UserAttributes>
+</i3D>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="hayPelletPallet_ingaming" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="1" filename="../palletBase_diffuse.png" />
+    <File fileId="2" filename="../palletBase_normal.png" />
+    <File fileId="4" filename="pallet_diffuse.png" />
+    <File fileId="5" filename="pallet_normal.png" />
+    <File fileId="6" filename="pallet_specular.png" />
+    <File fileId="3" filename="../palletBase_specular.png" />
+    <File fileId="7" filename="$data/shaders/decalShader.xml" />
+  </Files>
+
+  <Materials>
+    <Material name="lambert1" materialId="1" diffuseColor="0.5 0.5 0.5 1" specularColor="0 0 0" ambientColor="1 1 1">
+    </Material>
+    <Material name="palletBase_mat" materialId="2" cosPower="50" specularColor="1 1 1" ambientColor="1 1 1">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="pallet_mat" materialId="3" cosPower="255" specularColor="1 1 1" ambientColor="1 1 1">
+      <Texture fileId="4"/>
+      <Normalmap fileId="5"/>
+      <Glossmap fileId="6"/>
+    </Material>
+    <Material name="decals_mat" materialId="4" cosPower="50" specularColor="1 1 1" ambientColor="1 1 1" alphaBlending="true" customShaderId="7">
+      <Texture fileId="4"/>
+      <Normalmap fileId="5"/>
+      <Glossmap fileId="6"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="hayPelletsPallet.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <Shape name="hayPelletPallet_main_component1" shapeId="1" dynamic="true" compound="true" density="0.15" collisionMask="25178120" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="1">
+      <Shape name="dynamicMountTrigger" translation="0 -0.05 0" shapeId="2" kinematic="true" trigger="true" collisionMask="8192" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="2"/>
+      <TransformGroup name="collisions" translation="0 -0.05 0" nodeId="3">
+        <Shape name="col9" shapeId="3" compoundChild="true" collisionMask="25178120" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="4"/>
+        <Shape name="col8" shapeId="4" compoundChild="true" collisionMask="25178120" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="5"/>
+        <Shape name="col6" shapeId="5" compoundChild="true" collisionMask="25178120" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="6"/>
+        <Shape name="col5" shapeId="6" compoundChild="true" collisionMask="25178120" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="7"/>
+        <Shape name="col7" shapeId="7" compoundChild="true" collisionMask="25178120" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="8"/>
+        <Shape name="col4" shapeId="8" compoundChild="true" collisionMask="25178120" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="9"/>
+        <Shape name="col3" shapeId="9" compoundChild="true" collisionMask="25178120" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="10"/>
+        <Shape name="col2" shapeId="10" compoundChild="true" collisionMask="25178120" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="11"/>
+        <Shape name="col1" shapeId="11" compoundChild="true" collisionMask="25178120" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="12"/>
+      </TransformGroup>
+      <Shape name="pallet_base1" translation="0 -0.05 0" shapeId="12" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="13">
+        <Shape name="package_hay" shapeId="13" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="14"/>
+        <Shape name="decal" shapeId="14" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="4" clipDistance="300" nodeId="15"/>
+      </Shape>
+      <Shape name="dischargeTrigger" translation="0 -0.05 0" shapeId="15" kinematic="true" compound="true" trigger="true" collisionMask="8388608" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="16"/>
+    </Shape>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="1">
+      <Attribute name="dynamicMountTriggerIndex" type="string" value="0>13"/>
+      <Attribute name="dynamicMountForceLimitScale" type="float" value="0.85"/>
+      <Attribute name="fillType" type="string" value="hayPellets"/>
+      <Attribute name="capacity" type="string" value="1330"/>
+      <Attribute name="meshNodes" type="string" value="1"/>
+      <Attribute name="fillablePalletUnloadSpeed" type="float" value="12000"/>
+      <Attribute name="startFillLevel" type="float" value="1330"/>
+    </UserAttribute>
+    <UserAttribute nodeId="13">
+      <Attribute name="UDP3DSMAX" type="string" value="LastPose = undefined"/>
+      <Attribute name="MaxHandle" type="integer" value="1678"/>
+    </UserAttribute>
+    <UserAttribute nodeId="14">
+      <Attribute name="UDP3DSMAX" type="string" value="LastPose = undefined"/>
+      <Attribute name="MaxHandle" type="integer" value="1715"/>
+    </UserAttribute>
+    <UserAttribute nodeId="15">
+      <Attribute name="UDP3DSMAX" type="string" value="LastPose = undefined"/>
+      <Attribute name="MaxHandle" type="integer" value="1719"/>
+    </UserAttribute>
+  </UserAttributes>
+</i3D>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="walterscheidW" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="1" filename="$data/shared/assets/powerTakeOffs/walterscheidW_normal.png" />
+    <File fileId="2" filename="$data/shared/assets/powerTakeOffs/walterscheidW_specular.png" />
+    <File fileId="4" filename="$data/shared/assets/powerTakeOffs/walterscheidWWZDecal_diffuse.png" />
+    <File fileId="5" filename="$data/shared/assets/powerTakeOffs/walterscheidWWZDecal_normal.png" />
+    <File fileId="3" filename="$data/shaders/vehicleShader.xml" />
+  </Files>
+
+  <Materials>
+    <Material name="walterscheidW_mat" materialId="1" diffuseColor="0.5 0.5 0.5 1" cosPower="50" specularColor="1 1 1" ambientColor="1 1 1" customShaderId="3" customShaderVariation="colorMask_shaking">
+      <CustomParameter name="colorMat0" value="0.0161 0.0134 0.0120 1"/>
+      <CustomParameter name="colorMat1" value="0.0278 0.0254 0.0231 0"/>
+      <Normalmap fileId="1"/>
+      <Glossmap fileId="2"/>
+    </Material>
+    <Material name="walterscheidWWZDecal_mat" materialId="2" cosPower="20" specularColor="1 1 1" ambientColor="1 1 1" alphaBlending="true" customShaderId="3" customShaderVariation="Decal_colorMask_shaking">
+      <CustomParameter name="colorMat2" value="0.1274 0.2016 0.1329 1"/>
+      <CustomParameter name="colorMat0" value="0.5333 0.3968 0.0630 1"/>
+      <CustomParameter name="colorMat1" value="0.5333 0.3968 0.0630 0"/>
+      <Texture fileId="4"/>
+      <Normalmap fileId="5"/>
+      <Glossmap fileId="2"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="walterscheidW.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="startNode" translation="0 0 1.03157e-06" nodeId="1">
+      <Shape name="startJoint" translation="1.15482e-09 0 0" rotation="0 180 0" scale="1 1 1" shapeId="1" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="150" nodeId="2">
+        <Shape name="endJoint" translation="-3.91663e-24 0 1.01018" shapeId="2" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="150" nodeId="3">
+          <TransformGroup name="linkNode" translation="5.98217e-23 0 -5.68434e-16" rotation="0 180 0" scale="1 1 1" nodeId="4">
+            <Shape name="rotationPart04" shapeId="3" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="5"/>
+          </TransformGroup>
+          <Shape name="translationPart" translation="7.62939e-08 1.90735e-08 -0.119567" shapeId="4" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="150" nodeId="6">
+            <Shape name="decal" translation="-0.00808612 0.0362126 -0.328671" shapeId="5" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="2" clipDistance="50" nodeId="7"/>
+          </Shape>
+          <Shape name="rotationPart03" translation="4.76456e-24 0 0" shapeId="6" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="8"/>
+        </Shape>
+        <Shape name="scalePart" translation="-5.72205e-08 -1.90735e-08 0.118059" shapeId="7" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="150" nodeId="9"/>
+        <Shape name="rotationPart02" shapeId="8" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="10"/>
+      </Shape>
+      <Shape name="rotationPart01" shapeId="9" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="11"/>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+    <translationContributors>Vanquish081, Prom</translationContributors>
+
+    <texts>
+        <!-- Inputs -->
+        <text name="input_SH_TOGGLE_COLLECT_MODE" text="SH: Cambiar el modo de recoger"/>
+        <text name="input_SH_DEPART_BALES" text="SH: Salida de pacas"/>
+        <text name="input_SH_RESET_BALE_COUNTER" text="SH: Resetear Contador pacas"/>
+        <text name="input_SH_GRAB_BALES" text="SH: Coger paca"/>
+        <text name="input_SH_DROP_BALES" text="SH: Soltar paca"/>
+        <text name="input_SH_TOGGLE_CRANE_TOOL" text="SH: Cambiar la Herramienta Grua"/>
+        <text name="input_SH_MOVE_CRANE_BRIDGE_1" text="SH: Mover adelante puente grua "/>
+        <text name="input_SH_MOVE_CRANE_BRIDGE_2" text="SH: Mover atrás puente grua "/>
+        <text name="input_SH_MOVE_CRANE_TROLLEY_1" text="SH: Mover derecha carro grua "/>
+        <text name="input_SH_MOVE_CRANE_TROLLEY_2" text="SH: Mover izquierda carro grua "/>
+        <text name="input_SH_MOVE_CRANE_TOOL_1" text="SH: Mover arriba herramientaa grua "/>
+        <text name="input_SH_MOVE_CRANE_TOOL_2" text="SH: Mover abajo herramienta grua "/>
+        <text name="input_SH_ROTATE_CRANE_TOOL_1" text="SH: Girar derecha herramienta grua"/>
+        <text name="input_SH_ROTATE_CRANE_TOOL_2" text="SH: Girar izquierda herramienta grua"/>
+        <text name="input_SH_OPEN_CRANE_TOOL_1" text="SH: Abrir herramienta grua"/>
+        <text name="input_SH_OPEN_CRANE_TOOL_2" text="SH: Cerrar herramienta grua"/>
+        <text name="input_SH_TOGGLE_BALE_SIZE" text="SH: Cambiar tamaño paca"/>
+        <text name="input_SH_TOGGLE_REFILL_COVER" text="SH: Cambiar tipo de cubierta de relleno"/>
+
+        <!-- Bale grab -->
+        <text name="typeDesc_baleGrab" text="Pincho para pacas"/>
+        <text name="function_baleGrab" text="Con un pincho de pacas puedes coger pacas cuadradas rápida y fácilmente."/>
+
+        <text name="configuration_inputAttacherTeleHandler" text="Manipuladora Telescópica"/>
+
+        <text name="action_grabBales" text="Coger paca"/>
+        <text name="action_dropBales" text="Soltar paca"/>
+
+        <text name="action_addSpikes" text="Enganchar pinchos para paca"/>
+        <text name="action_removeSpikes" text="Desenganchar pinchos para paca"/>
+
+        <!-- Comprima -->
+        <text name="function_comprima" text="Una enfardadora convierte paja suelta, hierba o heno en prácticos fardos. El Comprima puede presionar fardos en diferentes tamaños entre 1,10m y 1,80m. ATENCION: muchas herramientas en el juego sólo son compatibles con pacas de 1,30m "/>
+
+        <!-- Bale counter -->
+        <text name="action_resetBaleCounter" text="Resetear contador de pacas"/>
+
+        <!-- BigPack -->
+        <text name="configuration_baleTrailer" text="BaleCollect 1230"/>
+        <text name="configuration_noBaleTrailer" text="Tolva simple"/>
+
+        <!-- BaleCollect -->
+        <text name="function_baleCollect" text="Enganche el Krone BaleCollect a la Krone BiGPack 1290 HDP II XC para recoger hasta un máximo de 3 pacas."/>
+        <text name="typeDesc_baleCollect" text="BaleCollect 1230"/>
+        <text name="action_collectMode" text="Modo de descarga %s"/>
+        <text name="warning_needsABaleTrailer" text="¡En esta configuración, la empacadora solo se puede utilizar en combinación con BaleCollect 1230!"/>
+
+        <!-- Premos -->
+        <text name="function_premos" text="La Krone Premos 5000 puede procesar paja y heno en pellets directamente en el campo. En combinación con el complemento triturador de pacas, la máquina también puede usarse fija."/>
+        <text name="typeDesc_premos" text="Prensa de Pellets"/>
+
+        <!-- balehredder -->
+        <text name="name_baleShredder" text="Triturador Pacas"/>
+        <text name="function_baleShredder" text="Enganche el triturador de pacas a la Premos 5000 para triturar las pacas y paletizar el material. La trituradora de pacas se puede fijar al lado derecho delantero de la Premos, compruebe que la flecha amarilla en el palé está apuntando hacia la Premos."/>
+        <text name="typeDesc_baleShredder" text="Triturador Pacas"/>
+        <text name="warning_firstFoldTheTool" text="¡Primero necesitas plegar el (%s)!"/>
+        <text name="warning_baleFillTypeNotSupported" text="¡Este tipo de paca no es compatible!"/>
+        <text name="warning_roundBalesNotSupported" text="¡Las pacas redondas no son compatibles!"/>
+
+        <!-- Placeables -->
+        <text name="name_pelletHall" text="Nave con Paletizadora de pellets"/>
+        <text name="name_pelletHall_crane" text="Nave con Grúa"/>
+        <text name="name_pelletHall_empty" text="Nave"/>
+        <text name="name_palletSellPoint" text="Punto venta de palets"/>
+        <text name="action_lightsOn" text="Encender luces"/>
+        <text name="action_lightsOff" text="Apagar luces"/>
+
+        <text name="function_pelletHall" text="Los pellets de paja y heno se pueden almacenar aquí. El paletizador llena los gránulos sueltos en sacos y los organiza en palets. Las máquinas se pueden llenar fácilmente con la grúa."/>
+        <text name="function_pelletHall_crane" text="Los pellets de paja y heno se pueden almacenar aquí. Las máquinas se pueden llenar fácilmente con la grúa."/>
+        <text name="function_pelletHall_empty" text="Aquí se pueden almacenar fardos y mercancías a granel o se pueden estacionar sus vehículos."/>
+        <text name="function_palletSellPoint" text="Aquí los palets de pellets creados se pueden vender a un precio más alto que los pellets sueltos."/>
+
+        <!-- Crane -->
+        <text name="action_toggleCraneTool" text="Alternar Herramienta Grua"/>
+
+        <!-- Palletizer -->
+        <text name="notification_palletizer_refilled" text="Paletizador lleno con %d sacos. (Guardar y sincronizar)"/>
+        <text name="notification_palletizer_stopped" text="Paletizador parado"/>
+        <text name="notification_palletizer_empty" text="Paletizador vacío"/>
+        <text name="statistics_palletizer_bags" text="Producido hoy hasta ahora: %d sacos, %d palets"/>
+        <text name="statistics_palletizer_time" text="Sólo queda material embalaje para %d minutos %d segundos"/>
+        <text name="statistics_palletizer_blocked" text="Paletizador bloqueado, ¡vaciar cinta!"/>
+
+        <!-- Pallets -->
+        <text name="baleTwinePallet" text="Palet de rollos de Cuerda para Pacas"/>
+        <text name="function_baleTwinePallet" text="Estos rollos de cuerda se usan en la Krone BigPack 1290 HDP II XC."/>
+        <text name="netRolePallet" text="Palet de rollos de lámina para Pacas"/>
+        <text name="function_netRolePallet" text="Estos rollos de lámina se usan en la Krone Comprima V 180 XC."/>
+        <text name="molassesPallet" text="Palet Melaza"/>
+        <text name="function_molassesPallet" text="Esta melaza junto con agua, se usa en la Krone Premos 5000 para crear pellets."/>
+
+        <!-- fillTypes -->
+        <text name="fillType_strawPellets" text="Pellets de Paja"/>
+        <text name="fillType_hayPellets" text="Pellets de Heno"/>
+        <text name="fillType_baleTwine" text="Cuerda para Pacas"/>
+        <text name="fillType_baleNet" text="Lámina para Pacas"/>
+        <text name="fillType_molasses" text="Melaza"/>
+
+        <!-- refillSupplies -->
+        <text name="action_openBaleNetDoor" text="Abrir portón de rollos de láminas"/>
+        <text name="action_closeBaleNetDoor" text="Cerrar portón de rollos de láminas"/>
+        <text name="action_lowerTwineBoxes" text="Abrir portón de rollos de cuerda"/>
+        <text name="action_liftTwineBoxes" text="Cerrar portón de rollos de cuerda"/>
+        <text name="warning_closeBaleNetDoorFirst" text="¡Cierre primero el portón de rollos de láminas!"/>
+        <text name="warning_closeTwineBoxesFirst" text="¡Cierre primero el portón de rollos de cuerda!"/>
+        <text name="warning_refillSuppliesFirst" text="¡No hay %s!"/>
+
+        <text name="configuration_refillSupplies" text="Rellenar material embalaje"/>
+        <text name="configuration_manually" text="Manualmente"/>
+        <text name="configuration_automatically" text="Automáticamente"/>
+
+        <!-- Variable bale size -->
+        <text name="action_baleUnitSize" text="Cambiar tamaño actual de las pacas %.2f"/>
+        <text name="warning_baleTooSmall" text="No hay suficiente llenado para la siguiente paca de %.2f ."/>
+
+        <!-- Misc -->
+        <text name="strawHarvest_message_failedHeightTypes" text="Straw Harvest no pudo cargarse en el mapa seleccionado: el mapa en combinación con las modificaciones activadas no es compatible con Straw Harvest. (demasiadas productos registrados)"/>
+    </texts>
+</l10n>

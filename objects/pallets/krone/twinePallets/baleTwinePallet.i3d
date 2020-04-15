@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="baleTwinePallet_ingaming" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="1" filename="../../palletBase_diffuse.png" />
+    <File fileId="2" filename="../../palletBase_normal.png" />
+    <File fileId="3" filename="../../palletBase_specular.png" />
+    <File fileId="4" filename="../consumables_diffuse.png" />
+    <File fileId="5" filename="../consumables_normal.png" />
+    <File fileId="6" filename="../consumables_specular.png" />
+    <File fileId="7" filename="$data/objects/pallets/woolPallet/woolPallet_diffuse.png" />
+    <File fileId="9" filename="$data/objects/pallets/woolPallet/woolPallet_specular.png" />
+    <File fileId="8" filename="$data/objects/pallets/woolPallet/woolPallet_normal.png" />
+    <File fileId="10" filename="$data/shared/assets/wire_diffuse.png" />
+    <File fileId="12" filename="$data/shared/assets/wire_specular.png" />
+    <File fileId="11" filename="$data/shared/assets/wire_normal.png" />
+    <File fileId="13" filename="$data/shaders/decalShader.xml" />
+  </Files>
+
+  <Materials>
+    <Material name="lambert1" materialId="1" diffuseColor="0.5 0.5 0.5 1" specularColor="0 0 0" ambientColor="1 1 1">
+    </Material>
+    <Material name="pallet_mat1" materialId="2" cosPower="50" specularColor="1 1 1" ambientColor="0.588235 0.588235 0.588235">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="baleTwine_mat" materialId="3" cosPower="50" specularColor="1 1 1" ambientColor="1 1 1">
+      <Texture fileId="4"/>
+      <Normalmap fileId="5"/>
+      <Glossmap fileId="6"/>
+    </Material>
+    <Material name="cage_mat" materialId="4" cosPower="20" specularColor="1 1 1" ambientColor="1 1 1">
+      <Texture fileId="7"/>
+      <Normalmap fileId="8"/>
+      <Glossmap fileId="9"/>
+    </Material>
+    <Material name="wire_mat" materialId="5" cosPower="255" specularColor="1 1 1" ambientColor="1 1 1" alphaBlending="true" customShaderId="13">
+      <Texture fileId="10"/>
+      <Normalmap fileId="11"/>
+      <Glossmap fileId="12"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="baleTwinePallet.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <Shape name="twineRolePallet_main_component1" shapeId="1" dynamic="true" compound="true" density="0.35" collisionMask="25178120" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="1">
+      <TransformGroup name="triggers" nodeId="2">
+        <Shape name="dynamicMountTrigger" translation="0 -0.05 0" shapeId="2" kinematic="true" trigger="true" collisionMask="8192" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="3"/>
+        <Shape name="fillTrigger" shapeId="3" kinematic="true" compound="true" trigger="true" collisionMask="1082130432" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="4"/>
+      </TransformGroup>
+      <TransformGroup name="collisions" translation="0 -0.05 0" nodeId="5">
+        <Shape name="collision1" shapeId="4" compoundChild="true" collisionMask="25178120" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="6"/>
+        <Shape name="collision2" shapeId="5" compoundChild="true" collisionMask="25178120" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="7"/>
+        <Shape name="collision3" shapeId="6" compoundChild="true" collisionMask="25178120" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="8"/>
+        <Shape name="collision4" shapeId="7" compoundChild="true" collisionMask="25178120" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="9"/>
+        <Shape name="collision5" shapeId="8" compoundChild="true" collisionMask="25178120" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="10"/>
+        <Shape name="collision6" shapeId="9" compoundChild="true" collisionMask="25178120" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="11"/>
+        <Shape name="collision7" shapeId="10" compoundChild="true" collisionMask="25178120" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="12"/>
+        <Shape name="collision8" shapeId="11" compoundChild="true" collisionMask="25178120" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="13"/>
+        <Shape name="collision9" shapeId="12" compoundChild="true" collisionMask="25178120" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="30" nodeId="14"/>
+      </TransformGroup>
+      <Shape name="palletBase" shapeId="13" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="15">
+        <TransformGroup name="twineRoles" translation="1.82343e-05 0.61046 7.82776e-05" nodeId="16">
+          <Shape name="twineRole01" translation="-0.465901 -0.292853 -0.297078" shapeId="14" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="17"/>
+          <Shape name="twineRole02" translation="-0.16566 -0.292853 -0.297078" shapeId="15" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="18"/>
+          <Shape name="twineRole03" translation="0.134429 -0.292853 -0.297078" shapeId="16" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="19"/>
+          <Shape name="twineRole04" translation="0.434555 -0.292853 -0.297078" shapeId="17" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="20"/>
+          <TransformGroup name="twineConfig04" translation="-1.82343e-05 -0.61046 -7.82776e-05" nodeId="21">
+            <Shape name="twineRole05" translation="0.434573 0.317608 0" shapeId="18" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="22"/>
+            <Shape name="twineRole06" translation="0.134447 0.317608 -0.000102015" shapeId="19" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="23"/>
+            <Shape name="twineRole07" translation="-0.165642 0.317608 3.38491e-05" shapeId="20" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="24"/>
+            <Shape name="twineRole08" translation="-0.468578 0.317608 0.000584204" shapeId="21" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="25"/>
+            <TransformGroup name="twineConfig08" nodeId="26">
+              <Shape name="twineRole09" translation="-0.46666 0.317608 0.297279" shapeId="22" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="27"/>
+              <Shape name="twineRole10" translation="-0.166958 0.317608 0.297134" shapeId="23" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="28"/>
+              <Shape name="twineRole11" translation="0.134727 0.317608 0.297157" shapeId="24" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="29"/>
+              <Shape name="twineRole12" translation="0.434628 0.317608 0.297157" shapeId="25" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="30"/>
+              <TransformGroup name="twineConfig12" nodeId="31">
+                <Shape name="twineRole13" translation="-0.467533 0.609806 -0.297659" shapeId="26" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="32"/>
+                <Shape name="twineRole14" translation="-0.167243 0.609806 -0.301281" shapeId="27" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="33"/>
+                <Shape name="twineRole15" translation="0.132773 0.609806 -0.29364" shapeId="28" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="34"/>
+                <Shape name="twineRole16" translation="0.43585 0.610608 -0.300101" shapeId="29" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="35"/>
+                <TransformGroup name="twineConfig16" nodeId="36">
+                  <Shape name="twineRole17" translation="0.43318 0.610608 0.000971365" shapeId="30" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="37"/>
+                  <Shape name="twineRole18" translation="0.135713 0.610608 0.0013557" shapeId="31" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="38"/>
+                  <Shape name="twineRole19" translation="-0.167172 0.610608 -1.74096e-05" shapeId="32" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="39"/>
+                  <Shape name="twineRole20" translation="-0.468116 0.610608 -0.000313978" shapeId="33" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="40"/>
+                  <TransformGroup name="twineConfig20" nodeId="41">
+                    <Shape name="twineRole21" translation="-0.463101 0.610608 0.295778" shapeId="34" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="42"/>
+                    <Shape name="twineRole22" translation="-0.162859 0.610608 0.295778" shapeId="35" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="43"/>
+                    <Shape name="twineRole23" translation="0.13723 0.610608 0.295778" shapeId="36" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="44"/>
+                    <Shape name="twineRole24" translation="0.437355 0.610608 0.295778" shapeId="37" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="45"/>
+                    <TransformGroup name="twineConfig24" nodeId="46">
+                      <Shape name="twineRole25" translation="-0.464995 0.903272 -0.299309" shapeId="38" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="47"/>
+                      <Shape name="twineRole26" translation="-0.166986 0.903272 -0.298349" shapeId="39" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="48"/>
+                      <Shape name="twineRole27" translation="0.133256 0.903272 -0.298349" shapeId="40" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="49"/>
+                      <Shape name="twineRole28" translation="0.433345 0.903272 -0.298506" shapeId="41" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="50"/>
+                      <TransformGroup name="twineConfig28" nodeId="51">
+                        <Shape name="twineRole29" translation="0.436902 0.903272 -0.00173356" shapeId="42" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="52"/>
+                        <Shape name="twineRole30" translation="0.13236 0.903272 -0.000502335" shapeId="43" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="53"/>
+                        <Shape name="twineRole31" translation="-0.164646 0.902299 -0.000896534" shapeId="44" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="54"/>
+                        <Shape name="twineRole32" translation="-0.468675 0.902299 -0.00104441" shapeId="45" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="55"/>
+                        <TransformGroup name="twineConfig32" nodeId="56">
+                          <Shape name="twineRole33" translation="-0.463335 0.902299 0.297013" shapeId="46" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="57"/>
+                          <Shape name="twineRole34" translation="-0.163209 0.902299 0.297013" shapeId="47" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="58"/>
+                          <Shape name="twineRole35" translation="0.137032 0.902299 0.297013" shapeId="48" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="59"/>
+                          <Shape name="twineRole36" translation="0.435994 0.902299 0.297961" shapeId="49" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="60"/>
+                          <TransformGroup name="twineConfig36" nodeId="61">
+                            <Shape name="twineRole37" translation="-0.46315 1.19627 -0.299415" shapeId="50" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="62"/>
+                            <Shape name="twineRole38" translation="-0.16306 1.19627 -0.299415" shapeId="51" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="63"/>
+                            <Shape name="twineRole39" translation="0.137065 1.19627 -0.299415" shapeId="52" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="64"/>
+                            <Shape name="twineRole40" translation="0.437307 1.19627 -0.299415" shapeId="53" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="65"/>
+                            <TransformGroup name="twineConfig40" nodeId="66">
+                              <Shape name="twineRole41" translation="0.434908 1.19627 -0.00136159" shapeId="54" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="67"/>
+                              <Shape name="twineRole42" translation="0.135078 1.19627 -0.00100419" shapeId="55" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="68"/>
+                              <Shape name="twineRole43" translation="-0.16716 1.19627 0.0016104" shapeId="56" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="69"/>
+                              <Shape name="twineRole44" translation="-0.469338 1.19627 -0.00112311" shapeId="57" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="70"/>
+                              <TransformGroup name="twineConfig44" nodeId="71">
+                                <Shape name="twineRole45" translation="-0.462206 1.19627 0.298015" shapeId="58" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="72"/>
+                                <Shape name="twineRole46" translation="-0.164943 1.19627 0.298015" shapeId="59" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="73"/>
+                                <Shape name="twineRole47" translation="0.132321 1.19627 0.298015" shapeId="60" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="74"/>
+                                <Shape name="twineRole48" translation="0.429584 1.19627 0.298015" shapeId="61" castsShadows="true" receiveShadows="true" materialIds="3" clipDistance="300" nodeId="75"/>
+                              </TransformGroup>
+                            </TransformGroup>
+                          </TransformGroup>
+                        </TransformGroup>
+                      </TransformGroup>
+                    </TransformGroup>
+                  </TransformGroup>
+                </TransformGroup>
+              </TransformGroup>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+        <Shape name="palletCage" translation="0 -0.0785041 0" shapeId="62" castsShadows="true" receiveShadows="true" materialIds="4" clipDistance="300" nodeId="76">
+          <Shape name="wireInside" shapeId="63" castsShadows="true" receiveShadows="true" materialIds="5" clipDistance="300" nodeId="77"/>
+          <Shape name="wire3" shapeId="64" castsShadows="true" receiveShadows="true" materialIds="5" clipDistance="300" nodeId="78"/>
+          <Shape name="wire2" shapeId="65" castsShadows="true" receiveShadows="true" materialIds="5" clipDistance="300" nodeId="79"/>
+          <Shape name="wire1" shapeId="66" castsShadows="true" receiveShadows="true" materialIds="5" clipDistance="300" nodeId="80"/>
+          <Shape name="wire" shapeId="67" castsShadows="true" receiveShadows="true" materialIds="5" clipDistance="300" nodeId="81"/>
+        </Shape>
+      </Shape>
+    </Shape>
+  </Scene>
+
+</i3D>

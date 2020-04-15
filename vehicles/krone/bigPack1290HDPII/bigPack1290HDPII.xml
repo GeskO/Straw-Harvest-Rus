@@ -1,0 +1,897 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="kroneBigPack1290HDPII">
+    <annotation>Copyright (C) Creative Mesh UG (haftungsbeschraenkt)</annotation>
+
+    <storeData>
+        <name>BigPack 1290 HDP II XC</name>
+        <specs>
+            <neededPower>258</neededPower>
+        </specs>
+        <functions>
+            <function>$l10n_function_baler</function>
+        </functions>
+        <image>vehicles/krone/bigPack1290HDPII/store_bigPack1290HDPII.dds</image>
+        <price>319000</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>KRONE</brand>
+        <category>baling</category>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_baler</typeDesc>
+        <filename>vehicles/krone/bigPack1290HDPII/bigPack1290HDPII.i3d</filename>
+        <size width="3.5" length="10" lengthOffset="-1.0"/>
+        <speedLimit value="25"/>
+        <components>
+            <component centerOfMass="0 0.7 0.5" solverIterationCount="10" mass="15400"/>
+            <component centerOfMass="0 0 0" solverIterationCount="10" mass="200"/>
+            <joint component1="1" component2="2" node="compJoint" rotLimit="0 0 0" transLimit="0 0 0"/>
+        </components>
+        <schemaOverlay attacherJointPosition="0 0">
+            <default name="DEFAULT_IMPLEMENT"/>
+            <turnedOn name="DEFAULT_IMPLEMENT_ON"/>
+            <selected name="DEFAULT_IMPLEMENT_SELECTED"/>
+            <turnedOnSelected name="DEFAULT_IMPLEMENT_SELECTED_ON"/>
+        </schemaOverlay>
+    </base>
+
+    <wheels>
+        <wheelConfigurations>
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+                <wheels>
+                    <wheel filename="shared/wheels/V710_45_R_26_5.xml" isLeft="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.3" repr="frontLeft" forcePointRatio="0.5" initialCompression="40" suspTravel="0.2" spring="25" damper="30"/>
+                        <wheelChock parkingNode="wheelChockAttached01" isInverted="true"/>
+                    </wheel>
+                    <wheel filename="shared/wheels/V710_45_R_26_5.xml" isLeft="false">
+                        <physics tipOcclusionAreaGroupId="2" restLoad="2.3" repr="frontRight" forcePointRatio="0.5" initialCompression="40" suspTravel="0.2" spring="25" damper="30"/>
+                    </wheel>
+                    <wheel filename="shared/wheels/V710_45_R_26_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.3" repr="backLeftRepr" driveNode="backLeftWheel" forcePointRatio="0.5" initialCompression="40" suspTravel="0.2" spring="25" damper="30"/>
+                        <steeringAxle scale="-0.7" rotMax="18" rotMin="-15"/>
+                    </wheel>
+                    <wheel filename="shared/wheels/V710_45_R_26_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="2" restLoad="2.3" repr="backRightRepr" driveNode="backRightWheel" forcePointRatio="0.5" initialCompression="40" suspTravel="0.2" spring="25" damper="30"/>
+                        <steeringAxle scale="-0.7" rotMax="15" rotMin="-18"/>
+                        <wheelChock parkingNode="wheelChockAttached02"/>
+                    </wheel>
+                    <wheel>
+                        <physics rotMin="-15" rotMax="15" tipOcclusionAreaGroupId="3" restLoad="0.2" repr="puWheelLoaderLeft" driveNode="puWheelLeft" forcePointRatio="0.3" radius="0.2" width="0.15" mass="0.1" initialCompression="25" suspTravel="0.03" spring="15" damper="10" rotationDamping="0.0001" brakeFactor="0" versatileYRot="true"/>
+                    </wheel>
+                    <wheel>
+                        <physics rotMin="-15" rotMax="15" tipOcclusionAreaGroupId="3" restLoad="0.2" repr="puWheelLoaderRight" driveNode="puWheelRight" forcePointRatio="0.3" radius="0.2" width="0.15" mass="0.1" initialCompression="25" suspTravel="0.03" spring="15" damper="10" rotationDamping="0.0001" brakeFactor="0" versatileYRot="true"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+        </wheelConfigurations>
+
+        <dynamicallyLoadedWheels>
+            <dynamicallyLoadedWheel linkNode="PULeft" filename="shared/wheels/pickupWheels.xml" isLeft="true"/>
+            <dynamicallyLoadedWheel linkNode="PURight" filename="shared/wheels/pickupWheels.xml" isLeft="false"/>
+        </dynamicallyLoadedWheels>
+    </wheels>
+
+    <dynamicallyLoadedParts>
+        <dynamicallyLoadedPart node="1|0" linkNode="hydraulicIn01Stored" filename="$data/shared/connectionHoses/connectors.i3d"/>
+        <dynamicallyLoadedPart node="1|0" linkNode="hydraulicOut01Stored" filename="$data/shared/connectionHoses/connectors.i3d"/>
+        <dynamicallyLoadedPart node="1|0" linkNode="hydraulicIn02Stored" filename="$data/shared/connectionHoses/connectors.i3d"/>
+        <dynamicallyLoadedPart node="1|0" linkNode="hydraulicOut02Stored" filename="$data/shared/connectionHoses/connectors.i3d"/>
+        <dynamicallyLoadedPart node="1|0" linkNode="hydraulicIn03Stored" filename="$data/shared/connectionHoses/connectors.i3d"/>
+        <dynamicallyLoadedPart node="1|3" linkNode="airInStored" filename="$data/shared/connectionHoses/connectors.i3d"/>
+        <dynamicallyLoadedPart node="1|2" linkNode="airOutStored" filename="$data/shared/connectionHoses/connectors.i3d"/>
+        <dynamicallyLoadedPart node="0|1" linkNode="electricStored" filename="$data/shared/connectionHoses/connectors.i3d"/>
+    </dynamicallyLoadedParts>
+
+    <speedRotatingParts>
+        <speedRotatingPart node="PULeft" wheelIndex="5"/>
+        <speedRotatingPart node="PURight" wheelIndex="6"/>
+        <speedRotatingPart node="feedRollerRot" radius="0.2" groundReferenceNodeIndex="1" turnOnFadeTime="1" turnOffFadeTime="3" onlyActiveWhenLowered="true" rotateOnlyIfFillLevelIncreased="true"/>
+    </speedRotatingParts>
+
+    <attachable>
+        <inputAttacherJoints>
+            <inputAttacherJoint node="attacherJoint" jointType="trailerLow" attacherHeight="0.7"/>
+        </inputAttacherJoints>
+        <steeringAxleAngleScale startSpeed="0" endSpeed="90"/>
+        <support animationName="moveSupport"/>
+        <brakeForce>0.9</brakeForce>
+    </attachable>
+
+    <powerTakeOffs>
+        <input inputAttacherJointIndices="1" inputNode="ptoInputNode" detachNode="ptoDetachNode" aboveAttacher="true" filename="shared/pto/walterscheidWWZ.xml"/>
+        <local startNode="ptoLocalStart1" endNode="ptoLocalEnd1" filename="shared/pto/walterscheidW.xml"/>
+    </powerTakeOffs>
+
+    <powerConsumer ptoRpm="800" neededMinPtoPower="80" neededMaxPtoPower="200"/>
+
+    <attacherJoints>
+        <attacherJointConfigurations>
+            <attacherJointConfiguration name="$l10n_configuration_noBaleTrailer" price="0">
+                <objectChange node="config_baleChute" visibilityActive="true" visibilityInactive="false"/>
+            </attacherJointConfiguration>
+            <attacherJointConfiguration name="$l10n_configuration_baleTrailer" price="0">
+                <attacherJoint node="attacherJointBack" jointType="trailer" lowerRotLimit="10 80 40" upperRotationOffset="0" allowsJointLimitMovement="false" canTurnOnImplement="false">
+                    <schema position="0.5 0" rotation="0" invertX="false"/>
+                </attacherJoint>
+                <objectChange node="config_baleCollect" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="baleChute" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="twineBoxBackLeft" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="twineBoxBackRight" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="bcCollision" compoundChildInactive="true" compoundChildActive="false"/>
+            </attacherJointConfiguration>
+        </attacherJointConfigurations>
+        <sounds>
+            <attach template="ATTACH_01" linkNode="bigPack1290HDPII_main_component1"/>
+            <hydraulic template="DEFAULT_HYDRAULIC_SOUND" linkNode="bigPack1290HDPII_main_component1"/>
+        </sounds>
+    </attacherJoints>
+
+    <lights>
+        <sharedLight linkNode="sideMarkerRound01" filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml"/>
+        <sharedLight linkNode="sideMarkerRound02" filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml"/>
+        <sharedLight linkNode="sideMarkerRound03" filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml"/>
+        <sharedLight linkNode="sideMarkerRound04" filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml"/>
+        <sharedLight linkNode="sideMarkerRound05" filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml"/>
+        <sharedLight linkNode="sideMarkerRound06" filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml"/>
+        <sharedLight linkNode="sideMarkerRound07" filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml"/>
+        <sharedLight linkNode="sideMarkerRound08" filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml"/>
+        <sharedLight linkNode="sideMarkerRound09" filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml"/>
+        <sharedLight linkNode="sideMarkerRound10" filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml"/>
+        <sharedLight linkNode="sideMarkerRound11" filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml"/>
+        <sharedLight linkNode="sideMarkerRound12" filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml"/>
+        <sharedLight linkNode="sideMarkerRound13" filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml"/>
+        <sharedLight linkNode="sideMarkerRound14" filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml"/>
+        <sharedLight linkNode="backMarkerRound01" filename="$data/shared/assets/reflectors/lizard/redRound_03.xml"/>
+        <sharedLight linkNode="backMarkerRound02" filename="$data/shared/assets/reflectors/lizard/redRound_03.xml"/>
+        <sharedLight linkNode="redTriangle01" filename="$data/shared/assets/reflectors/lizard/redTriangle_02.xml"/>
+        <sharedLight linkNode="redTriangle02" filename="$data/shared/assets/reflectors/lizard/redTriangle_02.xml"/>
+        <sharedLight linkNode="redTriangle03" filename="$data/shared/assets/reflectors/lizard/redTriangle_02.xml"/>
+        <sharedLight linkNode="redTriangle04" filename="$data/shared/assets/reflectors/lizard/redTriangle_02.xml"/>
+        <sharedLight linkNode="sideMarkerRight1" filename="$data/shared/assets/lights/lizard/sideMarker_01_right.xml"/>
+        <sharedLight linkNode="sideMarkerRight2" filename="$data/shared/assets/lights/lizard/sideMarker_01_right.xml"/>
+        <sharedLight linkNode="sideMarkerRight3" filename="$data/shared/assets/lights/lizard/sideMarker_01_right.xml"/>
+        <sharedLight linkNode="sideMarkerLeft1" filename="$data/shared/assets/lights/lizard/sideMarker_01_left.xml"/>
+        <sharedLight linkNode="sideMarkerLeft2" filename="$data/shared/assets/lights/lizard/sideMarker_01_left.xml"/>
+        <sharedLight linkNode="sideMarkerLeft3" filename="$data/shared/assets/lights/lizard/sideMarker_01_left.xml"/>
+        <sharedLight linkNode="rearLightLeft01" filename="$data/shared/assets/lights/lizard/rear3ChamberLight_03_left.xml"/>
+        <sharedLight linkNode="rearLightLeft02" filename="$data/shared/assets/lights/lizard/rear3ChamberLight_03_left.xml"/>
+        <sharedLight linkNode="rearLightRight01" filename="$data/shared/assets/lights/lizard/rear3ChamberLight_03_right.xml"/>
+        <sharedLight linkNode="rearLightRight02" filename="$data/shared/assets/lights/lizard/rear3ChamberLight_03_right.xml"/>
+        <sharedLight linkNode="workLight01" node="0" lightTypes="1" filename="$data/shared/assets/lights/hella/hellaWorkingLightRound_01_back.xml">
+            <rotationNode name="rotationNode1" rotation="15 0 0"/>
+        </sharedLight>
+        <sharedLight linkNode="workLight02" node="0" lightTypes="1" filename="$data/shared/assets/lights/hella/hellaWorkingLightRound_01_back.xml">
+            <rotationNode name="rotationNode1" rotation="15 0 0"/>
+        </sharedLight>
+
+        <realLights>
+            <low>
+                <light node="workLightBackHigh1" lightTypes="1"/>
+            </low>
+            <high>
+                <light node="workLightBackHigh1" lightTypes="1"/>
+                <light node="workLightBackHigh2" lightTypes="1"/>
+                <!-- bale collect -->
+                <light node="backLightsHigh01" lightTypes="0"/>
+                <brakeLight node="backLightsHigh01"/>
+                <turnLightLeft node="turnLightLeft02"/>
+                <turnLightRight node="turnLightRight02"/>
+                <!-- bale chute -->
+                <light node="backLightsHigh03" lightTypes="0"/>
+                <brakeLight node="backLightsHigh03"/>
+                <turnLightLeft node="turnLightLeft01"/>
+                <turnLightRight node="turnLightRight01"/>
+            </high>
+        </realLights>
+
+        <beaconLights>
+            <beaconLight node="beaconLight" speed="0.015" filename="$data/shared/assets/beaconLights/lizard/beaconLight02.xml"/>
+        </beaconLights>
+    </lights>
+
+    <groundReferenceNodes>
+        <groundReferenceNode node="groundReferenceNode" threshold="0.25"/>
+    </groundReferenceNodes>
+
+    <workAreas>
+        <workArea type="baler" functionName="processBalerArea" disableBackwards="false">
+            <area startNode="workAreaStart" widthNode="workAreaWidth" heightNode="workAreaHeight"/>
+            <groundReferenceNode index="1"/>
+        </workArea>
+    </workAreas>
+
+    <foldable>
+        <foldingParts startMoveDirection="1" turnOnFoldMinLimit="0.0" turnOnFoldMaxLimit="0.02">
+            <foldingPart animationName="foldBackDoor" speedScale="1"/>
+        </foldingParts>
+    </foldable>
+
+    <pickup>
+        <animation name="rotatePickup" lowerSpeed="2" liftSpeed="-1"/>
+    </pickup>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <fillUnit unit="$l10n_unit_literShort" fillTypeCategories="windrow" capacity="4000"/>
+                    <fillUnit unit="$l10n_unit_pieces" fillTypes="baleTwine" capacity="66"/>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <baler fillScale="1" maxPickupLitersPerSecond="400">
+        <baleAnimation node="animRootNode" firstBaleMarker="0.4615" scaleNode="scaleNode" baleNode="baleNode">
+            <key time="0" pos="0 0 0" rot="0 0 0"/>
+            <key time="0.4615" pos="0 0 -2.4" rot="0 0 0"/>
+            <key time="1" pos="0 0 -5.2" rot="0 0 0"/>
+        </baleAnimation>
+        <baleTypes>
+            <baleType isRoundBale="false" width="1.2" height="0.9" length="2.39"/>
+        </baleTypes>
+        <sounds>
+            <work template="BALE_WRAPPING_02"/>
+            <knotCleaning template="BALER_KNOT_CLEANING"/>
+        </sounds>
+        <baleUnloading time="4" allowed="true" foldThreshold="0.1"/>
+        <knotingAnimation name="knotting" speed="1"/>
+        <fillEffect>
+            <effectNode effectClass="MorphPositionEffect" effectNode="puEffect" materialType="pickup" materialTypeId="1" delay="0" fadeTime="0.5" speed="0.9" scrollLength="1.5" scrollSpeed="2"/>
+            <effectNode effectClass="ParticleEffect" effectNode="puEffect_emitter" particleType="PICKUP" emitCountScale="2" worldSpace="false"/>
+            <effectNode effectClass="ParticleEffect" effectNode="puEffect_emitter1" particleType="PICKUP" emitCountScale="2" worldSpace="false"/>
+            <effectNode effectClass="ParticleEffect" effectNode="puEffect_emitter2" particleType="PICKUP" emitCountScale="2" worldSpace="false"/>
+            <effectNode effectClass="ParticleEffect" effectNode="pickUpSmokeEmitter" particleType="SMOKE" emitCountScale="1"/>
+            <effectNode effectClass="ParticleEffect" effectNode="chamberSmokeEmitter" particleType="SMOKE" emitCountScale="1"/>
+        </fillEffect>
+        <animationNodes>
+            <animationNode node="tinesRoller" rotSpeed="-600" rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="5"/>
+            <animationNode node="feedRoller" rotSpeed="600" rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="5"/>
+            <animationNode node="sideAuger" rotSpeed="-1000" rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="5"/>
+            <animationNode node="flyWheel" rotSpeed="-1000" rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="5"/>
+            <animationNode node="gearWheel" rotSpeed="600" rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="5"/>
+            <animationNode node="rotor" rotSpeed="600" rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="5"/>
+            <animationNode node="rotPart" rotSpeed="-600" rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="5"/>
+            <animationNode node="pto1" rotSpeed="1200" rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="5"/>
+            <animationNode node="pto2" rotSpeed="1200" rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="5"/>
+            <animationNode node="pto3" rotSpeed="1200" rotAxis="3" turnOnFadeTime="2" turnOffFadeTime="5"/>
+            <animationNode node="knotterDriveWheel" rotSpeed="300" rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="5"/>
+        </animationNodes>
+    </baler>
+
+    <turnOnVehicle>
+        <turnedOnAnimation name="balingAnimation" turnOnFadeTime="2" turnOffFadeTime="5" speedScale="0.75"/>
+    </turnOnVehicle>
+
+    <refillSuppliesConfigurations>
+        <refillSuppliesConfiguration name="$l10n_configuration_manually" price="0">
+            <refillSupplies coverAnimationName="lowerTwineBox" openCoverText="action_lowerTwineBoxes" closeCoverText="action_liftTwineBoxes" coverWarningText="warning_closeTwineBoxesFirst">
+                <refillSupply fillUnitIndex="2" usageAnimationName="emptyTwineBoxes" usageFactor="16" />
+            </refillSupplies>
+        </refillSuppliesConfiguration>
+        <refillSuppliesConfiguration name="$l10n_configuration_automatically" price="10000">
+            <refillSupplies isActive="false" coverAnimationName="lowerTwineBox" openCoverText="action_lowerTwineBoxes" closeCoverText="action_liftTwineBoxes" coverWarningText="warning_closeTwineBoxesFirst">
+                <refillSupply fillUnitIndex="2"/>
+            </refillSupplies>
+        </refillSuppliesConfiguration>
+    </refillSuppliesConfigurations>
+
+    <baleCollectBaler attacherJointIndex="1" configurationIndex="2">
+        <baleAnimation firstBaleMarker="0.6823">
+            <key time="0" pos="0 0 0" rot="0 0 0"/>
+            <key time="0.6823" pos="0 0 -2.388" rot="0 0 0"/>
+            <key time="0.8" pos="0 0 -2.8" rot="0 0 0"/>
+            <key time="1" pos="0 0.1 -3.5" rot="12 0 0"/>
+        </baleAnimation>
+    </baleCollectBaler>
+
+    <connectionHoses>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn" node="hydraulicIn01" length="1.6" diameter="0.02" straighteningFactor="0.5">
+            <objectChange node="hydraulicIn01Stored" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicOut" node="hydraulicOut01" length="1.6" diameter="0.02" straighteningFactor="0.5">
+            <objectChange node="hydraulicOut01Stored" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn" node="hydraulicIn02" length="1.6" diameter="0.02" straighteningFactor="0.5">
+            <objectChange node="hydraulicIn02Stored" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicOut" node="hydraulicOut02" length="1.6" diameter="0.02" straighteningFactor="0.5">
+            <objectChange node="hydraulicOut02Stored" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn" node="hydraulicIn03" length="1.6" diameter="0.02" straighteningFactor="0.5">
+            <objectChange node="hydraulicIn03Stored" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+
+        <hose inputAttacherJointIndices="1" type="airDoubleRed" node="airIn" length="1.55" diameter="0.025" straighteningFactor="0.5" minCenterPointOffset="-0.1 0 0" maxCenterPointOffset="0 0 0">
+            <objectChange node="airInStored" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="airDoubleYellow" node="airOut" length="1.55" diameter="0.025" straighteningFactor="0.5" minCenterPointOffset="-0.1 0 0" maxCenterPointOffset="0 0 0">
+            <objectChange node="airOutStored" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="electric" node="electric" length="1.7" diameter="0.008" straighteningFactor="0.5">
+            <objectChange node="electricStored" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+    </connectionHoses>
+
+    <animations>
+        <animation name="moveSupport">
+            <part node="supportStamp" startTime="0" duration="0.6" startTrans="-0.141 1.335 3.872" endTrans="-0.141 0.640 3.872"/>
+            <part node="ptoSupport" startTime="0.4" duration="0.2" startRot="0 0 0" endRot="-65 0 0"/>
+        </animation>
+
+        <animation name="rotatePickup">
+            <part node="compJoint" startTime="0" endTime="1" startRot="-37.5 0 0" endRot="0 0 0"/>
+            <part startTime="0" endTime="1" componentJointIndex="1" startRotLimit="0 0 0" endRotLimit="0 0 2"/>
+            <part node="puLiftMech3Part2" startTime="0.1" endTime="0.65" startTrans="0 -0.001 0.05" endTrans="0 -0.001 0.087"/>
+        </animation>
+
+        <animation name="knotting">
+            <part node="swingArm" startTime="0" endTime="0.5" startRot="0 0 0" endRot="-88 0 0"/>
+            <part node="swingArm" startTime="0.5" endTime="1" startRot="-88 0 0" endRot="0 0 0"/>
+
+            <part node="knotters" startTime="0" endTime="0.999" startRot="0 0 0" endRot="359.9 0 0"/>
+            <part node="knotters" startTime="0.999" endTime="1" startRot="359.9 0 0" endRot="0 0 0"/>
+
+            <part node="indicators" startTime="0.4" endTime="0.5" startTrans="0 3.333 0.756" endTrans="0 3.4 0.756"/>
+            <part node="indicators" startTime="0.5" endTime="0.6" startTrans="0 3.4 0.756" endTrans="0 3.333 0.756"/>
+        </animation>
+
+        <animation name="foldBackDoor">
+            <part node="bcVis" startTime="0" endTime="3" startRot="0 0 0" endRot="92.3 0 0"/>
+            <part node="bcHook" startTime="3" endTime="3.1" startRot="0 0 0" endRot="-14.043 0 0"/>
+
+            <!-- chain animation -->
+            <part node="bcChainPart" startTime="0" endTime="0.3" startRot="0 0 0" endRot="10 0 0"/>
+            <part node="bcChainPart" startTime="0.3" endTime="3" startRot="10 0 0" endRot="25 0 0"/>
+            <part node="bcJoints" startTime="0" endTime="0.3" startRot="0 0 0" endRot="-7 0 0"/>
+            <part node="group1" startTime="0" endTime="1" startRot="0 0 0" endRot="-22 0 0"/>
+            <part node="group3" startTime="0.3" endTime="3" startRot="0 0 0" endRot="-42 0 0"/>
+        </animation>
+
+        <animation name="emptyTwineBoxes" direction="-1">
+            <!-- left -->
+            <part node="twineRoleR_Left" startTime="0" endTime="0.9999" visibility="true"/>
+            <part node="twineRoleR_Left" startTime="0.9999" endTime="1.00" visibility="false"/>
+            <part node="twineRolesBackLeft" startTime="0" endTime="0.9999" visibility="true"/>
+            <part node="twineRolesBackLeft" startTime="0.9999" endTime="1.00" visibility="false"/>
+
+            <part node="twineRoleD_Left" startTime="0" endTime="1.9999" visibility="true"/>
+            <part node="twineRoleD_Left" startTime="1.9999" endTime="2.00" visibility="false"/>
+
+            <part node="twineRoleC_Left" startTime="0" endTime="2.9999" visibility="true"/>
+            <part node="twineRoleC_Left" startTime="2.9999" endTime="3.00" visibility="false"/>
+
+            <part node="twineRoleB2_Left" startTime="0" endTime="3.9999" visibility="true"/>
+            <part node="twineRoleB2_Left" startTime="3.9999" endTime="4.00" visibility="false"/>
+
+            <part node="twineRoleA2_Left" startTime="0" endTime="4.9999" visibility="true"/>
+            <part node="twineRoleA2_Left" startTime="4.9999" endTime="5.00" visibility="false"/>
+
+            <part node="twineRoleB1_Left" startTime="0" endTime="5.9999" visibility="true"/>
+            <part node="twineRoleB1_Left" startTime="5.9999" endTime="6.00" visibility="false"/>
+
+            <part node="twineRoleA1_Left" startTime="0" endTime="6.9999" visibility="true"/>
+            <part node="twineRoleA1_Left" startTime="6.9999" endTime="7.00" visibility="false"/>
+
+            <!-- right -->
+            <part node="twineRoleR_Right" startTime="0" endTime="0.9999" visibility="true"/>
+            <part node="twineRoleR_Right" startTime="0.9999" endTime="1.00" visibility="false"/>
+            <part node="twineRolesBackRight" startTime="0" endTime="0.9999" visibility="true"/>
+            <part node="twineRolesBackRight" startTime="0.9999" endTime="1.00" visibility="false"/>
+
+            <part node="twineRoleD_Right" startTime="0" endTime="1.9999" visibility="true"/>
+            <part node="twineRoleD_Right" startTime="1.9999" endTime="2.00" visibility="false"/>
+
+            <part node="twineRoleC_Right" startTime="0" endTime="2.9999" visibility="true"/>
+            <part node="twineRoleC_Right" startTime="2.9999" endTime="3.00" visibility="false"/>
+
+            <part node="twineRoleB2_Right" startTime="0" endTime="3.9999" visibility="true"/>
+            <part node="twineRoleB2_Right" startTime="3.9999" endTime="4.00" visibility="false"/>
+
+            <part node="twineRoleA2_Right" startTime="0" endTime="4.9999" visibility="true"/>
+            <part node="twineRoleA2_Right" startTime="4.9999" endTime="5.00" visibility="false"/>
+
+            <part node="twineRoleB1_Right" startTime="0" endTime="5.9999" visibility="true"/>
+            <part node="twineRoleB1_Right" startTime="5.9999" endTime="6.00" visibility="false"/>
+
+            <part node="twineRoleA1_Right" startTime="0" endTime="6.9999" visibility="true"/>
+            <part node="twineRoleA1_Right" startTime="6.9999" endTime="7.00" visibility="false"/>
+        </animation>
+
+        <animation name="lowerTwineBox">
+            <!-- left twine boxes -->
+            <part node="linkLeft" startTime="0" endTime="4" startRot="0 0 0" endRot="0 0 -80"/>
+            <part node="twineBoxLeft" startTime="0" endTime="4" startRot="0 0 0" endRot="0 0 80"/>
+            <part node="twineBoxCoverLeft" startTime="4" endTime="6" startRot="0 0 0" endRot="0 0 70"/>
+
+            <part node="coverBackLeft" startTime="4" endTime="6" startRot="8 0 0" endRot="8 0 75"/>
+
+            <!-- right twine boxes -->
+            <part node="linkRight" startTime="0" endTime="4" startRot="0 0 0" endRot="0 0 80"/>
+            <part node="twineBoxRight" startTime="0" endTime="4" startRot="0 0 0" endRot="0 0 -80"/>
+            <part node="twineBoxCoverRight" startTime="4" endTime="6" startRot="0 0 0" endRot="0 0 -70"/>
+
+            <part node="coverBackRight" startTime="4" endTime="6" startRot="0 0 0" endRot="0 0 -75"/>
+        </animation>
+
+        <animation name="balingAnimation" looping="true">
+            <part node="pushBackMoveRotation" startTime="0" endTime="0.999" startRot="0 0 0" endRot="359.5 0 0"/>
+            <part node="pushBackMoveRotation" startTime="0.999" endTime="1.000" startRot="359.5 0 0" endRot="0 0 0"/>
+            <part node="pushRotor" startTime="0" endTime="0.999" startRot="0 0 0" endRot="359.5 0 0"/>
+            <part node="pushRotor" startTime="0.999" endTime="1" startRot="359.5 0 0" endRot="0 0 0"/>
+            <part node="avenge" startTime="0.999" endTime="1.000" startRot="359.5 0 0" endRot="0 0 0"/>
+            <part node="avenge" startTime="0" endTime="0.999" startRot="0 0 0" endRot="359.5 0 0"/>
+            <part node="avenge1" startTime="0.999" endTime="1.000" startRot="-359.5 0 0" endRot="0 0 0"/>
+            <part node="avenge1" startTime="0" endTime="0.999" startRot="0 0 0" endRot="-359.5 0 0"/>
+            <part node="avenge2" startTime="0.999" endTime="1.000" startRot="-359.5 0 0" endRot="0 0 0"/>
+            <part node="avenge2" startTime="0" endTime="0.999" startRot="0 0 0" endRot="-359.5 0 0"/>
+            <part node="avenge3" startTime="0.999" endTime="1.000" startRot="-359.5 0 0" endRot="0 0 0"/>
+            <part node="avenge3" startTime="0" endTime="0.999" startRot="0 0 0" endRot="-359.5 0 0"/>
+            <part node="avenge4" startTime="0" endTime="0.999" startRot="0 0 0" endRot="-359.5 0 0"/>
+            <part node="avenge4" startTime="0.999" endTime="1.000" startRot="-359.5 0 0" endRot="0 0 0"/>
+        </animation>
+    </animations>
+
+    <cylindered>
+        <movingTools>
+            <movingTool node="compJoint" playSound="true">
+                <componentJoint index="1"/>
+            </movingTool>
+
+            <movingTool node="bcVis" playSound="true">
+                <dependentPart node="bcCylinder"/>
+            </movingTool>
+
+            <!-- ram animation -->
+            <movingTool node="pushBackMoveRotation">
+                <dependentPart node="pushBackDir"/>
+            </movingTool>
+
+            <!-- knotting animation -->
+            <movingTool node="swingArm">
+                <dependentPart node="swingArmLink"/>
+            </movingTool>
+
+            <movingTool node="linkLeft" playSound="true">
+                <dependentPart node="twineBoxCylinderLeft"/>
+                <dependentPart node="twineBoxCylinder2Left"/>
+            </movingTool>
+
+            <!-- back twine boxes cylinders -->
+            <movingTool node="coverBackLeft">
+                <dependentPart node="cylinderBackLeft"/>
+                <dependentPart node="cylinderBackRight"/>
+            </movingTool>
+
+            <movingTool node="linkRight">
+                <dependentPart node="twineBoxCylinderRight"/>
+                <dependentPart node="twineBoxCylinder2Right"/>
+            </movingTool>
+        </movingTools>
+
+        <movingParts>
+            <!-- ram animation -->
+            <movingPart node="pushBackDir" referencePoint="pushBackRef" referenceFrame="pushBackRot" limitedAxis="2">
+                <translatingPart node="pushBack"/>
+                <dependentPart node="pushBackPunch"/>
+            </movingPart>
+            <movingPart node="pushBackPunch" referencePoint="pushBackPunchRef" referenceFrame="pushBackPunchRef"/>
+
+            <!-- knotting -->
+            <movingPart node="swingArmLink" referencePoint="swingArmLinkRef" referenceFrame="bigPack1290HDPII_main_component1" scaleZ="true" limitedAxis="1"/>
+
+            <!-- pickup -->
+            <movingPart node="pickup_vis" referencePoint="pickup_fixPoint" referenceFrame="pickup_fixPoint" isActiveDirty="true">
+                <dependentPart node="wheelHolderLeft"/>
+                <dependentPart node="wheelHolderRight"/>
+                <dependentPart node="pickUpChains_decal"/>
+                <dependentPart node="puLiftMech1Part1"/>
+                <dependentPart node="puLiftMech2Part1"/>
+                <dependentPart node="puLiftMech3Part1"/>
+                <dependentPart node="puLiftMech3Part2"/>
+                <dependentPart node="puLiftMech3Part3"/>
+            </movingPart>
+            <movingPart node="puLiftMech1Part1" localReferencePoint="puLiftMech1Part2" referencePoint="puLiftMech1Ref" referenceFrame="bigPack1290HDPII_main_component1">
+                <dependentPart node="puLiftMech1Part2"/>
+            </movingPart>
+            <movingPart node="puLiftMech1Part2" referencePoint="puLiftMech1Ref" referenceFrame="bigPack1290HDPII_main_component1"/>
+            <movingPart node="puLiftMech2Part1" referencePoint="puLiftMech2Ref" referenceFrame="bigPack1290HDPII_main_component1">
+                <translatingPart node="puLiftMech2Part2"/>
+            </movingPart>
+            <movingPart node="puLiftMech3Part1" referencePoint="puLiftMech3Ref" referenceFrame="bigPack1290HDPII_main_component1">
+                <dependentPart node="puLiftMech3Part3"/>
+            </movingPart>
+            <movingPart node="puLiftMech3Part3" referencePoint="puLiftMech3Ref" referenceFrame="bigPack1290HDPII_main_component1" scaleZ="true" limitedAxis="1"/>
+
+            <!-- pickup chain -->
+            <movingPart node="pickUpChains_decal" referencePoint="pickupChainsRef" referenceFrame="bigPack1290HDPII_main_component1" scaleZ="true" limitedAxis="1"/>
+
+            <movingPart node="wheelHolderLeft" referenceFrame="puWheelLoaderLeft" limitedAxis="2"/>
+            <movingPart node="wheelHolderRight" referenceFrame="puWheelLoaderRight" limitedAxis="2"/>
+
+            <movingPart node="bcCylinder" referencePoint="bcCylinderRef" referenceFrame="bigPack1290HDPII_main_component1">
+                <translatingPart node="bcStamp"/>
+            </movingPart>
+
+            <!-- left twine box -->
+            <movingPart node="twineBoxCylinderLeft" referencePoint="twineBoxCylinderLeftRef" referenceFrame="bigPack1290HDPII_main_component1">
+                <translatingPart node="twineBoxStampLeft"/>
+            </movingPart>
+            <movingPart node="twineBoxCylinder2Left" referencePoint="twineBoxCylinder2LeftRef" referenceFrame="twineBoxCylinder2LeftRef"/>
+
+            <!-- small twine box cylinders -->
+            <movingPart node="cylinderBackLeft" referencePoint="cylinderBackLeftRef" referenceFrame="cylinderBackLeftRef">
+                <translatingPart node="stampBackLeft"/>
+            </movingPart>
+            <movingPart node="cylinderBackRight" referencePoint="cylinderBackRightRef" referenceFrame="cylinderBackRightRef">
+                <translatingPart node="stampBackRight"/>
+            </movingPart>
+
+            <!-- right twine box -->
+            <movingPart node="twineBoxCylinderRight" referencePoint="twineBoxCylinderRightRef" referenceFrame="bigPack1290HDPII_main_component1">
+                <translatingPart node="twineBoxStampRight"/>
+            </movingPart>
+            <movingPart node="twineBoxCylinder2Right" referencePoint="twineBoxCylinder2RighttRef" referenceFrame="twineBoxCylinder2RighttRef"/>
+
+            <!-- back axle gear left -->
+            <movingPart node="wheelBackLeftRot" referenceFrame="backLeftRepr" isActiveDirty="true">
+                <dependentPart node="steeringCylinderLeft1"/>
+                <dependentPart node="steeringRod"/>
+            </movingPart>
+            <movingPart node="steeringCylinderLeft1" referencePoint="steeringCylinderLeftRef" referenceFrame="bigPack1290HDPII_main_component1">
+                <translatingPart node="steeringCylinderStampLeft"/>
+            </movingPart>
+
+            <!-- back axle gear right -->
+            <movingPart node="wheelBackRightRot" referenceFrame="backRightRepr" isActiveDirty="true">
+                <dependentPart node="steeringCylinderRight1"/>
+                <dependentPart node="steeringRod"/>
+            </movingPart>
+            <movingPart node="steeringCylinderRight1" referencePoint="steeringCylinderRightRef" referenceFrame="bigPack1290HDPII_main_component1">
+                <translatingPart node="steeringCylinderStampRight"/>
+            </movingPart>
+
+            <!-- steering rod -->
+            <movingPart node="steeringRod" referencePoint="steeringRodRef" referenceFrame="bigPack1290HDPII_main_component1"/>
+        </movingParts>
+        <sounds>
+            <hydraulic template="DEFAULT_HYDRAULIC_SOUND" linkNode="bigPack1290HDPII_main_component1"/>
+        </sounds>
+    </cylindered>
+
+    <foliageBending>
+        <bendingNode minX="-1.5" maxX="1.5" minZ="-2.0" maxZ="3.0 " yOffset="0.6"/>
+    </foliageBending>
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="4" fieldMultiplier="2"/>
+
+    <tipOccluder>
+        <occlusionArea start="tipAreaStart" width="tipAreaWidth" height="tipAreaHeight"/>
+    </tipOccluder>
+
+    <i3dMappings>
+        <i3dMapping id="bigPack1290HDPII_main_component1" node="0>" />
+        <i3dMapping id="wheels" node="0>0" />
+        <i3dMapping id="frontLeft" node="0>0|0" />
+        <i3dMapping id="backLeftRepr" node="0>0|1" />
+        <i3dMapping id="backLeftWheel" node="0>0|1|0" />
+        <i3dMapping id="frontRight" node="0>0|2" />
+        <i3dMapping id="backRightRepr" node="0>0|3" />
+        <i3dMapping id="backRightWheel" node="0>0|3|0" />
+        <i3dMapping id="attacherJoint" node="0>1|0" />
+        <i3dMapping id="supportStamp" node="0>1|1" />
+        <i3dMapping id="supportCol" node="0>1|1|0" />
+        <i3dMapping id="connectionHoses" node="0>1|2" />
+        <i3dMapping id="hydraulicIn01" node="0>1|2|0|0" />
+        <i3dMapping id="hydraulicIn02" node="0>1|2|0|1" />
+        <i3dMapping id="hydraulicIn03" node="0>1|2|0|2" />
+        <i3dMapping id="hydraulicOut02" node="0>1|2|0|3" />
+        <i3dMapping id="hydraulicOut01" node="0>1|2|0|4" />
+        <i3dMapping id="airIn" node="0>1|2|0|5" />
+        <i3dMapping id="airOut" node="0>1|2|0|6" />
+        <i3dMapping id="electric" node="0>1|2|0|7" />
+        <i3dMapping id="hydraulicIn03Stored" node="0>1|2|1|0" />
+        <i3dMapping id="hydraulicConnector26" node="0>1|2|1|0|0" />
+        <i3dMapping id="hydraulicOut01Stored" node="0>1|2|1|1" />
+        <i3dMapping id="hydraulicConnector17" node="0>1|2|1|1|0" />
+        <i3dMapping id="electricStored" node="0>1|2|1|2" />
+        <i3dMapping id="hydraulicConnector25" node="0>1|2|1|2|0" />
+        <i3dMapping id="hydraulicIn02Stored" node="0>1|2|1|3" />
+        <i3dMapping id="hydraulicConnector19" node="0>1|2|1|3|0" />
+        <i3dMapping id="hydraulicIn01Stored" node="0>1|2|1|4" />
+        <i3dMapping id="hydraulicConnector20" node="0>1|2|1|4|0" />
+        <i3dMapping id="hydraulicOut02Stored" node="0>1|2|1|5" />
+        <i3dMapping id="hydraulicConnector18" node="0>1|2|1|5|0" />
+        <i3dMapping id="airInStored" node="0>1|2|1|6" />
+        <i3dMapping id="hydraulicConnector22" node="0>1|2|1|6|0" />
+        <i3dMapping id="airOutStored" node="0>1|2|1|7" />
+        <i3dMapping id="hydraulicConnector23" node="0>1|2|1|7|0" />
+        <i3dMapping id="ptoDetachNode" node="0>1|3|0" />
+        <i3dMapping id="ptoLocalEnd1" node="0>1|3|1" />
+        <i3dMapping id="ptoLocalStart1" node="0>1|3|2" />
+        <i3dMapping id="ptoSupport" node="0>1|3|3" />
+        <i3dMapping id="ptoInputNode" node="0>1|3|4" />
+        <i3dMapping id="lights" node="0>2" />
+        <i3dMapping id="beaconLight" node="0>2|0" />
+        <i3dMapping id="workLights" node="0>2|1" />
+        <i3dMapping id="sideMarkerLeft1" node="0>2|2" />
+        <i3dMapping id="sideMarkerRight1" node="0>2|3" />
+        <i3dMapping id="sideMarkerRound01" node="0>2|4" />
+        <i3dMapping id="sideMarkerRound02" node="0>2|5" />
+        <i3dMapping id="workLightBackHigh1" node="0>2|6" />
+        <i3dMapping id="workLightBackHigh2" node="0>2|7" />
+        <i3dMapping id="workLight01" node="0>2|8" />
+        <i3dMapping id="workLight02" node="0>2|9" />
+        <i3dMapping id="pickup" node="0>3|0" />
+        <i3dMapping id="compJoint" node="0>3|0|0" />
+        <i3dMapping id="pickup_vis" node="0>3|0|1" />
+        <i3dMapping id="wheelHolderLeft" node="0>3|0|1|0" />
+        <i3dMapping id="PULeft" node="0>3|0|1|0|0" />
+        <i3dMapping id="wheelHolderRight" node="0>3|0|1|1" />
+        <i3dMapping id="PURight" node="0>3|0|1|1|0" />
+        <i3dMapping id="feedRollerFrame" node="0>3|0|1|2" />
+        <i3dMapping id="feedRollerRot" node="0>3|0|1|2|0" />
+        <i3dMapping id="groundReferenceNode" node="0>3|0|1|3" />
+        <i3dMapping id="rotatingParts" node="0>3|0|1|4" />
+        <i3dMapping id="tinesRoller" node="0>3|0|1|4|0" />
+        <i3dMapping id="feedRoller" node="0>3|0|1|4|1" />
+        <i3dMapping id="sideAuger" node="0>3|0|1|4|2" />
+        <i3dMapping id="puEffect_emitter" node="0>3|0|1|5" />
+        <i3dMapping id="puEffect_emitter1" node="0>3|0|1|6" />
+        <i3dMapping id="puEffect_emitter2" node="0>3|0|1|7" />
+        <i3dMapping id="pickupChainsRef" node="0>3|0|1|8" />
+        <i3dMapping id="pu_effect_joint" node="0>3|0|1|9" />
+        <i3dMapping id="pickUp_vis_mat2" node="0>3|0|1|10" />
+        <i3dMapping id="pickUp_vis_mat2_alpha" node="0>3|0|1|11" />
+        <i3dMapping id="floorPanel" node="0>3|0|1|12" />
+        <i3dMapping id="decals1" node="0>3|0|1|13" />
+        <i3dMapping id="pickup_visPart" node="0>3|0|1|14" />
+        <i3dMapping id="puLiftMech1Ref" node="0>3|0|1|15" />
+        <i3dMapping id="puLiftMech2Ref" node="0>3|0|1|16" />
+        <i3dMapping id="puLiftMech3Ref" node="0>3|0|1|17" />
+        <i3dMapping id="hydraulicConnector2" node="0>3|0|1|17|0" />
+        <i3dMapping id="puLiftMech3RefSpring" node="0>3|0|1|18" />
+        <i3dMapping id="puEffect" node="0>3|0|2" />
+        <i3dMapping id="puEffectJoint" node="0>3|0|2|0" />
+        <i3dMapping id="puLiftMainFrame" node="0>3|0|3" />
+        <i3dMapping id="puLiftMech1Part1" node="0>3|0|3|0" />
+        <i3dMapping id="puLiftMech1Part2" node="0>3|0|3|0|0" />
+        <i3dMapping id="puLiftMech2Part1" node="0>3|0|3|1" />
+        <i3dMapping id="puLiftMech2Part2" node="0>3|0|3|1|0" />
+        <i3dMapping id="puLiftMech2Part2Part" node="0>3|0|3|1|0|0" />
+        <i3dMapping id="puLiftMech3Part1" node="0>3|0|3|2" />
+        <i3dMapping id="puLiftMech3Part2" node="0>3|0|3|2|0" />
+        <i3dMapping id="puLiftMech3Part3" node="0>3|0|3|2|0|0" />
+        <i3dMapping id="pickUpChains_decal" node="0>3|0|4" />
+        <i3dMapping id="pickUpSmokeEmitter" node="0>3|0|5" />
+        <i3dMapping id="workAreas" node="0>4" />
+        <i3dMapping id="workAreaStart" node="0>4|0" />
+        <i3dMapping id="workAreaWidth" node="0>4|1" />
+        <i3dMapping id="workAreaHeight" node="0>4|2" />
+        <i3dMapping id="configuration" node="0>5" />
+        <i3dMapping id="config_baleCollect" node="0>5|0" />
+        <i3dMapping id="attacherJointBack" node="0>5|0|0" />
+        <i3dMapping id="baleCollect_vis_mat1" node="0>5|0|1" />
+        <i3dMapping id="baleCollect_vis_mat2" node="0>5|0|2" />
+        <i3dMapping id="sideMarkerRight2" node="0>5|0|3|0" />
+        <i3dMapping id="sideMarkerLeft2" node="0>5|0|3|1" />
+        <i3dMapping id="redTriangle02" node="0>5|0|3|2" />
+        <i3dMapping id="redTriangle01" node="0>5|0|3|3" />
+        <i3dMapping id="rearLightLeft01" node="0>5|0|3|4" />
+        <i3dMapping id="rearLightRight01" node="0>5|0|3|5" />
+        <i3dMapping id="backLightsHigh01" node="0>5|0|3|6" />
+        <i3dMapping id="backLightsHigh02" node="0>5|0|3|6|0" />
+        <i3dMapping id="turnLightRight02" node="0>5|0|3|7" />
+        <i3dMapping id="turnLightLeft02" node="0>5|0|3|8" />
+        <i3dMapping id="config_baleChute" node="0>5|1" />
+        <i3dMapping id="lights_functionality" node="0>5|1|0" />
+        <i3dMapping id="baleChute_vis_mat1" node="0>5|1|1" />
+        <i3dMapping id="baleChute_vis_mat2" node="0>5|1|2" />
+        <i3dMapping id="baleChuteChain_decal" node="0>5|1|3" />
+        <i3dMapping id="sideMarkerRight3" node="0>5|1|4|0" />
+        <i3dMapping id="sideMarkerLeft3" node="0>5|1|4|1" />
+        <i3dMapping id="redTriangle04" node="0>5|1|4|2" />
+        <i3dMapping id="redTriangle03" node="0>5|1|4|3" />
+        <i3dMapping id="rearLightLeft02" node="0>5|1|4|4" />
+        <i3dMapping id="rearLightRight02" node="0>5|1|4|5" />
+        <i3dMapping id="backLightsHigh03" node="0>5|1|4|6" />
+        <i3dMapping id="backLightsHigh04" node="0>5|1|4|6|0" />
+        <i3dMapping id="turnLightRight01" node="0>5|1|4|7" />
+        <i3dMapping id="turnLightLeft01" node="0>5|1|4|8" />
+        <i3dMapping id="baleChute" node="0>5|2" />
+        <i3dMapping id="bcVis" node="0>5|2|0" />
+        <i3dMapping id="bcCollision" node="0>5|2|0|0" />
+        <i3dMapping id="decals2" node="0>5|2|0|1" />
+        <i3dMapping id="bcChainPart" node="0>5|2|0|2" />
+        <i3dMapping id="bcScrews2" node="0>5|2|0|2|0" />
+        <i3dMapping id="bcChainJoint4" node="0>5|2|0|2|1" />
+        <i3dMapping id="bcCylinderRef" node="0>5|2|0|3" />
+        <i3dMapping id="sideMarkerRound03" node="0>5|2|0|4|0" />
+        <i3dMapping id="sideMarkerRound04" node="0>5|2|0|4|1" />
+        <i3dMapping id="backMarkerRound01" node="0>5|2|0|4|2" />
+        <i3dMapping id="backMarkerRound02" node="0>5|2|0|4|3" />
+        <i3dMapping id="bcHook" node="0>5|2|1" />
+        <i3dMapping id="bcCylinder" node="0>5|2|2" />
+        <i3dMapping id="bcStamp" node="0>5|2|2|0" />
+        <i3dMapping id="bcJoints" node="0>5|2|3" />
+        <i3dMapping id="group1" node="0>5|2|3|0" />
+        <i3dMapping id="bcChainJoint1" node="0>5|2|3|0|0" />
+        <i3dMapping id="group2" node="0>5|2|3|1" />
+        <i3dMapping id="bcChainJoint2" node="0>5|2|3|1|0" />
+        <i3dMapping id="group3" node="0>5|2|3|1|1" />
+        <i3dMapping id="bcChainJoint3" node="0>5|2|3|1|1|0" />
+        <i3dMapping id="visuals" node="0>6" />
+        <i3dMapping id="main_vis1_mg1_root" node="0>6|0" />
+        <i3dMapping id="steeringCylinderLeft1" node="0>6|0|0" />
+        <i3dMapping id="steeringCylinderLeft2" node="0>6|0|0|0" />
+        <i3dMapping id="steeringCylinderStampLeft" node="0>6|0|0|1" />
+        <i3dMapping id="steeringCylinderRight1" node="0>6|0|1" />
+        <i3dMapping id="steeringCylinderRight2" node="0>6|0|1|0" />
+        <i3dMapping id="steeringCylinderStampRight" node="0>6|0|1|1" />
+        <i3dMapping id="main_vis2_mg2_root" node="0>6|1" />
+        <i3dMapping id="rotationParts" node="0>6|2" />
+        <i3dMapping id="avenge" node="0>6|2|0" />
+        <i3dMapping id="avenge4" node="0>6|2|0|0" />
+        <i3dMapping id="avenge3" node="0>6|2|0|1" />
+        <i3dMapping id="avenge2" node="0>6|2|0|2" />
+        <i3dMapping id="avenge1" node="0>6|2|0|3" />
+        <i3dMapping id="flyWheelRot" node="0>6|2|1" />
+        <i3dMapping id="flyWheel" node="0>6|2|1|0" />
+        <i3dMapping id="gearWheel" node="0>6|2|2" />
+        <i3dMapping id="rotor" node="0>6|2|3" />
+        <i3dMapping id="tailWheel" node="0>6|2|4" />
+        <i3dMapping id="rotPart" node="0>6|2|5" />
+        <i3dMapping id="knotterDriveWheel" node="0>6|2|6" />
+        <i3dMapping id="ptoSide" node="0>6|2|7" />
+        <i3dMapping id="pto1Rot" node="0>6|2|7|0" />
+        <i3dMapping id="pto1" node="0>6|2|7|0|0" />
+        <i3dMapping id="pto2Rot" node="0>6|2|7|1" />
+        <i3dMapping id="pto2" node="0>6|2|7|1|0" />
+        <i3dMapping id="pto3Rot" node="0>6|2|7|2" />
+        <i3dMapping id="pto3" node="0>6|2|7|2|0" />
+        <i3dMapping id="wheelBackRightRot" node="0>6|3|0" />
+        <i3dMapping id="wheelBackDrumRight" node="0>6|3|0|0" />
+        <i3dMapping id="wheelBackBrake1Right" node="0>6|3|0|0|0" />
+        <i3dMapping id="steeringCylinderRightRef" node="0>6|3|0|0|1" />
+        <i3dMapping id="wheelBackBrake2Right" node="0>6|3|0|0|2" />
+        <i3dMapping id="wheelBackBrake3Right" node="0>6|3|0|0|2|0" />
+        <i3dMapping id="steeringRod" node="0>6|3|0|0|3" />
+        <i3dMapping id="wheelBackLeftRot" node="0>6|3|1" />
+        <i3dMapping id="wheelBackDrumLeft" node="0>6|3|1|0" />
+        <i3dMapping id="wheelBackBrake1Left1" node="0>6|3|1|0|0" />
+        <i3dMapping id="steeringCylinderLeftRef" node="0>6|3|1|0|1" />
+        <i3dMapping id="wheelBackBrake2Left" node="0>6|3|1|0|2" />
+        <i3dMapping id="wheelBackBrake3Left" node="0>6|3|1|0|2|0" />
+        <i3dMapping id="steeringRodRef" node="0>6|3|1|0|3" />
+        <i3dMapping id="brakeGear" node="0>6|3|2" />
+        <i3dMapping id="brakePully1" node="0>6|3|2|0" />
+        <i3dMapping id="brakePully2" node="0>6|3|2|1" />
+        <i3dMapping id="brakeGear1" node="0>6|3|2|2" />
+        <i3dMapping id="brakeGear2" node="0>6|3|2|3" />
+        <i3dMapping id="brakeGear3" node="0>6|3|2|4" />
+        <i3dMapping id="brakeGear4" node="0>6|3|2|5" />
+        <i3dMapping id="brakeCable1" node="0>6|3|2|6" />
+        <i3dMapping id="brakeCable2" node="0>6|3|2|7" />
+        <i3dMapping id="brakeCable3" node="0>6|3|2|8" />
+        <i3dMapping id="baleAnimation" node="0>6|4|0" />
+        <i3dMapping id="scaleNode" node="0>6|4|0|0" />
+        <i3dMapping id="baleNode" node="0>6|4|0|0|0" />
+        <i3dMapping id="animRootNode" node="0>6|4|0|1" />
+        <i3dMapping id="knotting" node="0>6|4|1" />
+        <i3dMapping id="swingArm" node="0>6|4|1|0" />
+        <i3dMapping id="swingArmLinkRef" node="0>6|4|1|0|0" />
+        <i3dMapping id="swingArmPart" node="0>6|4|1|0|1" />
+        <i3dMapping id="indicators" node="0>6|4|1|1" />
+        <i3dMapping id="sideMarkerRound05" node="0>6|4|1|1|0" />
+        <i3dMapping id="sideMarkerRound06" node="0>6|4|1|1|1" />
+        <i3dMapping id="sideMarkerRound07" node="0>6|4|1|1|2" />
+        <i3dMapping id="sideMarkerRound08" node="0>6|4|1|1|3" />
+        <i3dMapping id="sideMarkerRound09" node="0>6|4|1|1|4" />
+        <i3dMapping id="sideMarkerRound10" node="0>6|4|1|1|5" />
+        <i3dMapping id="sideMarkerRound11" node="0>6|4|1|1|6" />
+        <i3dMapping id="sideMarkerRound12" node="0>6|4|1|1|7" />
+        <i3dMapping id="knotters" node="0>6|4|1|2" />
+        <i3dMapping id="swingArmLink" node="0>6|4|1|2|0" />
+        <i3dMapping id="knottersPart2" node="0>6|4|1|2|1" />
+        <i3dMapping id="baleRamAnimation" node="0>6|4|2" />
+        <i3dMapping id="pushBackRot" node="0>6|4|2|0" />
+        <i3dMapping id="pushBackMoveRotation" node="0>6|4|2|0|0" />
+        <i3dMapping id="pushBackRef" node="0>6|4|2|0|0|0" />
+        <i3dMapping id="pushBackDir" node="0>6|4|2|0|1" />
+        <i3dMapping id="pushBack" node="0>6|4|2|0|1|0" />
+        <i3dMapping id="ramVis2" node="0>6|4|2|0|1|0|0" />
+        <i3dMapping id="pushBackPunchRef" node="0>6|4|2|0|1|0|1" />
+        <i3dMapping id="pushRotor" node="0>6|4|2|1" />
+        <i3dMapping id="ramGear2" node="0>6|4|2|1|0" />
+        <i3dMapping id="pushBackPunch" node="0>6|4|2|1|1" />
+        <i3dMapping id="ramRod2" node="0>6|4|2|1|1|0" />
+        <i3dMapping id="chamberSmokeEmitter" node="0>6|4|3" />
+        <i3dMapping id="twineBoxLeftGroup" node="0>6|5|0" />
+        <i3dMapping id="linkLeft" node="0>6|5|0|0" />
+        <i3dMapping id="twineBoxLeft" node="0>6|5|0|0|0" />
+        <i3dMapping id="twineBoxCoverLeft" node="0>6|5|0|0|0|0" />
+        <i3dMapping id="decals5" node="0>6|5|0|0|0|0|0" />
+        <i3dMapping id="sideMarkerRound13" node="0>6|5|0|0|0|0|1" />
+        <i3dMapping id="twineBoxCylinder2LeftRef" node="0>6|5|0|0|0|1" />
+        <i3dMapping id="twineBoxLeftPart" node="0>6|5|0|0|0|2" />
+        <i3dMapping id="twineRoleA1_Left" node="0>6|5|0|0|0|2|0" />
+        <i3dMapping id="twineRoleB1_Left" node="0>6|5|0|0|0|2|1" />
+        <i3dMapping id="twineRoleA2_Left" node="0>6|5|0|0|0|2|2" />
+        <i3dMapping id="twineRoleB2_Left" node="0>6|5|0|0|0|2|3" />
+        <i3dMapping id="twineRoleC_Left" node="0>6|5|0|0|0|2|4" />
+        <i3dMapping id="twineRoleD_Left" node="0>6|5|0|0|0|2|5" />
+        <i3dMapping id="twineRoleR_Left" node="0>6|5|0|0|0|2|6" />
+        <i3dMapping id="wheelChockAttached02" node="0>6|5|0|0|0|2|7" />
+        <i3dMapping id="collisionLeft" node="0>6|5|0|0|0|3" />
+        <i3dMapping id="decals6" node="0>6|5|0|0|0|4" />
+        <i3dMapping id="twineBoxCylinderLeftRef" node="0>6|5|0|0|1" />
+        <i3dMapping id="twineBoxLeftMat2" node="0>6|5|0|0|2" />
+        <i3dMapping id="twineBoxCylinderLeft" node="0>6|5|0|1" />
+        <i3dMapping id="twineBoxStampLeft" node="0>6|5|0|1|0" />
+        <i3dMapping id="twineBoxCylinder2Left" node="0>6|5|0|2" />
+        <i3dMapping id="twineBoxBackLeft" node="0>6|5|0|3" />
+        <i3dMapping id="coverBackLeftRot" node="0>6|5|0|3|0" />
+        <i3dMapping id="coverBackLeft" node="0>6|5|0|3|0|0" />
+        <i3dMapping id="plasticBackLeft" node="0>6|5|0|3|0|0|0" />
+        <i3dMapping id="decals7" node="0>6|5|0|3|0|0|0|0" />
+        <i3dMapping id="cylinderBackLeft" node="0>6|5|0|3|0|0|1" />
+        <i3dMapping id="stampBackLeft" node="0>6|5|0|3|0|0|1|0" />
+        <i3dMapping id="cylinderBackLeftRef" node="0>6|5|0|3|1" />
+        <i3dMapping id="twineRolesBackLeft" node="0>6|5|0|3|2" />
+        <i3dMapping id="twineBoxBackLeftHook" node="0>6|5|0|3|3" />
+        <i3dMapping id="twineBoxRightGroup" node="0>6|5|1" />
+        <i3dMapping id="linkRight" node="0>6|5|1|0" />
+        <i3dMapping id="twineBoxRight" node="0>6|5|1|0|0" />
+        <i3dMapping id="twineBoxCoverRight" node="0>6|5|1|0|0|0" />
+        <i3dMapping id="decals8" node="0>6|5|1|0|0|0|0" />
+        <i3dMapping id="sideMarkerRound14" node="0>6|5|1|0|0|0|1" />
+        <i3dMapping id="twineBoxCylinder2RighttRef" node="0>6|5|1|0|0|1" />
+        <i3dMapping id="twineBoxRightPart" node="0>6|5|1|0|0|2" />
+        <i3dMapping id="twineRoleR_Right" node="0>6|5|1|0|0|2|0" />
+        <i3dMapping id="twineRoleD_Right" node="0>6|5|1|0|0|2|1" />
+        <i3dMapping id="twineRoleC_Right" node="0>6|5|1|0|0|2|2" />
+        <i3dMapping id="twineRoleB2_Right" node="0>6|5|1|0|0|2|3" />
+        <i3dMapping id="twineRoleA2_Right" node="0>6|5|1|0|0|2|4" />
+        <i3dMapping id="twineRoleB1_Right" node="0>6|5|1|0|0|2|5" />
+        <i3dMapping id="twineRoleA1_Right" node="0>6|5|1|0|0|2|6" />
+        <i3dMapping id="wheelChockAttached01" node="0>6|5|1|0|0|2|7" />
+        <i3dMapping id="collisionRight" node="0>6|5|1|0|0|3" />
+        <i3dMapping id="decals9" node="0>6|5|1|0|0|4" />
+        <i3dMapping id="twineBoxCylinderRightRef" node="0>6|5|1|0|1" />
+        <i3dMapping id="linkRightMat2" node="0>6|5|1|0|2" />
+        <i3dMapping id="twineBoxCylinderRight" node="0>6|5|1|1" />
+        <i3dMapping id="twineBoxStampRight" node="0>6|5|1|1|0" />
+        <i3dMapping id="twineBoxBackRight" node="0>6|5|1|2" />
+        <i3dMapping id="twineBoxBackRightRot" node="0>6|5|1|2|0" />
+        <i3dMapping id="coverBackRight" node="0>6|5|1|2|0|0" />
+        <i3dMapping id="plasticBackRight" node="0>6|5|1|2|0|0|0" />
+        <i3dMapping id="decals10" node="0>6|5|1|2|0|0|0|0" />
+        <i3dMapping id="cylinderBackRight" node="0>6|5|1|2|0|0|1" />
+        <i3dMapping id="stampBackRight" node="0>6|5|1|2|0|0|1|0" />
+        <i3dMapping id="cylinderBackRightRef" node="0>6|5|1|2|1" />
+        <i3dMapping id="twineRolesBackRight" node="0>6|5|1|2|2" />
+        <i3dMapping id="twineBoxLeftBackHook" node="0>6|5|1|2|3" />
+        <i3dMapping id="twineBoxCylinder2Right" node="0>6|5|1|3" />
+        <i3dMapping id="fireextinguischer" node="0>6|6" />
+        <i3dMapping id="decals11" node="0>6|7" />
+        <i3dMapping id="glass" node="0>6|8" />
+        <i3dMapping id="collisions" node="0>7" />
+        <i3dMapping id="pCube4" node="0>7|0" />
+        <i3dMapping id="pCube2" node="0>7|1" />
+        <i3dMapping id="tipOcclusionAreas" node="0>8" />
+        <i3dMapping id="tipAreaStart" node="0>8|0" />
+        <i3dMapping id="tipAreaWidth" node="0>8|1" />
+        <i3dMapping id="tipAreaHeight" node="0>8|2" />
+        <i3dMapping id="bigPack1290HDPII_pickup_component2" node="1>" />
+        <i3dMapping id="puWheelLoaderLeft" node="1>0" />
+        <i3dMapping id="puWheelLeft" node="1>0|0" />
+        <i3dMapping id="puWheelLoaderRight" node="1>1" />
+        <i3dMapping id="puWheelRight" node="1>1|0" />
+        <i3dMapping id="pickup_fixPoint" node="1>2" />
+        <i3dMapping id="boundingVolume1" node="2>" />
+        <i3dMapping id="boundingVolume2" node="3>" />
+        <i3dMapping id="boundingVolume3" node="4>" />
+    </i3dMappings>
+</vehicle>

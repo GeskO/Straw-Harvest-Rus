@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="pallet">
+    <storeData>
+        <name>$l10n_netRolePallet</name>
+        <functions>
+            <function>$l10n_function_netRolePallet</function>
+        </functions>
+        <specs>
+            <capacity>15</capacity>
+            <fillTypes>baleNet</fillTypes>
+        </specs>
+        <image>objects/pallets/krone/netPallets/store_netRolePallet.png</image>
+        <price>100</price>
+        <allowLeasing>false</allowLeasing>
+        <category>pallets</category>
+        <showInStore>true</showInStore>
+        <canBeSold>false</canBeSold>
+        <rotation>0</rotation>
+        <brand>KRONE</brand>
+        <financeCategory>OTHER</financeCategory>
+    </storeData>
+
+    <base>
+        <filename>objects/pallets/krone/netPallets/netRolePallet.i3d</filename>
+        <size width="2" length="1.5" lengthOffset="0"/>
+        <input allowed="false"/>
+        <components>
+            <component centerOfMass="0 0.1 0" solverIterationCount="10" mass="200"/>
+        </components>
+    </base>
+
+    <animations>
+        <animation name="netRoleAnimation">
+            <part node="netRole01" startTime="0.000" endTime="0.001" visibility="false"/>
+            <part node="netRole01" startTime="0.001" endTime="1.000" visibility="true"/>
+
+            <part node="netRole02" startTime="0.000" endTime="0.072" visibility="false"/>
+            <part node="netRole02" startTime="0.072" endTime="1.000" visibility="true"/>
+
+            <part node="netRole03" startTime="0.000" endTime="0.143" visibility="false"/>
+            <part node="netRole03" startTime="0.143" endTime="1.000" visibility="true"/>
+
+            <part node="netRole04" startTime="0.000" endTime="0.214" visibility="false"/>
+            <part node="netRole04" startTime="0.214" endTime="1.000" visibility="true"/>
+
+            <part node="netRole05" startTime="0.000" endTime="0.285" visibility="false"/>
+            <part node="netRole05" startTime="0.285" endTime="1.000" visibility="true"/>
+
+            <part node="netRole06" startTime="0.000" endTime="0.356" visibility="false"/>
+            <part node="netRole06" startTime="0.356" endTime="1.000" visibility="true"/>
+
+            <part node="netRole07" startTime="0.000" endTime="0.427" visibility="false"/>
+            <part node="netRole07" startTime="0.427" endTime="1.000" visibility="true"/>
+
+            <part node="netRole08" startTime="0.000" endTime="0.498" visibility="false"/>
+            <part node="netRole08" startTime="0.498" endTime="1.000" visibility="true"/>
+
+            <part node="netRole09" startTime="0.000" endTime="0.569" visibility="false"/>
+            <part node="netRole09" startTime="0.569" endTime="1.000" visibility="true"/>
+
+            <part node="netRole10" startTime="0.000" endTime="0.640" visibility="false"/>
+            <part node="netRole10" startTime="0.640" endTime="1.000" visibility="true"/>
+
+            <part node="netRole11" startTime="0.000" endTime="0.711" visibility="false"/>
+            <part node="netRole11" startTime="0.711" endTime="1.000" visibility="true"/>
+
+            <part node="netRole12" startTime="0.000" endTime="0.782" visibility="false"/>
+            <part node="netRole12" startTime="0.782" endTime="1.000" visibility="true"/>
+
+            <part node="netRole13" startTime="0.000" endTime="0.853" visibility="false"/>
+            <part node="netRole13" startTime="0.853" endTime="1.000" visibility="true"/>
+
+            <part node="netRole14" startTime="0.000" endTime="0.924" visibility="false"/>
+            <part node="netRole14" startTime="0.924" endTime="1.000" visibility="true"/>
+
+            <part node="netRole15" startTime="0.000" endTime="0.995" visibility="false"/>
+            <part node="netRole15" startTime="0.995" endTime="1.000" visibility="true"/>
+        </animation>
+    </animations>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration name="$l10n_configuration_capacityX" price="1800" params="15">
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unit="$l10n_unit_pieces" fillTypes="baleNet" startFillType="baleNet" capacity="15" startFillLevel="15">
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="netRoleAnimation"/>
+                    </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration name="$l10n_configuration_capacityX" price="1440" params="12">
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unit="$l10n_unit_pieces" fillTypes="baleNet" startFillType="baleNet" capacity="15" startFillLevel="12">
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="netRoleAnimation"/>
+                    </fillUnit>
+                </fillUnits>
+                <objectChange node="netRoleConfig12" visibilityActive="false" visibilityInactive="true"/>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration name="$l10n_configuration_capacityX" price="1080" params="9">
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unit="$l10n_unit_pieces" fillTypes="baleNet" startFillType="baleNet" capacity="15" startFillLevel="9">
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="netRoleAnimation"/>
+                    </fillUnit>
+                </fillUnits>
+                <objectChange node="netRoleConfig09" visibilityActive="false" visibilityInactive="true"/>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration name="$l10n_configuration_capacityX" price="720" params="6">
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unit="$l10n_unit_pieces" fillTypes="baleNet" startFillType="baleNet" capacity="15" startFillLevel="6">
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="netRoleAnimation"/>
+                    </fillUnit>
+                </fillUnits>
+                <objectChange node="netRoleConfig06" visibilityActive="false" visibilityInactive="true"/>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration name="$l10n_configuration_capacityX" price="360" params="3">
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unit="$l10n_unit_pieces" fillTypes="baleNet" startFillType="baleNet" capacity="15" startFillLevel="3">
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="netRoleAnimation"/>
+                    </fillUnit>
+                </fillUnits>
+                <objectChange node="netRoleConfig03" visibilityActive="false" visibilityInactive="true"/>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <fillTriggerVehicle triggerNode="fillTrigger" fillUnitIndex="1" litersPerSecond="1"/>
+
+    <dischargeable requiresTipOcclusionArea="false"/>
+
+    <dynamicMount triggerNode="dynamicMountTrigger"/>
+
+    <tensionBeltObject>
+        <meshNodes>
+            <meshNode node="palletBase"/>
+            <meshNode node="netRolePallet_main_component1"/>
+        </meshNodes>
+    </tensionBeltObject>
+
+    <i3dMappings>
+        <i3dMapping id="netRolePallet_main_component1" node="0>" />
+        <i3dMapping id="triggers" node="0>0" />
+        <i3dMapping id="dynamicMountTrigger" node="0>0|0" />
+        <i3dMapping id="fillTrigger" node="0>0|1" />
+        <i3dMapping id="collisions" node="0>1" />
+        <i3dMapping id="collision1" node="0>1|0" />
+        <i3dMapping id="collision2" node="0>1|1" />
+        <i3dMapping id="collision3" node="0>1|2" />
+        <i3dMapping id="collision4" node="0>1|3" />
+        <i3dMapping id="collision5" node="0>1|4" />
+        <i3dMapping id="collision6" node="0>1|5" />
+        <i3dMapping id="collision7" node="0>1|6" />
+        <i3dMapping id="collision8" node="0>1|7" />
+        <i3dMapping id="collision9" node="0>1|8" />
+        <i3dMapping id="palletBase" node="0>2" />
+        <i3dMapping id="netRole01" node="0>2|0" />
+        <i3dMapping id="netRole02" node="0>2|1" />
+        <i3dMapping id="netRole03" node="0>2|2" />
+        <i3dMapping id="netRoleConfig03" node="0>2|3" />
+        <i3dMapping id="netRole04" node="0>2|3|0" />
+        <i3dMapping id="netRole05" node="0>2|3|1" />
+        <i3dMapping id="netRole06" node="0>2|3|2" />
+        <i3dMapping id="netRoleConfig06" node="0>2|3|3" />
+        <i3dMapping id="netRole07" node="0>2|3|3|0" />
+        <i3dMapping id="netRole08" node="0>2|3|3|1" />
+        <i3dMapping id="netRole09" node="0>2|3|3|2" />
+        <i3dMapping id="netRoleConfig09" node="0>2|3|3|3" />
+        <i3dMapping id="netRole10" node="0>2|3|3|3|0" />
+        <i3dMapping id="netRole11" node="0>2|3|3|3|1" />
+        <i3dMapping id="netRole12" node="0>2|3|3|3|2" />
+        <i3dMapping id="netRoleConfig12" node="0>2|3|3|3|3" />
+        <i3dMapping id="netRole13" node="0>2|3|3|3|3|0" />
+        <i3dMapping id="netRole15" node="0>2|3|3|3|3|1" />
+        <i3dMapping id="netRole14" node="0>2|3|3|3|3|2" />
+        <i3dMapping id="palletCage" node="0>2|4" />
+        <i3dMapping id="wireInside" node="0>2|4|0" />
+        <i3dMapping id="wire3" node="0>2|4|1" />
+        <i3dMapping id="wire2" node="0>2|4|2" />
+        <i3dMapping id="wire1" node="0>2|4|3" />
+        <i3dMapping id="wire" node="0>2|4|4" />
+    </i3dMappings>
+</vehicle>

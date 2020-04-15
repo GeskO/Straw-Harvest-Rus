@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<light>
+    <filename>shared/lights/kroneBackLightCombo.i3d</filename>
+    <rootNode node="1" />
+    <defaultLight node="1|0|0" lightTypes="0" intensity="8"/>
+    <defaultLight node="1|0|1" lightTypes="0" intensity="15"/>
+    <defaultLight node="1|0|1" lightTypes="0" intensity="25"/>
+    <defaultLight node="1|2" lightTypes="0" intensity="1"/>
+    <!-- <defaultLight node="1|3" lightTypes="0" intensity="8"/> -->
+    <defaultLight node="1|4" lightTypes="0" intensity="10"/>
+    <brakeLight node="1|0|0" lightTypes="0" intensity="20"/>
+    <brakeLight node="1|0|1" lightTypes="0" intensity="25"/>
+    <brakeLight node="1|0|1" lightTypes="0" intensity="35"/>
+    <turnLightRight node="1|1|0" intensity="6"/>
+    <turnLightRight node="1|1|1" intensity="15"/>
+    <turnLightRight node="1|1|1" intensity="25"/>
+</light>

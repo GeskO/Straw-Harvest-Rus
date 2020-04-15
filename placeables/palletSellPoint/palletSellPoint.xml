@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable>
+    <storeData>
+        <name>$l10n_name_palletSellPoint</name>
+        <image>placeables/palletSellPoint/store_sellPoint.png</image>
+        <price>500</price>
+        <specs>
+            <fillTypes>strawPellets hayPellets</fillTypes>
+        </specs>
+        <functions>
+            <function>$l10n_function_palletSellPoint</function>
+        </functions>
+        <dailyUpkeep>3</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>HALLSYS</brand>
+        <species>placeable</species>
+        <category>placeableMisc</category>
+    </storeData>
+
+    <placeableType>sellingStation</placeableType>
+    <filename>placeables/palletSellPoint/palletSellPoint.i3d</filename>
+    <placement testSizeX="4" testSizeZ="6" sizeX="4" sizeZ="6" useRandomYRotation="false" useManualYRotation="true"/>
+
+    <sellingStation stationName="$l10n_name_palletSellPoint" appearsOnPDA="true" storageRadius="0" litersForFullPriceDrop="100000" fullPriceRecoverHours="48">
+        <unloadTrigger baleTriggerNode="3" exactFillRootNode="6"/>
+        <fillType name="strawPellets" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false"/>
+        <fillType name="hayPellets" priceScale="1" supportsGreatDemand="true" disablePriceDrop="false"/>
+    </sellingStation>
+
+    <seasons>
+        <maskAreas>
+            <maskArea startNode="4|0" widthNode="4|1" heightNode="4|2"/>
+        </maskAreas>
+    </seasons>
+
+    <tipOcclusionUpdateArea sizeX="4" sizeZ="6"/>
+
+    <clearAreas>
+        <clearArea startNode="4|0" widthNode="4|1" heightNode="4|2"/>
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="10" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+            <levelArea startNode="4|0" widthNode="4|1" heightNode="4|2" groundType="dirt"/>
+        </levelAreas>
+    </leveling>
+</placeable>

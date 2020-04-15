@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="kroneBackLightCombo" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="4" filename="$data/shared/assets/lights/lizard/sideMarker_05_normal.dds" />
+    <File fileId="5" filename="$data/shared/assets/lights/lizard/sideMarker_05_specular.dds" />
+    <File fileId="1" filename="kroneBackLightCombo_normal.png" />
+    <File fileId="2" filename="kroneBackLightCombo_specular.png" />
+    <File fileId="6" filename="$data/shared/clearPlastic_diffuse.dds" />
+    <File fileId="3" filename="$data/shaders/vehicleShader.xml" />
+  </Files>
+
+  <Materials>
+    <Material name="kroneBackLightCombo_mat" materialId="1" diffuseColor="0.5 0.5 0.5 1" cosPower="20" specularColor="1 1 1" ambientColor="1 1 1" customShaderId="3" customShaderVariation="colorMask">
+      <CustomParameter name="colorMat2" value="0.5 0 0 2"/>
+      <CustomParameter name="colorMat0" value="1.0 1.0 1.0 2"/>
+      <CustomParameter name="colorMat1" value="1 0.25 0 2"/>
+      <Normalmap fileId="1"/>
+      <Glossmap fileId="2"/>
+    </Material>
+    <Material name="sideMarkerStatic_mat" materialId="5" diffuseColor="0.5 0.5 0.5 1" cosPower="20" specularColor="1 1 1" ambientColor="1 1 1" alphaBlending="true" customShaderId="3" customShaderVariation="staticLight">
+      <CustomParameter name="colorMat2" value="0.5 0 0 2"/>
+      <CustomParameter name="colorMat0" value="1.0 1.0 1.0 2"/>
+      <CustomParameter name="colorMat1" value="1 0.25 0 2"/>
+      <Normalmap fileId="4"/>
+      <Glossmap fileId="5"/>
+    </Material>
+    <Material name="sideMarker_mat" materialId="4" diffuseColor="0.5 0.5 0.5 1" cosPower="20" specularColor="1 1 1" ambientColor="1 1 1" customShaderId="3" customShaderVariation="colorMask">
+      <CustomParameter name="colorMat2" value="0.5 0 0 2"/>
+      <CustomParameter name="colorMat0" value="1.0 1.0 1.0 2"/>
+      <CustomParameter name="colorMat1" value="1 0.25 0 2"/>
+      <Normalmap fileId="4"/>
+      <Glossmap fileId="5"/>
+    </Material>
+    <Material name="comboLightGlass_mat" materialId="2" cosPower="20" specularColor="1 1 1" ambientColor="1 1 1" alphaBlending="true" customShaderId="3" customShaderVariation="staticLight">
+      <CustomParameter name="colorMat2" value="0.5 0 0 2"/>
+      <CustomParameter name="colorMat0" value="1.0 1.0 1.0 2"/>
+      <CustomParameter name="colorMat1" value="1 0.25 0 2"/>
+      <Texture fileId="6"/>
+      <Normalmap fileId="1"/>
+      <Glossmap fileId="2"/>
+    </Material>
+    <Material name="comboLightChamber_mat" materialId="3" diffuseColor="0.5 0.5 0.5 1" cosPower="20" specularColor="1 1 1" ambientColor="1 1 1" alphaBlending="true" customShaderId="3" customShaderVariation="staticLight">
+      <CustomParameter name="colorMat2" value="0.5 0 0 2"/>
+      <CustomParameter name="colorMat0" value="1.0 1.0 1.0 2"/>
+      <CustomParameter name="colorMat1" value="1 0.25 0 2"/>
+      <CustomParameter name="blinkOffset" value="0.0 0.0 1.0 0.0"/>
+      <Normalmap fileId="1"/>
+      <Glossmap fileId="2"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="kroneBackLightCombo.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <Shape name="kroneBackLightComboLeft" translation="6.19248e-05 6.85674e-15 0" shapeId="1" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="1">
+      <TransformGroup name="defaultLight" nodeId="2">
+        <Shape name="defaultLightGlass_static" translation="-0.117102 0.034547 0.176624" shapeId="2" castsShadows="true" receiveShadows="true" decalLayer="2" materialIds="2" clipDistance="35" nodeId="3"/>
+        <Shape name="defaultLightChamber_static" shapeId="3" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="3" clipDistance="35" nodeId="4"/>
+        <Shape name="defaultLightBuldbs_static" shapeId="4" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="3" clipDistance="35" nodeId="5"/>
+      </TransformGroup>
+      <TransformGroup name="turnLight" nodeId="6">
+        <Shape name="turnLightGlass_static" translation="-0.117102 0.034547 0.176624" shapeId="5" castsShadows="true" receiveShadows="true" decalLayer="2" materialIds="2" clipDistance="35" nodeId="7"/>
+        <Shape name="turnLightChamber_static" shapeId="6" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="3" clipDistance="35" nodeId="8"/>
+        <Shape name="turnLightBulbs_static" shapeId="7" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="3" clipDistance="35" nodeId="9"/>
+      </TransformGroup>
+      <Shape name="triangle_static" translation="-0.117102 0.034547 0.176624" shapeId="8" castsShadows="true" receiveShadows="true" decalLayer="2" materialIds="2" clipDistance="35" nodeId="10"/>
+      <Shape name="sideMarker" translation="-0.400398 0.00130249 2.77556e-19" shapeId="9" castsShadows="true" receiveShadows="true" materialIds="4" clipDistance="35" nodeId="11"/>
+      <Shape name="frontMarker_static" translation="-0.117102 -0.0457047 0.176624" shapeId="10" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="5" clipDistance="35" nodeId="12"/>
+      <Shape name="kroneBackLightCombo1" shapeId="11" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="13"/>
+      <Shape name="screws" translation="-0.229927 -0.0032751 0.0987083" shapeId="12" castsShadows="true" receiveShadows="true" materialIds="4" clipDistance="300" nodeId="14"/>
+    </Shape>
+    <Shape name="kroneBackLightComboRight" translation="6.19248e-05 6.85674e-15 0" shapeId="13" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="15">
+      <TransformGroup name="defaultLight" nodeId="16">
+        <Shape name="defaultLightGlass_static" translation="-0.117102 -0.034547 0.176624" shapeId="14" castsShadows="true" receiveShadows="true" decalLayer="2" materialIds="2" clipDistance="35" nodeId="17"/>
+        <Shape name="defaultLightChamber_static" shapeId="15" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="3" clipDistance="35" nodeId="18"/>
+        <Shape name="defaultLightBuldbs_static" shapeId="16" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="3" clipDistance="35" nodeId="19"/>
+      </TransformGroup>
+      <TransformGroup name="turnLight" nodeId="20">
+        <Shape name="turnLightGlass_static" translation="-0.117102 -0.034547 0.176624" shapeId="17" castsShadows="true" receiveShadows="true" decalLayer="2" materialIds="2" clipDistance="35" nodeId="21"/>
+        <Shape name="turnLightChamber_static" shapeId="18" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="3" clipDistance="35" nodeId="22"/>
+        <Shape name="turnLightBulbs_static" shapeId="19" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="3" clipDistance="35" nodeId="23"/>
+      </TransformGroup>
+      <Shape name="triangle_static" translation="-0.117102 -0.034547 0.176624" shapeId="20" castsShadows="true" receiveShadows="true" decalLayer="2" materialIds="2" clipDistance="35" nodeId="24"/>
+      <Shape name="sideMarker" translation="-0.40737 -0.00130226 2.77556e-19" shapeId="21" castsShadows="true" receiveShadows="true" materialIds="4" clipDistance="35" nodeId="25"/>
+      <Shape name="frontMarker_static" translation="-0.117102 0.0457047 0.176624" shapeId="22" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="5" clipDistance="35" nodeId="26"/>
+      <Shape name="kroneBackLightCombo1" shapeId="23" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="27"/>
+      <Shape name="screws" translation="-0.229927 0.0032751 0.0987083" shapeId="24" castsShadows="true" receiveShadows="true" materialIds="4" clipDistance="300" nodeId="28"/>
+    </Shape>
+  </Scene>
+
+</i3D>

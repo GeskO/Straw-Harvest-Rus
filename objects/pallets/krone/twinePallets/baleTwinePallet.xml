@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="pallet">
+    <storeData>
+        <name>$l10n_baleTwinePallet</name>
+        <functions>
+            <function>$l10n_function_baleTwinePallet</function>
+        </functions>
+        <specs>
+            <capacity>48</capacity>
+            <fillTypes>baleTwine</fillTypes>
+        </specs>
+        <image>objects/pallets/krone/twinePallets/store_twineRolePallet.png</image>
+        <price>100</price>
+        <allowLeasing>false</allowLeasing>
+        <category>pallets</category>
+        <showInStore>true</showInStore>
+        <canBeSold>false</canBeSold>
+        <rotation>0</rotation>
+        <brand>KRONE</brand>
+        <financeCategory>OTHER</financeCategory>
+    </storeData>
+
+    <base>
+        <filename>objects/pallets/krone/twinePallets/baleTwinePallet.i3d</filename>
+        <size width="2" length="1.5" lengthOffset="0"/>
+        <input allowed="false"/>
+        <components>
+            <component centerOfMass="0 0.1 0" solverIterationCount="10" mass="200"/>
+        </components>
+    </base>
+
+    <animations>
+        <animation name="twineAnimation">
+            <part node="twineRole01" startTime="0.000" endTime="0.001" visibility="false"/>
+            <part node="twineRole01" startTime="0.001" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole02" startTime="0.000" endTime="0.022" visibility="false"/>
+            <part node="twineRole02" startTime="0.022" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole03" startTime="0.000" endTime="0.043" visibility="false"/>
+            <part node="twineRole03" startTime="0.043" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole04" startTime="0.000" endTime="0.064" visibility="false"/>
+            <part node="twineRole04" startTime="0.064" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole05" startTime="0.000" endTime="0.085" visibility="false"/>
+            <part node="twineRole05" startTime="0.085" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole06" startTime="0.000" endTime="0.106" visibility="false"/>
+            <part node="twineRole06" startTime="0.106" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole07" startTime="0.000" endTime="0.127" visibility="false"/>
+            <part node="twineRole07" startTime="0.127" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole08" startTime="0.000" endTime="0.148" visibility="false"/>
+            <part node="twineRole08" startTime="0.148" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole09" startTime="0.000" endTime="0.169" visibility="false"/>
+            <part node="twineRole09" startTime="0.169" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole10" startTime="0.000" endTime="0.190" visibility="false"/>
+            <part node="twineRole10" startTime="0.190" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole11" startTime="0.000" endTime="0.211" visibility="false"/>
+            <part node="twineRole11" startTime="0.211" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole12" startTime="0.000" endTime="0.232" visibility="false"/>
+            <part node="twineRole12" startTime="0.232" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole13" startTime="0.000" endTime="0.253" visibility="false"/>
+            <part node="twineRole13" startTime="0.253" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole14" startTime="0.000" endTime="0.274" visibility="false"/>
+            <part node="twineRole14" startTime="0.274" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole15" startTime="0.000" endTime="0.295" visibility="false"/>
+            <part node="twineRole15" startTime="0.295" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole16" startTime="0.000" endTime="0.316" visibility="false"/>
+            <part node="twineRole16" startTime="0.316" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole17" startTime="0.000" endTime="0.337" visibility="false"/>
+            <part node="twineRole17" startTime="0.337" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole18" startTime="0.000" endTime="0.358" visibility="false"/>
+            <part node="twineRole18" startTime="0.358" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole19" startTime="0.000" endTime="0.379" visibility="false"/>
+            <part node="twineRole19" startTime="0.379" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole20" startTime="0.000" endTime="0.400" visibility="false"/>
+            <part node="twineRole20" startTime="0.400" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole21" startTime="0.000" endTime="0.421" visibility="false"/>
+            <part node="twineRole21" startTime="0.421" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole22" startTime="0.000" endTime="0.442" visibility="false"/>
+            <part node="twineRole22" startTime="0.442" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole23" startTime="0.000" endTime="0.463" visibility="false"/>
+            <part node="twineRole23" startTime="0.463" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole24" startTime="0.000" endTime="0.484" visibility="false"/>
+            <part node="twineRole24" startTime="0.484" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole25" startTime="0.000" endTime="0.505" visibility="false"/>
+            <part node="twineRole25" startTime="0.505" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole26" startTime="0.000" endTime="0.526" visibility="false"/>
+            <part node="twineRole26" startTime="0.526" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole27" startTime="0.000" endTime="0.547" visibility="false"/>
+            <part node="twineRole27" startTime="0.547" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole28" startTime="0.000" endTime="0.568" visibility="false"/>
+            <part node="twineRole28" startTime="0.568" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole29" startTime="0.000" endTime="0.589" visibility="false"/>
+            <part node="twineRole29" startTime="0.589" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole30" startTime="0.000" endTime="0.610" visibility="false"/>
+            <part node="twineRole30" startTime="0.610" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole31" startTime="0.000" endTime="0.631" visibility="false"/>
+            <part node="twineRole31" startTime="0.631" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole32" startTime="0.000" endTime="0.652" visibility="false"/>
+            <part node="twineRole32" startTime="0.652" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole33" startTime="0.000" endTime="0.673" visibility="false"/>
+            <part node="twineRole33" startTime="0.673" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole34" startTime="0.000" endTime="0.694" visibility="false"/>
+            <part node="twineRole34" startTime="0.694" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole35" startTime="0.000" endTime="0.715" visibility="false"/>
+            <part node="twineRole35" startTime="0.715" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole36" startTime="0.000" endTime="0.736" visibility="false"/>
+            <part node="twineRole36" startTime="0.736" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole37" startTime="0.000" endTime="0.757" visibility="false"/>
+            <part node="twineRole37" startTime="0.757" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole38" startTime="0.000" endTime="0.778" visibility="false"/>
+            <part node="twineRole38" startTime="0.778" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole39" startTime="0.000" endTime="0.799" visibility="false"/>
+            <part node="twineRole39" startTime="0.799" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole40" startTime="0.000" endTime="0.820" visibility="false"/>
+            <part node="twineRole40" startTime="0.820" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole41" startTime="0.000" endTime="0.841" visibility="false"/>
+            <part node="twineRole41" startTime="0.841" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole42" startTime="0.000" endTime="0.862" visibility="false"/>
+            <part node="twineRole42" startTime="0.862" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole43" startTime="0.000" endTime="0.883" visibility="false"/>
+            <part node="twineRole43" startTime="0.883" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole44" startTime="0.000" endTime="0.904" visibility="false"/>
+            <part node="twineRole44" startTime="0.904" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole45" startTime="0.000" endTime="0.925" visibility="false"/>
+            <part node="twineRole45" startTime="0.925" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole46" startTime="0.000" endTime="0.946" visibility="false"/>
+            <part node="twineRole46" startTime="0.946" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole47" startTime="0.000" endTime="0.967" visibility="false"/>
+            <part node="twineRole47" startTime="0.967" endTime="1.000" visibility="true"/>
+
+            <part node="twineRole48" startTime="0.000" endTime="0.988" visibility="false"/>
+            <part node="twineRole48" startTime="0.988" endTime="1.000" visibility="true"/>
+        </animation>
+    </animations>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration name="$l10n_configuration_capacityX" price="2880" params="48">
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unit="$l10n_unit_pieces" fillTypes="baleTwine" startFillType="baleTwine" capacity="48" startFillLevel="48">
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="twineAnimation"/>
+                    </fillUnit>
+                </fillUnits>
+                <!-- <objectChange node="twineConfig48" visibilityActive="false" visibilityInactive="true"/> -->
+            </fillUnitConfiguration>
+            <fillUnitConfiguration name="$l10n_configuration_capacityX" price="2640" params="44">
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unit="$l10n_unit_pieces" fillTypes="baleTwine" startFillType="baleTwine" capacity="48" startFillLevel="44">
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="twineAnimation"/>
+                    </fillUnit>
+                </fillUnits>
+                <objectChange node="twineConfig44" visibilityActive="false" visibilityInactive="true"/>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration name="$l10n_configuration_capacityX" price="2400" params="40">
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unit="$l10n_unit_pieces" fillTypes="baleTwine" startFillType="baleTwine" capacity="48" startFillLevel="40">
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="twineAnimation"/>
+                    </fillUnit>
+                </fillUnits>
+                <objectChange node="twineConfig40" visibilityActive="false" visibilityInactive="true"/>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration name="$l10n_configuration_capacityX" price="2160" params="36">
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unit="$l10n_unit_pieces" fillTypes="baleTwine" startFillType="baleTwine" capacity="48" startFillLevel="36">
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="twineAnimation"/>
+                    </fillUnit>
+                </fillUnits>
+                <objectChange node="twineConfig36" visibilityActive="false" visibilityInactive="true"/>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration name="$l10n_configuration_capacityX" price="1920" params="32">
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unit="$l10n_unit_pieces" fillTypes="baleTwine" startFillType="baleTwine" capacity="48" startFillLevel="32">
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="twineAnimation"/>
+                    </fillUnit>
+                </fillUnits>
+                <objectChange node="twineConfig32" visibilityActive="false" visibilityInactive="true"/>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration name="$l10n_configuration_capacityX" price="1680" params="28">
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unit="$l10n_unit_pieces" fillTypes="baleTwine" startFillType="baleTwine" capacity="48" startFillLevel="28">
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="twineAnimation"/>
+                    </fillUnit>
+                </fillUnits>
+                <objectChange node="twineConfig28" visibilityActive="false" visibilityInactive="true"/>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration name="$l10n_configuration_capacityX" price="1440" params="24">
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unit="$l10n_unit_pieces" fillTypes="baleTwine" startFillType="baleTwine" capacity="48" startFillLevel="24">
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="twineAnimation"/>
+                    </fillUnit>
+                </fillUnits>
+                <objectChange node="twineConfig24" visibilityActive="false" visibilityInactive="true"/>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration name="$l10n_configuration_capacityX" price="1200" params="20">
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unit="$l10n_unit_pieces" fillTypes="baleTwine" startFillType="baleTwine" capacity="48" startFillLevel="20">
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="twineAnimation"/>
+                    </fillUnit>
+                </fillUnits>
+                <objectChange node="twineConfig20" visibilityActive="false" visibilityInactive="true"/>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration name="$l10n_configuration_capacityX" price="960" params="16">
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unit="$l10n_unit_pieces" fillTypes="baleTwine" startFillType="baleTwine" capacity="48" startFillLevel="16">
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="twineAnimation"/>
+                    </fillUnit>
+                </fillUnits>
+                <objectChange node="twineConfig16" visibilityActive="false" visibilityInactive="true"/>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration name="$l10n_configuration_capacityX" price="720" params="12">
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unit="$l10n_unit_pieces" fillTypes="baleTwine" startFillType="baleTwine" capacity="48" startFillLevel="12">
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="twineAnimation"/>
+                    </fillUnit>
+                </fillUnits>
+                <objectChange node="twineConfig12" visibilityActive="false" visibilityInactive="true"/>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration name="$l10n_configuration_capacityX" price="480" params="8">
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unit="$l10n_unit_pieces" fillTypes="baleTwine" startFillType="baleTwine" capacity="48" startFillLevel="8">
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="twineAnimation"/>
+                    </fillUnit>
+                </fillUnits>
+                <objectChange node="twineConfig08" visibilityActive="false" visibilityInactive="true"/>
+            </fillUnitConfiguration>
+            <fillUnitConfiguration name="$l10n_configuration_capacityX" price="240" params="4">
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unit="$l10n_unit_pieces" fillTypes="baleTwine" startFillType="baleTwine" capacity="48" startFillLevel="4">
+                        <dashboard displayType="ANIMATION" valueType="fillLevel" animName="twineAnimation"/>
+                    </fillUnit>
+                </fillUnits>
+                <objectChange node="twineConfig04" visibilityActive="false" visibilityInactive="true"/>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <fillTriggerVehicle triggerNode="fillTrigger" fillUnitIndex="1" litersPerSecond="1"/>
+
+    <dischargeable requiresTipOcclusionArea="false"/>
+
+    <dynamicMount triggerNode="dynamicMountTrigger"/>
+
+    <tensionBeltObject>
+        <meshNodes>
+            <meshNode node="palletBase"/>
+            <meshNode node="twineRolePallet_main_component1"/>
+        </meshNodes>
+    </tensionBeltObject>
+
+    <i3dMappings>
+        <i3dMapping id="twineRolePallet_main_component1" node="0>" />
+        <i3dMapping id="triggers" node="0>0" />
+        <i3dMapping id="dynamicMountTrigger" node="0>0|0" />
+        <i3dMapping id="fillTrigger" node="0>0|1" />
+        <i3dMapping id="collisions" node="0>1" />
+        <i3dMapping id="collision1" node="0>1|0" />
+        <i3dMapping id="collision2" node="0>1|1" />
+        <i3dMapping id="collision3" node="0>1|2" />
+        <i3dMapping id="collision4" node="0>1|3" />
+        <i3dMapping id="collision5" node="0>1|4" />
+        <i3dMapping id="collision6" node="0>1|5" />
+        <i3dMapping id="collision7" node="0>1|6" />
+        <i3dMapping id="collision8" node="0>1|7" />
+        <i3dMapping id="collision9" node="0>1|8" />
+        <i3dMapping id="palletBase" node="0>2" />
+        <i3dMapping id="twineRoles" node="0>2|0" />
+        <i3dMapping id="twineRole01" node="0>2|0|0" />
+        <i3dMapping id="twineRole02" node="0>2|0|1" />
+        <i3dMapping id="twineRole03" node="0>2|0|2" />
+        <i3dMapping id="twineRole04" node="0>2|0|3" />
+        <i3dMapping id="twineConfig04" node="0>2|0|4" />
+        <i3dMapping id="twineRole05" node="0>2|0|4|0" />
+        <i3dMapping id="twineRole06" node="0>2|0|4|1" />
+        <i3dMapping id="twineRole07" node="0>2|0|4|2" />
+        <i3dMapping id="twineRole08" node="0>2|0|4|3" />
+        <i3dMapping id="twineConfig08" node="0>2|0|4|4" />
+        <i3dMapping id="twineRole09" node="0>2|0|4|4|0" />
+        <i3dMapping id="twineRole10" node="0>2|0|4|4|1" />
+        <i3dMapping id="twineRole11" node="0>2|0|4|4|2" />
+        <i3dMapping id="twineRole12" node="0>2|0|4|4|3" />
+        <i3dMapping id="twineConfig12" node="0>2|0|4|4|4" />
+        <i3dMapping id="twineRole13" node="0>2|0|4|4|4|0" />
+        <i3dMapping id="twineRole14" node="0>2|0|4|4|4|1" />
+        <i3dMapping id="twineRole15" node="0>2|0|4|4|4|2" />
+        <i3dMapping id="twineRole16" node="0>2|0|4|4|4|3" />
+        <i3dMapping id="twineConfig16" node="0>2|0|4|4|4|4" />
+        <i3dMapping id="twineRole17" node="0>2|0|4|4|4|4|0" />
+        <i3dMapping id="twineRole18" node="0>2|0|4|4|4|4|1" />
+        <i3dMapping id="twineRole19" node="0>2|0|4|4|4|4|2" />
+        <i3dMapping id="twineRole20" node="0>2|0|4|4|4|4|3" />
+        <i3dMapping id="twineConfig20" node="0>2|0|4|4|4|4|4" />
+        <i3dMapping id="twineRole21" node="0>2|0|4|4|4|4|4|0" />
+        <i3dMapping id="twineRole22" node="0>2|0|4|4|4|4|4|1" />
+        <i3dMapping id="twineRole23" node="0>2|0|4|4|4|4|4|2" />
+        <i3dMapping id="twineRole24" node="0>2|0|4|4|4|4|4|3" />
+        <i3dMapping id="twineConfig24" node="0>2|0|4|4|4|4|4|4" />
+        <i3dMapping id="twineRole25" node="0>2|0|4|4|4|4|4|4|0" />
+        <i3dMapping id="twineRole26" node="0>2|0|4|4|4|4|4|4|1" />
+        <i3dMapping id="twineRole27" node="0>2|0|4|4|4|4|4|4|2" />
+        <i3dMapping id="twineRole28" node="0>2|0|4|4|4|4|4|4|3" />
+        <i3dMapping id="twineConfig28" node="0>2|0|4|4|4|4|4|4|4" />
+        <i3dMapping id="twineRole29" node="0>2|0|4|4|4|4|4|4|4|0" />
+        <i3dMapping id="twineRole30" node="0>2|0|4|4|4|4|4|4|4|1" />
+        <i3dMapping id="twineRole31" node="0>2|0|4|4|4|4|4|4|4|2" />
+        <i3dMapping id="twineRole32" node="0>2|0|4|4|4|4|4|4|4|3" />
+        <i3dMapping id="twineConfig32" node="0>2|0|4|4|4|4|4|4|4|4" />
+        <i3dMapping id="twineRole33" node="0>2|0|4|4|4|4|4|4|4|4|0" />
+        <i3dMapping id="twineRole34" node="0>2|0|4|4|4|4|4|4|4|4|1" />
+        <i3dMapping id="twineRole35" node="0>2|0|4|4|4|4|4|4|4|4|2" />
+        <i3dMapping id="twineRole36" node="0>2|0|4|4|4|4|4|4|4|4|3" />
+        <i3dMapping id="twineConfig36" node="0>2|0|4|4|4|4|4|4|4|4|4" />
+        <i3dMapping id="twineRole37" node="0>2|0|4|4|4|4|4|4|4|4|4|0" />
+        <i3dMapping id="twineRole38" node="0>2|0|4|4|4|4|4|4|4|4|4|1" />
+        <i3dMapping id="twineRole39" node="0>2|0|4|4|4|4|4|4|4|4|4|2" />
+        <i3dMapping id="twineRole40" node="0>2|0|4|4|4|4|4|4|4|4|4|3" />
+        <i3dMapping id="twineConfig40" node="0>2|0|4|4|4|4|4|4|4|4|4|4" />
+        <i3dMapping id="twineRole41" node="0>2|0|4|4|4|4|4|4|4|4|4|4|0" />
+        <i3dMapping id="twineRole42" node="0>2|0|4|4|4|4|4|4|4|4|4|4|1" />
+        <i3dMapping id="twineRole43" node="0>2|0|4|4|4|4|4|4|4|4|4|4|2" />
+        <i3dMapping id="twineRole44" node="0>2|0|4|4|4|4|4|4|4|4|4|4|3" />
+        <i3dMapping id="twineConfig44" node="0>2|0|4|4|4|4|4|4|4|4|4|4|4" />
+        <i3dMapping id="twineRole45" node="0>2|0|4|4|4|4|4|4|4|4|4|4|4|0" />
+        <i3dMapping id="twineRole46" node="0>2|0|4|4|4|4|4|4|4|4|4|4|4|1" />
+        <i3dMapping id="twineRole47" node="0>2|0|4|4|4|4|4|4|4|4|4|4|4|2" />
+        <i3dMapping id="twineRole48" node="0>2|0|4|4|4|4|4|4|4|4|4|4|4|3" />
+        <i3dMapping id="palletCage" node="0>2|1" />
+        <i3dMapping id="wireInside" node="0>2|1|0" />
+        <i3dMapping id="wire3" node="0>2|1|1" />
+        <i3dMapping id="wire2" node="0>2|1|2" />
+        <i3dMapping id="wire1" node="0>2|1|3" />
+        <i3dMapping id="wire" node="0>2|1|4" />
+    </i3dMappings>
+</vehicle>

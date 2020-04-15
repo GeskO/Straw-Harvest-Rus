@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="fillPlane_materialHolder" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="8.1.0"/>
+  </Asset>
+
+  <Files>
+    <File fileId="3" filename="$data/shaders/psSubUVShader.xml"/>
+    <File fileId="6" filename="../fx_pellets32x4_normal.png"/>
+    <File fileId="2" filename="../fx_pelletsDust32x4_normal.png"/>
+    <File fileId="5" filename="fx_hayPellets32x4_diffuse.png"/>
+    <File fileId="1" filename="fx_hayPelletsDust32x4_diffuse.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="fx_strawPellets32x4_mat" materialId="6" customShaderId="3" customShaderVariation="SUBUV_MOVIE_HORIZONTAL">
+      <Texture fileId="5"/>
+      <Normalmap fileId="6"/>
+      <CustomParameter name="psPlayScale" value="50 200 1 0"/>
+      <CustomParameter name="psColor" value="1.5 1.5 1 1"/>
+    </Material>
+    <Material name="fx_grass32x4_mat" materialId="4" customShaderId="3" customShaderVariation="SUBUV_MOVIE_HORIZONTAL">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <CustomParameter name="psPlayScale" value="50 150 1 0"/>
+      <CustomParameter name="psColor" value="1 1 1 0"/>
+    </Material>
+    <Material name="lambert1" materialId="5" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="hayPellets_particles.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+    <ParticleSystem name="weederGrassEmitter" dynamicId="3" type="sprite" rate="0.3" lifespan="700" maxCount="200" speed="0.001" speedRandom="0.001" tangentSpeed="0.2" normalSpeed="0.44086" spriteScaleX="0.05" spriteScaleY="0.05" blendFactor="1" blendInFactor="0" blendOutFactor="1" depthSort="true" randomInitRotation="true" deltaRotateMin="-0.0005236" deltaRotateMax="0.0005236" textureAtlasSizeX="32" textureAtlasSizeY="4">
+      <Gravity force="0 -0.8 0"/>
+    </ParticleSystem>
+    <ParticleSystem name="weederGrassEmitter" dynamicId="1" type="sprite" rate="0.6" lifespan="700" maxCount="1000" speed="0.001" speedRandom="0.001" tangentSpeed="0.2" normalSpeed="1" spriteScaleX="0.05" spriteScaleY="0.05" blendFactor="1" blendInFactor="0" blendOutFactor="1" depthSort="true" randomInitRotation="true" deltaRotateMin="-0.0005236" deltaRotateMax="0.0005236" textureAtlasSizeX="32" textureAtlasSizeY="4">
+      <Gravity force="0 -0.8 0"/>
+    </ParticleSystem>
+    <ParticleSystem name="weederGrassEmitter" dynamicId="4" type="sprite" rate="1" lifespan="10323" maxCount="7847" speed="0.0005" speedRandom="0" tangentSpeed="0" normalSpeed="1" spriteScaleX="0.05" spriteScaleY="0.05" blendFactor="1" blendInFactor="0" blendOutFactor="1" depthSort="true" randomInitRotation="true" deltaRotateMin="-0.0005236" deltaRotateMax="0.0005236" textureAtlasSizeX="32" textureAtlasSizeY="4">
+      <Gravity force="0 0 0"/>
+    </ParticleSystem>
+  </Dynamics>
+
+  <Scene>
+    <TransformGroup name="particles" nodeId="15">
+      <Dynamic dynamicId="1" emitterShapeNodeId="18" name="strawPellets_sieveDrumEmitter" translation="-3.794 0 0" clipDistance="100" nodeId="17" materialIds="4" distanceBlending="false">
+        <Shape shapeId="2" name="emitShape" visibility="false" nodeId="18" materialIds="5" nonRenderable="true"/>
+      </Dynamic>
+      <Dynamic dynamicId="3" emitterShapeNodeId="18" name="strawPelletsEmitter" translation="-2.64122 0 0" clipDistance="100" nodeId="20" materialIds="6" distanceBlending="false">
+        <Shape shapeId="2" name="emitShape" translation="0.673975 0 0" visibility="false" nodeId="21" materialIds="5" nonRenderable="true"/>
+      </Dynamic>
+      <Dynamic dynamicId="4" emitterShapeNodeId="18" name="strawPelletsEmitter" translation="-2.64122 0 -1.63431" clipDistance="100" nodeId="23" materialIds="6" distanceBlending="false">
+        <Shape shapeId="2" name="emitShape" translation="0.673975 0 0" visibility="false" nodeId="24" materialIds="5" nonRenderable="true"/>
+      </Dynamic>
+    </TransformGroup>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="17">
+      <Attribute name="fillType" type="string" value="hayPellets"/>
+      <Attribute name="onCreate" type="scriptCallback" value="MaterialUtil.onCreateParticleSystem"/>
+      <Attribute name="particleType" type="string" value="PELLET_SMOKE"/>
+      <Attribute name="useWorldSpace" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="20">
+      <Attribute name="fillType" type="string" value="hayPellets"/>
+      <Attribute name="onCreate" type="scriptCallback" value="MaterialUtil.onCreateParticleSystem"/>
+      <Attribute name="particleType" type="string" value="PELLET"/>
+    </UserAttribute>
+    <UserAttribute nodeId="23">
+      <Attribute name="fillType" type="string" value="hayPellets"/>
+      <Attribute name="onCreate" type="scriptCallback" value="MaterialUtil.onCreateParticleSystem"/>
+      <Attribute name="particleType" type="string" value="PELLET_MOVE"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>

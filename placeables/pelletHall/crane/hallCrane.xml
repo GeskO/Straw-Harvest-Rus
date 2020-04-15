@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="hallCrane">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Crane</name>
+        <image>placeables/pelletHall/crane/store_crane.png</image>
+        <canBeSold>false</canBeSold>
+        <showInStore>false</showInStore>
+        <price>0</price>
+        <lifetime>0</lifetime>
+        <rotation>0</rotation>
+        <brand>HALLSYS</brand>
+        <category>misc</category>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_tractor</typeDesc>
+        <filename>placeables/pelletHall/crane/hallCrane.i3d</filename>
+        <size width="34" length="2"/>
+        <components>
+            <component centerOfMass="0 1 -0.4" solverIterationCount="15" mass="15000"/>
+            <component centerOfMass="0 0.0 0" solverIterationCount="15" mass="100"/>
+            <component centerOfMass="0 0.0 0" solverIterationCount="15" mass="250"/>
+            <component centerOfMass="0 0.0 0" solverIterationCount="15" mass="250"/>
+            <joint component1="1" component2="2" node="craneTravelerComponentJoint" rotLimit="0 0 0" transLimit="0 0 0"/>
+            <joint component1="2" component2="3" node="toolLeftComponentJoint" rotLimit="0 0 0" transLimit="0 0 0"/>
+            <joint component1="2" component2="4" node="toolRightComponentJoint" rotLimit="0 0 0" transLimit="0 0 0"/>
+            <collisionPair component1="1" component2="3" enabled="false"/>
+            <collisionPair component1="1" component2="4" enabled="false"/>
+            <collisionPair component1="3" component2="4" enabled="false"/>
+        </components>
+    </base>
+
+    <lights>
+        <states>
+            <state lightTypes="0"/>
+        </states>
+
+        <beaconLights>
+            <beaconLight node="beaconLight" filename="$data/shared/assets/beaconLights/lizard/beaconLight02.xml"/>
+        </beaconLights>
+    </lights>
+
+    <enterable isTabbable="false">
+        <enterReferenceNode node="enterReferencePoint"/>
+        <exitPoint node="exitReferencePoint"/>
+        <nicknameRenderNode index="hallCrane_rotator_component2" offset="0 0.5 0"/>
+        <cameras>
+            <camera node="indoorCamera" rotatable="true" limit="true" rotMinX="-1.1" rotMaxX="0.4" transMin="0" transMax="0" useMirror="true" isInside="true"/>
+            <camera node="outdoorCamera" rotatable="true" rotateNode="outdoorCameraTarget" limit="true" useWorldXZRotation="true" rotMinX="-1" rotMaxX="1" transMin="-2" transMax="10"/>
+            <camera node="outdoorCamera2" rotatable="true" rotateNode="outdoorCameraTarget2" limit="true" useWorldXZRotation="true" rotMinX="-1" rotMaxX="1" transMin="-2" transMax="10"/>
+        </cameras>
+    </enterable>
+
+    <animations>
+        <animation name="adjustComponentJoint">
+            <part componentJointIndex="1" startTime="0" endTime="10" startTransMinLimit="0 0 0" endTransMinLimit="0 -4.5 0" startTransMaxLimit="0 0 0" endTransMaxLimit="0 0 0"/>
+        </animation>
+    </animations>
+
+    <cylindered>
+        <movingTools>
+            <movingTool node="crane" playSound="true">
+                <controls axis="SH_MOVE_CRANE_BRIDGE" invertAxis="true" mouseSpeedFactor="1.0" iconName="CRANE_EC_TRANSLATE_Y"/>
+                <translation translationAxis="1" transSpeed="3" transAcceleration="8" transMax="14.67" transMin="-14.92" startTrans="-0.165"/>
+                <componentJoint index="1"/>
+            </movingTool>
+
+            <movingTool node="craneTraveler" playSound="true">
+                <controls axis="SH_MOVE_CRANE_TROLLEY" invertAxis="true" mouseSpeedFactor="1.0" iconName="CRANE_EC_TRANSLATE_Z"/>
+                <translation translationAxis="2" transSpeed="3" transAcceleration="10" transMax="14.35" transMin="-4" startTrans="0.415"/>
+                <componentJoint index="1"/>
+            </movingTool>
+
+            <!-- Tool up/down -->
+            <movingTool node="craneTravelerComponentJoint" playSound="true">
+                <controls axis="SH_MOVE_CRANE_TOOL" invertAxis="false" mouseSpeedFactor="1.0" iconName="GRABBER_OPEN_CLOSE"/>
+                <animation animSpeed="0.2" animAcceleration="2" animName="adjustComponentJoint"/>
+            </movingTool>
+
+            <!-- Tool rotation -->
+            <movingTool node="craneRotator" playSound="true">
+                <controls axis="SH_ROTATE_CRANE_TOOL" invertAxis="true" mouseSpeedFactor="1.0" iconName="FRONTLOADER_ARM_ROTATE"/>
+                <rotation rotSpeed="-80" rotAcceleration="320" rotationAxis="2"/>
+                <componentJoint index="2"/>
+                <componentJoint index="3"/>
+            </movingTool>
+
+            <!-- Tool grab -->
+            <movingTool node="toolLeftComponentJoint" playSound="true">
+                <controls axis="SH_OPEN_CRANE_TOOL" invertAxis="true" mouseSpeedFactor="1.0" iconName="GRABBER_OPEN_CLOSE"/>
+                <rotation rotationAxis="1" rotSpeed="80" rotAcceleration="640" rotMax="1" rotMin="-83"/>
+                <componentJoint index="2"/>
+                <dependentMovingTool node="toolRightComponentJoint" speedScale="1"/>
+            </movingTool>
+            <movingTool node="toolRightComponentJoint" playSound="true">
+                <rotation rotationAxis="1" rotSpeed="-80" rotAcceleration="640" rotMax="83" rotMin="-1"/>
+                <componentJoint index="3"/>
+            </movingTool>
+        </movingTools>
+
+        <movingParts>
+            <movingPart node="shovelLeft" referencePoint="shovelLeftRefPoint" referenceFrame="shovelLeftRefFrame" isActiveDirty="true" limitedAxis="1"/>
+            <movingPart node="grabLeft" referencePoint="grabLeftRefPoint" referenceFrame="grabLeftRefFrame" isActiveDirty="true" limitedAxis="1"/>
+            <movingPart node="palletGrabLeftRotHelp" referencePoint="palletGrabLeftRefPoint" referenceFrame="palletGrabLeftRefFrame" isActiveDirty="true" limitedAxis="2">
+                <translatingPart node="palletGrabLeftTranslateHelp"/>
+            </movingPart>
+            <movingPart node="palletGrabLeftTranslate" referencePoint="palletGrabLeftTranslateHelp" referenceFrame="palletGrabLeftRefFrame" isActiveDirty="true" limitedAxis="1">
+                <translatingPart node="palletGrabLeft"/>
+            </movingPart>
+
+            <movingPart node="shovelRight" referencePoint="shovelRightRefPoint" referenceFrame="shovelRightRefFrame" isActiveDirty="true" limitedAxis="1"/>
+            <movingPart node="grabRight" referencePoint="grabRightRefPoint" referenceFrame="grabRightRefFrame" isActiveDirty="true" limitedAxis="1"/>
+            <movingPart node="palletGrabRightRotHelp" referencePoint="palletGrabRightRefPoint" referenceFrame="palletGrabRightRefFrame" isActiveDirty="true" limitedAxis="2">
+                <translatingPart node="palletGrabRightTranslateHelp"/>
+            </movingPart>
+            <movingPart node="palletGrabRightTranslate" referencePoint="palletGrabRightTranslateHelp" referenceFrame="palletGrabRightRefFrame" isActiveDirty="true" limitedAxis="1">
+                <translatingPart node="palletGrabRight"/>
+            </movingPart>
+
+            <!-- Hydraulics -->
+            <movingPart node="shovelCylinder" referencePoint="shovelCylinderRef" referenceFrame="shovel_vis" isActiveDirty="true">
+                <translatingPart node="shovelCylinderPunch"/>
+            </movingPart>
+            <movingPart node="shovelConnectionBar" referencePoint="shovelConnectionBarRef" referenceFrame="shovel_vis" isActiveDirty="true" scaleZ="true"/>
+            <movingPart node="grabCylinder" referencePoint="grabCylinderRef" referenceFrame="grab_vis" isActiveDirty="true">
+                <translatingPart node="grabCylinderPunch"/>
+            </movingPart>
+            <movingPart node="grabConnectionBar" referencePoint="grabConnectionBarRef" referenceFrame="grab_vis" isActiveDirty="true" scaleZ="true"/>
+            <movingPart node="palletGrabCylinderLeft" referencePoint="palletGrabCylinderLeftRef" referenceFrame="palletGrabLeftRefFrame" isActiveDirty="true">
+                <translatingPart node="palletGrabCylinderPunchLeft"/>
+            </movingPart>
+            <movingPart node="palletGrabCylinderRight" referencePoint="palletGrabCylinderRightRef" referenceFrame="palletGrabRightRefFrame" isActiveDirty="true">
+                <translatingPart node="palletGrabCylinderPunchRight"/>
+            </movingPart>
+        </movingParts>
+
+        <sounds>
+            <hydraulic template="DEFAULT_HYDRAULIC_SOUND" linkNode="0>"/>
+        </sounds>
+    </cylindered>
+
+    <craneTools dischargeThreshold="0.15" shovelThreshold="0.05">
+        <craneTool name="shovel" type="shovel" fillUnitIndex="1" movingToolNode="craneTravelerComponentJoint" movingToolMaxAnimationTime="0.95">
+            <objectChange node="shovel" visibilityActive="true" visibilityInactive="false"/>
+            <objectChange node="grab" visibilityActive="false" visibilityInactive="true"/>
+            <objectChange node="palletGrab" visibilityActive="false" visibilityInactive="true"/>
+
+            <!--Shovel compounds-->
+            <objectChange node="shovelLeftCollisionPart1" compoundChildActive="true" compoundChildInactive="false"/>
+            <objectChange node="shovelRightCollisionPart1" compoundChildActive="true" compoundChildInactive="false"/>
+        </craneTool>
+        <craneTool name="grab" type="grab" jointNode="grabJointNode" movingToolNode="craneTravelerComponentJoint" movingToolMaxAnimationTime="0.9">
+            <mount>
+                <trigger node="baleTriggerRight"/>
+                <trigger node="baleTriggerLeft"/>
+            </mount>
+
+            <objectChange node="grab" visibilityActive="true" visibilityInactive="false"/>
+            <objectChange node="shovel" visibilityActive="false" visibilityInactive="true"/>
+            <objectChange node="palletGrab" visibilityActive="false" visibilityInactive="true"/>
+
+            <!--Grab compounds-->
+            <objectChange node="grabRightCollisionPart1" compoundChildActive="true" compoundChildInactive="false"/>
+            <objectChange node="grabRightCollisionPart2" compoundChildActive="false" compoundChildInactive="false"/>
+            <objectChange node="grabRightCollisionPart3" compoundChildActive="true" compoundChildInactive="false"/>
+            <objectChange node="grabLeftCollisionPart1" compoundChildActive="true" compoundChildInactive="false"/>
+            <objectChange node="grabLeftCollisionPart2" compoundChildActive="false" compoundChildInactive="false"/>
+            <objectChange node="grabLeftCollisionPart3" compoundChildActive="true" compoundChildInactive="false"/>
+        </craneTool>
+        <craneTool name="palletGrab" type="palletGrab" jointNode="palletGrabJointNode" movingToolNode="craneTravelerComponentJoint" movingToolMaxAnimationTime="0.75">
+            <mount>
+                <trigger node="dynamicMountTriggerRight"/>
+                <trigger node="dynamicMountTriggerLeft"/>
+            </mount>
+
+            <objectChange node="palletGrab" visibilityActive="true" visibilityInactive="false"/>
+            <objectChange node="shovel" visibilityActive="false" visibilityInactive="true"/>
+            <objectChange node="grab" visibilityActive="false" visibilityInactive="true"/>
+
+            <objectChange node="palletGrabLeftCollision1" compoundChildActive="true" compoundChildInactive="false"/>
+            <objectChange node="pelletGrabRightCollision1" compoundChildActive="true" compoundChildInactive="false"/>
+            <objectChange node="grabCollisionRight1" compoundChildActive="true" compoundChildInactive="false"/>
+            <objectChange node="grabCollisionRight2" compoundChildActive="true" compoundChildInactive="false"/>
+            <objectChange node="grabCollisionLeft1" compoundChildActive="true" compoundChildInactive="false"/>
+            <objectChange node="grabCollisionLeft2" compoundChildActive="true" compoundChildInactive="false"/>
+        </craneTool>
+    </craneTools>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <fillUnit unit="$l10n_unit_literShort" fillTypeCategories="bulk" capacity="800">
+                        <exactFillRootNode node="exactFillRootNode"/>
+                    </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <fillVolume>
+        <fillVolumeConfigurations>
+            <fillVolumeConfiguration>
+                <volumes>
+                    <volume node="fillVolume" maxAllowedHeapAngle="10" fillUnitIndex="1"/>
+                </volumes>
+            </fillVolumeConfiguration>
+        </fillVolumeConfigurations>
+
+        <loadInfos>
+            <loadInfo>
+                <node node="loadInfo" width="1.2" length="0.5"/>
+            </loadInfo>
+        </loadInfos>
+
+        <unloadInfos>
+            <unloadInfo>
+                <node node="unloadInfo" width="1.2" length="0.5"/>
+            </unloadInfo>
+        </unloadInfos>
+    </fillVolume>
+
+    <dischargeable requiresTipOcclusionArea="false" stopDischargeOnDeactivate="false">
+        <dischargeNode node="dischargeNode" fillUnitIndex="1" emptySpeed="3500">
+            <raycast node="dischargeNode" maxDistance="30" useWorldNegYDirection="true" yOffset="2"/>
+            <info width="1.2" length="0.5" zOffset="0.5"/>
+
+            <movingToolActivation node="toolLeftComponentJoint" isInverted="true" openFactor="0.5"/>
+
+            <effects>
+                <effectNode effectClass="TipEffect">
+                    <effectNode effectNode="grainNorm1" materialType="unloading" materialTypeId="3" fadeTime="0.5" alignXAxisToWorldY="true"/>
+                </effectNode>
+                <effectNode effectNode="smokeEffect" materialType="smoke" materialTypeId="1" fadeTime="0.5"/>
+            </effects>
+        </dischargeNode>
+    </dischargeable>
+
+    <shovel>
+        <shovelNode node="pickupNode" fillUnitIndex="1" loadInfoIndex="1" width="1.2" length="0.5" needsMovement="true" maxPickupAngle="160">
+            <movingToolActivation node="toolLeftComponentJoint" isInverted="false" openFactor="0.3"/>
+        </shovelNode>
+        <dischargeInfo node="dischargeNode" minSpeedAngle="90" maxSpeedAngle="160"/>
+    </shovel>
+
+    <ropes>
+        <rope baseNode="rope1" targetNode="ropeTarget1" baseParameters="0 0 0 0" targetParameters="0 0 0 0"/>
+        <rope baseNode="rope2" targetNode="ropeTarget2" baseParameters="0 0 0 0" targetParameters="0 0 0 0"/>
+        <rope baseNode="rope3" targetNode="ropeTarget3" baseParameters="0 0 0 0" targetParameters="0 0 0 0"/>
+        <rope baseNode="rope4" targetNode="ropeTarget4" baseParameters="0 0 0 0" targetParameters="0 0 0 0"/>
+    </ropes>
+
+    <i3dMappings>
+        <i3dMapping id="hallCrane_main_component1" node="0>" />
+        <i3dMapping id="crane" node="0>0" />
+        <i3dMapping id="craneTraveler" node="0>0|0" />
+        <i3dMapping id="craneTravelerComponentJoint" node="0>0|0|0" />
+        <i3dMapping id="ropes" node="0>0|0|1" />
+        <i3dMapping id="Umlenkrolle" node="0>0|0|1|0" />
+        <i3dMapping id="Stromkabel" node="0>0|0|1|1" />
+        <i3dMapping id="ropeTargets" node="0>0|0|2" />
+        <i3dMapping id="ropeTarget1" node="0>0|0|2|0" />
+        <i3dMapping id="ropeTarget2" node="0>0|0|2|1" />
+        <i3dMapping id="ropeTarget3" node="0>0|0|2|2" />
+        <i3dMapping id="ropeTarget4" node="0>0|0|2|3" />
+        <i3dMapping id="cameras" node="0>0|1" />
+        <i3dMapping id="indoorCamera" node="0>0|1|0" />
+        <i3dMapping id="outdoorCameraTarget2" node="0>0|1|1" />
+        <i3dMapping id="outdoorCamera2" node="0>0|1|1|0" />
+        <i3dMapping id="craneCollisionPart" node="0>0|2" />
+        <i3dMapping id="lights" node="0>0|3" />
+        <i3dMapping id="beaconLight" node="0>0|3|0" />
+        <i3dMapping id="VehicleEnterTrigger" node="0>1" />
+        <i3dMapping id="vehicleEnterCircle" node="0>1|0" />
+        <i3dMapping id="exitReferencePoint" node="0>1|1" />
+        <i3dMapping id="enterReferencePoint" node="0>1|2" />
+        <i3dMapping id="hallCrane_rotator_component2" node="1>" />
+        <i3dMapping id="cranePulley_vis" node="1>0" />
+        <i3dMapping id="craneRotator_vis" node="1>0|0" />
+        <i3dMapping id="craneRotator" node="1>0|0|0" />
+        <i3dMapping id="toolRightComponentJoint" node="1>0|0|0|0" />
+        <i3dMapping id="toolLeftComponentJoint" node="1>0|0|0|1" />
+        <i3dMapping id="shovel" node="1>0|0|0|2" />
+        <i3dMapping id="shovel_vis" node="1>0|0|0|2|0" />
+        <i3dMapping id="shovelLeft" node="1>0|0|0|2|0|0" />
+        <i3dMapping id="shovelConnectionBarRef" node="1>0|0|0|2|0|0|0" />
+        <i3dMapping id="shovelCylinderRef" node="1>0|0|0|2|0|0|1" />
+        <i3dMapping id="pickupNode" node="1>0|0|0|2|0|0|2" />
+        <i3dMapping id="shovelRight" node="1>0|0|0|2|0|1" />
+        <i3dMapping id="shovelCylinder" node="1>0|0|0|2|0|1|0" />
+        <i3dMapping id="shovelCylinderPunch" node="1>0|0|0|2|0|1|0|0" />
+        <i3dMapping id="shovelConnectionBar" node="1>0|0|0|2|0|1|1" />
+        <i3dMapping id="fillVolume" node="1>0|0|0|2|0|2|0" />
+        <i3dMapping id="exactFillRootNode" node="1>0|0|0|2|0|2|1" />
+        <i3dMapping id="loadInfo" node="1>0|0|0|2|0|2|2" />
+        <i3dMapping id="unloadInfo" node="1>0|0|0|2|0|2|3" />
+        <i3dMapping id="dischargeNode" node="1>0|0|0|2|0|2|4" />
+        <i3dMapping id="grainNorm1" node="1>0|0|0|2|0|2|5" />
+        <i3dMapping id="smokeEffect" node="1>0|0|0|2|0|2|6" />
+        <i3dMapping id="shovelLeftRefFrame" node="1>0|0|0|2|0|3" />
+        <i3dMapping id="shovelRightRefFrame" node="1>0|0|0|2|0|4" />
+        <i3dMapping id="grab" node="1>0|0|0|3" />
+        <i3dMapping id="grab_vis" node="1>0|0|0|3|0" />
+        <i3dMapping id="grabLeft" node="1>0|0|0|3|0|0" />
+        <i3dMapping id="grabConnectionBarRef" node="1>0|0|0|3|0|0|0" />
+        <i3dMapping id="grabCylinderRef" node="1>0|0|0|3|0|0|1" />
+        <i3dMapping id="grab_vis3" node="1>0|0|0|3|0|0|2" />
+        <i3dMapping id="baleTriggerLeft" node="1>0|0|0|3|0|0|3" />
+        <i3dMapping id="grabRight" node="1>0|0|0|3|0|1" />
+        <i3dMapping id="grabConnectionBar" node="1>0|0|0|3|0|1|0" />
+        <i3dMapping id="grabCylinder" node="1>0|0|0|3|0|1|1" />
+        <i3dMapping id="grabCylinderPunch" node="1>0|0|0|3|0|1|1|0" />
+        <i3dMapping id="grab_vis2" node="1>0|0|0|3|0|1|2" />
+        <i3dMapping id="baleTriggerRight" node="1>0|0|0|3|0|1|3" />
+        <i3dMapping id="grabRightRefFrame" node="1>0|0|0|3|0|2" />
+        <i3dMapping id="grabLeftRefFrame" node="1>0|0|0|3|0|3" />
+        <i3dMapping id="grabJointNode" node="1>0|0|0|3|0|4" />
+        <i3dMapping id="palletGrab" node="1>0|0|0|4" />
+        <i3dMapping id="base" node="1>0|0|0|4|0" />
+        <i3dMapping id="palletGrabRightRotHelp" node="1>0|0|0|4|0|0" />
+        <i3dMapping id="palletGrabRightTranslateHelp" node="1>0|0|0|4|0|0|0" />
+        <i3dMapping id="palletGrabLeftRotHelp" node="1>0|0|0|4|0|1" />
+        <i3dMapping id="palletGrabLeftTranslateHelp" node="1>0|0|0|4|0|1|0" />
+        <i3dMapping id="palletGrabRightTranslate" node="1>0|0|0|4|0|2" />
+        <i3dMapping id="palletGrabRight" node="1>0|0|0|4|0|2|0" />
+        <i3dMapping id="palletGrabCylinderRightRef" node="1>0|0|0|4|0|2|0|0" />
+        <i3dMapping id="pelletGrabRightCollision1" node="1>0|0|0|4|0|2|0|1" />
+        <i3dMapping id="dynamicMountTriggerRight" node="1>0|0|0|4|0|2|0|2" />
+        <i3dMapping id="grabCollisionLeft1" node="1>0|0|0|4|0|2|0|3|0" />
+        <i3dMapping id="grabCollisionLeft2" node="1>0|0|0|4|0|2|0|3|1" />
+        <i3dMapping id="palletGrabLeftTranslate" node="1>0|0|0|4|0|3" />
+        <i3dMapping id="palletGrabLeft" node="1>0|0|0|4|0|3|0" />
+        <i3dMapping id="palletGrabCylinderLeftRef" node="1>0|0|0|4|0|3|0|0" />
+        <i3dMapping id="palletGrabLeftCollision1" node="1>0|0|0|4|0|3|0|1" />
+        <i3dMapping id="dynamicMountTriggerLeft" node="1>0|0|0|4|0|3|0|2" />
+        <i3dMapping id="grabCollisionRight1" node="1>0|0|0|4|0|3|0|3|0" />
+        <i3dMapping id="grabCollisionRight2" node="1>0|0|0|4|0|3|0|3|1" />
+        <i3dMapping id="palletGrabCylinderRight" node="1>0|0|0|4|0|4" />
+        <i3dMapping id="palletGrabCylinderPunchRight" node="1>0|0|0|4|0|4|0" />
+        <i3dMapping id="palletGrabCylinderLeft" node="1>0|0|0|4|0|5" />
+        <i3dMapping id="palletGrabCylinderPunchLeft" node="1>0|0|0|4|0|5|0" />
+        <i3dMapping id="palletGrabLeftRefFrame" node="1>0|0|0|4|0|6" />
+        <i3dMapping id="palletGrabRightRefFrame" node="1>0|0|0|4|0|7" />
+        <i3dMapping id="palletGrabJointNode" node="1>0|0|0|4|0|8" />
+        <i3dMapping id="ropesBase" node="1>0|1" />
+        <i3dMapping id="rope1" node="1>0|1|0" />
+        <i3dMapping id="rope2" node="1>0|1|1" />
+        <i3dMapping id="rope3" node="1>0|1|2" />
+        <i3dMapping id="rope4" node="1>0|1|3" />
+        <i3dMapping id="outdoorCameraTarget" node="1>0|2" />
+        <i3dMapping id="outdoorCamera" node="1>0|2|0" />
+        <i3dMapping id="hallCrane_toolLeft_component3" node="2>" />
+        <i3dMapping id="shovelLeftRefPoint" node="2>0" />
+        <i3dMapping id="grabLeftRefPoint" node="2>1" />
+        <i3dMapping id="palletGrabLeftRefPoint" node="2>2" />
+        <i3dMapping id="shovelCollisionsLeft" node="2>3" />
+        <i3dMapping id="shovelLeftCollisionPart1" node="2>3|0" />
+        <i3dMapping id="grabCollisionsLeft" node="2>4" />
+        <i3dMapping id="grabLeftCollisionPart1" node="2>4|0" />
+        <i3dMapping id="grabLeftCollisionPart2" node="2>4|1|0" />
+        <i3dMapping id="grabLeftCollisionPart3" node="2>4|1|1" />
+        <i3dMapping id="hallCrane_toolRight_component4" node="3>" />
+        <i3dMapping id="shovelRightRefPoint" node="3>0" />
+        <i3dMapping id="grabRightRefPoint" node="3>1" />
+        <i3dMapping id="palletGrabRightRefPoint" node="3>2" />
+        <i3dMapping id="shovelCollisionsRight" node="3>3" />
+        <i3dMapping id="shovelRightCollisionPart1" node="3>3|0" />
+        <i3dMapping id="grabCollisionsRight" node="3>4" />
+        <i3dMapping id="grabRightCollisionPart1" node="3>4|0" />
+        <i3dMapping id="grabRightCollisionPart2" node="3>4|1|0" />
+        <i3dMapping id="grabRightCollisionPart3" node="3>4|1|1" />
+    </i3dMappings>
+</vehicle>

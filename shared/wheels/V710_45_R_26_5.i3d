@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="V710_45_R_26_5" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="1" filename="V710_45_R_26_5_normal.png" />
+    <File fileId="2" filename="V710_45_R_26_5_specular.png" />
+    <File fileId="3" filename="$data/shaders/vehicleShader.xml" />
+  </Files>
+
+  <Materials>
+    <Material name="V710Tire" materialId="1" diffuseColor="0.5 0.5 0.5 1" cosPower="50" specularColor="1 1 1" ambientColor="1 1 1" customShaderId="3" customShaderVariation="tirePressureDeformation">
+      <CustomParameter name="morphPosition" value="-0.435 -0.827 0.5 0.05"/>
+      <Normalmap fileId="1"/>
+      <Glossmap fileId="2"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="V710_45_R_26_5.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <Shape name="V710LeftTire" scale="1 1 1" shapeId="1" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="1"/>
+    <Shape name="V710RightTire" scale="1 1 1" shapeId="2" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="300" nodeId="2"/>
+  </Scene>
+
+</i3D>

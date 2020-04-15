@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+    <translationContributors>Chosse, Lexik</translationContributors>
+
+    <texts>
+        <!-- Inputs -->
+        <text name="input_SH_TOGGLE_COLLECT_MODE" text="SH: Vybrat režim"/>
+        <text name="input_SH_DEPART_BALES" text="SH: Vyložit balíky"/>
+        <text name="input_SH_RESET_BALE_COUNTER" text="SH: Resetovat počítadlo balíků"/>
+        <text name="input_SH_GRAB_BALES" text="SH: Uchytit balíky"/>
+        <text name="input_SH_DROP_BALES" text="SH: Uvolnit balíky"/>
+        <text name="input_SH_TOGGLE_CRANE_TOOL" text="SH: Vybrat nářadí jeřábu"/>
+        <text name="input_SH_MOVE_CRANE_BRIDGE_1" text="SH: Pohyb ramena jeřábu vpřed"/>
+        <text name="input_SH_MOVE_CRANE_BRIDGE_2" text="SH: Pohyb ramena jeřábu vzad"/>
+        <text name="input_SH_MOVE_CRANE_TROLLEY_1" text="SH: Pohyb ramena jeřábu vpravo"/>
+        <text name="input_SH_MOVE_CRANE_TROLLEY_2" text="SH: Pohyb ramena jeřábu vlevo"/>
+        <text name="input_SH_MOVE_CRANE_TOOL_1" text="SH: Pohyb nářadí nahoru"/>
+        <text name="input_SH_MOVE_CRANE_TOOL_2" text="SH: Pohyb nářadí dolů"/>
+        <text name="input_SH_ROTATE_CRANE_TOOL_1" text="SH: Otočit nářadí vpravo"/>
+        <text name="input_SH_ROTATE_CRANE_TOOL_2" text="SH: Otočit nářadí vlevo"/>
+        <text name="input_SH_OPEN_CRANE_TOOL_1" text="SH: Otevřít nářadí"/>
+        <text name="input_SH_OPEN_CRANE_TOOL_2" text="SH: Zavřít nářadí"/>
+        <text name="input_SH_TOGGLE_BALE_SIZE" text="SH: Zvolit velikost balíku"/>
+        <text name="input_SH_TOGGLE_REFILL_COVER" text="SH: Zvolit doplňovací kryt"/>
+
+        <!-- Bale grab -->
+        <text name="typeDesc_baleGrab" text="Balíkový drapák"/>
+        <text name="function_baleGrab" text="Pomocí zajišťovacích drapáků můžete jednoduše a rychle uchytit bylíky."/>
+
+        <text name="configuration_inputAttacherTeleHandler" text="Teleskopický manipulátor"/>
+
+        <text name="action_grabBales" text="Zajistit balíky"/>
+        <text name="action_dropBales" text="Uvolnit balíky"/>
+
+        <text name="action_addSpikes" text="Přidělat vidle"/>
+        <text name="action_removeSpikes" text="Oddělat vidle"/>
+
+        <!-- Comprima -->
+        <text name="function_comprima" text="Lis na balíky lisuje slámu, trávu nebo seno do praktických balíků. Comprima může lisovat balíky ve velikostech od 1,10m do 1,80m. UPOZORNĚNÍ: většina příslušenství ve hře podporuje pouze balíky o velikosti 1,30m. "/>
+
+        <!-- Bale counter -->
+        <text name="action_resetBaleCounter" text="Resetovat počítadlo balíků"/>
+
+        <!-- BigPack -->
+        <text name="configuration_baleTrailer" text="BaleCollect 1230"/>
+        <text name="configuration_noBaleTrailer" text="Skluzná branka"/>
+
+        <!-- BaleCollect -->
+        <text name="function_baleCollect" text="Připojte Bale Collect ke svému Krone BigPack 1290 HDP II XC pro uložení 3 balíků a vyložením bok po boku."/>
+        <text name="typeDesc_baleCollect" text="Akumulační vozík"/>
+        <text name="action_collectMode" text="Způsob vyložení %s"/>
+        <text name="warning_needsABaleTrailer" text="V této konfiguraci může být lis použít pouze s akumulačním vozíkem!"/>
+
+        <!-- Premos -->
+        <text name="function_premos" text="Tento stroj může vytvořit pelety ze slámy nebo sena přímo na poli. S připojeným drtičem balíků může být použit i stacionárně."/>
+        <text name="typeDesc_premos" text="Peletovač"/>
+
+        <!-- BaleShredder -->
+        <text name="name_baleShredder" text="Drtič balíků"/>
+        <text name="function_baleShredder" text="Připojte drtič k Premos 5000 pro rozdrcení balíků a následné peletování materiálu. Drtič se připojuje na pravé straně ve směru jízdy, všimněte si žluté šipky uvnitř drtiče, ta má směřovat k Premosu."/>
+        <text name="typeDesc_baleShredder" text="Drtič balíků"/>
+        <text name="warning_firstFoldTheTool" text="Prvně musíte zařízení složit (%s)!"/>
+        <text name="warning_baleFillTypeNotSupported" text="Nepodporovaný typ balíku!"/>
+        <text name="warning_roundBalesNotSupported" text="Kulaté balíky nejsou podporovány!"/>
+
+        <!-- Placeables -->
+        <text name="name_pelletHall" text="Hala s paletizátorem"/>
+        <text name="name_pelletHall_crane" text="Hala s jeřábem"/>
+        <text name="name_pelletHall_empty" text="Hala"/>
+        <text name="name_palletSellPoint" text="Prodejní místo pro palety"/>
+        <text name="action_lightsOn" text="Rozsvítit světla"/>
+        <text name="action_lightsOff" text="Zhasnout světla"/>
+
+        <text name="function_pelletHall" text="Zde můžete skladovat své pelety ze slámy a sena. Použijte paletizátor pro zabalení pelet do pytlů a uložení na palety. Pomocí jeřábu je velmi jednoduché naplnit paletizátor."/>
+        <text name="function_pelletHall_crane" text="Zde můžete skladovat své pelety ze slámy a sena. Pomocí jeřábu je velmi jednoduché naplnit vaše stroje."/>
+        <text name="function_pelletHall_empty" text="Zde můžete skladovat své balíky a sypký materiál nebo zaparkovat své stroje."/>
+        <text name="function_palletSellPoint" text="Zde můžete prodat palety s peletami za vyšší cenu než za sypký materiál."/>
+
+        <!-- Crane -->
+        <text name="action_toggleCraneTool" text="Vybrat nářadí jeřábu"/>
+
+        <!-- Palletizer -->
+        <text name="notification_palletizer_refilled" text="Paletizátor doplněn %d pytli z důvodu uložení/synchronizace."/>
+        <text name="notification_palletizer_stopped" text="Paletizátor se zastavil"/>
+        <text name="notification_palletizer_empty" text="Paletizátor je prázný"/>
+        <text name="statistics_palletizer_bags" text="Dnešní produkce: %d pytlů, %d palet"/>
+        <text name="statistics_palletizer_time" text="Zásoby vystačí na %d minut %d sekund"/>
+        <text name="statistics_palletizer_blocked" text="Paletizátor je zablokován, uvolněte dopravník!"/>
+
+        <!-- Pallets -->
+        <text name="baleTwinePallet" text="Paleta motouzů"/>
+        <text name="function_baleTwinePallet" text="S motouzy doplníte Krone BigPack 1290 HDP II XC."/>
+        <text name="netRolePallet" text="Paleta síťovin"/>
+        <text name="function_netRolePallet" text="S rolemi síťoviny doplníte Krone Comprima V 180 XC."/>
+        <text name="molassesPallet" text="Paleta s melasou"/>
+        <text name="function_molassesPallet" text="S kanystry melasy doplníte melasovou nádrž u Krone Premos 5000."/>
+
+        <!-- fillTypes -->
+        <text name="fillType_strawPellets" text="Slaměné pelety"/>
+        <text name="fillType_hayPellets" text="Senné pelety"/>
+        <text name="fillType_baleTwine" text="Motouz"/>
+        <text name="fillType_baleNet" text="Role síťoviny"/>
+        <text name="fillType_molasses" text="Melasa"/>
+
+        <!-- refillSupplies -->
+        <text name="action_openBaleNetDoor" text="Otevřít kryt"/>
+        <text name="action_closeBaleNetDoor" text="Zavřít kryt"/>
+        <text name="action_lowerTwineBoxes" text="Otevřít boxy "/>
+        <text name="action_liftTwineBoxes" text="Zavřít boxy"/>
+        <text name="warning_closeBaleNetDoorFirst" text="Zavřete kryt!"/>
+        <text name="warning_closeTwineBoxesFirst" text="Zavřete boxy!"/>
+        <text name="warning_refillSuppliesFirst" text="Doplňte %s !"/>
+
+        <text name="configuration_refillSupplies" text="Doplňování"/>
+        <text name="configuration_manually" text="Manuálně"/>
+        <text name="configuration_automatically" text="Automaticky"/>
+
+        <!-- Variable bale size -->
+        <text name="action_baleUnitSize" text="Změnit velikost balíku %.2f"/>
+        <text name="warning_baleTooSmall" text="Velikost dalšího balíku %.2f je příliš malá pro aktuální úroveň naplnění"/>
+
+        <!-- Misc -->
+        <text name="strawHarvest_message_failedHeightTypes" text="Sklizeň slámy nebylo možné načíst na aktuální mapě: mapa v kombinaci s aktivními módy není kompatibilní se Sklizní Slámy. (Příliš mnoho plodin)"/>
+    </texts>
+</l10n>

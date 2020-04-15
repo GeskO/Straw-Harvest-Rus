@@ -1,0 +1,607 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="kroneComprimaV180XC">
+    <annotation>Copyright (C) Creative Mesh UG</annotation>
+
+    <storeData>
+        <name>Comprima V 180 XC</name>
+        <specs>
+            <neededPower>80</neededPower>
+        </specs>
+        <functions>
+            <function>$l10n_function_comprima</function>
+        </functions>
+        <image>vehicles/krone/comprimaV180XC/store_comprimaV180.dds</image>
+        <price>81700</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>KRONE</brand>
+        <category>baling</category>
+        <shopFoldingState>1</shopFoldingState>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_baler</typeDesc>
+        <filename>vehicles/krone/comprimaV180XC/comprimaV180XC.i3d</filename>
+        <size width="3" length="5"/>
+        <speedLimit value="20"/>
+        <components>
+            <component centerOfMass="0 0.8 0.2" solverIterationCount="10" mass="3100"/>
+            <component centerOfMass="0 0 0" solverIterationCount="10" mass="100"/>
+            <joint component1="1" component2="2" node="compJoint" rotLimit="0 0 0" transLimit="0 0 0"/>
+        </components>
+        <schemaOverlay attacherJointPosition="0 0">
+            <default name="DEFAULT_IMPLEMENT"/>
+            <turnedOn name="DEFAULT_IMPLEMENT_ON"/>
+            <selected name="DEFAULT_IMPLEMENT_SELECTED"/>
+            <turnedOnSelected name="DEFAULT_IMPLEMENT_SELECTED_ON"/>
+        </schemaOverlay>
+    </base>
+
+    <wheels>
+        <wheelConfigurations>
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+                <wheels>
+                    <wheel filename="shared/wheels/T480_45_17.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics restLoad="0.8" repr="wheelLeft1" forcePointRatio="0.5" initialCompression="30" suspTravel="0.25" spring="20" damper="10"/>
+                    </wheel>
+                    <wheel filename="shared/wheels/T480_45_17.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics restLoad="0.8" repr="wheelRight1" forcePointRatio="0.5" initialCompression="30" suspTravel="0.25" spring="20" damper="10"/>
+                    </wheel>
+                    <wheel filename="shared/wheels/T480_45_17.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics restLoad="0.8" repr="wheelLeft2" forcePointRatio="0.5" initialCompression="30" suspTravel="0.25" spring="20" damper="10"/>
+                    </wheel>
+                    <wheel filename="shared/wheels/T480_45_17.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics restLoad="0.8" repr="wheelRight2" forcePointRatio="0.5" initialCompression="30" suspTravel="0.25" spring="20" damper="10"/>
+                    </wheel>
+                    <wheel filename="shared/wheels/pickupWheels.xml" isLeft="true">
+                        <physics restLoad="0.2" repr="pickupWheelLeft" driveNode="pickupWheelLeft_linkNode" forcePointRatio="0.3" mass="0.01" initialCompression="15" suspTravel="0.1" spring="3" damper="2" brakeFactor="0" rotationDamping="0.001"/>
+                    </wheel>
+                    <wheel filename="shared/wheels/pickupWheels.xml" isLeft="false">
+                        <physics restLoad="0.2" repr="pickupWheelRight" driveNode="pickupWheelRight_linkNode" forcePointRatio="0.3" mass="0.01" initialCompression="15" suspTravel="0.1" spring="3" damper="2" brakeFactor="0" rotationDamping="0.001"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+        </wheelConfigurations>
+    </wheels>
+
+    <dynamicallyLoadedParts>
+        <dynamicallyLoadedPart node="1|0" linkNode="hydraulicIn1Stored2" filename="$data/shared/connectionHoses/connectors.i3d"/>
+        <dynamicallyLoadedPart node="1|0" linkNode="hydraulicOut1Stored2" filename="$data/shared/connectionHoses/connectors.i3d"/>
+        <dynamicallyLoadedPart node="1|0" linkNode="hydraulicIn2Stored2" filename="$data/shared/connectionHoses/connectors.i3d"/>
+        <dynamicallyLoadedPart node="1|3" linkNode="airRedStored2" filename="$data/shared/connectionHoses/connectors.i3d"/>
+        <dynamicallyLoadedPart node="1|2" linkNode="airYellowStored2" filename="$data/shared/connectionHoses/connectors.i3d"/>
+        <dynamicallyLoadedPart node="0|1" linkNode="electricStored2" filename="$data/shared/connectionHoses/connectors.i3d"/>
+    </dynamicallyLoadedParts>
+
+    <speedRotatingParts>
+        <speedRotatingPart node="Niederhalterrolle" radius="0.19" turnOnFadeTime="1" turnOffFadeTime="2" onlyActiveWhenLowered="true" rotateOnlyIfFillLevelIncreased="true"/>
+    </speedRotatingParts>
+
+    <connectionHoses>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn" node="hydraulicIn1" length="1.2" diameter="0.018" >
+            <objectChange node="hydraulicIn1Stored" visibilityActive="false" visibilityInactive="true" />
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicOut" node="hydraulicOut1" length="1.2" diameter="0.018" >
+            <objectChange node="hydraulicOut1Stored" visibilityActive="false" visibilityInactive="true" />
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn" node="hydraulicIn2" length="1.2" diameter="0.018" >
+            <objectChange node="hydraulicIn2Stored" visibilityActive="false" visibilityInactive="true" />
+        </hose>
+        <hose inputAttacherJointIndices="1" type="airDoubleRed" node="airRed" length="1.0" diameter="0.022" >
+            <objectChange node="airRedStored" visibilityActive="false" visibilityInactive="true" />
+        </hose>
+        <hose inputAttacherJointIndices="1" type="airDoubleYellow" node="airYellow" length="1.0" diameter="0.022" >
+            <objectChange node="airYellowStored" visibilityActive="false" visibilityInactive="true" />
+        </hose>
+        <hose inputAttacherJointIndices="1" type="electric" node="electric" length="1.2" diameter="0.012" >
+            <objectChange node="electricStored" visibilityActive="false" visibilityInactive="true" />
+        </hose>
+    </connectionHoses>
+
+    <powerTakeOffs>
+        <input inputNode="ptoInputNode" detachNode="ptoDetachedNode" inputAttacherJointIndices="1" aboveAttacher="true" filename="$data/shared/assets/powerTakeOffs/walterscheidWWZ.xml"/>
+    </powerTakeOffs>
+
+    <powerConsumer ptoRpm="540" neededMinPtoPower="15" neededMaxPtoPower="35"/>
+
+    <lights>
+        <sharedLight linkNode="reflector01" filename="$data/shared/assets/reflectors/lizard/yellowRound_01.xml"/>
+        <sharedLight linkNode="reflector02" filename="$data/shared/assets/reflectors/lizard/yellowRound_01.xml"/>
+        <sharedLight linkNode="reflector03" filename="$data/shared/assets/reflectors/lizard/yellowRound_01.xml"/>
+        <sharedLight linkNode="reflector04" filename="$data/shared/assets/reflectors/lizard/yellowRound_01.xml"/>
+        <sharedLight linkNode="kroneBackLightCombo_left" filename="shared/lights/kroneBackLightCombo_left.xml"/>
+        <sharedLight linkNode="kroneBackLightCombo_right" filename="shared/lights/kroneBackLightCombo_right.xml"/>
+        <sharedLight linkNode="sideMarkerRight" filename="$data/shared/assets/lights/lizard/frontLightRectangle_01.xml"/>
+        <sharedLight linkNode="sideMarkerLeft" filename="$data/shared/assets/lights/lizard/frontLightRectangle_01.xml"/>
+
+        <realLights>
+            <high>
+                <light node="backLightsHigh" lightTypes="0"/>
+                <turnLightLeft node="turnLightLeftBack"/>
+                <turnLightRight node="turnLightRightBack"/>
+                <brakeLight node="backLightsHigh"/>
+            </high>
+        </realLights>
+    </lights>
+
+    <groundReferenceNodes>
+        <groundReferenceNode node="rechen_pickup" threshold="0.25"/>
+    </groundReferenceNodes>
+
+    <workAreas>
+        <workArea type="baler" functionName="processBalerArea" disableBackwards="false">
+            <area startNode="areaStart" widthNode="areaWidth" heightNode="areaHeight"/>
+            <groundReferenceNode index="1"/>
+        </workArea>
+    </workAreas>
+
+    <attachable>
+        <inputAttacherJoints>
+            <inputAttacherJoint node="attacherJoint" jointType="trailerLow" attacherHeight="0.78"/>
+        </inputAttacherJoints>
+        <support animationName="moveSupport"/>
+        <brakeForce>0.8</brakeForce>
+    </attachable>
+
+    <pickup>
+        <animation name="lowerPickup" lowerSpeed="2" liftSpeed="-1"/>
+    </pickup>
+
+    <turnOnVehicle>
+        <sounds>
+            <start file="resources/sounds/comprimaStart.wav" innerRadius="5.0" outerRadius="65.0">
+                <volume indoor="0.5" outdoor="1" />
+                <pitch indoor="1.00" outdoor="1.00" />
+                <lowpassGain indoor="0.75" outdoor="1.00" />
+            </start>
+            <work file="resources/sounds/comprimaRun.wav" innerRadius="5.0" outerRadius="65.0" fadeOut="0.3">
+                <volume indoor="0.5" outdoor="2.5" />
+                <pitch indoor="1.00" outdoor="1.00" />
+                <lowpassGain indoor="0.75" outdoor="1.00" />
+            </work>
+            <stop file="resources/sounds/comprimaStop.wav" innerRadius="5.0" outerRadius="65.0" fadeIn="0.1">
+                <volume indoor="0.5" outdoor="1.5" />
+                <pitch indoor="1.00" outdoor="1.00" />
+                <lowpassGain indoor="0.75" outdoor="1.00" />
+            </stop>
+        </sounds>
+    </turnOnVehicle>
+
+    <baleSize growAnimationName="baleGrowAnimation" pressureNeedleAnimationName="pressureNeedleAnim">
+        <units>
+            <unit baleTypeIndex="1" capacity="3500" baleGuideAnimationName="baleGuide110" />
+            <unit baleTypeIndex="2" capacity="4000" baleGuideAnimationName="baleGuide130" />
+            <unit baleTypeIndex="3" capacity="5000" baleGuideAnimationName="baleGuide155" />
+            <unit baleTypeIndex="4" capacity="6500" baleGuideAnimationName="baleGuide180" />
+        </units>
+    </baleSize>
+
+    <baler maxPickupLitersPerSecond="350">
+        <sounds>
+            <balerBaleSizeOptimizedAlarm sampleFillLevelDiff="900" file="$data/sounds/rollBelt150Alarm.wav" pitchOffset="1.00" volume="0.45" indoorVolumeFactor="1.35" indoorLowpassGain="0.95"/>
+            <eject template="BALER_EJECT" />
+            <door template="ROLLBELT_DOOR" />
+        </sounds>
+        <baleTypes>
+            <baleType isRoundBale="true" width="1.2" diameter="1.1"/>
+            <baleType isRoundBale="true" width="1.2" diameter="1.3"/>
+            <baleType isRoundBale="true" width="1.2" diameter="1.55"/>
+            <baleType isRoundBale="true" width="1.2" diameter="1.8"/>
+        </baleTypes>
+        <baleAnimation node="baleNode" scaleIndex="scaleNode" baleIndex="scaleNode" scaleNode="scaleNode" baleNode="baleNode" unloadAnimationName="unloadBale" closeAnimationName="closeDoor" baleDropAnimTime="1.9"/>
+        <fillEffect>
+            <effectNode effectClass="MorphPositionEffect" effectNode="pickupEffect" materialType="pickup" materialTypeId="1" delay="0" fadeTime="0.5" speed="0.9"/>
+
+            <effectNode effectClass="ParticleEffect" effectNode="emitShape_straw1" particleType="PICKUP" emitCountScale="6" worldSpace="false"/>
+            <effectNode effectClass="ParticleEffect" effectNode="emitShape_straw2" particleType="PICKUP" emitCountScale="6" worldSpace="false"/>
+            <effectNode effectClass="ParticleEffect" effectNode="emitShape_straw3" particleType="PICKUP" emitCountScale="6" worldSpace="false"/>
+            <effectNode effectClass="ParticleEffect" effectNode="emitShape_straw4" particleType="PICKUP" emitCountScale="6" worldSpace="false"/>
+            <effectNode effectClass="ParticleEffect" effectNode="emitShape_smoke1" particleType="SMOKE" emitCountScale="0.75"/>
+            <effectNode effectClass="ParticleEffect" effectNode="emitShape_smoke2" particleType="SMOKE" emitCountScale="0.75"/>
+        </fillEffect>
+        <animationNodes>
+            <animationNode node="rotor" rotSpeed="600" rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="5"/>
+            <animationNode node="roller6" rotSpeed="-600" rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="5"/>
+            <animationNode node="roller7" rotSpeed="-600" rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="5"/>
+            <animationNode node="roller8" rotSpeed="-600" rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="5"/>
+            <animationNode node="roller9" rotSpeed="-600" rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="5"/>
+            <animationNode node="roller10" rotSpeed="-600" rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="5"/>
+            <animationNode node="roller11" rotSpeed="-1100" rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="5"/>
+            <animationNode node="wheel1" rotSpeed="-600" rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="5"/>
+            <animationNode node="wheel" rotSpeed="-600" rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="5"/>
+            <animationNode node="roller12" rotSpeed="600" rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="5"/>
+            <animationNode node="roller13" rotSpeed="-600" rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="5"/>
+            <animationNode node="roller2" rotSpeed="600" rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="5"/>
+            <animationNode node="roller3" rotSpeed="600" rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="5"/>
+            <animationNode node="roller4" rotSpeed="600" rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="5"/>
+            <animationNode node="roller5" rotSpeed="-600" rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="5"/>
+            <animationNode node="roller" rotSpeed="600" rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="5"/>
+            <animationNode node="rechen_pickup" rotSpeed="-600" rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="5"/>
+            <animationNode node="Schneggle_links" rotSpeed="-600" rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="5"/>
+            <animationNode node="Schneggle_rechts" rotSpeed="-600" rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="5"/>
+
+            <animationNode node="novoGripFront" shaderParameterName="offsetUV" rotSpeed="-90" shaderComponentScale="1 0 0 0" turnOnFadeTime="2" turnOffFadeTime="5"/>
+            <animationNode node="novoGripBack" shaderParameterName="offsetUV" rotSpeed="-90" shaderComponentScale="1 0 0 0" turnOnFadeTime="2" turnOffFadeTime="5"/>
+        </animationNodes>
+    </baler>
+
+    <animations>
+        <animation name="moveSupport">
+            <part node="supportArm" startTime="0" endTime="0.7" startTrans="0.334 0.837 1.915" endTrans="0.334 0.35 1.915"/>
+            <part node="crank" startTime="0" endTime="0.7" startRot="0 0 0" endRot="0 720 0"/>
+            <part node="stopBlock1" startTime="0" endTime="0.001" startTrans="0.668 1.053 1.646" endTrans="1.239 0.025 0.39" startRot="0 0 0" endRot="27.527 0 0"/>
+            <part node="stopBlock2" startTime="0" endTime="0.001" startTrans="0.495 1.053 1.646" endTrans="1.239 0.00 -1.35" startRot="0 0 0" endRot="27.527 180 0"/>
+        </animation>
+
+        <animation name="lowerPickup">
+            <part node="compJoint" startTime="0" endTime="1" startRot="-23.5 0 0" endRot="0 0 0"/>
+            <part startTime="0" endTime="1" componentJointIndex="1" startRotLimit="0 0 0" endRotLimit="15 0 1"/>
+            <part node="chain_left" startTime="0" endTime="0.6" startRot="-43 0 0" endRot="0 0 0"/>
+            <part node="chain_right" startTime="0" endTime="0.6" startRot="-43 0 0" endRot="0 0 0"/>
+        </animation>
+
+        <animation name="unloadBale">
+            <!-- <part node="netRole" startTime="0" endTime="1" startRot="0 0 0" endRot="-1420 0 0"/> -->
+            <part node="baleDoor" startTime="0" endTime="1.5" startRot="0 0 0" endRot="83 0 0"/>
+            <part node="baleSeesaw" startTime="1.009" endTime="1.5" startRot="0 0 0" endRot="-30.7 0 0"/>
+            <part node="baleSeesaw" startTime="1.5" endTime="1.9" startRot="-30.7 0 0" endRot="-30.7 0 0"/>
+
+            <part node="novoGrip_upperSwing" startTime="0.5" endTime="1.5" endRot="-50 0 0"/>
+            <part node="novoGrip_lowerSwing" startTime="0.5" endTime="1.5" endRot="45 0 0"/>
+            <part node="j_lowerSwingRot" startTime="0.5" endTime="1.5" endRot="-25 0 0"/>
+            <part node="j_lowerSwingRot2" startTime="0.5" endTime="1.5" endRot="-80 0 0"/>
+            <part node="novoGrip_backSwing" startTime="0.5" endTime="1.5" endRot="51 0 0"/>
+            <part node="j_backDoorTopRot" startTime="0.5" endTime="1.5" endRot="-42 0 0"/>
+            <part node="cloth" startTime="0.5" endTime="1.5" endRot="42 0 0"/>
+        </animation>
+
+        <!-- close door -->
+        <animation name="closeDoor">
+            <part node="baleDoor" startTime="0" endTime="1.5" startRot="83 0 0" endRot="0 0 0"/>
+            <part node="baleSeesaw" startTime="0" endTime="0.491" startRot="-30.7 0 0" endRot="0 0 0"/>
+
+            <part node="novoGrip_upperSwing" startTime="0.5" endTime="1.5" endRot="0 0 0"/>
+            <part node="novoGrip_lowerSwing" startTime="0.5" endTime="1.5" endRot="0 0 0"/>
+            <part node="j_lowerSwingRot" startTime="0.5" endTime="1.5" endRot="0 0 0"/>
+            <part node="j_lowerSwingRot2" startTime="0.5" endTime="1.5" endRot="0 0 0"/>
+            <part node="novoGrip_backSwing" startTime="0.5" endTime="1.5" endRot="0 0 0"/>
+            <part node="j_backDoorTopRot" startTime="0.5" endTime="1.5" endRot="0 0 0"/>
+            <part node="cloth" startTime="0.5" endTime="1.5" endRot="0 0 0"/>
+        </animation>
+
+        <animation name="baleNetDoor">
+            <part node="cover" startTime="0" endTime="1" startRot="0 0 0" endRot="-60 0 0"/>
+        </animation>
+
+        <animation name="baleGuide110">
+            <part node="scaleNode" startTime="0" endTime="0.3" startTrans="0.01 1.421 -0.272" startRot="0 0 0" endTrans="0.01 1.022 -0.988" endRot="10 0 0"/>
+            <part node="scaleNode" startTime="1.009" endTime="1.9" startTrans="0.01 1.022 -0.888" startRot="10 0 0" endTrans="0.01 0.607 -2.611" endRot="-210 0 0"/>
+        </animation>
+        <animation name="baleGuide130">
+            <part node="scaleNode" startTime="0" endTime="0.3" startTrans="0.01 1.521 -0.272" startRot="0 0 0" endTrans="0.01 1.122 -0.888" endRot="10 0 0"/>
+            <part node="scaleNode" startTime="1.009" endTime="1.9" startTrans="0.01 1.122 -0.888" startRot="10 0 0" endTrans="0.01 0.707 -2.611" endRot="-180 0 0"/>
+        </animation>
+        <animation name="baleGuide155">
+            <part node="scaleNode" startTime="0" endTime="0.3" startTrans="0.01 1.671 -0.272" startRot="0 0 0" endTrans="0.01 1.272 -0.888" endRot="10 0 0"/>
+            <part node="scaleNode" startTime="1.009" endTime="1.9" startTrans="0.01 1.272 -0.888" startRot="10 0 0" endTrans="0.01 0.857 -2.611" endRot="-130 0 0"/>
+        </animation>
+        <animation name="baleGuide180">
+            <part node="scaleNode" startTime="0" endTime="0.3" startTrans="0.01 1.625 -0.564" startRot="0 0 0" endTrans="0.01 1.363 -0.875" endRot="10 0 0"/>
+            <part node="scaleNode" startTime="1.009" endTime="1.9" startTrans="0.01 1.363 -0.875" startRot="10 0 0" endTrans="0.01 1.037 -2.595" endRot="-90 0 0"/>
+        </animation>
+
+        <animation name="baleGrowAnimation">
+            <part node="scaleNode" startTime="0" endTime="1.0" startTrans="0.01 0.985 0.145" endTrans="0.01 1.625 -0.564"/>
+            <part node="novoGrip_upperSwing" startTime="0" endTime="1.0" startRot="0 0 0" endRot="-50 0 0"/>
+            <part node="novoGrip_lowerSwing" startTime="0" endTime="1.0" startRot="0 0 0" endRot="45 0 0"/>
+            <part node="j_lowerSwingRot" startTime="0" endTime="1.0" startRot="0 0 0" endRot="-25 0 0"/>
+            <part node="j_lowerSwingRot2" startTime="0" endTime="1.0" startRot="0 0 0" endRot="-80 0 0"/>
+            <part node="novoGrip_backSwing" startTime="0" endTime="1.0" startRot="0 0 0" endRot="51 0 0"/>
+            <part node="j_backDoorTopRot" startTime="0" endTime="1.0" startRot="0 0 0" endRot="-42 0 0"/>
+            <part node="cloth" startTime="0" endTime="1.0" startRot="0 0 0" endRot="42 0 0"/>
+        </animation>
+
+        <animation name="pressureNeedleAnim">
+            <part node="pressureNeedle_decal" startTime="0.0" endTime="0.35" startRot="0 0 0" endRot="0 0 -191"/>
+        </animation>
+
+        <animation name="netRoleEmptyAnim" direction="-1">
+            <part node="net" startTime="0" endTime="0.333" startScale="1 1 1" endScale="1 0.35 0.35"/>
+            <part node="net" startTime="0.333" endTime="0.666" startScale="1 1 1" endScale="1 0.35 0.35"/>
+            <part node="net" startTime="0.666" endTime="0.999" startScale="1 1 1" endScale="1 0.35 0.35"/>
+            <part node="net" startTime="0.99999" endTime="1.0" startScale="1 0.35 0.35" endScale="1 0 0"/>
+
+            <part node="netzrolle2" startTime="0.333" endTime="0.334" startScale="1 1 1" endScale="0 0 1"/>
+            <part node="netzrolle1" startTime="0.666" endTime="0.667" startScale="1 1 1" endScale="0 0 1"/>
+        </animation>
+    </animations>
+
+    <cylindered>
+        <movingTools>
+            <movingTool node="compJoint" playSound="true">
+                <componentJoint index="1"/>
+            </movingTool>
+
+            <movingTool node="baleDoor">
+                <dependentPart node="door_zylinder"/>
+                <dependentPart node="pullRod"/>
+            </movingTool>
+
+            <movingTool node="baleSeesaw">
+                <dependentPart node="pullRod"/>
+                <dependentPart node="springLeft"/>
+                <dependentPart node="springRight"/>
+            </movingTool>
+        </movingTools>
+
+        <movingParts>
+            <movingPart node="pickup_vis" referenceNode="pickup_fixNode" referenceFrame="comprimaV180XC_pickup_component2" isActiveDirty="true">
+                <dependentPart node="decal_chain_movingPartLeft"/>
+                <dependentPart node="decal_chain_movingPartRight"/>
+            </movingPart>
+
+            <movingPart node="door_zylinder" referencePoint="doorCyl_fixPoint" referenceFrame="doorCyl_fixPoint" >
+                <translatingPart node="stamp"/>
+            </movingPart>
+
+            <movingPart node="springLeft" referencePoint="leftSpringFixPoint" referenceFrame="comprimaV180XC_main_component1" scaleZ="true"/>
+            <movingPart node="springRight" referencePoint="rightSpringFixPoint" referenceFrame="comprimaV180XC_main_component1" scaleZ="true"/>
+
+            <movingPart node="pullRod" limitedAxis="1" referencePoint="zugstange_fixPoint" referenceFrame="comprimaV180XC_main_component1"/>
+
+            <movingPart node="decal_chain_movingPartLeft" referencePoint="pickup_chain_left_fixPoint" referenceFrame="pickup_chain_left_fixPoint" scaleZ="true"/>
+            <movingPart node="decal_chain_movingPartRight" referencePoint="pickup_chain_right_fixPoint" referenceFrame="pickup_chain_right_fixPoint" scaleZ="true"/>
+        </movingParts>
+        <sounds>
+            <hydraulic template="DEFAULT_HYDRAULIC_SOUND" linkNode="comprimaV180XC_main_component1"/>
+        </sounds>
+    </cylindered>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <fillUnit unit="$l10n_unit_literShort" fillTypeCategories="windrow" capacity="6300">
+                        <alarmTriggers>
+                            <alarmTrigger minFillLevel="0.86" maxFillLevel="1" needsTurnOn="true">
+                                <alarmSound template="ROLLBELT_ALARM" linkNode="comprimaV180XC_main_component1"/>
+                            </alarmTrigger>
+                        </alarmTriggers>
+                    </fillUnit>
+                    <fillUnit unit="$l10n_unit_pieces" fillTypes="baleNet" capacity="3"/>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <tipOccluder>
+        <occlusionArea start="start" width="width" height="height"/>
+    </tipOccluder>
+
+    <foliageBending>
+    <bendingNode minX="-1.2" maxX="1.2" minZ="-1.55" maxZ="1" yOffset="0.25" />
+    <bendingNode minX="-1.2" maxX="1.2" minZ="-0.6" maxZ="0.35" yOffset="-0.26" node="comprimaV180XC_pickup_component2"/>
+    </foliageBending>
+
+    <baseMaterial>
+        <material name="KroneComprimaV180XC_mat" baseNode="main_vis_mg1_root">
+            <shaderParameter name="colorMat0" value="KRONE_GREEN1"/>
+        </material>
+    </baseMaterial>
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="4" fieldMultiplier="2"/>
+
+    <refillSuppliesConfigurations>
+        <refillSuppliesConfiguration name="$l10n_configuration_manually" price="0">
+            <refillSupplies coverAnimationName="baleNetDoor" coverWarningText="warning_closeBaleNetDoorFirst">
+                <refillSupply fillUnitIndex="2" usageAnimationName="netRoleEmptyAnim" usageFactor="8" />
+            </refillSupplies>
+        </refillSuppliesConfiguration>
+        <refillSuppliesConfiguration name="$l10n_configuration_automatically" price="10000">
+            <refillSupplies isActive="false" coverAnimationName="baleNetDoor" coverWarningText="warning_closeBaleNetDoorFirst">
+                <refillSupply fillUnitIndex="2"/>
+            </refillSupplies>
+        </refillSuppliesConfiguration>
+    </refillSuppliesConfigurations>
+
+    <i3dMappings>
+        <i3dMapping id="comprimaV180XC_main_component1" node="0>" />
+        <i3dMapping id="wheels" node="0>0" />
+        <i3dMapping id="wheelLeft1" node="0>0|0" />
+        <i3dMapping id="wheelLeft2" node="0>0|1" />
+        <i3dMapping id="wheelRight1" node="0>0|2" />
+        <i3dMapping id="wheelRight2" node="0>0|3" />
+        <i3dMapping id="ptoInputNode" node="0>1" />
+        <i3dMapping id="attacherBarRot" node="0>2" />
+        <i3dMapping id="attacherJoint" node="0>2|0" />
+        <i3dMapping id="ptoDetachedNode" node="0>2|1" />
+        <i3dMapping id="drawBar" node="0>2|2" />
+        <i3dMapping id="electric" node="0>2|3|0" />
+        <i3dMapping id="airYellow" node="0>2|3|1" />
+        <i3dMapping id="hydraulicIn1" node="0>2|3|2" />
+        <i3dMapping id="hydraulicOut1" node="0>2|3|3" />
+        <i3dMapping id="airRed" node="0>2|3|4" />
+        <i3dMapping id="hydraulicIn2" node="0>2|3|5" />
+        <i3dMapping id="airRedStored" node="0>2|3|6" />
+        <i3dMapping id="airRedStored2" node="0>2|3|6|0" />
+        <i3dMapping id="airYellowStored" node="0>2|3|7" />
+        <i3dMapping id="airYellowStored2" node="0>2|3|7|0" />
+        <i3dMapping id="hydraulicIn1Stored" node="0>2|3|8" />
+        <i3dMapping id="hydraulicIn1Stored2" node="0>2|3|8|0" />
+        <i3dMapping id="hydraulicIn2Stored" node="0>2|3|9" />
+        <i3dMapping id="hydraulicIn2Stored2" node="0>2|3|9|0" />
+        <i3dMapping id="hydraulicOut1Stored" node="0>2|3|10" />
+        <i3dMapping id="hydraulicOut1Stored2" node="0>2|3|10|0" />
+        <i3dMapping id="electricStored" node="0>2|3|11" />
+        <i3dMapping id="electricStored2" node="0>2|3|11|0" />
+        <i3dMapping id="wire" node="0>2|3|12" />
+        <i3dMapping id="lights" node="0>3" />
+        <i3dMapping id="sharedReflectors" node="0>3|0" />
+        <i3dMapping id="reflector01" node="0>3|0|0" />
+        <i3dMapping id="reflector02" node="0>3|0|1" />
+        <i3dMapping id="reflector03" node="0>3|0|2" />
+        <i3dMapping id="reflector04" node="0>3|0|3" />
+        <i3dMapping id="sideMarkerRight" node="0>3|1" />
+        <i3dMapping id="sideMarkerLeft" node="0>3|2" />
+        <i3dMapping id="support" node="0>4" />
+        <i3dMapping id="supportArm" node="0>4|0" />
+        <i3dMapping id="support_col" node="0>4|0|0" />
+        <i3dMapping id="crank" node="0>4|1" />
+        <i3dMapping id="pickup" node="0>5" />
+        <i3dMapping id="compJoint" node="0>5|0" />
+        <i3dMapping id="pickup_vis" node="0>5|1" />
+        <i3dMapping id="Schneggle_links" node="0>5|1|0" />
+        <i3dMapping id="Schneggle_rechts" node="0>5|1|1" />
+        <i3dMapping id="Niederhalterrolle" node="0>5|1|2" />
+        <i3dMapping id="rechen_pickup" node="0>5|1|3" />
+        <i3dMapping id="comprima_zerlegt:Object187" node="0>5|1|4" />
+        <i3dMapping id="pickupWheelLeft_linkNode" node="0>5|1|5" />
+        <i3dMapping id="pickupWheelRight_linkNode" node="0>5|1|6" />
+        <i3dMapping id="groundReferenceNode" node="0>5|1|7" />
+        <i3dMapping id="decals_pickup" node="0>5|1|8" />
+        <i3dMapping id="emitShape_straw1" node="0>5|1|9" />
+        <i3dMapping id="emitShape_straw2" node="0>5|1|10" />
+        <i3dMapping id="emitShape_straw3" node="0>5|1|11" />
+        <i3dMapping id="emitShape_straw4" node="0>5|1|12" />
+        <i3dMapping id="pickup_chains" node="0>5|1|13" />
+        <i3dMapping id="chain_left" node="0>5|1|13|0" />
+        <i3dMapping id="decal_chain_right" node="0>5|1|13|0|0" />
+        <i3dMapping id="decal_chain_movingPartLeft" node="0>5|1|13|0|1" />
+        <i3dMapping id="chain_right" node="0>5|1|13|1" />
+        <i3dMapping id="decal_chain_left" node="0>5|1|13|1|0" />
+        <i3dMapping id="decal_chain_movingPartRight" node="0>5|1|13|1|1" />
+        <i3dMapping id="effect_joint" node="0>5|1|14" />
+        <i3dMapping id="workArea" node="0>6" />
+        <i3dMapping id="areaStart" node="0>6|0" />
+        <i3dMapping id="areaWidth" node="0>6|1" />
+        <i3dMapping id="areaHeight" node="0>6|2" />
+        <i3dMapping id="baling" node="0>7" />
+        <i3dMapping id="unloadRot" node="0>7|0" />
+        <i3dMapping id="scaleNode" node="0>7|0|0" />
+        <i3dMapping id="baleNode" node="0>7|0|0|0|0" />
+        <i3dMapping id="j_root" node="0>8" />
+        <i3dMapping id="baleDoor" node="0>9" />
+        <i3dMapping id="backDoor_vis" node="0>9|0" />
+        <i3dMapping id="doorCyl_fixPoint" node="0>9|1" />
+        <i3dMapping id="zugstange_fixPoint" node="0>9|2" />
+        <i3dMapping id="lights_holder" node="0>9|3" />
+        <i3dMapping id="sharedLights" node="0>9|3|0" />
+        <i3dMapping id="frontOvalLeft" node="0>9|3|0|0" />
+        <i3dMapping id="frontOvalRight" node="0>9|3|0|1" />
+        <i3dMapping id="orangeOvalLeft" node="0>9|3|0|2" />
+        <i3dMapping id="orangeOvalRight" node="0>9|3|0|3" />
+        <i3dMapping id="rerLightLeft" node="0>9|3|0|4" />
+        <i3dMapping id="rerLightRight" node="0>9|3|0|5" />
+        <i3dMapping id="collision" node="0>9|4" />
+        <i3dMapping id="decals_backDoor" node="0>9|5" />
+        <i3dMapping id="lights_functionality" node="0>9|6" />
+        <i3dMapping id="backLights" node="0>9|6|0" />
+        <i3dMapping id="backLightsHigh" node="0>9|6|0|0" />
+        <i3dMapping id="backLightsHigh2" node="0>9|6|0|0|0" />
+        <i3dMapping id="turnLights" node="0>9|6|1" />
+        <i3dMapping id="turnLeft" node="0>9|6|1|0" />
+        <i3dMapping id="turnLightLeftBack" node="0>9|6|1|0|0" />
+        <i3dMapping id="turnRight" node="0>9|6|1|1" />
+        <i3dMapping id="turnLightRightBack" node="0>9|6|1|1|0" />
+        <i3dMapping id="kroneBackLightCombo_right" node="0>9|7" />
+        <i3dMapping id="kroneBackLightCombo_left" node="0>9|8" />
+        <i3dMapping id="decalScrew" node="0>9|9" />
+        <i3dMapping id="novoGrip_backSwing" node="0>9|10|0" />
+        <i3dMapping id="roller" node="0>9|10|0|0" />
+        <i3dMapping id="j_backSwing" node="0>9|10|0|1" />
+        <i3dMapping id="rotatingParts1" node="0>9|10|1" />
+        <i3dMapping id="roller2" node="0>9|10|1|0" />
+        <i3dMapping id="roller3" node="0>9|10|1|1" />
+        <i3dMapping id="roller4" node="0>9|10|1|2" />
+        <i3dMapping id="roller5" node="0>9|10|1|3" />
+        <i3dMapping id="novoGripBack" node="0>9|10|2" />
+        <i3dMapping id="j_backDoor" node="0>9|11" />
+        <i3dMapping id="j_backDoorTopRot" node="0>9|12" />
+        <i3dMapping id="j_backDoorTop" node="0>9|12|0" />
+        <i3dMapping id="visuals" node="0>10" />
+        <i3dMapping id="rotatingParts2" node="0>10|0" />
+        <i3dMapping id="rotor" node="0>10|0|0" />
+        <i3dMapping id="roller6" node="0>10|0|1" />
+        <i3dMapping id="roller10" node="0>10|0|2" />
+        <i3dMapping id="roller11" node="0>10|0|3" />
+        <i3dMapping id="netRoleHolder" node="0>10|0|4" />
+        <i3dMapping id="wheel1" node="0>10|0|5" />
+        <i3dMapping id="wheel" node="0>10|0|6" />
+        <i3dMapping id="novoGripFront" node="0>10|1|0" />
+        <i3dMapping id="novoGrip_upperSwing" node="0>10|1|1" />
+        <i3dMapping id="roller8" node="0>10|1|1|0" />
+        <i3dMapping id="j_upperSwing" node="0>10|1|1|1" />
+        <i3dMapping id="cloth" node="0>10|1|1|2" />
+        <i3dMapping id="roller9" node="0>10|1|2" />
+        <i3dMapping id="roller7" node="0>10|1|3" />
+        <i3dMapping id="novoGrip_lowerSwing" node="0>10|1|4" />
+        <i3dMapping id="roller12" node="0>10|1|4|0" />
+        <i3dMapping id="roller13" node="0>10|1|4|1" />
+        <i3dMapping id="j_lowerSwingRot" node="0>10|1|4|2" />
+        <i3dMapping id="j_lowerSwing" node="0>10|1|4|2|0" />
+        <i3dMapping id="j_lowerSwingRot2" node="0>10|1|4|3" />
+        <i3dMapping id="j_lowerSwingClockwise" node="0>10|1|4|3|0" />
+        <i3dMapping id="j_lowerSwingRot3" node="0>10|1|4|4" />
+        <i3dMapping id="j_lowerSwingAntiClockwise" node="0>10|1|4|4|0" />
+        <i3dMapping id="novoGrip_frontTG" node="0>10|2" />
+        <i3dMapping id="door_zylinder" node="0>10|3" />
+        <i3dMapping id="stamp" node="0>10|3|0" />
+        <i3dMapping id="baleSeesaw" node="0>10|4" />
+        <i3dMapping id="pullRod" node="0>10|4|0" />
+        <i3dMapping id="springLeft" node="0>10|4|1" />
+        <i3dMapping id="springRight" node="0>10|4|2" />
+        <i3dMapping id="collision2" node="0>10|4|3" />
+        <i3dMapping id="collision1" node="0>10|4|4" />
+        <i3dMapping id="leftSpringFixPoint" node="0>10|5" />
+        <i3dMapping id="rightSpringFixPoint" node="0>10|6" />
+        <i3dMapping id="hydraulicHosesDoor" node="0>10|7" />
+        <i3dMapping id="stopBlock1" node="0>10|8" />
+        <i3dMapping id="stopBlock2" node="0>10|9" />
+        <i3dMapping id="pressureNeedle_decal" node="0>10|10" />
+        <i3dMapping id="netRole" node="0>10|11" />
+        <i3dMapping id="net" node="0>10|11|0" />
+        <i3dMapping id="emitShape_smoke1" node="0>10|12" />
+        <i3dMapping id="emitShape_smoke2" node="0>10|13" />
+        <i3dMapping id="pickup_chain_left_fixPoint" node="0>10|14" />
+        <i3dMapping id="pickup_chain_right_fixPoint" node="0>10|15" />
+        <i3dMapping id="pickupEffect" node="0>10|16" />
+        <i3dMapping id="effect_helpJoint" node="0>10|16|0" />
+        <i3dMapping id="axleLeft" node="0>10|17" />
+        <i3dMapping id="brakeGearLeft" node="0>10|17|0" />
+        <i3dMapping id="axleLeft1" node="0>10|17|0|0" />
+        <i3dMapping id="axleLeft2" node="0>10|17|0|1" />
+        <i3dMapping id="axleLeft3" node="0>10|17|0|2" />
+        <i3dMapping id="axleLeft6" node="0>10|17|0|3" />
+        <i3dMapping id="axleLeft7" node="0>10|17|0|4" />
+        <i3dMapping id="axleLeft8" node="0>10|17|0|5" />
+        <i3dMapping id="axleRight" node="0>10|18" />
+        <i3dMapping id="brakeGearRight" node="0>10|18|0" />
+        <i3dMapping id="axleRight1" node="0>10|18|0|0" />
+        <i3dMapping id="axleRight2" node="0>10|18|0|1" />
+        <i3dMapping id="axleRight3" node="0>10|18|0|2" />
+        <i3dMapping id="axleRight4" node="0>10|18|0|3" />
+        <i3dMapping id="axleRight5" node="0>10|18|0|4" />
+        <i3dMapping id="axleRight6" node="0>10|18|0|5" />
+        <i3dMapping id="decal_barometer" node="0>10|19" />
+        <i3dMapping id="main_vis_mg1_root" node="0>10|20" />
+        <i3dMapping id="decals_main_mg2_root" node="0>10|21" />
+        <i3dMapping id="netBinding" node="0>11" />
+        <i3dMapping id="cover" node="0>11|0" />
+        <i3dMapping id="decals_mg2_root1" node="0>11|0|0" />
+        <i3dMapping id="netzrolle1" node="0>11|1" />
+        <i3dMapping id="netzrolle2" node="0>11|2" />
+        <i3dMapping id="tipOcclusionArea" node="0>12" />
+        <i3dMapping id="start" node="0>12|0" />
+        <i3dMapping id="width" node="0>12|1" />
+        <i3dMapping id="height" node="0>12|2" />
+        <i3dMapping id="wheelCollisionLeft" node="0>13|0" />
+        <i3dMapping id="wheelCollisionRight" node="0>13|1" />
+        <i3dMapping id="comprimaV180XC_pickup_component2" node="1>" />
+        <i3dMapping id="pickup_fixPoint" node="1>0" />
+        <i3dMapping id="pickupWheelLeft" node="1>1" />
+        <i3dMapping id="pickupWheelRight" node="1>2" />
+        <i3dMapping id="boundingVolume1" node="2>" />
+        <i3dMapping id="boundingVolume2" node="3>" />
+    </i3dMappings>
+</vehicle>

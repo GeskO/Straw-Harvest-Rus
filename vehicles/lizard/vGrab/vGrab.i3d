@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="vGrab_ingaming" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="6" filename="../../../shared/baleGrabAdaptor/adaptor_diffuse.png" />
+    <File fileId="4" filename="../../../shared/baleGrabAdaptor/adaptor_normal.png" />
+    <File fileId="5" filename="../../../shared/baleGrabAdaptor/adaptor_specular.png" />
+    <File fileId="1" filename="vGrab_normal.png" />
+    <File fileId="2" filename="vGrab_specular.png" />
+    <File fileId="8" filename="$data/shared/default_normal.png" />
+    <File fileId="9" filename="$data/shared/connectionHoses/hoses1_specular.png" />
+    <File fileId="7" filename="vGrab_diffuse.png" />
+    <File fileId="3" filename="$data/shaders/vehicleShader.xml" />
+  </Files>
+
+  <Materials>
+    <Material name="lambert1" materialId="1" diffuseColor="0.5 0.5 0.5 1" specularColor="0 0 0" ambientColor="1 1 1">
+    </Material>
+    <Material name="vGrab_mat" materialId="4" diffuseColor="0.50237 0.50237 0.50237 1" cosPower="50" specularColor="1 1 1" ambientColor="1 1 1" customShaderId="3" customShaderVariation="colorMask">
+      <CustomParameter name="colorMat0" value="0.80 0.55 0.05 0.0"/>
+      <Normalmap fileId="1"/>
+      <Glossmap fileId="2"/>
+    </Material>
+    <Material name="adaptor_mat" materialId="2" diffuseColor="0.5 0.5 0.5 1" cosPower="50" specularColor="1 1 1" ambientColor="1 1 1" customShaderId="3" customShaderVariation="colorMask">
+      <CustomParameter name="colorMat0" value="0.80 0.55 0.05 0.0"/>
+      <Normalmap fileId="4"/>
+      <Glossmap fileId="5"/>
+    </Material>
+    <Material name="adaptor_decals_mat" materialId="3" cosPower="255" specularColor="1 1 1" ambientColor="1 1 1" alphaBlending="true" customShaderId="3" customShaderVariation="Decal">
+      <Texture fileId="6"/>
+      <Normalmap fileId="4"/>
+      <Glossmap fileId="5"/>
+    </Material>
+    <Material name="decals_mat" materialId="6" cosPower="255" specularColor="1 1 1" ambientColor="1 1 1" alphaBlending="true" customShaderId="3" customShaderVariation="Decal">
+      <Texture fileId="7"/>
+      <Normalmap fileId="1"/>
+      <Glossmap fileId="2"/>
+    </Material>
+    <Material name="hoses_mat" materialId="5" diffuseColor="0.5 0.5 0.5 1" cosPower="50" specularColor="1 1 1" ambientColor="1 1 1" customShaderId="3" customShaderVariation="colorMask">
+      <Normalmap fileId="8"/>
+      <Glossmap fileId="9"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="vGrab.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <Shape name="vGrab_main_component1" shapeId="1" dynamic="true" compound="true" density="0.1" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="1">
+      <TransformGroup name="attachable" nodeId="2">
+        <TransformGroup name="fl_attacher_joint" translation="9.45207e-17 0.553346 -0.318537" rotation="90 -84 -90" nodeId="3"/>
+        <Shape name="col_wheelLoader" translation="1.70946e-16 0.477572 -0.0196087" shapeId="2" compoundChild="true" density="0.2" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="4">
+          <TransformGroup name="wl_attacherJoint1" translation="1.59651e-18 -0.260724 -0.554075" rotation="-90 -96 90" nodeId="5"/>
+          <Shape name="adapter_wheelloader_vis" translation="-0.554476 0.078487 -0.298251" shapeId="3" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="6"/>
+          <Shape name="decals_adapter_wheelloader" translation="0.00146864 0.0452126 -0.425912" shapeId="4" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="3" clipDistance="300" nodeId="7"/>
+        </Shape>
+        <Shape name="col_teleLoader" translation="1.70946e-16 0.477572 -0.0234127" shapeId="5" compoundChild="true" density="0.2" collisionMask="8194" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="8">
+          <TransformGroup name="tl_attacherJoint" translation="0 -0.156295 -0.543312" rotation="-90 -89 90" nodeId="9"/>
+          <Shape name="adapter_teleloader_vis" translation="-0.56003 0.0790878 -0.296532" shapeId="6" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="300" nodeId="10">
+            <Shape name="decals_adapter_teleloader" translation="0.555935 -0.0737715 -0.154969" shapeId="7" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="3" clipDistance="300" nodeId="11"/>
+          </Shape>
+        </Shape>
+        <TransformGroup name="connectionHoses" nodeId="12">
+          <TransformGroup name="hydraulicOut01" translation="-0.0311692 0.851568 -0.20777" rotation="-159.972 0 0" nodeId="13"/>
+          <TransformGroup name="hydraulicIn01" translation="0.0265406 0.851568 -0.20777" rotation="-159.972 0 0" nodeId="14"/>
+        </TransformGroup>
+      </TransformGroup>
+      <Shape name="vGrab_vis" shapeId="8" castsShadows="true" receiveShadows="true" materialIds="4" skinBindNodeIds="15 18 20 21 22" clipDistance="300" nodeId="15">
+        <Shape name="hoses_vis" translation="-0.00137998 0.835066 -0.155552" shapeId="9" castsShadows="true" receiveShadows="true" materialIds="5" skinBindNodeIds="17 23" clipDistance="300" nodeId="16">
+          <TransformGroup name="hoses_helpJoint" translation="0 -0.000114495 0" nodeId="17"/>
+        </Shape>
+        <TransformGroup name="left_grab" translation="0.363079 1.07139 0.0852803" collision="false" collisionMask="0" clipDistance="300" nodeId="18">
+          <TransformGroup name="cyl_fixPoint" translation="-0.0854533 -0.0433368 -0.0847974" scale="1 1 1" collision="false" collisionMask="0" clipDistance="300" nodeId="19"/>
+        </TransformGroup>
+        <TransformGroup name="right_grab" translation="-0.363079 1.07139 0.0852803" collision="false" collisionMask="0" clipDistance="300" nodeId="20">
+          <TransformGroup name="cylinder" translation="0.0849166 -0.0445835 -0.0847974" rotation="179.871 89.9502 -180" scale="1 1 1" collision="false" collisionMask="0" clipDistance="300" nodeId="21">
+            <TransformGroup name="stamp" translation="3.51941e-14 1.06581e-14 0.55579" scale="1 1 1" collision="false" collisionMask="0" clipDistance="300" nodeId="22"/>
+            <TransformGroup name="hoses_cyl1" translation="0.0584931 -1.15483e-05 0.044463" rotation="111.172 -89.8622 -111.172" nodeId="23"/>
+          </TransformGroup>
+        </TransformGroup>
+        <Shape name="decals_balegrab" translation="-0.00562176 0.799651 -0.19419" shapeId="10" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="6" clipDistance="50" nodeId="24"/>
+        <Shape name="decals_adaptor_balegrab" translation="0.798485 0.597428 0.0848873" shapeId="11" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="3" clipDistance="300" nodeId="25"/>
+      </Shape>
+      <TransformGroup name="baleGrab" nodeId="26">
+        <Shape name="hookTrigger" shapeId="12" kinematic="true" trigger="true" collisionMask="16777216" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="27"/>
+        <Shape name="balefork" translation="1.13338e-17 0.612033 -0.0358871" shapeId="13" castsShadows="true" receiveShadows="true" materialIds="4" clipDistance="300" nodeId="28"/>
+        <Shape name="balefork1" translation="4.90918e-18 0.0388471 -0.0117563" shapeId="14" castsShadows="true" receiveShadows="true" materialIds="4" clipDistance="300" nodeId="29"/>
+      </TransformGroup>
+      <TransformGroup name="collisions" nodeId="30">
+        <TransformGroup name="forkColAnim" translation="0 0.0398692 1.06002" nodeId="31">
+          <Shape name="colRightBack" translation="-0.666556 -0.0398692 -0.433874" shapeId="15" compoundChild="true" collisionMask="134225922" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="32"/>
+          <Shape name="colRightFront" translation="-0.66463 0.0244572 -0.0902255" shapeId="16" compoundChild="true" collisionMask="134225920" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="33"/>
+          <Shape name="colLeftFront" translation="0.669174 0.0244572 -0.0902255" shapeId="17" compoundChild="true" collisionMask="134225920" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="34"/>
+          <Shape name="colLeftBack" translation="0.667249 -0.0398692 -0.433874" shapeId="18" compoundChild="true" collisionMask="134225922" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="35"/>
+        </TransformGroup>
+      </TransformGroup>
+    </Shape>
+  </Scene>
+
+</i3D>
