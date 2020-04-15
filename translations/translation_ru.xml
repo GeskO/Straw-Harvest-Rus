@@ -1,0 +1,125 @@
+<?xml version="1.0.4" encoding="utf-8" standalone="no" ?>
+<l10n>
+    <translationContributors>GeskO</translationContributors>
+
+    <texts>
+        <!-- Inputs -->
+        <text name="input_SH_TOGGLE_COLLECT_MODE" text="SH: Переключить режим сбора"/>
+        <text name="input_SH_DEPART_BALES" text="SH: Отправление тюков"/>
+        <text name="input_SH_RESET_BALE_COUNTER" text="SH: Сбросить счетчик тюков"/>
+        <text name="input_SH_GRAB_BALES" text="SH: Захватить тюки"/>
+        <text name="input_SH_DROP_BALES" text="SH: Падение тюков"/>
+        <text name="input_SH_TOGGLE_CRANE_TOOL" text="SH: Инструмент с кранами"/>
+        <text name="input_SH_MOVE_CRANE_BRIDGE_1" text="SH: Переместить кран мост вперед"/>
+        <text name="input_SH_MOVE_CRANE_BRIDGE_2" text="SH: Переместить кран мост назад"/>
+        <text name="input_SH_MOVE_CRANE_TROLLEY_1" text="SH: Переместить крановую тележку вправо"/>
+        <text name="input_SH_MOVE_CRANE_TROLLEY_2" text="SH: Переместить крановую тележку влево"/>
+        <text name="input_SH_MOVE_CRANE_TOOL_1" text="SH: Переместить крановый инструмент вверх"/>
+        <text name="input_SH_MOVE_CRANE_TOOL_2" text="SH: Переместить крановый инструмент вниз"/>
+        <text name="input_SH_ROTATE_CRANE_TOOL_1" text="SH: повернуть кран вправо"/>
+        <text name="input_SH_ROTATE_CRANE_TOOL_2" text="SH: повернуть кран влево"/>
+        <text name="input_SH_OPEN_CRANE_TOOL_1" text="SH: Открытый крановый инструмент"/>
+        <text name="input_SH_OPEN_CRANE_TOOL_2" text="SH: Закрыть крановый инструмент"/>
+        <text name="input_SH_TOGGLE_BALE_SIZE" text="SH: Размер тюка"/>
+        <text name="input_SH_TOGGLE_REFILL_COVER" text="SH: Переключить крышку заправки"/>
+
+        <!-- Bale grab -->
+        <text name="typeDesc_baleGrab" text="Захват тюков"/>
+        <text name="function_baleGrab" text="С помощью захвата тюков вы можете быстро и легко захватывать квадратные тюки."/>
+
+        <text name="configuration_inputAttacherTeleHandler" text="Телескопический"/>
+
+        <text name="action_grabBales" text="Захватить тюки"/>
+        <text name="action_dropBales" text="Падение тюков"/>
+
+        <text name="action_addSpikes" text="Прикрепить шипы"/>
+        <text name="action_removeSpikes" text="Снять шипы"/>
+
+        <!-- Bale counter -->
+        <text name="action_resetBaleCounter" text="Сбросить счетчик тюков"/>
+
+        <!-- Comprima -->
+        <text name="function_comprima" text="Пресс-подборщик превращает рыхлую солому, траву или сено в удобные тюки. Comprima может прессовать тюки разных размеров от 1,10 до 1,80м. ВНИМАНИЕ: многие инструменты в игре совместимы только с 1,30 м тюками."/>
+
+        <!-- BigPack -->
+        <text name="configuration_baleTrailer" text="BaleCollect 1230"/>
+        <text name="configuration_noBaleTrailer" text="Bale Chute"/>
+
+        <!-- BaleCollect -->
+        <text name="function_baleCollect" text="Прикрепите прицеп для тюков Krone к Krone BiGPack 1290 HDP II XC, чтобы собрать 3 тюка и разгрузить их рядом."/>
+        <text name="typeDesc_baleCollect" text="Сборщик тюков"/>
+        <text name="action_collectMode" text="Режим выгрузки тюков %s"/>
+        <text name="warning_needsABaleTrailer" text="В этой конфигурации пресс-подборщик может использоваться только в сочетании с прицепом для тюков!"/>
+
+        <!-- Premos -->
+        <text name="function_premos" text="Эта машина может гранулировать солому и сено прямо на поле. Прикрепленный к измельчителю тюков, он также может использоваться стационарно."/>
+        <text name="typeDesc_premos" text="Pellet Harvester"/>
+
+        <!-- BaleShredder -->
+        <text name="name_baleShredder" text="Измельчитель тюков"/>
+        <text name="function_baleShredder" text="Прикрепите измельчитель тюков к Premos 5000, чтобы измельчить тюки и гранулировать материал. Измельчитель тюков можно прикрепить к передней правой стороне Premos. Во время движения, убедитесь, что желтая стрелка на поддоне указывает в сторону Premos."/>
+        <text name="typeDesc_baleShredder" text="Измельчитель тюков"/>
+        <text name="warning_firstFoldTheTool" text="Сначала нужно сложить инструмент (%s)!"/>
+        <text name="warning_baleFillTypeNotSupported" text="Bale fillType не поддерживается!"/>
+        <text name="warning_roundBalesNotSupported" text="Круглые тюки не поддерживаются!"/>
+
+        <!-- Placeables -->
+        <text name="name_pelletHall" text="Пеллет Холл Паллетизатор"/>
+        <text name="name_pelletHall_crane" text="Пеллет Холл Крейн"/>
+        <text name="name_pelletHall_empty" text="Пеллет Холл"/>
+        <text name="name_palletSellPoint" text="Пункт продажи поддонов"/>
+        <text name="action_lightsOn" text="Включить свет"/>
+        <text name="action_lightsOff" text="Выключить свет"/>
+
+        <text name="function_pelletHall" text="Здесь вы можете хранить соломенные пеллеты и пеллеты из сена. Используйте паллетизатор, чтобы положить гранулы в пакеты и укладывать их на поддоны. С помощью крана легко заполнить паллетайзер."/>
+        <text name="function_pelletHall_crane" text="Здесь вы можете хранить соломенные пеллеты и пеллеты из сена. С помощью крана легко заполнить вашу технику."/>
+        <text name="function_pelletHall_empty" text="Здесь вы можете хранить тюки и сыпучие материалы или парковать свои транспортные средства."/>
+        <text name="function_palletSellPoint" text="Здесь вы можете продать пеллетные поддоны по более высокой цене, чем в качестве сыпучего материала."/>
+
+        <!-- Crane -->
+        <text name="action_toggleCraneTool" text="Поменять инструмент"/>
+
+        <!-- Palletizer -->
+        <text name="notification_palletizer_refilled" text="Палетизатор заправлен %d мешками благодаря экономии/синхронизации"/>
+        <text name="notification_palletizer_stopped" text="Паллетизатор остановлен"/>
+        <text name="notification_palletizer_empty" text="Паллетизатор пустой"/>
+        <text name="statistics_palletizer_bags" text="Сегодня изготовлено: %d пачек, %d паллетов"/>
+        <text name="statistics_palletizer_time" text="Запасов хватит на %d минут %d секунд"/>
+        <text name="statistics_palletizer_blocked" text="Паллетизатор заблокирован, очистите конвейер!"/>
+
+        <!-- Pallets -->
+        <text name="baleTwinePallet" text="Шпагат для тюков"/>
+        <text name="function_baleTwinePallet" text="Этим шпагатом вы можете пополнить Krone BigPack 1290 HDP II XC."/>
+        <text name="netRolePallet" text="Сетка для тюков"/>
+        <text name="function_netRolePallet" text="Этой сеткой вы можете пополнить Krone Comprima V 180 XC."/>
+        <text name="molassesPallet" text="Канистра патоки"/>
+        <text name="function_molassesPallet" text="С помощью канистр вы можете пополнить резервуар патоки Krone Premos 5000."/>
+
+        <!-- fillTypes -->
+        <text name="fillType_strawPellets" text="Соломенные пеллеты"/>
+        <text name="fillType_hayPellets" text="Пеллеты из сена"/>
+        <text name="fillType_baleTwine" text="Шпагат для тюков"/>
+        <text name="fillType_baleNet" text="Сетка для тюков"/>
+        <text name="fillType_molasses" text="Патока"/>
+
+        <!-- refillSupplies -->
+        <text name="action_openBaleNetDoor" text="Открытая дверь тюковщика"/>
+        <text name="action_closeBaleNetDoor" text="Закрыть дверь тюковщика"/>
+        <text name="action_lowerTwineBoxes" text="Открыть ящик для шпагатов"/>
+        <text name="action_liftTwineBoxes" text="Закрыть ящик для шпагатов"/>
+        <text name="warning_closeBaleNetDoorFirst" text="Сначала закройте коробку для тюков!"/>
+        <text name="warning_closeTwineBoxesFirst" text="Поднимите коробки шпагата в первую очередь!"/>
+        <text name="warning_refillSuppliesFirst" text="Паполните %s первым!"/>
+
+        <text name="configuration_refillSupplies" text="Пополнить запасы"/>
+        <text name="configuration_manually" text="Вручную"/>
+        <text name="configuration_automatically" text="Автоматически"/>
+
+        <!-- Variable bale size -->
+        <text name="action_baleUnitSize" text="Переключить текущий размер тюка %.2f"/>
+        <text name="warning_baleTooSmall" text="Размер следующего тюка %.2f слишком мал для текущего уровня заполнения"/>
+
+        <!-- Misc -->
+        <text name="strawHarvest_message_failedHeightTypes" text="Straw Harvest не удалось загрузить на выбранную карту: карта в сочетании с активными модами не совместима с Straw Harvest. (слишком много фруктов на земле)"/>
+    </texts>
+</l10n>

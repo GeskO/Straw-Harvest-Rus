@@ -13,6 +13,7 @@
         <es>Extensión Recogida De Paja</es>
         <pt>Addon Colheita De Palha</pt>
         <nl>Stro Oogst Addon</nl>
+        <ru>Addon Straw Harvest</ru>
     </title>
 
     <description>
@@ -123,6 +124,18 @@ De balen verplaatsen wordt een gemak met de inbegrepen balenklemmen van Bressel 
 
 De inbegrepen industrie hal kan op drie manieren worden opgebouwd. Je kan het gebruiken als een open opslagloods om je machines, balen en pellets in op te slaan. Voeg een bovenloopkraan toe om het verplaatsen van stortgoed, balen en pellets makkelijker te maken. Voeg een automatische palletiseerder toe om de pellets, geproduceerd door de KRONE Premos 5000, verder te verwerken. De pallets gevult met pellets kunnen vervolgens met een hogere winst verkocht worden bij het verkooppunt binnen de Addon.
 ]]></nl>
+        <ru><![CDATA[Расширьте свою сельскохозяйственную деятельность с помощью пеллетной промышленности и увеличьте производительность с помощью мощных машин KRONE и Bressel und Lade, включенных в дополнение "Соломенный урожай".
+
+Первый в мире мобильный пеллетный комбайн, KRONE Premos 5000, может производить пеллеты путем сбора соломы или сенокосов непосредственно с поля или может работать стационарно с дополнительным измельчителем тюков. Полученные пеллеты могут быть проданы, использованы для постельных принадлежностей животных, скормлены животным или вы можете перерабатывать их в промышленном зале.
+
+KRONE BiGPack 1290 HDP II и KRONE Comprima V180XC являются предпочтительными пресс-подборщиками для мощного сбора соломы. С помощью присоединяемого KRONE BaleCollect, BiGPack может выгружать стопки до трех квадратных тюков одновременно. Кроме того, Comprima также поставляется с различными вариантами размера круглого тюка.
+
+Поскольку KRONE BiGPack, Comprima и Premos в действительности нуждаются в связке пряжи, сетке и патоке, эту функцию теперь можно добавить по желанию через настройки магазина, чтобы добавить к своему опыту виртуального фермерства. Когда эта опция включена, вам придется покупать расходные поддоны в магазине.
+
+Работать с тюками легко с помощью прилагаемых захватов для тюков от Bressel und Lade and Lizard. Эти грейферы бывают разных размеров для фронтальных погрузчиков, телескопических погрузчиков и колесных погрузчиков. Они захватывают и удерживают тюки во время движения и освобождают тюки только тогда, когда вы этого хотите.
+
+Включенный промышленный зал может быть настроен тремя различными способами. Вы можете использовать его как пустой зал для парковки транспортных средств и хранения тюков и поддонов. Добавьте кран для заловов для облегчения перемещения сыпучих материалов, тюков и поддонов. Вы также можете добавить автоматический укладчик на поддоны для дальнейшей обработки пеллет, созданных KRONE Premos 5000. Затем поддоны, заполненные пеллетами, можно продавать с более высокой прибылью на станции продажи, которая также поставляется с надстройкой.
+]]></ru>
     </description>
 
     <l10n filenamePrefix="translations/translation"/>
