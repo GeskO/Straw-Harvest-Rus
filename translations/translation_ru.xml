@@ -1,4 +1,4 @@
-<?xml version="1.0.5" encoding="utf-8" standalone="no" ?>
+<?xml version="1.0.6" encoding="utf-8" standalone="no" ?>
 <l10n>
     <translationContributors>GeskO</translationContributors>
 
@@ -30,10 +30,10 @@
         <text name="configuration_inputAttacherTeleHandler" text="Телескопический погрузчик"/>
 
         <text name="action_grabBales" text="Зацепить тюки"/>
-        <text name="action_dropBales" text="Отцепить тюки"/>
+        <text name="action_dropBales" text="Отпустить тюки"/>
 
-        <text name="action_addSpikes" text="Подсоеденить вилы"/>
-        <text name="action_removeSpikes" text="Отсоеденить шипы"/>
+        <text name="action_addSpikes" text="Разложить вилы"/>
+        <text name="action_removeSpikes" text="Сложить вилы"/>
 
         <!-- Bale counter -->
         <text name="action_resetBaleCounter" text="Сбросить счетчик тюков"/>
