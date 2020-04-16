@@ -10,7 +10,7 @@
 
 ### Последняя версия русификатора / Latest Release
 
-[Скачать последнюю версию](https://github.com/GeskO/Straw-Harvest-Rus/releases/download/v1.0.5/FS19_addon_strawHarvest.zip)
+[Скачать последнюю версию](https://github.com/GeskO/Straw-Harvest-Rus/releases/download/v1.0.6/FS19_addon_strawHarvest.zip)
 
 ### Все версии русификатора / Releases
 
